@@ -1,0 +1,1762 @@
+{
+ "version": "2026-10-10",
+ "note": "Hand-checked plan layer on top of the live wiki data. Levels marked est are best guesses from where things drop.",
+ "trackItems": [
+  "scarab-helm",
+  "scarab-boots",
+  "scarab-greaves",
+  "scarab-breastplate",
+  "scarab-shell-shield",
+  "cinder-beetle-shield",
+  "cinder-beetle-boots",
+  "cinder-beetle-helm",
+  "cinder-beetle-greaves",
+  "cinder-beetle-breastplate",
+  "gold-trimmed-black-tunic",
+  "mantle-of-night",
+  "tunic-of-night",
+  "stonehammer-maul",
+  "giant-femur",
+  "overlords-plate-helm",
+  "shield-of-the-protector",
+  "pouch",
+  "cotton-satchel"
+ ],
+ "sources": [
+  {
+   "label": "Stories of MnM wiki (live data)",
+   "url": "https://storiesofmnm.com/wiki/"
+  },
+  {
+   "label": "Shadow Knight class guide",
+   "url": "https://storiesofmnm.com/wiki/guide/shadow-knight-class-guide/"
+  },
+  {
+   "label": "Scarab Armor Quests",
+   "url": "https://storiesofmnm.com/wiki/quest/scarab-armor-quests/"
+  },
+  {
+   "label": "Cinder Beetle Armor Quests",
+   "url": "https://storiesofmnm.com/wiki/quest/cinder-beetle-armor-quests/"
+  },
+  {
+   "label": "Shadow Knight Starter Quest (Night Harbor)",
+   "url": "https://storiesofmnm.com/wiki/quest/shadow-knight-starter-quest-night-harbor/"
+  },
+  {
+   "label": "Leveling guide 1-25 (Whisper of the House)",
+   "url": "https://www.whisperofthehouse.com/monsters-and-memories/leveling-guide"
+  },
+  {
+   "label": "Tradeskills & bags (Whisper of the House)",
+   "url": "https://www.whisperofthehouse.com/monsters-and-memories/tradeskills"
+  },
+  {
+   "label": "Named encounters & patch notes (The Games Wiki)",
+   "url": "https://thegameswiki.com/monsters-and-memories/wiki/named-encounters"
+  }
+ ],
+ "classes": [
+  {
+   "name": "Archer",
+   "abbr": "ARC",
+   "role": "ranged",
+   "weights": {
+    "DEX": 1.6,
+    "AGI": 1.0,
+    "STR": 0.8,
+    "STA": 1.0,
+    "AC": 0.5,
+    "HP": 0.3
+   }
+  },
+  {
+   "name": "Bard",
+   "abbr": "BRD",
+   "role": "support",
+   "weights": {
+    "CHA": 1.5,
+    "DEX": 1.0,
+    "STR": 0.9,
+    "STA": 1.0,
+    "AC": 0.6,
+    "HP": 0.3,
+    "Mana": 0.05
+   }
+  },
+  {
+   "name": "Beastmaster",
+   "abbr": "BST",
+   "role": "melee",
+   "weights": {
+    "STR": 1.3,
+    "DEX": 1.1,
+    "AGI": 1.0,
+    "STA": 1.2,
+    "WIS": 0.6,
+    "AC": 0.6,
+    "HP": 0.3
+   }
+  },
+  {
+   "name": "Cleric",
+   "abbr": "CLR",
+   "role": "healer",
+   "weights": {
+    "WIS": 2.0,
+    "STA": 1.2,
+    "AC": 0.6,
+    "HP": 0.3,
+    "Mana": 0.15
+   }
+  },
+  {
+   "name": "Druid",
+   "abbr": "DRU",
+   "role": "healer",
+   "weights": {
+    "WIS": 2.0,
+    "STA": 1.0,
+    "AC": 0.4,
+    "HP": 0.3,
+    "Mana": 0.15
+   }
+  },
+  {
+   "name": "Elementalist",
+   "abbr": "ELE",
+   "role": "caster",
+   "weights": {
+    "INT": 2.0,
+    "STA": 1.0,
+    "AC": 0.3,
+    "HP": 0.3,
+    "Mana": 0.15
+   }
+  },
+  {
+   "name": "Enchanter",
+   "abbr": "ENC",
+   "role": "caster",
+   "weights": {
+    "INT": 2.0,
+    "CHA": 0.8,
+    "STA": 0.9,
+    "AC": 0.3,
+    "HP": 0.3,
+    "Mana": 0.15
+   }
+  },
+  {
+   "name": "Fighter",
+   "abbr": "FTR",
+   "role": "tank",
+   "weights": {
+    "AC": 1.1,
+    "STA": 2.0,
+    "STR": 1.4,
+    "AGI": 0.7,
+    "DEX": 0.5,
+    "HP": 0.35
+   }
+  },
+  {
+   "name": "Inquisitor",
+   "abbr": "INQ",
+   "role": "hybrid",
+   "weights": {
+    "STR": 1.2,
+    "STA": 1.2,
+    "WIS": 1.0,
+    "DEX": 0.6,
+    "AC": 0.7,
+    "HP": 0.3,
+    "Mana": 0.05
+   }
+  },
+  {
+   "name": "Monk",
+   "abbr": "MNK",
+   "role": "melee",
+   "weights": {
+    "STR": 1.3,
+    "DEX": 1.3,
+    "AGI": 1.2,
+    "STA": 1.2,
+    "AC": 0.6,
+    "HP": 0.3
+   }
+  },
+  {
+   "name": "Necromancer",
+   "abbr": "NEC",
+   "role": "caster",
+   "weights": {
+    "INT": 2.0,
+    "STA": 1.0,
+    "AC": 0.3,
+    "HP": 0.3,
+    "Mana": 0.15
+   }
+  },
+  {
+   "name": "Paladin",
+   "abbr": "PAL",
+   "role": "tank",
+   "weights": {
+    "AC": 1.0,
+    "STA": 1.9,
+    "STR": 1.3,
+    "WIS": 0.9,
+    "AGI": 0.5,
+    "HP": 0.35,
+    "Mana": 0.05
+   }
+  },
+  {
+   "name": "Ranger",
+   "abbr": "RNG",
+   "role": "melee",
+   "weights": {
+    "DEX": 1.3,
+    "STR": 1.2,
+    "AGI": 1.0,
+    "STA": 1.1,
+    "WIS": 0.5,
+    "AC": 0.6,
+    "HP": 0.3
+   }
+  },
+  {
+   "name": "Rogue",
+   "abbr": "ROG",
+   "role": "melee",
+   "weights": {
+    "DEX": 1.6,
+    "STR": 1.3,
+    "AGI": 1.1,
+    "STA": 1.0,
+    "AC": 0.5,
+    "HP": 0.3
+   }
+  },
+  {
+   "name": "Shadow Knight",
+   "abbr": "SHD",
+   "role": "tank",
+   "weights": {
+    "AC": 1.0,
+    "STA": 2.0,
+    "STR": 1.5,
+    "INT": 0.9,
+    "AGI": 0.5,
+    "DEX": 0.3,
+    "HP": 0.35,
+    "Mana": 0.06,
+    "CHA": 0.05
+   }
+  },
+  {
+   "name": "Shaman",
+   "abbr": "SHM",
+   "role": "healer",
+   "weights": {
+    "WIS": 2.0,
+    "STA": 1.2,
+    "AC": 0.5,
+    "HP": 0.3,
+    "Mana": 0.15
+   }
+  },
+  {
+   "name": "Spellblade",
+   "abbr": "SPB",
+   "role": "hybrid",
+   "weights": {
+    "STR": 1.2,
+    "DEX": 1.0,
+    "INT": 1.0,
+    "STA": 1.1,
+    "AC": 0.6,
+    "HP": 0.3,
+    "Mana": 0.05
+   }
+  },
+  {
+   "name": "Wizard",
+   "abbr": "WIZ",
+   "role": "caster",
+   "weights": {
+    "INT": 2.0,
+    "STA": 1.0,
+    "AC": 0.3,
+    "HP": 0.3,
+    "Mana": 0.15
+   }
+  }
+ ],
+ "races": [
+  "Human",
+  "Ogre",
+  "Goblin",
+  "Deep Elf",
+  "Wood Elf",
+  "Halfling",
+  "Dwarf",
+  "Gnome",
+  "Deep Gnome",
+  "Deep Dwarf"
+ ],
+ "cities": [
+  {
+   "key": "night-harbor",
+   "name": "Night Harbor",
+   "region": "Szuur (desert coast)",
+   "who": "Good and neutral race / faith / class combos. Human and Ogre Shadow Knights can start here.",
+   "zones": [
+    "Night Harbor",
+    "Night Harbor Sewers",
+    "Shaded Dunes",
+    "Sungreet Strand",
+    "Tomb of the Last Wyrmsbane",
+    "Infested Crypt",
+    "Tel Ekir",
+    "Ancient Crypt",
+    "Grain Cellar",
+    "Shallow Shoals",
+    "Glass Flats",
+    "Fallen Pass",
+    "Fallen Watch",
+    "Vale of Zintar",
+    "Caves of Irem",
+    "Evershade Weald"
+   ]
+  },
+  {
+   "key": "underdocks",
+   "name": "The Underdocks",
+   "region": "The Deep, under Night Harbor",
+   "who": "Some neutral and evil combos - Goblins, Deep Elves, and some Humans and Ogres.",
+   "zones": [
+    "Underdocks",
+    "Blind Midden",
+    "Night Harbor",
+    "Night Harbor Sewers",
+    "Shaded Dunes",
+    "Rothold",
+    "Caves of Irem",
+    "Ail'Vorith"
+   ]
+  },
+  {
+   "key": "faelindral",
+   "name": "Faelindral",
+   "region": "Calafrey (Evershade Weald)",
+   "who": "Wood Elves and Halflings (most Halfling Clerics and Paladins start elsewhere).",
+   "zones": [
+    "Faelindral",
+    "Evershade Weald",
+    "Keeper's Bight",
+    "Blacktide Bay",
+    "Scarwood",
+    "Glinting Hollow",
+    "The Hidden Grotto",
+    "Night Harbor"
+   ]
+  },
+  {
+   "key": "ailvorith",
+   "name": "Ail'Vorith",
+   "region": "The Deep, below eastern Calafrey",
+   "who": "Deep Elves and other evil combos. Newbie yards 1-20, camps up to 50.",
+   "zones": [
+    "Ail'Vorith",
+    "Blind Midden",
+    "Rothold",
+    "Underdocks",
+    "Caves of Irem"
+   ]
+  }
+ ],
+ "sets": [
+  {
+   "id": "scarab",
+   "name": "Scarab armor",
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "giver": "Hult Beetlewrangler - Sojourner camp, north of the Wayfarers Hospice (Night Harbor)",
+   "mob": "a dunes scarab (level 3) - Night Harbor, Shaded Dunes, Sungreet Strand",
+   "pieces": [
+    {
+     "item": "scarab-shell-shield",
+     "need": {
+      "Scarab Carapace": 1,
+      "Scarab Leg": 1
+     }
+    },
+    {
+     "item": "scarab-boots",
+     "need": {
+      "Scarab Carapace": 1,
+      "Scarab Leg": 2
+     }
+    },
+    {
+     "item": "scarab-helm",
+     "need": {
+      "Scarab Carapace": 2,
+      "Scarab Leg": 1
+     }
+    },
+    {
+     "item": "scarab-greaves",
+     "need": {
+      "Scarab Carapace": 3,
+      "Scarab Leg": 2
+     },
+     "alt": "Community wiki version: 2 carapace + 2 legs + 1 Scarab Elytron Plate"
+    },
+    {
+     "item": "scarab-breastplate",
+     "need": {
+      "Scarab Carapace": 4,
+      "Scarab Leg": 3
+     },
+     "alt": "Community wiki version: 3 carapace + 3 legs + 1 Scarab Thorax Plate"
+    }
+   ],
+   "tip": "Two wikis disagree on the greaves and breastplate. Keep any Scarab Elytron Plate or Thorax Plate that drops - if Hult hands your stack back, add the plate."
+  },
+  {
+   "id": "cinder",
+   "name": "Cinder Beetle armor",
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "giver": "Starts with Hult Beetlewrangler, then five Night Harbor craftsmen in order",
+   "mob": "Carapace, Legs and Gland are often sold by Blacksmith and Cook vendors in Night Harbor. Plain mandible: rare from cinder drones in Sungreet Strand.",
+   "pieces": [
+    {
+     "item": "cinder-beetle-shield",
+     "who": "Hult Beetlewrangler (Sojourner camp)",
+     "need": {
+      "Cinder Beetle Carapace": 1,
+      "Cinder Beetle Legs": 1
+     }
+    },
+    {
+     "item": "cinder-beetle-boots",
+     "who": "a master blacksmith - in front of the Blacksmithing building, Night Market. Night only (from 6 PM game time)",
+     "need": {
+      "Cinder Beetle Carapace": 1,
+      "Cinder Beetle Legs": 2
+     }
+    },
+    {
+     "item": "cinder-beetle-helm",
+     "who": "Weaponsmith Sielah Zefir - Black Feather Bazaar (also gives 10 Black Feather Arrows)",
+     "need": {
+      "Cinder Beetle Carapace": 2,
+      "Cinder Beetle Legs": 2,
+      "Cinder Beetle Mandible (plain)": 1,
+      "Charcoal": 2,
+      "Copper Dagger": 1
+     }
+    },
+    {
+     "item": "cinder-beetle-greaves",
+     "who": "Shipwright Benlink - behind crates on the southwest docks",
+     "need": {
+      "Cinder Beetle Carapace": 3,
+      "Cinder Beetle Legs": 2,
+      "Cinder Beetle Serrated Mandible": 1,
+      "Cinder Tanning Agent": 1
+     },
+     "sub": "Cinder Tanning Agent: Dilshad Abolfazl at the Tannery near the West Gate Bank - 1 Cinder Beetle Gland + 1 Cinder Beetle Blood"
+    },
+    {
+     "item": "cinder-beetle-breastplate",
+     "who": "Master Shipwright Huda - docks just south of the Sageside teleporter, near the Carpentry Trainer",
+     "need": {
+      "Cinder Beetle Carapace": 4,
+      "Cinder Beetle Serrated Mandible": 2,
+      "Giant Cinder Beetle Eye": 1,
+      "Cinder Varnish": 1
+     },
+     "sub": "Cinder Varnish: Hult Beetlewrangler - 2 Resin + 2 Cinder Beetle Blood + 1 Crude Fish Oil + 1 Twilight Bay Rum"
+    }
+   ],
+   "raw": {
+    "Cinder Beetle Carapace": 11,
+    "Cinder Beetle Legs": 7,
+    "Cinder Beetle Serrated Mandible": 3,
+    "Cinder Beetle Blood": 3,
+    "Charcoal": 2,
+    "Resin": 2,
+    "Cinder Beetle Mandible (plain)": 1,
+    "Cinder Beetle Gland": 1,
+    "Giant Cinder Beetle Eye": 1,
+    "Copper Dagger": 1,
+    "Crude Fish Oil": 1,
+    "Twilight Bay Rum": 1
+   },
+   "tip": "The five Cinder pieces add up to AC 81 (plus STR, STA and HP) against AC 16 for the whole Scarab set. The shield alone is AC 14 for one carapace and one leg - do it first. Buy carapace/legs/gland from vendors before you farm."
+  }
+ ],
+ "plays": [
+  {
+   "id": "scarab-set",
+   "kind": "gear",
+   "title": "Finish the Scarab set",
+   "lvl": [
+    1,
+    7
+   ],
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "usesItems": [
+    "scarab-breastplate"
+   ],
+   "priority": 3,
+   "set": "scarab",
+   "why": "Cheap filler for every empty armor slot while you're still in the newbie yards. Dunes scarabs are level 3 - right at your level.",
+   "steps": [
+    "Kill dunes scarabs outside the gates (also Shaded Dunes, Sungreet Strand).",
+    "Hand pieces to Hult Beetlewrangler, north of the Wayfarers Hospice, one piece at a time.",
+    "Don't over-farm it: the Cinder set replaces it soon."
+   ]
+  },
+  {
+   "id": "cinder-set",
+   "kind": "gear",
+   "title": "Start the Cinder Beetle set - the big early upgrade",
+   "lvl": [
+    1,
+    16
+   ],
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "usesItems": [
+    "cinder-beetle-breastplate"
+   ],
+   "priority": 5,
+   "set": "cinder",
+   "why": "This is the juicy set: AC 81 across five pieces with STR, STA and HP, against AC 16 for all of Scarab - and most of the parts can be bought. The breastplate alone is AC 23 (scarab: 5).",
+   "steps": [
+    "Shop first: check Blacksmith and Cook vendors around Night Harbor for Carapace, Legs and Gland.",
+    "Shield now (1 carapace + 1 legs to Hult), boots tonight (master blacksmith, Night Market, after 6 PM game time).",
+    "Helm needs the plain Cinder Beetle Mandible - a rare drop from cinder drones in Sungreet Strand.",
+    "Greaves and breastplate need the two crafted parts (Tanning Agent, Varnish) - see the shopping list."
+   ]
+  },
+  {
+   "id": "sk-starter-1",
+   "kind": "quest",
+   "title": "Shadow Knight starter, part 1 - femurs and Noel Klares",
+   "lvl": [
+    1,
+    4
+   ],
+   "classes": [
+    "Shadow Knight"
+   ],
+   "cities": [
+    "night-harbor"
+   ],
+   "priority": 4,
+   "why": "Unlocks the rest of the chain that ends in the Gold Trimmed Black Tunic.",
+   "steps": [
+    "Brazzic Durraim (Concourse of Souls, downstairs) gives a Sealed Scroll and a Black Leather Bag.",
+    "Loot 6 Shattered Skeleton Femurs from rotting skeletons in the yard in front of the Concourse, then Combine in the bag.",
+    "Noel Klares is on the Wayfarers Hospice roof. He turns hostile when you hand him the scroll - pull him away from the guards first, kill him, loot his ring.",
+    "Bag of Femurs + ring back to Brazzic."
+   ],
+   "link": "https://storiesofmnm.com/wiki/quest/shadow-knight-starter-quest-night-harbor/"
+  },
+  {
+   "id": "sk-wererats",
+   "kind": "quest",
+   "title": "The wererat heads - wait for level 5 with a group, or 8 solo",
+   "lvl": [
+    5,
+    12
+   ],
+   "holdBelow": 5,
+   "soloAt": 8,
+   "classes": [
+    "Shadow Knight"
+   ],
+   "cities": [
+    "night-harbor"
+   ],
+   "priority": 5,
+   "usesItems": [
+    "gold-trimmed-black-tunic"
+   ],
+   "why": "You read it right: the wiki rates this camp for level 8 solo or 5 in a group. Reward is the Gold Trimmed Black Tunic.",
+   "steps": [
+    "Give the Bag of Femurs to Buckmarr Gorstagg (the college alchemist) - he hands you the Silver Edged Blade.",
+    "Shaded Dunes coast: wererats posing as smugglers. You need 4 Wererat Heads.",
+    "The Ashira & Smugglers camp is rated 8-16 and includes a named wererat smuggler boss (likely Toma the Two-Faced) - pull the edges, not the boss.",
+    "Heads + blade to Buckmarr, Small Brown Vial to Brazzic, tunic is yours."
+   ],
+   "link": "https://storiesofmnm.com/wiki/quest/shadow-knight-starter-quest-night-harbor/"
+  },
+  {
+   "id": "necro-pouch",
+   "kind": "bag",
+   "title": "Necrolyte's Pouch - free bag in your own guild hall",
+   "lvl": [
+    1,
+    12
+   ],
+   "cities": [
+    "night-harbor"
+   ],
+   "priority": 4,
+   "why": "Bones, the silent skeleton in the Concourse of Souls, trades a reagent pouch for bone chips and a jawbone. Skeletons in your yard drop both kinds of parts.",
+   "steps": [
+    "Hail Bones in the Concourse of Souls and read the note.",
+    "Bring the bone chips and a jawbone from the skeletons out front."
+   ],
+   "link": "https://storiesofmnm.com/wiki/quest/necrolytes-pouch-quest/"
+  },
+  {
+   "id": "buy-pouch",
+   "kind": "bag",
+   "title": "Buy 6-slot Pouches for empty bag and belt slots",
+   "lvl": [
+    1,
+    20
+   ],
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "usesItems": [
+    "pouch"
+   ],
+   "priority": 3,
+   "why": "You can wear 1 backpack, 3 bags and 3 belt items. A Pouch is a small 6-slot bag sold by bag and goods merchants in Night Harbor, including Dilshad Abolfazl at the Tannery.",
+   "steps": [
+    "Keep one belt slot for your spellbook and one for a lantern (frees your offhand for a shield)."
+   ]
+  },
+  {
+   "id": "craft-backpack",
+   "kind": "bag",
+   "title": "Make your own backpack",
+   "lvl": [
+    1,
+    20
+   ],
+   "priority": 2,
+   "why": "Leatherworking backpack: 2 low-quality pelts + 4 wood + 4 resin + 1 silver (Tanning uses the wood and resin). Pelts from wolves and jackals.",
+   "steps": [
+    "Save resin - it's also in the Cinder Varnish.",
+    "Tailoring alternative: an 8-slot satchel costs 6 bolts of cloth (36 cloth scraps)."
+   ],
+   "link": "https://www.whisperofthehouse.com/monsters-and-memories/tradeskills"
+  },
+  {
+   "id": "night-terror",
+   "kind": "camp",
+   "title": "Night Terror - named lvl 8 in your front yard after dark",
+   "lvl": [
+    6,
+    11
+   ],
+   "cities": [
+    "night-harbor"
+   ],
+   "priority": 4,
+   "usesItems": [
+    "mantle-of-night",
+    "tunic-of-night"
+   ],
+   "why": "Spawns in the Necropolis Front Yard at night. Its wing goes to Witcher Sayyaad (A Winged Terror quest) for the Mantle of Night or Tunic of Night.",
+   "steps": [
+    "Bring a friend at 6-7, solo is safer at 9+.",
+    "Turn the Night Terror's Wing in to Witcher Sayyaad in the Necropolis."
+   ],
+   "link": "https://storiesofmnm.com/wiki/quest/a-winged-terror/"
+  },
+  {
+   "id": "snar",
+   "kind": "camp",
+   "title": "Snar the Egg Collector (named, lvl 8)",
+   "lvl": [
+    7,
+    11
+   ],
+   "cities": [
+    "night-harbor"
+   ],
+   "priority": 3,
+   "why": "Named goblin rogue on the Crocodile Beach near North Gate. Drops Eggwatcher Shield, Nestguard Wristwraps, Sturdy Bindings, Snar's Pinch and Nestrunner's Slippers.",
+   "steps": [
+    "Respawn time unknown - check in each time you head out the North Gate."
+   ]
+  },
+  {
+   "id": "wyrmsbane",
+   "kind": "camp",
+   "title": "Tomb of the Last Wyrmsbane with a group",
+   "lvl": [
+    4,
+    11
+   ],
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "priority": 4,
+   "why": "The best early group dungeon - skeletons come in groups (great practice for a tank holding several). Works for a group from about level 4, and the drops matter too.",
+   "steps": [
+    "Leave when the group spends more time recovering than killing.",
+    "High Marshal Fionna (~16) waits at the bottom."
+   ]
+  },
+  {
+   "id": "femur-warning",
+   "kind": "warning",
+   "title": "Skip the Giant Femur for now",
+   "lvl": [
+    1,
+    40
+   ],
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "priority": 2,
+   "usesItems": [
+    "giant-femur"
+   ],
+   "why": "Older guides list the Bone Construct's Giant Femur as early gear. The Sept 11 hotfix made every Bone Construct reward need level 49 to equip, and the item was revamped."
+  },
+  {
+   "id": "stone-sack",
+   "kind": "bag",
+   "title": "Stone Sack + Stonehammer Maul (Sungreet Strand quarry)",
+   "lvl": [
+    6,
+    14
+   ],
+   "lvlEst": true,
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "usesItems": [
+    "stonehammer-maul"
+   ],
+   "priority": 3,
+   "why": "Foreman Stonehammer pays a bag and a two-hander for clearing three taskmasters and then the Onyx Outlaws' goblin overseer at the quarry summit.",
+   "steps": [
+    "Wiki lists it as level 1+, but the overseer is a boss - expect to want a friend.",
+    "Reave needs a two-hander, so the maul has a use."
+   ],
+   "link": "https://storiesofmnm.com/wiki/quest/stonehammers-stone-sack/"
+  },
+  {
+   "id": "tel-ekir",
+   "kind": "camp",
+   "title": "Tel Ekir Ashira Outskirts - plate helm and shield",
+   "lvl": [
+    10,
+    16
+   ],
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "usesItems": [
+    "overlords-plate-helm",
+    "shield-of-the-protector"
+   ],
+   "priority": 4,
+   "why": "General Overlord Bloodynose drops the Overlord's Plate Helm and Ashir the Protector drops the Shield of the Protector."
+  },
+  {
+   "id": "blacktide",
+   "kind": "camp",
+   "title": "Blacktide Bay groups (plate-heavy loot)",
+   "lvl": [
+    10,
+    18
+   ],
+   "priority": 3,
+   "why": "Group dungeon from about level 10. Its loot is described as heavier on chain and plate. Safepoint is on the Evershade Weald side."
+  },
+  {
+   "id": "rested",
+   "kind": "habit",
+   "title": "Top up Rested XP before every grind",
+   "lvl": [
+    1,
+    60
+   ],
+   "priority": 2,
+   "why": "Resting by a campfire or in an inn builds a +15% XP reserve in a few minutes. Use an inn when weather is bad."
+  },
+  {
+   "id": "light",
+   "kind": "habit",
+   "title": "Carry light - Humans can't see in the dark",
+   "lvl": [
+    1,
+    12
+   ],
+   "races": [
+    "Human"
+   ],
+   "priority": 3,
+   "why": "The Trainee's Candle burns out. A torch is cheap; a lantern clips to your belt so your offhand stays free for a shield."
+  },
+  {
+   "id": "spellbook",
+   "kind": "habit",
+   "title": "Plan for your first corpse run",
+   "lvl": [
+    1,
+    15
+   ],
+   "classes": [
+    "Shadow Knight",
+    "Paladin",
+    "Fighter",
+    "Rogue",
+    "Monk",
+    "Ranger",
+    "Bard",
+    "Beastmaster",
+    "Archer",
+    "Inquisitor",
+    "Spellblade"
+   ],
+   "priority": 2,
+   "why": "Your spellbook is equipped and drops with your corpse, and Shadow Knights get no cantrips. Keep Locate Corpse memorized, and keep a spare book (the Bookworm trait gives one) with recovery spells."
+  },
+  {
+   "id": "fishing",
+   "kind": "habit",
+   "title": "Fish once for the Cinder Varnish",
+   "lvl": [
+    3,
+    16
+   ],
+   "cities": [
+    "night-harbor",
+    "underdocks"
+   ],
+   "priority": 1,
+   "why": "The varnish needs Crude Fish Oil (fish through Alchemy). Fishing: get a rod, put grubs in the ammo slot, press B and use Fishing from Innates at a valid spot."
+  },
+  {
+   "id": "graveyard",
+   "kind": "camp",
+   "title": "Town Graveyard (key needed)",
+   "lvl": [
+    10,
+    14
+   ],
+   "cities": [
+    "night-harbor"
+   ],
+   "priority": 2,
+   "why": "Undead above the Necro area, ~12 solo or 10-14 in a group, spawns at night. You need a key from a quest to get in."
+  },
+  {
+   "id": "goblin-cranes",
+   "kind": "camp",
+   "title": "Goblins west of Twilight Harbor, by the cranes",
+   "lvl": [
+    8,
+    15
+   ],
+   "cities": [
+    "night-harbor"
+   ],
+   "priority": 2,
+   "why": "13-15 solo or 8-12 in a group. No faction hit, but they're social - pull one at a time with Grip of Shadow."
+  },
+  {
+   "id": "xp-spread",
+   "kind": "warning",
+   "title": "Watch the party level spread",
+   "lvl": [
+    12,
+    30
+   ],
+   "priority": 2,
+   "why": "A level 12 grouped with a level 18 got no party XP; at 13 it came back. Kill one mob and check the message whenever the group's range changes."
+  },
+  {
+   "id": "mid-route",
+   "kind": "camp",
+   "title": "Next stops: Fallen Pass and Keeper's Bight, then River Pirates",
+   "lvl": [
+    18,
+    27
+   ],
+   "priority": 2,
+   "why": "Dense camps where a self-healing tank shines (18-27). River Pirates cover about 21-25, then Glass Flats."
+  },
+  {
+   "id": "ud-fightclub",
+   "kind": "quest",
+   "title": "Wererat Fight Club (Draznax)",
+   "lvl": [
+    4,
+    10
+   ],
+   "cities": [
+    "underdocks"
+   ],
+   "priority": 4,
+   "why": "Underdocks quest from level 4. Pair it with the Deepcut Bandit Camp and Wererat Warrens (5-12).",
+   "link": "https://storiesofmnm.com/wiki/quest/wererat-fight-club/"
+  },
+  {
+   "id": "ud-camps",
+   "kind": "camp",
+   "title": "Deepcut Bandit Camp & Wererat Warrens",
+   "lvl": [
+    5,
+    12
+   ],
+   "cities": [
+    "underdocks"
+   ],
+   "priority": 3,
+   "why": "Steady melee camps for Underdocks starts."
+  },
+  {
+   "id": "fael-drakeling",
+   "kind": "gear",
+   "title": "Green Drakeling Scale armor (Takalea Scaletender)",
+   "lvl": [
+    1,
+    12
+   ],
+   "cities": [
+    "faelindral"
+   ],
+   "priority": 4,
+   "why": "Faelindral's starter armor quest: boots, cloak, pants and coat.",
+   "link": "https://storiesofmnm.com/wiki/quest/green-drakeling-scale-armor-quests/"
+  },
+  {
+   "id": "fael-dryads",
+   "kind": "camp",
+   "title": "Dryads around Faelindral",
+   "lvl": [
+    1,
+    4
+   ],
+   "cities": [
+    "faelindral"
+   ],
+   "priority": 3,
+   "why": "Dense level 1 population for when the newbie yard is crowded."
+  },
+  {
+   "id": "av-fungal",
+   "kind": "gear",
+   "title": "Fungal Armor Quests",
+   "lvl": [
+    1,
+    12
+   ],
+   "cities": [
+    "ailvorith"
+   ],
+   "priority": 4,
+   "why": "Ail'Vorith's starter armor set.",
+   "link": "https://storiesofmnm.com/wiki/quest/fungal-armor-quests/"
+  },
+  {
+   "id": "av-caves",
+   "kind": "camp",
+   "title": "Ail'Vorith Outer Caves",
+   "lvl": [
+    2,
+    13
+   ],
+   "cities": [
+    "ailvorith"
+   ],
+   "priority": 3,
+   "why": "Easy solo trash outside the gates."
+  }
+ ],
+ "spells": {
+  "Shadow Knight": [
+   [
+    1,
+    "Taunt, Shadow Strike, Aura of Vampirism, Theft of Vigor, Locate Corpse"
+   ],
+   [
+    2,
+    "Soulrend (first lifetap), Spirit Break"
+   ],
+   [
+    3,
+    "Faltering Pulse, Kick"
+   ],
+   [
+    5,
+    "Lull the Dead, Invisibility versus Undead"
+   ],
+   [
+    6,
+    "Grip of Shadow - your pull and interrupt"
+   ],
+   [
+    7,
+    "Holy Protection"
+   ],
+   [
+    8,
+    "Grip of Agony, Siphoning Slash, Soulrend II, Shadow Strike II, Soul Servant; Meditation and Channeling unlock"
+   ],
+   [
+    10,
+    "Aura of the Unholy, Lord of Shadows, Pulling Shadows, Reave, Terror in the Shadows"
+   ],
+   [
+    12,
+    "Feign Death - escape and corpse-run tool"
+   ],
+   [
+    13,
+    "Fear"
+   ],
+   [
+    14,
+    "Sacrifice Minion"
+   ],
+   [
+    16,
+    "Steal Strength, Repel the Dead"
+   ],
+   [
+    18,
+    "Life Sap"
+   ],
+   [
+    20,
+    "Spirit Splinter; Double Attack"
+   ],
+   [
+    22,
+    "Surging Shadows"
+   ],
+   [
+    24,
+    "Dark Embrace, Fear the Dead"
+   ],
+   [
+    26,
+    "Life Siphon"
+   ],
+   [
+    28,
+    "Unholy Bulwark - 15s invulnerable"
+   ]
+  ],
+  "_note": "Levels come from community data compiled before the Shadow Knight rework - if your vendor disagrees, trust the vendor."
+ },
+ "itemNotes": {
+  "giant-femur": {
+   "reqLevel": 49,
+   "note": "Bone Construct rewards need level 49 to equip (Sept 11 hotfix)."
+  },
+  "scarab-breastplate": {
+   "level": 2
+  },
+  "scarab-helm": {
+   "level": 2
+  },
+  "scarab-boots": {
+   "level": 2
+  },
+  "scarab-greaves": {
+   "level": 2
+  },
+  "scarab-shell-shield": {
+   "level": 2
+  },
+  "cinder-beetle-shield": {
+   "level": 3
+  },
+  "cinder-beetle-boots": {
+   "level": 3
+  },
+  "cinder-beetle-helm": {
+   "level": 6
+  },
+  "cinder-beetle-greaves": {
+   "level": 7
+  },
+  "cinder-beetle-breastplate": {
+   "level": 8
+  },
+  "gold-trimmed-black-tunic": {
+   "level": 8,
+   "note": "Shadow Knight starter quest reward (wererat heads)."
+  },
+  "mantle-of-night": {
+   "level": 8
+  },
+  "tunic-of-night": {
+   "level": 8
+  },
+  "stonehammer-maul": {
+   "level": 9,
+   "est": true
+  },
+  "overlords-plate-helm": {
+   "level": 12
+  },
+  "shield-of-the-protector": {
+   "level": 12
+  }
+ },
+ "maps": {
+  "regions": [
+   "Szuur",
+   "Calafrey",
+   "The Deep"
+  ],
+  "zones": [
+   {
+    "key": "night-harbor",
+    "name": "Night Harbor",
+    "region": "Szuur",
+    "slug": "night-harbor",
+    "atlas": "night-harbor",
+    "maps": [
+     {
+      "id": "night-harbor-v5",
+      "file": "night-harbor-v5.webp",
+      "w": 4096,
+      "h": 3482,
+      "title": "City map (v5)",
+      "author": "Maggot",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Night_harbor_V5.jpg",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   {
+    "key": "shaded-dunes",
+    "name": "Shaded Dunes",
+    "region": "Szuur",
+    "slug": "shaded-dunes",
+    "atlas": "shaded-dunes",
+    "maps": [
+     {
+      "id": "shaded-dunes",
+      "file": "shaded-dunes-map.webp",
+      "w": 4096,
+      "h": 2509,
+      "title": "Zone map",
+      "author": "Maggot",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Shaded_Dunes_Map.jpg",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "sungreet-strand",
+    "name": "Sungreet Strand",
+    "region": "Szuur",
+    "slug": "sungreet-strand",
+    "atlas": "sungreet-strand",
+    "maps": [
+     {
+      "id": "sungreet-strand-v4",
+      "file": "sungreet-strand-v4.webp",
+      "w": 4096,
+      "h": 2644,
+      "title": "Zone map (v4)",
+      "author": "Maggot",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Sungreet_Strand_v4.jpg",
+      "license": null
+     },
+     {
+      "id": "sungreet-strand-old",
+      "file": "sungreet-strand-map.webp",
+      "w": 4096,
+      "h": 2602,
+      "title": "Older edition",
+      "author": "Maggot",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Sungreet_Strand_map.jpg",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "tomb-of-the-last-wyrmsbane",
+    "name": "Tomb of the Last Wyrmsbane",
+    "region": "Szuur",
+    "slug": "tomb-of-the-last-wyrmsbane",
+    "atlas": "wyrmsbane-tomb",
+    "maps": [
+     {
+      "id": "wyrmsbane-combined",
+      "file": "wyrmsbanecombined-v0.91.webp",
+      "w": 2760,
+      "h": 1710,
+      "title": "Floor plan with loot levels",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:WyrmsbaneCombined_v0.91.png",
+      "license": null
+     },
+     {
+      "id": "wyrmsbane-iso",
+      "file": "tombofthelastwyrmsbaneisometric.webp",
+      "w": 4096,
+      "h": 3072,
+      "title": "Isometric view",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:TombOfTheLastWyrmsbaneIsometric.jpg",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "ancient-crypt",
+    "name": "Ancient Crypt",
+    "region": "Szuur",
+    "slug": "ancient-crypt",
+    "atlas": "ancient-crypt",
+    "maps": [
+     {
+      "id": "ancient-crypt",
+      "file": "ancient-crypt-map.webp",
+      "w": 3700,
+      "h": 4096,
+      "title": "Dungeon map",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Ancient_Crypt_Map.png",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "tel-ekir",
+    "name": "Tel Ekir",
+    "region": "Szuur",
+    "slug": "tel-ekir",
+    "atlas": "tel-ekir",
+    "maps": [
+     {
+      "id": "tel-ekir-iso",
+      "file": "tel-ekir-isometric.webp",
+      "w": 4096,
+      "h": 3072,
+      "title": "Isometric map",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Tel-ekir-isometric.jpg",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "grain-cellar",
+    "name": "Grain Cellar",
+    "region": "Szuur",
+    "slug": "grain-cellar",
+    "atlas": "grain-cellar",
+    "maps": [
+     {
+      "id": "grain-cellar",
+      "file": "graincellar.webp",
+      "w": 1475,
+      "h": 1066,
+      "title": "Floor plan",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Graincellar.png",
+      "license": null
+     },
+     {
+      "id": "grain-cellar-iso",
+      "file": "grain-cellar-isometric.webp",
+      "w": 4096,
+      "h": 3072,
+      "title": "Isometric view",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Grain_Cellar_Isometric.jpg",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "glass-flats",
+    "name": "Glass Flats",
+    "region": "Szuur",
+    "slug": "glass-flats",
+    "atlas": "glass-flats",
+    "maps": [
+     {
+      "id": "glass-flats",
+      "file": "glass-flats-map.webp",
+      "w": 4096,
+      "h": 2458,
+      "title": "Zone map",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Glass_Flats_Map.png",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "fallen-pass",
+    "name": "Fallen Pass",
+    "region": "Szuur",
+    "slug": "fallen-pass",
+    "atlas": "fallen-pass",
+    "maps": [
+     {
+      "id": "fallen-pass",
+      "file": "fallen-pass-v1.webp",
+      "w": 3888,
+      "h": 3744,
+      "title": "Zone map (v1)",
+      "author": "Maggot",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Fallen_pass_v1.jpg",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "fallen-watch",
+    "name": "Fallen Watch",
+    "region": "Szuur",
+    "slug": "fallen-watch",
+    "atlas": "fallen-watch",
+    "maps": [
+     {
+      "id": "fallen-watch",
+      "file": "fallen-watch-map-by-skoop.webp",
+      "w": 2216,
+      "h": 4096,
+      "title": "Dungeon map",
+      "author": "skoop",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Fallen_watch_map_by_skoop.png",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "vale-of-zintar",
+    "name": "Vale of Zintar",
+    "region": "Szuur",
+    "slug": "vale-of-zintar",
+    "atlas": "vale-of-zintar",
+    "maps": [
+     {
+      "id": "vale-of-zintar",
+      "file": "vale-of-zintar-map.webp",
+      "w": 3165,
+      "h": 4096,
+      "title": "Zone map",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Vale_of_Zintar_Map.png",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "shallow-shoals",
+    "name": "Shallow Shoals",
+    "region": "Szuur",
+    "slug": "shallow-shoals",
+    "atlas": null,
+    "maps": [
+     {
+      "id": "shallow-shoals",
+      "file": "badshallowshoalmap.webp",
+      "w": 1179,
+      "h": 1359,
+      "title": "Rough sketch",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:BadShallowShoalMap.png",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "caves-of-irem",
+    "name": "Caves of Irem",
+    "region": "The Deep",
+    "slug": "caves-of-irem",
+    "atlas": null,
+    "maps": [
+     {
+      "id": "deep-dunes",
+      "file": "deep-dunes-map.webp",
+      "w": 1920,
+      "h": 1080,
+      "title": "Deep Dunes map",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Deep_Dunes_Map.png",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "evershade-weald",
+    "name": "Evershade Weald",
+    "region": "Calafrey",
+    "slug": "evershade-weald",
+    "atlas": "evershade-weald",
+    "maps": [
+     {
+      "id": "evershade-june26",
+      "file": "evershade-weald-june-26.webp",
+      "w": 2560,
+      "h": 1711,
+      "title": "Zone map (June 26 edition)",
+      "author": "Nindaan",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Evershade_Weald_june_26.jpg",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "id": "evershade-large",
+      "file": "evershade-weald-map.webp",
+      "w": 4096,
+      "h": 2738,
+      "title": "Larger edition",
+      "author": "Nindaan",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Evershade_Weald_Map.jpg",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "faelindral",
+    "name": "Faelindral",
+    "region": "Calafrey",
+    "slug": "faelindral",
+    "atlas": "faelindral",
+    "maps": [
+     {
+      "id": "faelindral-v2",
+      "file": "faelindral-v2.webp",
+      "w": 3528,
+      "h": 3456,
+      "title": "City map (v2)",
+      "author": "Maggot",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Faelindral_V2.jpg",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   {
+    "key": "blacktide-bay",
+    "name": "Blacktide Bay",
+    "region": "Calafrey",
+    "slug": "blacktide-bay",
+    "atlas": null,
+    "maps": [
+     {
+      "id": "blacktide-bay",
+      "file": "blacktide-bay.webp",
+      "w": 3072,
+      "h": 4096,
+      "title": "Dungeon map",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Blacktide_Bay.jpg",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "keepers-bight",
+    "name": "Keeper's Bight",
+    "region": "Calafrey",
+    "slug": "keepers-bight",
+    "atlas": "keepers-bight",
+    "maps": []
+   },
+   {
+    "key": "scarwood",
+    "name": "Scarwood",
+    "region": "Calafrey",
+    "slug": "scarwood",
+    "atlas": "scarwood",
+    "maps": []
+   },
+   {
+    "key": "underdocks",
+    "name": "The Underdocks",
+    "region": "The Deep",
+    "slug": "underdocks-zone-info-and-map",
+    "atlas": "underdocks",
+    "maps": [
+     {
+      "id": "underdocks-bottom",
+      "file": "underdocksbottomfloorcity.webp",
+      "w": 1274,
+      "h": 824,
+      "title": "Bottom floor (city)",
+      "author": "Keirvan",
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:UnderdocksBottomFloorCity.png",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "id": "underdocks-sketch",
+      "file": "underdocks-map.webp",
+      "w": 977,
+      "h": 1221,
+      "title": "Hand-drawn sketch",
+      "author": null,
+      "wiki": "https://monstersandmemories.miraheze.org/wiki/File:Underdocks_map.png",
+      "license": null
+     }
+    ]
+   },
+   {
+    "key": "ailvorith",
+    "name": "Ail'Vorith",
+    "region": "The Deep",
+    "slug": "ailvorith-zone-info-and-map",
+    "atlas": "ail-vorith",
+    "maps": []
+   }
+  ]
+ },
+ "pins": [
+  {
+   "id": "hult",
+   "map": "night-harbor-v5",
+   "x": 0.2778,
+   "y": 0.3418,
+   "title": "Hult Beetlewrangler (Sojourner's Camp)",
+   "note": "Scarab armor turn-ins, Cinder Beetle Shield, and Cinder Varnish (2 Resin, 2 Cinder Beetle Blood, Crude Fish Oil, Twilight Bay Rum).",
+   "plays": [
+    "scarab-set",
+    "cinder-set"
+   ],
+   "approx": false
+  },
+  {
+   "id": "tannery",
+   "map": "night-harbor-v5",
+   "x": 0.3704,
+   "y": 0.392,
+   "title": "Tannery - Dilshad Abolfazl",
+   "note": "Cinder Tanning Agent (1 Gland + 1 Blood) for the greaves. Also sells 6-slot Pouches.",
+   "plays": [
+    "cinder-set",
+    "buy-pouch"
+   ],
+   "approx": false
+  },
+  {
+   "id": "blacksmith",
+   "map": "night-harbor-v5",
+   "x": 0.3767,
+   "y": 0.5434,
+   "title": "Night Market - master blacksmith",
+   "note": "Cinder Beetle Boots. Only out at night (from 6 PM game time), in front of the Blacksmithing building.",
+   "plays": [
+    "cinder-set"
+   ],
+   "approx": false
+  },
+  {
+   "id": "sielah",
+   "map": "night-harbor-v5",
+   "x": 0.6267,
+   "y": 0.199,
+   "title": "Blackfeather Bazaar - Weaponsmith Sielah Zefir",
+   "note": "Cinder Beetle Helm: 2 carapace, 2 legs, plain mandible, 2 charcoal, copper dagger. She adds 10 Black Feather Arrows.",
+   "plays": [
+    "cinder-set"
+   ],
+   "approx": false
+  },
+  {
+   "id": "huda",
+   "map": "night-harbor-v5",
+   "x": 0.7202,
+   "y": 0.6404,
+   "title": "Docks by the Sageside teleporter - Master Shipwright Huda",
+   "note": "Cinder Beetle Breastplate. Near the carpentry trainer, just south of the teleporter landing.",
+   "plays": [
+    "cinder-set"
+   ],
+   "approx": false
+  },
+  {
+   "id": "benlink",
+   "map": "night-harbor-v5",
+   "x": 0.3174,
+   "y": 0.6692,
+   "title": "Southwest docks - Shipwright Benlink",
+   "note": "Cinder Beetle Greaves. Behind crates near a first mate and a sailor. Position is a guess from the wiki's description.",
+   "plays": [
+    "cinder-set"
+   ],
+   "approx": true
+  },
+  {
+   "id": "concourse",
+   "map": "night-harbor-v5",
+   "x": 0.55,
+   "y": 0.2289,
+   "title": "Concourse of Souls (Shadow Knight guild)",
+   "note": "Exavius Deathwhisper and Brazzic Durraim (starter quest), and Bones (Necrolyte's Pouch).",
+   "plays": [
+    "sk-starter-1",
+    "sk-wererats",
+    "necro-pouch"
+   ],
+   "approx": false
+  },
+  {
+   "id": "necro-yard",
+   "map": "night-harbor-v5",
+   "x": 0.5525,
+   "y": 0.2849,
+   "title": "Necropolis front yard",
+   "note": "Rotting skeletons for femurs and bone chips. The Night Terror (lvl 8) spawns here after dark.",
+   "plays": [
+    "sk-starter-1",
+    "necro-pouch",
+    "night-terror"
+   ],
+   "approx": false
+  },
+  {
+   "id": "hospice",
+   "map": "night-harbor-v5",
+   "x": 0.2161,
+   "y": 0.3791,
+   "title": "Wayfarers Hospice",
+   "note": "Noel Klares is on the roof (up through the guard tower). Pull him away from the guards.",
+   "plays": [
+    "sk-starter-1"
+   ],
+   "approx": false
+  },
+  {
+   "id": "north-gate",
+   "map": "night-harbor-v5",
+   "x": 0.7222,
+   "y": 0.2975,
+   "title": "North Gate",
+   "note": "Newbie yard (lvl 1-5). Crocodile Beach and Snar the Egg Collector (lvl 8) are outside.",
+   "plays": [
+    "snar",
+    "scarab-set"
+   ],
+   "approx": false
+  },
+  {
+   "id": "west-gate",
+   "map": "night-harbor-v5",
+   "x": 0.2,
+   "y": 0.5138,
+   "title": "West Gate",
+   "note": "Newbie yard and the road to Shaded Dunes (scarabs, then the wererat camp).",
+   "plays": [
+    "scarab-set"
+   ],
+   "approx": false
+  },
+  {
+   "id": "sewers",
+   "map": "night-harbor-v5",
+   "x": 0.6101,
+   "y": 0.6341,
+   "title": "Sewers entrance",
+   "note": "Night Harbor Sewers: rats, muggers, snakes and wererats (lvl 1-5).",
+   "plays": [],
+   "approx": false
+  },
+  {
+   "id": "teleporter",
+   "map": "night-harbor-v5",
+   "x": 0.7236,
+   "y": 0.4087,
+   "title": "Sageside teleporter",
+   "note": "Takes you to the docks (Master Shipwright Huda).",
+   "plays": [
+    "cinder-set"
+   ],
+   "approx": false
+  },
+  {
+   "id": "smugglers",
+   "map": "shaded-dunes",
+   "x": 0.24,
+   "y": 0.8569,
+   "title": "Smugglers Camp - wererats",
+   "note": "Wererats posing as smugglers: 4 Wererat Heads for Buckmarr. Rated 8 solo / 5 in a group. Pull from the edges.",
+   "plays": [
+    "sk-wererats"
+   ],
+   "approx": false
+  },
+  {
+   "id": "ashira-oasis",
+   "map": "shaded-dunes",
+   "x": 0.7366,
+   "y": 0.6855,
+   "title": "Ashira Oasis Camp",
+   "note": "Level 5-10 ashira camp; Dhajr Spitemaw and friends.",
+   "plays": [],
+   "approx": false
+  },
+  {
+   "id": "dunes-scarabs",
+   "map": "shaded-dunes",
+   "x": 0.9131,
+   "y": 0.4185,
+   "title": "Dunes scarabs (lvl 3)",
+   "note": "Generic level 1-5 mobs near the Night Harbor gate: Scarab Carapace and Scarab Leg.",
+   "plays": [
+    "scarab-set"
+   ],
+   "approx": true
+  },
+  {
+   "id": "quarry",
+   "map": "sungreet-strand-v4",
+   "x": 0.5859,
+   "y": 0.3328,
+   "title": "Quarry - Foreman Stonehammer",
+   "note": "Stone Sack + Stonehammer Maul: three taskmasters, then the goblin overseer at the summit.",
+   "plays": [
+    "stone-sack"
+   ],
+   "approx": false
+  },
+  {
+   "id": "river-pirates",
+   "map": "sungreet-strand-v4",
+   "x": 0.6968,
+   "y": 0.7107,
+   "title": "River Pirate Tavern",
+   "note": "River Pirates camps, about 21-25.",
+   "plays": [
+    "mid-route"
+   ],
+   "approx": false
+  }
+ ],
+ "refreshHours": 6
+}

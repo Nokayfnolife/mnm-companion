@@ -1,0 +1,1830 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>MnM Companion</title>
+<style>
+/* Leaflet 1.9.4 (BSD-2-Clause) */
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+.leaflet-container {
+	overflow: hidden;
+	}
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
+	  -webkit-user-drag: none;
+	}
+.leaflet-tile::selection {
+	background: transparent;
+}
+.leaflet-safari .leaflet-tile {
+	image-rendering: -webkit-optimize-contrast;
+	}
+.leaflet-safari .leaflet-tile-container {
+	width: 1600px;
+	height: 1600px;
+	-webkit-transform-origin: 0 0;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	display: block;
+	}
+.leaflet-container .leaflet-overlay-pane svg {
+	max-width: none !important;
+	max-height: none !important;
+	}
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
+	max-width: none !important;
+	max-height: none !important;
+	width: auto;
+	padding: 0;
+	}
+.leaflet-container img.leaflet-tile {
+	mix-blend-mode: plus-lighter;
+}
+.leaflet-container.leaflet-touch-zoom {
+	-ms-touch-action: pan-x pan-y;
+	touch-action: pan-x pan-y;
+	}
+.leaflet-container.leaflet-touch-drag {
+	-ms-touch-action: pinch-zoom;
+	touch-action: none;
+	touch-action: pinch-zoom;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.leaflet-container {
+	-webkit-tap-highlight-color: transparent;
+}
+.leaflet-container a {
+	-webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+.leaflet-tile {
+	filter: inherit;
+	visibility: hidden;
+	}
+.leaflet-tile-loaded {
+	visibility: inherit;
+	}
+.leaflet-zoom-box {
+	width: 0;
+	height: 0;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	z-index: 800;
+	}
+.leaflet-overlay-pane svg {
+	-moz-user-select: none;
+	}
+.leaflet-pane         { z-index: 400; }
+.leaflet-tile-pane    { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane  { z-index: 500; }
+.leaflet-marker-pane  { z-index: 600; }
+.leaflet-tooltip-pane   { z-index: 650; }
+.leaflet-popup-pane   { z-index: 700; }
+.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane svg    { z-index: 200; }
+.leaflet-vml-shape {
+	width: 1px;
+	height: 1px;
+	}
+.lvml {
+	behavior: url(#default#VML);
+	display: inline-block;
+	position: absolute;
+	}
+.leaflet-control {
+	position: relative;
+	z-index: 800;
+	pointer-events: visiblePainted; 
+	pointer-events: auto;
+	}
+.leaflet-top,
+.leaflet-bottom {
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	}
+.leaflet-top {
+	top: 0;
+	}
+.leaflet-right {
+	right: 0;
+	}
+.leaflet-bottom {
+	bottom: 0;
+	}
+.leaflet-left {
+	left: 0;
+	}
+.leaflet-control {
+	float: left;
+	clear: both;
+	}
+.leaflet-right .leaflet-control {
+	float: right;
+	}
+.leaflet-top .leaflet-control {
+	margin-top: 10px;
+	}
+.leaflet-bottom .leaflet-control {
+	margin-bottom: 10px;
+	}
+.leaflet-left .leaflet-control {
+	margin-left: 10px;
+	}
+.leaflet-right .leaflet-control {
+	margin-right: 10px;
+	}
+.leaflet-fade-anim .leaflet-popup {
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+	opacity: 1;
+	}
+.leaflet-zoom-animated {
+	-webkit-transform-origin: 0 0;
+	    -ms-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	}
+svg.leaflet-zoom-animated {
+	will-change: transform;
+}
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+	}
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+	}
+.leaflet-zoom-anim .leaflet-zoom-hide {
+	visibility: hidden;
+	}
+.leaflet-interactive {
+	cursor: pointer;
+	}
+.leaflet-grab {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:         grab;
+	}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+	cursor: crosshair;
+	}
+.leaflet-popup-pane,
+.leaflet-control {
+	cursor: auto;
+	}
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+	cursor: move;
+	cursor: -webkit-grabbing;
+	cursor:    -moz-grabbing;
+	cursor:         grabbing;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+	pointer-events: none;
+	}
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+	pointer-events: visiblePainted; 
+	pointer-events: auto;
+	}
+.leaflet-container {
+	background: #ddd;
+	outline-offset: 1px;
+	}
+.leaflet-container a {
+	color: #0078A8;
+	}
+.leaflet-zoom-box {
+	border: 2px dotted #38f;
+	background: rgba(255,255,255,0.5);
+	}
+.leaflet-container {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.5;
+	}
+.leaflet-bar {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+	border-radius: 4px;
+	}
+.leaflet-bar a {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	}
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+	background-color: #f4f4f4;
+	}
+.leaflet-bar a:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	}
+.leaflet-bar a:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom: none;
+	}
+.leaflet-bar a.leaflet-disabled {
+	cursor: default;
+	background-color: #f4f4f4;
+	color: #bbb;
+	}
+.leaflet-touch .leaflet-bar a {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	}
+.leaflet-touch .leaflet-bar a:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	}
+.leaflet-touch .leaflet-bar a:last-child {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	}
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+	}
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+	font-size: 22px;
+	}
+.leaflet-control-layers {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	background: #fff;
+	border-radius: 5px;
+	}
+.leaflet-control-layers-toggle {
+	background-image: none;
+	width: 36px;
+	height: 36px;
+	}
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: none;
+	background-size: 26px 26px;
+	}
+.leaflet-touch .leaflet-control-layers-toggle {
+	width: 44px;
+	height: 44px;
+	}
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+	display: none;
+	}
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+	display: block;
+	position: relative;
+	}
+.leaflet-control-layers-expanded {
+	padding: 6px 10px 6px 6px;
+	color: #333;
+	background: #fff;
+	}
+.leaflet-control-layers-scrollbar {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 5px;
+	}
+.leaflet-control-layers-selector {
+	margin-top: 2px;
+	position: relative;
+	top: 1px;
+	}
+.leaflet-control-layers label {
+	display: block;
+	font-size: 13px;
+	font-size: 1.08333em;
+	}
+.leaflet-control-layers-separator {
+	height: 0;
+	border-top: 1px solid #ddd;
+	margin: 5px -10px 5px -6px;
+	}
+.leaflet-default-icon-path { 
+	background-image: none;
+	}
+.leaflet-container .leaflet-control-attribution {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 0;
+	}
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+	padding: 0 5px;
+	color: #333;
+	line-height: 1.4;
+	}
+.leaflet-control-attribution a {
+	text-decoration: none;
+	}
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:focus {
+	text-decoration: underline;
+	}
+.leaflet-attribution-flag {
+	display: inline !important;
+	vertical-align: baseline !important;
+	width: 1em;
+	height: 0.6669em;
+	}
+.leaflet-left .leaflet-control-scale {
+	margin-left: 5px;
+	}
+.leaflet-bottom .leaflet-control-scale {
+	margin-bottom: 5px;
+	}
+.leaflet-control-scale-line {
+	border: 2px solid #777;
+	border-top: none;
+	line-height: 1.1;
+	padding: 2px 5px 1px;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	background: rgba(255, 255, 255, 0.8);
+	text-shadow: 1px 1px #fff;
+	}
+.leaflet-control-scale-line:not(:first-child) {
+	border-top: 2px solid #777;
+	border-bottom: none;
+	margin-top: -2px;
+	}
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+	border-bottom: 2px solid #777;
+	}
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	box-shadow: none;
+	}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
+	}
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+.leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.leaflet-popup-content {
+	margin: 13px 24px 13px 20px;
+	line-height: 1.3;
+	font-size: 13px;
+	font-size: 1.08333em;
+	min-height: 1px;
+	}
+.leaflet-popup-content p {
+	margin: 17px 0;
+	margin: 1.3em 0;
+	}
+.leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -20px;
+	overflow: hidden;
+	pointer-events: none;
+	}
+.leaflet-popup-tip {
+	width: 17px;
+	height: 17px;
+	padding: 1px;
+	margin: -10px auto 0;
+	pointer-events: auto;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: white;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	font: 16px/24px Tahoma, Verdana, sans-serif;
+	color: #757575;
+	text-decoration: none;
+	background: transparent;
+	}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+	color: #585858;
+	}
+.leaflet-popup-scrolled {
+	overflow: auto;
+	}
+.leaflet-oldie .leaflet-popup-content-wrapper {
+	-ms-zoom: 1;
+	}
+.leaflet-oldie .leaflet-popup-tip {
+	width: 24px;
+	margin: 0 auto;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+	}
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+	border: 1px solid #999;
+	}
+.leaflet-div-icon {
+	background: #fff;
+	border: 1px solid #666;
+	}
+.leaflet-tooltip {
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+.leaflet-tooltip.leaflet-interactive {
+	cursor: pointer;
+	pointer-events: auto;
+	}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	position: absolute;
+	pointer-events: none;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+	}
+.leaflet-tooltip-bottom {
+	margin-top: 6px;
+}
+.leaflet-tooltip-top {
+	margin-top: -6px;
+}
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+	left: 50%;
+	margin-left: -6px;
+	}
+.leaflet-tooltip-top:before {
+	bottom: 0;
+	margin-bottom: -12px;
+	border-top-color: #fff;
+	}
+.leaflet-tooltip-bottom:before {
+	top: 0;
+	margin-top: -12px;
+	margin-left: -6px;
+	border-bottom-color: #fff;
+	}
+.leaflet-tooltip-left {
+	margin-left: -6px;
+}
+.leaflet-tooltip-right {
+	margin-left: 6px;
+}
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	top: 50%;
+	margin-top: -6px;
+	}
+.leaflet-tooltip-left:before {
+	right: 0;
+	margin-right: -12px;
+	border-left-color: #fff;
+	}
+.leaflet-tooltip-right:before {
+	left: 0;
+	margin-left: -12px;
+	border-right-color: #fff;
+	}
+@media print {
+	.leaflet-control {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+		}
+	}
+:root{
+  color-scheme:dark;
+  --bg:#121019; --bg2:#191523; --panel:#1e1929; --panel2:#251f33; --line:rgba(214,168,92,.16); --line2:rgba(214,168,92,.32);
+  --brass:#d6a85c; --brass2:#f0c983; --sand:#ece2cf; --muted:#a3967f; --dim:#7a705f;
+  --now:#7cc4a4; --soon:#d6a85c; --hold:#d9785f; --info:#8fb3e0; --none:#8a7f6c;
+  --r:10px; --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 8px 24px rgba(0,0,0,.25);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:radial-gradient(1200px 500px at 70% -200px,#2b2140 0%,transparent 60%),var(--bg);background-color:var(--bg);color:var(--sand);font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:var(--brass2);text-decoration:none;border-bottom:1px solid rgba(240,201,131,.25)}
+a:hover{border-bottom-color:var(--brass2)}
+button{font:inherit;color:inherit;cursor:pointer}
+code{font:12.5px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--bg2);border:1px solid var(--line);border-radius:4px;padding:0 4px;word-break:break-all}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px 60px}
+.num{font-variant-numeric:tabular-nums}
+.loading{color:var(--muted);padding:40px 0}
+
+/* top bar */
+.top{display:flex;align-items:center;gap:12px 16px;padding:18px 0 10px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand h1{font:600 22px/1 var(--serif);letter-spacing:.06em;margin:0;color:var(--sand)}
+.brand h1 b{color:var(--brass)}
+.brand span{color:var(--muted);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.viewseg button{padding:6px 16px;font-size:13.5px}
+.status{margin-left:auto;display:flex;align-items:center;gap:6px 14px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--now);display:inline-block;margin-right:6px;box-shadow:0 0 0 3px rgba(124,196,164,.15)}
+.dot.warn{background:var(--brass);box-shadow:0 0 0 3px rgba(214,168,92,.15)}
+.dot.err{background:var(--hold)}
+.sync{font-size:12px;border:1px solid var(--line2);border-radius:999px;padding:1px 9px;color:var(--muted)}
+.sync.db{color:var(--now);border-color:rgba(124,196,164,.35)}
+.btn{background:var(--panel2);border:1px solid var(--line2);border-radius:8px;padding:6px 12px;font-size:13px;color:var(--sand)}
+.btn:hover{border-color:var(--brass)}
+.btn.primary{background:linear-gradient(180deg,#e0b46a,#b98a3e);color:#1a1408;border-color:#e6bd77;font-weight:600}
+.btn.ghost{background:transparent}
+.btn:disabled{opacity:.45;cursor:default}
+
+/* character tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:8px 0 14px;border-bottom:1px solid var(--line)}
+.tab{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;font-size:13.5px}
+.tab .crest{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--line2);font:700 10px/1 var(--sans);letter-spacing:.04em;color:var(--brass)}
+.tab .lv{color:var(--muted);font-size:12px}
+.tab.on{border-color:var(--brass);background:linear-gradient(180deg,#2c2338,#231d2f)}
+.tab.on .crest{background:var(--brass);color:#1a1408;border-color:var(--brass)}
+.tab.add{padding:6px 14px;color:var(--brass);border-style:dashed}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 28px;align-items:center;padding:22px 0 8px}
+.who h2{font:600 30px/1.1 var(--serif);margin:0 0 6px;letter-spacing:.01em}
+.who .meta{color:var(--muted);font-size:14px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}
+.who .meta b{color:var(--sand);font-weight:500}
+.lvlbig{text-align:right}
+.lvlbig .n{font:600 64px/0.9 var(--serif);color:var(--brass2);font-variant-numeric:tabular-nums}
+.lvlbig .l{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.slider{grid-column:1/-1;position:relative;padding:6px 0 4px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:0}
+input[type=range]::-webkit-slider-runnable-track{height:8px;border-radius:8px;background:linear-gradient(90deg,var(--brass) 0 var(--fill,5%),#2d2638 var(--fill,5%) 100%);border:1px solid var(--line2)}
+input[type=range]::-moz-range-track{height:8px;border-radius:8px;background:#2d2638;border:1px solid var(--line2)}
+input[type=range]::-moz-range-progress{height:8px;border-radius:8px;background:var(--brass)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe2a8,#c8923a 60%,#8a5f1f);border:2px solid #1a1408;margin-top:-10px;box-shadow:0 0 0 4px rgba(214,168,92,.18)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#d6a85c;border:2px solid #1a1408}
+.ticks{position:absolute;left:13px;right:13px;top:36px;height:30px;pointer-events:none}
+.tick{position:absolute;transform:translateX(-50%);font-size:10.5px;color:var(--dim);white-space:nowrap;text-align:center;line-height:1.15}
+.tick::before{content:"";display:block;width:1px;height:6px;background:var(--line2);margin:0 auto 3px}
+.tick.hit{color:var(--brass)}
+.upnext{display:flex;gap:8px 14px;flex-wrap:wrap;align-items:baseline;margin-top:26px;font-size:13px;color:#cfc3ad}
+.upnext .ul{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.upnext .un b{color:var(--brass2);margin-right:3px}
+.modes{display:flex;gap:6px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:8px;overflow:hidden;flex-wrap:wrap}
+.seg button{background:transparent;border:0;padding:5px 11px;font-size:12.5px;color:var(--muted)}
+.seg button.on{background:var(--brass);color:#1a1408;font-weight:600}
+.mapmode .hero{padding:12px 0 2px;gap:6px 20px}
+.mapmode .who h2{font-size:22px;margin-bottom:3px}
+.mapmode .lvlbig .n{font-size:40px}
+.mapmode .ticks,.mapmode .upnext{display:none}
+.onboard{grid-column:1/-1;background:var(--panel);border:1px solid var(--line2);border-radius:var(--r);padding:22px;max-width:640px}
+.onboard h2{font:600 24px/1.2 var(--serif);margin:0 0 6px}
+.onboard p{color:#cfc3ad;margin:0 0 14px}
+.onboard .btn{margin-right:8px}
+
+/* layout */
+.grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:18px;align-items:start;margin-top:8px}
+.col{display:grid;gap:18px;min-width:0}
+.card{background:linear-gradient(180deg,var(--panel),#1b1726);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);min-width:0}
+.card>header{display:flex;align-items:baseline;gap:6px 10px;padding:14px 16px 10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.card>header h3{font:600 15px/1.2 var(--serif);letter-spacing:.08em;text-transform:uppercase;margin:0;color:var(--brass2)}
+.card>header .sub{color:var(--muted);font-size:12.5px}
+.card>header .right{margin-left:auto;display:flex;gap:6px;align-items:center}
+.body{padding:12px 16px 16px}
+.empty{color:var(--dim);font-size:13.5px;padding:6px 0}
+.empty b{color:var(--muted)}
+
+/* plays */
+.play{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 12px;padding:12px 0;border-top:1px solid var(--line);transition:background .6s}
+.play:first-child{border-top:0;padding-top:4px}
+.play.flash{background:rgba(214,168,92,.1)}
+.badge{font:600 10px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:5px 7px;border-radius:5px;border:1px solid;white-space:nowrap;align-self:start;margin-top:3px;display:inline-block}
+.b-now{color:var(--now);border-color:rgba(124,196,164,.4);background:rgba(124,196,164,.08)}
+.b-soon{color:var(--soon);border-color:rgba(214,168,92,.4);background:rgba(214,168,92,.08)}
+.b-hold{color:var(--hold);border-color:rgba(217,120,95,.45);background:rgba(217,120,95,.08)}
+.b-info{color:var(--info);border-color:rgba(143,179,224,.4);background:rgba(143,179,224,.07)}
+.play h4{margin:0;font:600 15.5px/1.3 var(--sans);color:var(--sand)}
+.play .why{color:#cfc3ad;font-size:13.5px;margin-top:3px}
+.play ol{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:13px}
+.play ol li{margin:2px 0}
+.play .kind{color:var(--dim);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-left:6px;font-weight:500}
+.acts{display:flex;gap:4px 16px;flex-wrap:wrap;align-items:baseline;margin-top:2px}
+.acts a{font-size:12.5px}
+.chk{appearance:none;width:18px;height:18px;border:1.5px solid var(--line2);border-radius:5px;margin:3px 0 0;cursor:pointer;display:grid;place-items:center;background:var(--bg2)}
+.chk:checked{background:var(--brass);border-color:var(--brass)}
+.chk:checked::after{content:"";width:5px;height:9px;border:solid #1a1408;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.done{opacity:.45}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{display:inline-flex;gap:6px;align-items:baseline;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:12.5px;max-width:100%;flex-wrap:wrap}
+.chip .s{color:var(--muted);font-size:11.5px}
+.chip.no{opacity:.5}
+.more{background:none;border:0;color:var(--brass);font-size:12.5px;padding:6px 0 0}
+.more.maplink::before{content:"◎ ";}
+
+/* gear grid */
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.slot{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:10px 11px;min-width:0}
+.slot .sl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);display:flex;justify-content:space-between}
+.slot .it{font-weight:600;font-size:14px;margin-top:3px;line-height:1.3}
+.slot .it a{color:var(--sand);border-bottom-color:rgba(236,226,207,.15)}
+.slot .st{color:var(--muted);font-size:12px;margin-top:2px}
+.slot .src{color:var(--dim);font-size:11.5px;margin-top:3px;line-height:1.35}
+.slot .nx{margin-top:8px;padding-top:7px;border-top:1px dashed var(--line);font-size:12.5px;color:#cfc3ad}
+.slot .nx b{color:var(--brass2);font-weight:600}
+.slot.none .it{color:var(--dim);font-weight:400}
+.up{color:var(--now);font-weight:600}
+.lvtag{font-size:11px;color:var(--brass);border:1px solid var(--line2);border-radius:20px;padding:0 6px;white-space:nowrap}
+.own{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);margin-top:6px;cursor:pointer}
+.own input{accent-color:#d6a85c}
+
+/* lists */
+.row{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .lv{font:600 13px/1.2 var(--sans);color:var(--brass2);text-align:center;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:5px 2px;align-self:start}
+.row .lv small{display:block;font-size:9.5px;color:var(--dim);font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-top:1px}
+.row .t{font-weight:600;font-size:14px}
+.row .d{color:var(--muted);font-size:12.5px;margin-top:1px}
+.row .x{color:#cfc3ad;font-size:12.5px;margin-top:3px}
+.tag{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:1px}
+.tag.new{color:#1a1408;background:var(--brass);border-color:var(--brass)}
+.tag.cls,.tag.fit{color:var(--now);border-color:rgba(124,196,164,.35)}
+
+/* sets */
+.set{padding:4px 0 10px}
+.set+.set{border-top:1px solid var(--line);padding-top:12px}
+.set h4{margin:0;font:600 15px/1.3 var(--serif);letter-spacing:.03em}
+.set .meta{color:var(--muted);font-size:12.5px;margin:2px 0 8px}
+.piece{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px;padding:7px 0;border-top:1px dashed var(--line)}
+.piece .n{font-weight:600;font-size:13.5px}
+.piece .w{color:var(--muted);font-size:12px}
+.piece .need{color:#cfc3ad;font-size:12px}
+.mats{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;margin-top:10px;background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.mats .h{grid-column:1/-1;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:2px}
+.mat{font-size:13px;align-self:center}
+.mat.ok{color:var(--now)}
+.ctr{display:inline-flex;align-items:center;gap:0;border:1px solid var(--line2);border-radius:6px;overflow:hidden}
+.ctr button{background:var(--panel2);border:0;width:26px;height:26px;font-size:14px;line-height:1}
+.ctr span{min-width:58px;text-align:center;font-size:12.5px;font-variant-numeric:tabular-nums}
+.tip{margin-top:8px;color:var(--muted);font-size:12.5px;border-left:2px solid var(--brass);padding-left:9px}
+
+/* spells */
+.sp{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;padding:6px 0;font-size:13px;border-top:1px solid var(--line)}
+.sp:first-child{border-top:0}
+.sp .lv{color:var(--dim);font-variant-numeric:tabular-nums;font-weight:600}
+.sp.now .lv{color:var(--now)}
+.sp.next .lv{color:var(--brass2)}
+.sp.past{opacity:.45}
+
+/* news */
+.news{font-size:13px;padding:7px 0;border-top:1px solid var(--line)}
+.news:first-child{border-top:0}
+.news .when{color:var(--dim);font-size:11.5px}
+
+/* map view */
+.mapbar{display:flex;gap:10px 12px;align-items:center;flex-wrap:wrap;padding:10px 0 12px}
+.mapbar select{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:7px 10px;color:var(--sand);font:inherit;font-size:14px;max-width:100%}
+.mtools{margin-left:auto;display:flex;gap:8px 14px;align-items:center;flex-wrap:wrap}
+.mtools .own{margin:0;font-size:12.5px}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px;align-items:start}
+.mapcol{min-width:0}
+.map{position:relative;z-index:0;isolation:isolate;height:calc(100vh - 250px);min-height:460px;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:#0d0b12}
+.map.dropping,.map.dropping .leaflet-grab,.map.dropping .leaflet-interactive{cursor:crosshair}
+.nomap{display:grid;place-items:center;text-align:center;color:var(--muted);padding:30px;height:100%;font-size:14px;line-height:1.7}
+.nomap b{color:var(--sand)}
+#noMap{height:280px;border:1px dashed var(--line2);border-radius:var(--r)}
+.credit{font-size:12px;color:var(--dim);margin-top:7px;line-height:1.5}
+.credit a{color:var(--muted)}
+.side{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+.side .sh{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:16px 0 4px}
+.side .sh:first-of-type{margin-top:8px}
+.zlinks{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:12.5px}
+.pinrow{display:grid;grid-template-columns:24px minmax(0,1fr);gap:9px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 2px;color:inherit;align-items:start;border-radius:0}
+.pinrow:hover{background:rgba(214,168,92,.05)}
+.pinrow b{font-weight:600;font-size:13.5px;display:block;line-height:1.3}
+.pinrow small,.crow small{display:block;color:var(--muted);font-size:12px;line-height:1.35;margin-top:1px}
+.pdot{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:700 11px/1 var(--sans);color:#1a1408;background:var(--none);margin-top:1px}
+.pdot i{font-style:normal}
+.pdot.s-now{background:var(--now)} .pdot.s-soon{background:var(--brass)} .pdot.s-hold{background:var(--hold)} .pdot.s-done{background:#4a4352;color:#c9c0b3} .pdot.s-none{background:var(--none)}
+.pdot.s-mine{background:var(--info);border-radius:5px;transform:rotate(45deg);width:17px;height:17px;margin:3px 0 0 3px}
+.pdot.s-mine i{transform:rotate(-45deg);font-size:10px}
+.crow{display:grid;grid-template-columns:46px minmax(0,1fr);gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:13px}
+.crow b{font-weight:600}
+.crow .lvp{font:600 12px/1.2 var(--sans);color:var(--muted);text-align:center;background:var(--bg2);border:1px solid var(--line);border-radius:5px;padding:4px 2px;align-self:start}
+.crow.fit .lvp{color:#1a1408;background:var(--now);border-color:var(--now)}
+.crow.later{opacity:.55}
+.crow .cn{color:#cfc3ad}
+.legend{display:flex;gap:4px 12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:4px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* leaflet skin */
+.leaflet-container{font-family:var(--sans);background:#0d0b12}
+.leaflet-container a{color:var(--brass2)}
+.leaflet-bar{border:1px solid var(--line2)!important;box-shadow:0 4px 14px rgba(0,0,0,.4)!important}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--panel2);color:var(--sand);border-bottom:1px solid var(--line2);width:32px;height:32px;line-height:32px;font-size:18px}
+.leaflet-bar a:hover{background:#30283f}
+.leaflet-bar a.leaflet-disabled{background:var(--panel);color:var(--dim)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--sand);border:1px solid var(--line2);box-shadow:0 8px 28px rgba(0,0,0,.55)}
+.leaflet-popup-content{margin:12px 14px;font:13px/1.45 var(--sans)}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted);border:0}
+.mapimg{image-rendering:auto}
+.pin{background:none;border:0}
+.pin span{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;font:700 12px/1 var(--sans);color:#1a1408;border:2px solid #1a1408;box-shadow:0 2px 7px rgba(0,0,0,.65),0 0 0 2px rgba(255,255,255,.22);background:var(--none)}
+.pin.s-now span{background:var(--now)} .pin.s-soon span{background:var(--brass)} .pin.s-hold span{background:var(--hold)} .pin.s-done span{background:#4a4352;color:#c9c0b3}
+.pin.mine span{background:var(--info);border-radius:5px;transform:rotate(45deg)}
+.pin.mine span i{transform:rotate(-45deg);font-style:normal;font-size:11px}
+.pin.hl span{animation:ping 1.1s ease-out 4}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(240,201,131,.95),0 2px 7px rgba(0,0,0,.65)}100%{box-shadow:0 0 0 20px rgba(240,201,131,0),0 2px 7px rgba(0,0,0,.65)}}
+.pop h5{margin:0 0 4px;font:600 14px/1.3 var(--sans);color:var(--sand);padding-right:14px}
+.pop p{margin:0 0 8px;color:#cfc3ad}
+.pop .approx{font-size:11px;color:var(--brass);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.pop .pl{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;padding:4px 0;border-top:1px solid var(--line);font-size:12.5px}
+.pop .pl .badge{margin-top:0}
+.pop .pl .more{padding:0}
+.pop input,.pop textarea{width:100%;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;color:var(--sand);padding:7px 8px;font:inherit;margin:0 0 6px;resize:vertical}
+.pop .pact{display:flex;gap:6px;justify-content:flex-end;margin-top:2px}
+.pop .pact .del{margin-right:auto}
+.pop .hint{font-size:11.5px;color:var(--dim);margin-top:6px}
+
+/* modal */
+.scrim{position:fixed;inset:0;background:rgba(8,6,12,.7);display:none;align-items:center;justify-content:center;padding:16px;z-index:3000}
+.scrim.on{display:flex}
+.modal{background:var(--panel);border:1px solid var(--line2);border-radius:12px;max-width:460px;width:100%;padding:20px;max-height:calc(100vh - 32px);overflow:auto}
+.modal h3{font:600 20px/1.2 var(--serif);margin:0 0 14px}
+.mtext{color:#cfc3ad;font-size:13.5px;margin:0 0 12px}
+.f{display:grid;gap:5px;margin-bottom:12px}
+.f label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.f input,.f select,.f textarea{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:9px 10px;color:var(--sand);font:inherit;width:100%}
+.f textarea{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;resize:vertical}
+.f .hint{font-size:12px;color:var(--dim)}
+.f .hint.bad{color:var(--hold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mfoot{display:flex;gap:8px;justify-content:flex-end;margin-top:6px;flex-wrap:wrap}
+.del{color:var(--hold)!important;border-color:rgba(217,120,95,.4)!important}
+.mfoot .del{margin-right:auto}
+.foot{margin-top:28px;color:var(--dim);font-size:12px;line-height:1.7}
+.foot a{color:var(--muted)}
+.foot p{margin:0 0 6px}
+.foot .btn{font-size:12px;padding:4px 10px;margin-left:4px}
+.banner{background:rgba(217,120,95,.08);border:1px solid rgba(217,120,95,.35);color:#f0c4b6;border-radius:8px;padding:9px 12px;font-size:13px;margin-top:10px}
+
+@media (max-width:980px){
+  .grid,.mapgrid{grid-template-columns:1fr}
+  .lvlbig .n{font-size:52px}
+  .who h2{font-size:25px}
+  .map{height:62vh;min-height:340px}
+  .side{position:static;max-height:none}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px 50px}
+  .hero{grid-template-columns:1fr auto}
+  .slots{grid-template-columns:1fr}
+  .status{margin-left:0;width:100%}
+  .brand span{display:none}
+  .ticks{display:none}
+  .upnext{margin-top:6px}
+  .mtools{margin-left:0}
+  .mapbar select{width:100%}
+  .two{grid-template-columns:1fr}
+}
+</style>
+
+<div class="wrap" id="app">
+  <div class="top">
+    <div class="brand"><h1>MnM <b>Companion</b></h1><span>Monsters &amp; Memories</span></div>
+    <div class="seg viewseg" id="viewSeg" role="tablist" aria-label="View"><button data-v="plan">Plan</button><button data-v="map">Map</button></div>
+    <div class="status" id="status"></div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <div id="warn"></div>
+  <section class="hero" id="hero"><p class="loading">Loading the wiki copy…</p></section>
+
+  <div id="planView" hidden>
+    <div class="grid">
+      <div class="col">
+        <div class="card"><header><h3>Do next</h3><span class="sub" id="nextSub"></span></header><div class="body" id="plays"></div></div>
+        <div class="card"><header><h3>Gear by slot</h3><span class="sub">best you can use now, and the next step up</span>
+          <div class="right"><div class="seg" id="gearMode"><button data-v="all">All slots</button><button data-v="up">Upgrades only</button></div></div></header>
+          <div class="body"><div class="slots" id="slots"></div><div class="tip" id="gearNote"></div></div></div>
+        <div class="card"><header><h3>Quests</h3><span class="sub" id="qSub"></span>
+          <div class="right"><div class="seg" id="qScope"><button data-v="home">Near home</button><button data-v="all">All zones</button></div></div></header>
+          <div class="body" id="quests"></div></div>
+      </div>
+      <div class="col">
+        <div class="card" id="setsCard"><header><h3>Armor sets</h3><span class="sub">shopping list</span></header><div class="body" id="sets"></div></div>
+        <div class="card"><header><h3>Where to hunt</h3><span class="sub" id="campSub"></span></header><div class="body" id="camps"></div></div>
+        <div class="card"><header><h3>Bags &amp; space</h3></header><div class="body" id="bags"></div></div>
+        <div class="card" id="spellCard"><header><h3>Spells to buy</h3><span class="sub" id="spellSub"></span></header><div class="body" id="spells"></div></div>
+        <div class="card"><header><h3>New on the wiki</h3><span class="sub" id="newsSub"></span></header><div class="body" id="news"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mapView" hidden>
+    <div class="mapbar">
+      <select id="zoneSel" aria-label="Zone"></select>
+      <div class="seg" id="mapAlt" hidden></div>
+      <div class="mtools">
+        <label class="own"><input type="checkbox" id="showPlan"> Plan spots</label>
+        <label class="own"><input type="checkbox" id="showMine"> My pins</label>
+        <button class="btn" id="dropBtn">Drop a pin</button>
+      </div>
+    </div>
+    <div class="mapgrid">
+      <div class="mapcol">
+        <div id="map" class="map"></div>
+        <div id="noMap" hidden></div>
+        <div class="credit" id="mapCredit"></div>
+        <div class="legend"><span><i style="background:var(--now)"></i>for your level now</span><span><i style="background:var(--brass)"></i>soon</span><span><i style="background:var(--hold)"></i>not yet</span><span><i style="background:var(--none)"></i>landmark, earlier or later</span><span><i style="background:var(--info);border-radius:2px;transform:rotate(45deg)"></i>your pins</span></div>
+      </div>
+      <aside class="card side" id="side"></aside>
+    </div>
+  </div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<div class="scrim" id="scrim"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm = s => String(s||"").toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9' ]+/g," ").replace(/\s+/g," ").trim();
+const clone = o => JSON.parse(JSON.stringify(o));
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const clamp01 = v => Math.round(Math.max(0, Math.min(1, v)) * 10000) / 10000;
+
+let S = {loaded:false, snapshot:null, curated:null, user:{characters:[], active:null, progress:{}, pins:[]}};
+const UI = Object.assign({view:"plan", gear:"all", qScope:"home", zone:null, alt:{}, showPlan:true, showMine:true}, loadUI(),
+  {showAllQ:false, showAllCamps:false, showAllNews:false, openPlays:{}, drop:false, sideMoreQ:false});
+if(UI.view !== "map") UI.view = "plan";
+if(!UI.alt || typeof UI.alt !== "object") UI.alt = {};
+let saveTimer = null;
+const SLOTS = [["head","Head"],["face","Face"],["ear","Ear"],["neck","Neck"],["shoulders","Shoulders"],["back","Back"],["chest","Chest"],["wrist","Wrist"],["hands","Hands"],["ring","Ring"],["waist","Waist"],["legs","Legs"],["feet","Feet"],["primary","Primary"],["secondary","Secondary"],["ranged","Ranged"]];
+
+function loadUI(){ try{ const v = JSON.parse(localStorage.getItem("mnm-ui") || "{}"); return v && typeof v === "object" ? v : {}; }catch(_){ return {}; } }
+function saveUI(){ try{ localStorage.setItem("mnm-ui", JSON.stringify({view:UI.view, gear:UI.gear, qScope:UI.qScope, zone:UI.zone, alt:UI.alt, showPlan:UI.showPlan, showMine:UI.showMine})); }catch(_){} }
+function localGet(){ try{ const u = localStorage.getItem("mnm-user"); return u ? JSON.parse(u) : null; }catch(_){ return null; } }
+function localSet(u){ try{ localStorage.setItem("mnm-user", JSON.stringify(u)); }catch(_){} }
+
+// ------------------------------------------------------------- your data: Supabase account with a browser copy
+const Store = {mode:"local", ready:false, sb:null, uid:null, email:null, chan:null, noAuth:false, inflight:false, dirty:false, pending:false, retried:false, err:null};
+
+function normUser(u){
+  u = (u && typeof u === "object") ? u : {};
+  const seen = new Set();
+  const chars = (Array.isArray(u.characters) ? u.characters : []).filter(c => c && typeof c === "object").map(c => {
+    let id = String(c.id || "").replace(/[^\w-]/g,"").slice(0,40) || ("c" + Math.random().toString(36).slice(2,8));
+    while(seen.has(id)) id += "x"; seen.add(id);
+    return {id, name:String(c.name || "").slice(0,40), race:String(c.race || "Human").slice(0,30), cls:String(c.cls || "Warrior").slice(0,30),
+      city:String(c.city || "night-harbor").slice(0,40), level:Math.max(1, Math.min(60, parseInt(c.level) || 1)), solo:c.solo !== false, created:c.created || null};
+  });
+  const progress = (u.progress && typeof u.progress === "object" && !Array.isArray(u.progress)) ? u.progress : {};
+  const pins = (Array.isArray(u.pins) ? u.pins : []).filter(p => p && p.map && isFinite(p.x) && isFinite(p.y)).map(p => ({
+    id:String(p.id || ("p" + Math.random().toString(36).slice(2,8))).slice(0,40), map:String(p.map).slice(0,60), x:clamp01(+p.x), y:clamp01(+p.y),
+    label:String(p.label || "").slice(0,80), note:String(p.note || "").slice(0,400), at:p.at || null}));
+  const active = chars.some(c => c.id === u.active) ? u.active : (chars[0] ? chars[0].id : null);
+  return {characters:chars, active, progress, pins};
+}
+
+// key-order-independent form, with empty progress entries dropped, to tell real changes from echoes
+function stable(v){ if(Array.isArray(v)) return "[" + v.map(stable).join(",") + "]"; if(v && typeof v === "object") return "{" + Object.keys(v).sort().map(k => JSON.stringify(k) + ":" + stable(v[k])).join(",") + "}"; return JSON.stringify(v === undefined ? null : v); }
+function canon(u){
+  const x = clone(u);
+  Object.keys(x.progress || {}).forEach(k => {
+    const p = x.progress[k] || {};
+    Object.keys(p.mats || {}).forEach(s => { if(!Object.keys(p.mats[s] || {}).length) delete p.mats[s]; });
+    ["have","done","mats"].forEach(f => { if(p[f] && !Object.keys(p[f]).length) delete p[f]; });
+    if(!Object.keys(p).length) delete x.progress[k];
+  });
+  return stable(x);
+}
+function save(){
+  localSet(S.user);
+  if(Store.mode !== "db") return;
+  Store.pending = true;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(flush, 600);
+}
+async function flush(){
+  if(Store.mode !== "db" || !Store.sb || !Store.uid) return;
+  if(Store.inflight){ Store.dirty = true; return; }
+  Store.inflight = true;
+  try{
+    const {error} = await Store.sb.from("user_data").upsert({user_id:Store.uid, data:clone(S.user), updated_at:new Date().toISOString()});
+    if(error) throw error;
+    Store.err = null; Store.retried = false;
+  }catch(e){
+    if(!Store.retried){ Store.retried = true; Store.dirty = true; await sleep(700 + Math.random() * 1200); }
+    else { Store.err = "Couldn't save to your account just now (" + String((e && e.message) || e).slice(0,120) + "). Your changes are kept in this browser and will sync on the next edit."; Store.retried = false; }
+    renderStatus();
+  }finally{
+    Store.inflight = false;
+    if(Store.dirty){ Store.dirty = false; flush(); } else Store.pending = false;
+  }
+}
+// ------------------------------------------------------------- accounts (Supabase)
+function siteURL(){ return location.origin + location.pathname; }
+async function connect(){
+  const cfg = window.MNM_CONFIG || {};
+  if(!cfg.supabaseUrl || !cfg.supabaseAnonKey || !window.supabase){ Store.noAuth = true; goLocal(); return; }
+  const sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
+  Store.sb = sb;
+  sb.auth.onAuthStateChange((_ev, session) => { setTimeout(() => onSession(session), 0); });
+  try{ const {data} = await sb.auth.getSession(); await onSession(data.session); }catch(_){ goLocal(); }
+  window.addEventListener("focus", () => { if(Store.mode === "db") pull(); });
+}
+async function pull(){
+  if(!Store.sb || !Store.uid || Store.pending || Store.inflight) return;
+  const {data, error} = await Store.sb.from("user_data").select("data").eq("user_id", Store.uid).maybeSingle();
+  if(error || !data || !data.data) return;
+  const d = normUser(data.data);
+  if(canon(d) === canon(S.user)) return;
+  S.user = d; localSet(S.user); render();
+}
+async function onSession(session){
+  const u = session && session.user ? session.user : null;
+  const uid = u ? u.id : null;
+  if(Store.ready && uid === Store.uid) return;
+  Store.uid = uid; Store.email = u ? (u.email || (u.user_metadata && (u.user_metadata.full_name || u.user_metadata.name)) || "your account") : null;
+  if(Store.chan){ try{ Store.sb.removeChannel(Store.chan); }catch(_){} Store.chan = null; }
+  if(!uid){ goLocal(); return; }
+  const {data, error} = await Store.sb.from("user_data").select("data").eq("user_id", uid).maybeSingle();
+  if(error){ Store.err = "Signed in, but couldn't load your saved characters (" + error.message + "). Changes stay in this browser for now."; goLocal(); return; }
+  Store.mode = "db"; Store.ready = true; Store.err = null;
+  if(data && data.data){ S.user = normUser(data.data); localSet(S.user); render(); }
+  else { render(); if((S.user.characters || []).length){ Store.pending = true; flush(); } } // first sign-in: bring this browser's characters along
+  Store.chan = Store.sb.channel("ud-" + uid)
+    .on("postgres_changes", {event:"*", schema:"public", table:"user_data", filter:"user_id=eq." + uid}, p => {
+      if(Store.pending || Store.inflight || !p.new || !p.new.data) return;
+      const d = normUser(p.new.data);
+      if(canon(d) === canon(S.user)) return;
+      S.user = d; localSet(S.user); render();
+    }).subscribe();
+}
+async function signOut(){
+  if(Store.pending){ clearTimeout(saveTimer); await flush(); }
+  try{ await Store.sb.auth.signOut(); }catch(_){}
+  S.user = normUser({}); localSet(S.user);
+  Store.uid = null; Store.ready = false; goLocal();
+}
+function openSignIn(){
+  const prov = ((window.MNM_CONFIG || {}).providers || []).filter(p => /^[a-z]+$/.test(p));
+  const label = p => p.charAt(0).toUpperCase() + p.slice(1);
+  $("#modal").innerHTML = `<h3>Sign in</h3>
+    <p class="mtext">Sign in to keep your characters, progress and map pins in your account, the same on every device. Anything you've set up in this browser comes with you the first time.</p>
+    ${prov.map(p => `<button class="btn" style="width:100%;margin-bottom:8px" data-prov="${esc(p)}">Continue with ${esc(label(p))}</button>`).join("")}
+    <div class="f"><label for="sEmail">Email</label><input id="sEmail" type="email" autocomplete="email" placeholder="you@example.com"><div class="hint" id="sMsg">We'll email you a one-time sign-in link. No password needed.</div></div>
+    <div class="mfoot"><button class="btn" id="sCancel">Cancel</button><button class="btn primary" id="sGo">Email me a link</button></div>`;
+  $("#scrim").classList.add("on");
+  const msg = (t, bad) => { const m = $("#sMsg"); m.textContent = t; m.classList.toggle("bad", !!bad); };
+  $("#sCancel").onclick = closeModal;
+  $$("#modal [data-prov]").forEach(b => b.onclick = async () => {
+    const {error} = await Store.sb.auth.signInWithOAuth({provider:b.dataset.prov, options:{redirectTo:siteURL()}});
+    if(error) msg(error.message, true);
+  });
+  $("#sGo").onclick = async () => {
+    const email = $("#sEmail").value.trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg("That doesn't look like an email address.", true); return; }
+    $("#sGo").disabled = true;
+    const {error} = await Store.sb.auth.signInWithOtp({email, options:{emailRedirectTo:siteURL()}});
+    $("#sGo").disabled = false;
+    if(error) msg(error.message, true); else msg("Check your inbox for the sign-in link. You can close this.");
+  };
+  setTimeout(() => $("#sEmail").focus(), 50);
+}
+function goLocal(){
+  Store.mode = "local"; Store.ready = true; Store.ref = null;
+  render();
+}
+
+// ------------------------------------------------------------- loading
+async function getJSON(u){ const r = await fetch(u, {cache:"no-store"}); if(!r.ok) throw new Error(u + " " + r.status); return r.json(); }
+async function load(){
+  const local = localGet();
+  if(local) S.user = normUser(local);
+  try{
+    const [w, c] = await Promise.all([getJSON("data/wiki.json"), getJSON("curated.json")]);
+    S.snapshot = w; S.curated = c;
+  }catch(e){
+    $("#hero").innerHTML = `<p class="loading">Couldn't load the wiki copy (${esc(e.message)}). Reload the page to try again.</p>`;
+    return;
+  }
+  prep(); buildMapIndex();
+  S.loaded = true;
+  render();
+  connect();
+}
+
+// ------------------------------------------------------------- data prep
+let D = {};
+function prep(){
+  const snap = S.snapshot || {}, cur = S.curated || {};
+  const items = snap.items || {};
+  const camps = [];
+  Object.values(snap.zones || {}).forEach(z => (z.camps||[]).forEach(c => camps.push(c)));
+  const lootLevel = {}, npcLevel = {}, nameToSlug = {};
+  Object.values(items).forEach(it => { if(it.name) nameToSlug[norm(it.name)] = it.slug; });
+  const campLv = c => { const l = c.level||{}; const r = l.solo || l.group; return r ? r[0] : null; };
+  camps.forEach(c => {
+    const lv = campLv(c); if(lv == null) return;
+    (c.loot||[]).forEach(n => { const k = nameToSlug[norm(n)] || norm(n); lootLevel[k] = Math.min(lootLevel[k] ?? 99, lv); });
+    (c.lootSlugs||[]).forEach(s => { if(s) lootLevel[s] = Math.min(lootLevel[s] ?? 99, lv); });
+    (c.named||[]).forEach(n => { npcLevel[norm(n)] = Math.min(npcLevel[norm(n)] ?? 99, lv); });
+  });
+  const guideTier = {};
+  Object.values(snap.guides||{}).forEach(g => (g.gear||[]).forEach(x => { if(x.slug) guideTier[x.slug] = x.tier; }));
+  const notes = cur.itemNotes || {};
+  const out = {};
+  Object.values(items).forEach(it => {
+    const d = it.detail || {};
+    const stats = {};
+    Object.entries(d.stats||{}).forEach(([k,v]) => { const n = parseFloat(String(v).replace(/[^\d.\-+]/g,"")); if(!isNaN(n)) stats[k.toUpperCase()==="HP"?"HP":(k.toUpperCase()==="MANA"?"Mana":k.toUpperCase())] = n; });
+    let classes = (d["class"] || "").trim();
+    if(!classes && it.classes) classes = it.classes.split(/\s+/).map(x => x.replace(/_/g," ")).join(", ");
+    const slotRaw = (it.slot || (d.sub||"").split("·").pop() || "").toLowerCase().replace(/ hand/g,"");
+    const slots = slotRaw.split(/[,/]/).map(s => s.trim()).filter(Boolean);
+    let lvl = null, est = true, why = "";
+    const nt = notes[it.slug];
+    if(nt && nt.level){ lvl = nt.level; est = !!nt.est; why = "plan"; }
+    else if(lootLevel[it.slug] != null){ lvl = lootLevel[it.slug]; why = "camp level"; }
+    else if((d.dropNpcs||[]).some(n => npcLevel[norm(n)] != null)){ lvl = Math.min(...d.dropNpcs.map(n => npcLevel[norm(n)] ?? 99)); why = "named level"; }
+    else if(guideTier[it.slug]){ lvl = guideTier[it.slug] === "early" ? 10 : 22; why = "class guide"; }
+    out[it.slug] = {slug:it.slug, name:it.name, url:it.url, type:it.type||"", slots, stats, classes,
+      race:(d.race||it.races||"All"), tags:d.tags||[], drop:d.drop||it.excerpt||"", bagSlots:d.bagSlots||null,
+      weapon:d.weapon||null, effect:d.effect||"", lvl, est, why, req:(nt&&nt.reqLevel)||null, note:(nt&&nt.note)||"", hasDetail:!!it.detail};
+  });
+  D = {items:out, camps, npcLevel, nameToSlug,
+       classes: Object.fromEntries((cur.classes||[]).map(c => [c.name, c])),
+       cities: Object.fromEntries((cur.cities||[]).map(c => [c.key, c]))};
+}
+
+// ------------------------------------------------------------- helpers
+const char = () => S.user.characters.find(c => c.id === S.user.active) || S.user.characters[0];
+const prog = c => { const p = (S.user.progress[c.id] = S.user.progress[c.id] || {}); p.have = p.have || {}; p.done = p.done || {}; p.mats = p.mats || {}; return p; };
+const clsInfo = c => D.classes[c.cls] || {abbr:(c.cls||"?").slice(0,3).toUpperCase(), weights:{AC:1,STA:1.5,STR:1,HP:.3}};
+function usable(it, c){
+  const cl = (it.classes||"").toLowerCase();
+  if(!cl || /\ball\b/.test(cl)) return raceOk(it,c);
+  const nm = (c.cls||"").toLowerCase();
+  return (cl.includes(nm) || cl.split(/[\s,]+/).includes(clsInfo(c).abbr.toLowerCase())) && raceOk(it,c);
+}
+function raceOk(it,c){ const r=(it.race||"All").toLowerCase(); return !r || r.includes("all") || r.includes((c.race||"").toLowerCase()); }
+function score(it, c){
+  const w = clsInfo(c).weights || {};
+  let s = 0;
+  Object.entries(it.stats).forEach(([k,v]) => { s += (w[k] ?? (k==="AC"?0.4:0.15)) * v; });
+  if(it.weapon){
+    const dmg = parseFloat(Object.entries(it.weapon).find(([k]) => /dmg|damage/i.test(k))?.[1]);
+    const dly = parseFloat(Object.entries(it.weapon).find(([k]) => /delay|dly/i.test(k))?.[1]);
+    if(dmg && dly) s += (dmg/dly) * 40 * ((clsInfo(c).role||"").match(/tank|melee|hybrid|ranged/) ? 1 : .2);
+  }
+  return s;
+}
+function statLine(it){
+  const order = ["AC","STR","STA","AGI","DEX","INT","WIS","CHA","HP","Mana"];
+  const parts = order.filter(k => it.stats[k] != null).map(k => k==="AC" ? "AC "+it.stats[k] : k+" "+(it.stats[k]>0?"+":"")+it.stats[k]);
+  Object.keys(it.stats).filter(k => !order.includes(k)).forEach(k => parts.push(k+" "+it.stats[k]));
+  if(it.weapon) Object.entries(it.weapon).forEach(([k,v]) => parts.push(k+" "+v));
+  if(it.bagSlots) parts.unshift(it.bagSlots+" slots");
+  return parts.join(" · ") || (it.hasDetail ? "no stats listed" : "stats not read yet");
+}
+function itemLink(it, cls){ return it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener" class="${cls||""}">${esc(it.name)}</a>` : esc(it.name); }
+function classMatch(classes, c){
+  const s = String(classes||"ALL").toUpperCase();
+  if(!s.trim() || /\bALL\b/.test(s)) return true;
+  const nm = (c.cls||"").toUpperCase(), ab = clsInfo(c).abbr;
+  return s.includes(nm) || s.split(/[\s,\/]+/).includes(ab) || s.includes(nm.replace(/ /g,"_"));
+}
+function homeZones(c){ return ((D.cities[c.city]||{}).zones||[]).map(norm); }
+function inHome(zone, c){ const z = norm(zone); return homeZones(c).some(h => h === z || (h.length > 4 && z.startsWith(h))); }
+function ago(iso){
+  if(!iso) return "never";
+  const s = (Date.now() - new Date(iso).getTime())/1000;
+  if(s < 90) return "just now"; if(s < 3600) return Math.round(s/60)+" min ago";
+  if(s < 86400) return Math.round(s/3600)+" h ago"; return Math.round(s/86400)+" days ago";
+}
+function trimDrop(t){ t = String(t||"").replace(/\s+/g," ").trim(); return t.length > 110 ? t.slice(0,108)+"…" : t; }
+function appliesTo(p, c){ return (!p.cities || p.cities.includes(c.city)) && (!p.classes || p.classes.includes(c.cls)) && (!p.races || p.races.includes(c.race)); }
+
+// ------------------------------------------------------------- render
+function render(){
+  if(!S.loaded) return;
+  $("#app").classList.toggle("mapmode", UI.view === "map");
+  renderViewSeg(); renderStatus(); renderTabs(); renderFoot();
+  if(!S.user.characters.length){ renderEmpty(); return; }
+  $("#planView").hidden = UI.view !== "plan";
+  $("#mapView").hidden = UI.view !== "map";
+  renderHero();
+  renderBody();
+}
+function renderBody(){
+  if(UI.view === "plan"){ renderPlays(); renderGear(); renderQuests(); renderSets(); renderCamps(); renderBags(); renderSpells(); renderNews(); }
+  else showMap();
+}
+function renderEmpty(){
+  $("#planView").hidden = true; $("#mapView").hidden = true;
+  if(!Store.ready){ $("#hero").innerHTML = `<p class="loading">Loading your characters…</p>`; return; }
+  $("#hero").innerHTML = `<div class="onboard"><h2>Add your first character</h2>
+    <p>Pick a class, race, starting city and level. The plan, gear list, camps and map pins all follow the level slider, and each alt gets its own tab.</p>
+    <button class="btn primary" id="obAdd">Add a character</button><button class="btn" id="obImp">Import from the PC app</button></div>`;
+  $("#obAdd").onclick = () => openEditor(null);
+  $("#obImp").onclick = openImport;
+}
+function renderViewSeg(){
+  $$("#viewSeg button").forEach(b => {
+    b.classList.toggle("on", b.dataset.v === UI.view);
+    b.setAttribute("aria-selected", b.dataset.v === UI.view ? "true" : "false");
+    b.onclick = () => { if(UI.view === b.dataset.v) return; UI.view = b.dataset.v; setDrop(false); saveUI(); render(); };
+  });
+}
+
+function renderStatus(){
+  const m = (S.snapshot||{}).meta || {}, hrs = (S.curated||{}).refreshHours || 6;
+  const age = m.lastScan ? (Date.now() - new Date(m.lastScan).getTime())/3600000 : 999;
+  let h = `<span><span class="dot ${m.lastError?"err":(age > hrs*3?"warn":"")}"></span>Wiki checked <b class="num">${esc(ago(m.lastScan))}</b> · every ${hrs} h</span>`;
+  if(m.counts) h += `<span class="num">${m.counts.quests} quests · ${m.counts.items} items · ${m.counts.zones} zones</span>`;
+  h += `<span class="sync ${Store.mode}" title="${Store.mode==="db"?"Characters, progress and pins are saved to your account":"Characters, progress and pins are saved in this browser only"}">${!Store.ready?"Connecting…":(Store.mode==="db"?"Synced to your account":"Saved in this browser")}</span>`;
+  if(Store.sb && Store.ready) h += Store.uid ? `<span title="Signed in">${esc(Store.email)}</span><button class="btn ghost" id="outBtn">Sign out</button>` : `<button class="btn primary" id="inBtn">Sign in</button>`;
+  $("#status").innerHTML = h;
+  if($("#outBtn")) $("#outBtn").onclick = signOut;
+  if($("#inBtn")) $("#inBtn").onclick = openSignIn;
+  let w = "";
+  if(m.lastError) w += `<div class="banner">The last wiki check failed (${esc(ago(m.lastError.at))}): ${esc(m.lastError.message)}. Showing the last good copy.</div>`;
+  if(Store.err) w += `<div class="banner">${esc(Store.err)}</div>`;
+  $("#warn").innerHTML = w;
+}
+
+function renderTabs(){
+  const a = S.user.active;
+  $("#tabs").innerHTML = S.user.characters.map(c => `<button class="tab ${c.id===a?"on":""}" data-id="${esc(c.id)}"><span class="crest">${esc(clsInfo(c).abbr)}</span>${esc(c.name || c.cls)} <span class="lv num">${esc(c.level)}</span></button>`).join("")
+    + (Store.ready || S.user.characters.length ? `<button class="tab add" id="addAlt">${S.user.characters.length ? "+ Add alt" : "+ Add character"}</button>` : "");
+  $$(".tab[data-id]").forEach(b => b.onclick = () => { if(S.user.active === b.dataset.id) return; S.user.active = b.dataset.id; UI.showAllQ = false; save(); render(); });
+  if($("#addAlt")) $("#addAlt").onclick = () => openEditor(null);
+}
+
+function milestones(c){
+  const ticks = [
+    [4,"Wyrmsbane groups",["night-harbor","underdocks"]],[5,"Wererat heads (group)",["night-harbor"],["Shadow Knight"]],
+    [8,"Night Terror · wererats solo",["night-harbor"]],[10,"Blacktide · Tel Ekir",null],[12,"Feign Death",null,["Shadow Knight"]],
+    [18,"Fallen Pass",null],[21,"River Pirates",null],[28,"Unholy Bulwark",null,["Shadow Knight"]],[35,"Glinting Hollow key",null],[49,"Bone Construct gear",null]];
+  return ticks.filter(t => (!t[2] || t[2].includes(c.city)) && (!t[3] || t[3].includes(c.cls)));
+}
+
+function renderHero(){
+  const c = char(), city = D.cities[c.city] || {name:c.city};
+  const max = 60, fill = ((c.level-1)/(max-1))*100;
+  $("#hero").innerHTML = `
+    <div class="who"><h2>${esc(c.name || c.cls)}</h2>
+      <div class="meta"><span><b>${esc(c.race)}</b> ${esc(c.cls)}</span><span>starts in <b>${esc(city.name)}</b></span>
+      <span class="modes"><span class="seg" id="soloSeg"><button data-v="1" class="${c.solo!==false?"on":""}">Solo</button><button data-v="0" class="${c.solo===false?"on":""}">Group</button></span></span>
+      <button class="btn ghost" id="editChar">Edit</button></div></div>
+    <div class="lvlbig"><div class="n num" id="lvlN">${c.level}</div><div class="l">Level</div></div>
+    <div class="slider"><input type="range" min="1" max="${max}" value="${c.level}" id="lvl" style="--fill:${fill}%" aria-label="Character level">
+      <div class="ticks">${[...new Set(milestones(c).map(t => t[0]))].map(n => `<span class="tick ${n<=c.level?"hit":""}" style="left:${((n-1)/(max-1))*100}%">${n}</span>`).join("")}</div>
+      <div class="upnext" id="upnext">${upNext(c)}</div></div>`;
+  const r = $("#lvl");
+  r.oninput = () => { c.level = +r.value; $("#lvlN").textContent = c.level; r.style.setProperty("--fill", ((c.level-1)/(max-1))*100+"%"); clearTimeout(r._t); r._t = setTimeout(() => { save(); renderTabs(); renderBody(); renderTicks(); }, 120); };
+  $$("#soloSeg button").forEach(b => b.onclick = () => { c.solo = b.dataset.v === "1"; save(); render(); });
+  $("#editChar").onclick = () => openEditor(c);
+}
+function upNext(c){
+  const up = milestones(c).filter(t => t[0] > c.level).slice(0,3);
+  return up.length ? `<span class="ul">Coming up</span>` + up.map(t => `<span class="un"><b class="num">${t[0]}</b> ${esc(t[1])}</span>`).join("") : "";
+}
+function renderTicks(){ const c = char(); $$(".tick").forEach(t => { const n = parseInt(t.textContent); t.classList.toggle("hit", n <= c.level); }); const u = $("#upnext"); if(u) u.innerHTML = upNext(c); }
+
+// ---- plays
+function playState(p, c){
+  const L = c.level, group = c.solo === false;
+  const lo = p.lvl ? p.lvl[0] : 1, hi = p.lvl ? p.lvl[1] : 60;
+  if(p.holdBelow && L < p.holdBelow) return {s:"hold", label:"Not yet", txt:`Come back at ${p.holdBelow} with a group${p.soloAt?` or ${p.soloAt} solo`:""}.`};
+  if(p.soloAt && !group && L < p.soloAt) return {s:"soon", label:"Group it", txt:`Doable now with a group; solo from about ${p.soloAt}.`};
+  if(L >= lo && L <= hi) return {s:"now", label:"Now"};
+  if(L < lo && lo - L <= 3) return {s:"soon", label:`At ${lo}`};
+  return null;
+}
+function playsFor(c){
+  const cur = S.curated || {};
+  return (cur.plays||[]).filter(p => appliesTo(p, c))
+    .filter(p => {
+      if(p.kind !== "gear" || !p.usesItems) return true;
+      const its = p.usesItems.map(s => D.items[s]).filter(Boolean);
+      return !its.length || its.some(it => usable(it,c));
+    })
+    .map(p => ({p, st: playState(p,c)})).filter(x => x.st);
+}
+function renderPlays(){
+  const c = char(), pr = prog(c);
+  const rank = {now:0, hold:1, soon:2};
+  let list = playsFor(c).sort((a,b) => (!!pr.done[a.p.id]) - (!!pr.done[b.p.id]) || rank[a.st.s]-rank[b.st.s] || (b.p.priority||0)-(a.p.priority||0));
+  const covered = new Set((S.curated.plays||[]).map(p => p.link).filter(Boolean));
+  const starters = ((S.snapshot||{}).quests||[]).filter(q => q.starter && classMatch(q.classes,c) && !/^ALL$/i.test(q.classes) && inHome(q.zone,c) && !covered.has(q.url));
+  const nNow = list.filter(x => x.st.s==="now" && !pr.done[x.p.id]).length;
+  $("#nextSub").textContent = `${nNow} things for level ${c.level}`;
+  let h = list.map(({p,st}) => {
+    const done = !!pr.done[p.id];
+    const its = (p.usesItems||[]).map(s => D.items[s]).filter(Boolean);
+    const open = UI.openPlays[p.id] ?? (st.s !== "soon" && !done && (p.priority||0) >= 4);
+    const acts = (p.steps && p.steps.length ? `<button class="more" data-tog="${esc(p.id)}">${open?"Hide steps":"Show steps"}</button>` : "")
+      + (Z.byPlay[p.id] ? `<button class="more maplink" data-showmap="${esc(p.id)}">Show on map</button>` : "")
+      + (p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">wiki</a>` : "");
+    return `<div class="play ${done?"done":""}" data-play="${esc(p.id)}">
+      <span class="badge b-${st.s}">${esc(st.label)}</span>
+      <div><h4>${esc(p.title)}<span class="kind">${esc(p.kind)}${p.lvlEst?" · level est.":""}</span></h4>
+        <div class="why">${esc(p.why)}${st.txt?` <b style="color:var(--hold)">${esc(st.txt)}</b>`:""}</div>
+        ${its.length?`<div class="chips">${its.map(it => `<span class="chip ${usable(it,c)?"":"no"}">${itemLink(it)} <span class="s">${esc(statLine(it))}${usable(it,c)?"":" · not for "+esc(clsInfo(c).abbr)}${it.req?" · needs "+it.req:""}</span></span>`).join("")}</div>`:""}
+        ${open && p.steps && p.steps.length ? `<ol>${p.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol>` : ""}
+        ${acts ? `<div class="acts">${acts}</div>` : ""}
+      </div>
+      <input type="checkbox" class="chk" title="Mark done" aria-label="Mark ${esc(p.title)} done" data-done="${esc(p.id)}" ${done?"checked":""}>
+    </div>`;
+  }).join("");
+  h += starters.map(q => `<div class="play"><span class="badge b-info">Class</span><div><h4>${esc(q.name)}<span class="kind">starter quest</span></h4><div class="why">${esc(q.excerpt)}${q.reward?" Reward: "+esc(q.reward)+".":""}</div><div class="acts"><a href="${esc(q.url)}" target="_blank" rel="noopener">wiki walkthrough</a></div></div><span></span></div>`).join("");
+  $("#plays").innerHTML = h || `<div class="empty">Nothing hand-picked for this level and city yet - the quest, camp and gear lists below still fill in from the wiki.</div>`;
+  $$("[data-tog]").forEach(b => b.onclick = () => { const id = b.dataset.tog; const p = (S.curated.plays||[]).find(x => x.id===id); const st = p && playState(p,char()); const cur = UI.openPlays[id] ?? (st && st.s!=="soon" && !prog(char()).done[id] && (p.priority||0)>=4); UI.openPlays[id] = !cur; renderPlays(); });
+  $$("[data-done]").forEach(b => b.onchange = () => { const pr = prog(char()); if(b.checked) pr.done[b.dataset.done] = true; else delete pr.done[b.dataset.done]; save(); renderPlays(); });
+  $$("[data-showmap]").forEach(b => b.onclick = () => focusPlay(b.dataset.showmap));
+}
+
+// ---- gear
+function gearPlan(c){
+  const L = c.level, slack = c.solo === false ? 2 : 0, pr = prog(c);
+  const res = {};
+  SLOTS.forEach(([k]) => res[k] = {owned:null, now:null, next:null, unknown:0});
+  Object.values(D.items).forEach(it => {
+    if(!/armor|weapon|jewelry|instrument/.test(it.type) && !it.hasDetail) return;
+    if(!usable(it,c)) return;
+    if(!it.hasDetail && !(S.curated.itemNotes||{})[it.slug]) { it.slots.forEach(sl => { if(res[sl]) res[sl].unknown++; }); return; }
+    const sc = score(it,c);
+    if(sc < 1.5 && !(S.curated.itemNotes||{})[it.slug]) return;
+    it.slots.forEach(sl => {
+      const r = res[sl]; if(!r) return;
+      if(pr.have[it.slug]){ if(!r.owned || sc > r.owned.sc) r.owned = {it, sc}; return; }
+      if(it.lvl == null){ r.unknown++; return; }
+      if(it.req && it.req > L) { if(it.req <= L + 8 && (!r.next || sc > r.next.sc)) r.next = {it, sc}; return; }
+      if(it.lvl <= L + slack){ if(!r.now || sc > r.now.sc) r.now = {it, sc}; }
+      else if(it.lvl <= L + 8){ if(!r.next || sc > r.next.sc || (sc === r.next.sc && it.lvl < r.next.it.lvl)) r.next = {it, sc}; }
+    });
+  });
+  Object.values(res).forEach(r => {
+    if(r.owned && r.now && r.now.sc <= r.owned.sc) r.now = null;
+    const base = Math.max(r.owned ? r.owned.sc : 0, r.now ? r.now.sc : 0);
+    if(r.next && r.next.sc <= base) r.next = null;
+  });
+  return res;
+}
+function diffTxt(a, b){
+  if(!b) return "";
+  const keys = ["AC","STA","STR","HP"]; const out = [];
+  keys.forEach(k => { const d = (a.stats[k]||0) - (b.stats[k]||0); if(d) out.push((d>0?"+":"")+d+" "+k); });
+  return out.slice(0,3).join(", ");
+}
+function renderGear(){
+  const c = char(), plan = gearPlan(c), pr = prog(c);
+  let h = "";
+  SLOTS.forEach(([k,label]) => {
+    const r = plan[k];
+    const isUp = !!(r.now || r.next);
+    if(UI.gear === "up" && !isUp) return;
+    const cur = r.now || r.owned;
+    const owned = cur && pr.have[cur.it.slug];
+    h += `<div class="slot ${cur?"":"none"}"><div class="sl"><span>${label}</span>${cur?`<span class="lvtag">${owned?"owned":(cur.it.lvl!=null?"lv "+cur.it.lvl+(cur.it.est?"~":""):"")}</span>`:""}</div>`;
+    if(cur){
+      const it = cur.it;
+      h += `<div class="it">${itemLink(it)}</div><div class="st">${esc(statLine(it))}${r.now && r.owned?` <span class="up">${esc(diffTxt(it, r.owned.it))}</span>`:""}</div><div class="src">${esc(trimDrop(it.drop))}</div>
+        <label class="own"><input type="checkbox" data-have="${esc(it.slug)}" ${owned?"checked":""}> I have this</label>`;
+    } else h += `<div class="it">Nothing confirmed yet</div><div class="src">${r.unknown?r.unknown+" usable items with no known level":""}</div>`;
+    if(r.next){ const it = r.next.it; h += `<div class="nx">Next: <b>${itemLink(it)}</b> <span class="lvtag">${it.req?"needs "+it.req:"lv "+it.lvl+(it.est?"~":"")}</span><div class="st">${esc(statLine(it))}</div><div class="src">${esc(trimDrop(it.drop))}</div></div>`; }
+    h += `</div>`;
+  });
+  $("#slots").innerHTML = h || `<div class="empty">No upgrades found in the next few levels.</div>`;
+  const pend = ((S.snapshot||{}).meta||{}).itemDetailsPending;
+  $("#gearNote").innerHTML = `Levels with ~ are estimates from the camp or named mob that drops them. Tick “I have this” and the page compares upgrades against what you own.${pend?` ${pend} item pages still to read - more appear after each check.`:""}`;
+  $$("#gearMode button").forEach(b => { b.classList.toggle("on", b.dataset.v === UI.gear); b.onclick = () => { UI.gear = b.dataset.v; saveUI(); renderGear(); }; });
+  $$("#slots [data-have]").forEach(b => b.onchange = () => { const pr = prog(char()); if(b.checked) pr.have[b.dataset.have] = true; else delete pr.have[b.dataset.have]; save(); renderGear(); renderSets(); });
+}
+
+// ---- quests
+function questLevel(q){
+  const p = (S.curated.plays||[]).find(x => x.link === q.url);
+  return p && p.lvl ? p.lvl[0] : (q.level || 1);
+}
+function renderQuests(){
+  const c = char(), L = c.level, pr = prog(c);
+  const seenIds = new Set(((S.snapshot||{}).news||[]).filter(n => n.kind==="quest").map(n => n.slug));
+  let qs = ((S.snapshot||{}).quests||[]).filter(q => classMatch(q.classes,c) && (UI.qScope==="all" || inHome(q.zone,c)));
+  qs = qs.map(q => ({q, lv: questLevel(q)})).filter(x => x.lv <= L + 4);
+  qs.sort((a,b) => {
+    const own = x => (x.q.starter && !/^ALL$/i.test(x.q.classes)) ? 0 : 1;
+    const soon = x => x.lv > L ? 1 : 0;
+    return soon(a)-soon(b) || own(a)-own(b) || (b.q.reward?1:0)-(a.q.reward?1:0) || b.lv-a.lv || a.q.name.localeCompare(b.q.name);
+  });
+  const now = qs.filter(x => x.lv <= L).length;
+  $("#qSub").textContent = `${now} you can take now${qs.length-now?`, ${qs.length-now} soon`:""}`;
+  const lim = UI.showAllQ ? qs.length : 14;
+  let h = qs.slice(0, lim).map(({q,lv}) => {
+    const done = pr.done["q:"+q.slug];
+    return `<div class="row ${done?"done":""}"><div class="lv num">${lv}+<small>${lv>L?"soon":"now"}</small></div><div>
+      <div class="t"><a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.name)}</a>${seenIds.has(q.slug)?'<span class="tag new">new</span>':""}${!/^ALL$/i.test(q.classes)?`<span class="tag cls">${esc(q.classes.length>18?clsInfo(c).abbr:q.classes)}</span>`:""}
+      <label class="own" style="float:right;margin:0"><input type="checkbox" data-qdone="${esc(q.slug)}" ${done?"checked":""}> done</label></div>
+      <div class="d">${esc(q.zone)}${q.reward?" · Reward: "+esc(q.reward):""}</div>
+      <div class="x">${esc(q.excerpt)}</div></div></div>`;
+  }).join("");
+  if(qs.length > lim) h += `<button class="more" id="qMore">Show all ${qs.length}</button>`;
+  $("#quests").innerHTML = h || `<div class="empty">No quests listed for this class and area yet.</div>`;
+  if($("#qMore")) $("#qMore").onclick = () => { UI.showAllQ = true; renderQuests(); };
+  $$("#qScope button").forEach(b => { b.classList.toggle("on", b.dataset.v === UI.qScope); b.onclick = () => { UI.qScope = b.dataset.v; saveUI(); renderQuests(); renderCamps(); }; });
+  $$("[data-qdone]").forEach(b => b.onchange = () => { const pr = prog(char()); const k = "q:"+b.dataset.qdone; if(b.checked) pr.done[k] = true; else delete pr.done[k]; save(); renderQuests(); });
+}
+
+// ---- sets
+function renderSets(){
+  const c = char(), pr = prog(c);
+  const sets = ((S.curated||{}).sets||[]).filter(s => (!s.cities || s.cities.includes(c.city)) && s.pieces.some(p => !D.items[p.item] || usable(D.items[p.item], c)));
+  $("#setsCard").style.display = sets.length ? "" : "none";
+  $("#sets").innerHTML = sets.map(s => {
+    const mats = pr.mats[s.id] || {};
+    const need = {};
+    s.pieces.forEach(p => { if(!pr.have[p.item]) Object.entries(p.need).forEach(([m,q]) => need[m] = (need[m]||0)+q); });
+    if(s.raw && s.pieces.some(p => !pr.have[p.item])){
+      if(need["Cinder Tanning Agent"]){ need["Cinder Beetle Gland"] = (need["Cinder Beetle Gland"]||0)+need["Cinder Tanning Agent"]; need["Cinder Beetle Blood"] = (need["Cinder Beetle Blood"]||0)+need["Cinder Tanning Agent"]; delete need["Cinder Tanning Agent"]; }
+      if(need["Cinder Varnish"]){ const v = need["Cinder Varnish"]; need["Resin"]=(need["Resin"]||0)+2*v; need["Cinder Beetle Blood"]=(need["Cinder Beetle Blood"]||0)+2*v; need["Crude Fish Oil"]=(need["Crude Fish Oil"]||0)+v; need["Twilight Bay Rum"]=(need["Twilight Bay Rum"]||0)+v; delete need["Cinder Varnish"]; }
+    }
+    const usableAny = s.pieces.some(p => D.items[p.item] && usable(D.items[p.item], c));
+    const got = s.pieces.filter(p => pr.have[p.item]).length;
+    return `<div class="set"><h4>${esc(s.name)} <span class="tag">${got}/${s.pieces.length}</span>${usableAny?"":'<span class="tag" style="color:var(--hold)">not for your class</span>'}</h4>
+      <div class="meta">${esc(s.giver)}<br>${esc(s.mob)}</div>
+      ${Z.byPlay[s.id+"-set"] ? `<button class="more maplink" data-showmap="${esc(s.id)}-set">Show the turn-in spots on the map</button>` : ""}
+      ${s.pieces.map(p => { const it = D.items[p.item] || {name:p.item, stats:{}, slots:[]}; const have = !!pr.have[p.item];
+        return `<div class="piece ${have?"done":""}"><input type="checkbox" class="chk" data-have="${esc(p.item)}" ${have?"checked":""} title="I have this" aria-label="I have ${esc(it.name)}">
+          <div><div class="n">${itemLink(it)} <span class="w">${esc((it.slots||[]).join("/"))} · ${esc(statLine(it))}</span></div>
+          ${p.who?`<div class="w">${esc(p.who)}</div>`:""}
+          <div class="need">${Object.entries(p.need).map(([m,q]) => q+"× "+esc(m)).join(", ")}</div>
+          ${p.sub?`<div class="w">${esc(p.sub)}</div>`:""}${p.alt?`<div class="w">${esc(p.alt)}</div>`:""}</div></div>`; }).join("")}
+      ${Object.keys(need).length ? `<div class="mats"><div class="h">Still to collect</div>${Object.entries(need).map(([m,q]) => { const have = mats[m]||0; return `<div class="mat ${have>=q?"ok":""}">${esc(m)}</div><div class="ctr"><button data-mat="${esc(s.id)}|${esc(m)}|-1" aria-label="One less ${esc(m)}">−</button><span>${have} / ${q}</span><button data-mat="${esc(s.id)}|${esc(m)}|1" aria-label="One more ${esc(m)}">+</button></div>`; }).join("")}</div>` : `<div class="tip">Set complete.</div>`}
+      ${s.tip?`<div class="tip">${esc(s.tip)}</div>`:""}</div>`;
+  }).join("");
+  $$("#sets [data-have]").forEach(b => b.onchange = () => { const pr = prog(char()); if(b.checked) pr.have[b.dataset.have] = true; else delete pr.have[b.dataset.have]; save(); renderSets(); renderGear(); });
+  $$("#sets [data-showmap]").forEach(b => b.onclick = () => focusPlay(b.dataset.showmap));
+  $$("[data-mat]").forEach(b => b.onclick = () => { const [sid,m,d] = b.dataset.mat.split("|"); const pr = prog(char()); const mm = pr.mats[sid] = pr.mats[sid] || {}; mm[m] = Math.max(0,(mm[m]||0)+parseInt(d)); save(); renderSets(); });
+}
+
+// ---- camps
+function campRange(cp, group){ const l = cp.level || {}; return (group ? (l.group || l.solo) : (l.solo || (l.group && [l.group[0]+2, l.group[1]+2]))) || null; }
+function renderCamps(){
+  const c = char(), L = c.level, group = c.solo === false;
+  let cs = D.camps.map(cp => ({cp, r: campRange(cp, group)}))
+    .filter(x => x.r && x.r[0] <= L + 1 && x.r[1] >= L - 1 && (UI.qScope === "all" || inHome(x.cp.zone, c)));
+  const hz = homeZones(c), hi = z => { const i = hz.indexOf(norm(z)); return i < 0 ? 99 : i; };
+  cs.sort((a,b) => Math.round(Math.abs(((a.r[0]+a.r[1])/2)-L)) - Math.round(Math.abs(((b.r[0]+b.r[1])/2)-L)) || hi(a.cp.zone) - hi(b.cp.zone));
+  $("#campSub").textContent = `${group?"group":"solo"} range around ${L}`;
+  const lim = UI.showAllCamps ? cs.length : 7;
+  let h = cs.slice(0,lim).map(({cp,r}) => {
+    const loot = (cp.loot||[]).map(n => { const s = D.nameToSlug[norm(n)]; const it = s && D.items[s]; return it ? `<span class="chip ${usable(it,c)?"":"no"}">${itemLink(it)}${it.hasDetail?` <span class="s">${esc(statLine(it))}</span>`:""}</span>` : `<span class="chip">${esc(n)}</span>`; }).join("");
+    const zk = zoneKeyForSlug(cp.zoneSlug);
+    return `<div class="row"><div class="lv num">${r[0]}-${r[1]}<small>${group&&cp.level.group?"group":"solo"}</small></div><div>
+      <div class="t">${esc(cp.area)}</div><div class="d">${esc(cp.zone)} · ${esc(cp.mobs)}${zk && Z.byKey[zk].maps.length ? ` · <button class="more maplink" style="padding:0" data-zone="${esc(zk)}">map</button>` : ""}</div>
+      ${cp.note?`<div class="x">${esc(cp.note)}</div>`:""}${loot?`<div class="chips">${loot}</div>`:""}</div></div>`;
+  }).join("");
+  if(cs.length > lim) h += `<button class="more" id="cMore">Show all ${cs.length}</button>`;
+  $("#camps").innerHTML = h || `<div class="empty">No mapped camps for level ${L} ${UI.qScope==="home"?"near home - try All zones on the quest list":"yet"}.</div>`;
+  if($("#cMore")) $("#cMore").onclick = () => { UI.showAllCamps = true; renderCamps(); };
+  $$("#camps [data-zone]").forEach(b => b.onclick = () => openZone(b.dataset.zone));
+}
+
+// ---- bags
+function renderBags(){
+  const c = char();
+  const bags = Object.values(D.items).filter(it => it.slots.includes("bag") && usable(it,c)).sort((a,b) => (b.bagSlots||0)-(a.bagSlots||0));
+  const plays = (S.curated.plays||[]).filter(p => p.kind==="bag" && (!p.cities || p.cities.includes(c.city)));
+  let h = `<div class="tip" style="margin:0 0 10px">You can wear 1 backpack, 3 bags and 3 belt items (pouches, lantern, spellbook).</div>`;
+  h += plays.map(p => `<div class="row"><div class="lv num">${p.lvl?p.lvl[0]:1}+<small>${p.lvlEst?"est":"lvl"}</small></div><div><div class="t">${p.link?`<a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.title)}</a>`:esc(p.title)}</div><div class="x">${esc(p.why)}</div>${Z.byPlay[p.id]?`<button class="more maplink" data-showmap="${esc(p.id)}">Show on map</button>`:""}</div></div>`).join("");
+  h += bags.slice(0,8).map(it => `<div class="row"><div class="lv num">${it.bagSlots||"?"}<small>slots</small></div><div><div class="t">${itemLink(it)}</div><div class="d">${esc(trimDrop(it.drop))}</div></div></div>`).join("");
+  $("#bags").innerHTML = h;
+  $$("#bags [data-showmap]").forEach(b => b.onclick = () => focusPlay(b.dataset.showmap));
+}
+
+// ---- spells
+function renderSpells(){
+  const c = char(), L = c.level;
+  const list = ((S.curated||{}).spells||{})[c.cls];
+  $("#spellCard").style.display = list ? "" : "none";
+  if(!list) return;
+  const nextLv = (list.find(x => x[0] > L)||[])[0];
+  $("#spellSub").textContent = nextLv ? `next new spells at ${nextLv}` : "";
+  $("#spells").innerHTML = list.map(([lv,t]) => `<div class="sp ${lv<=L && lv > L-3 ? "now" : (lv<=L ? "past" : (lv===nextLv?"next":""))}"><span class="lv">${lv}</span><span>${esc(t)}</span></div>`).join("")
+    + `<div class="tip">${esc(S.curated.spells._note||"")}</div>`;
+}
+
+// ---- news
+function renderNews(){
+  const c = char();
+  const all = (S.snapshot||{}).news || [];
+  const rel = all.filter(n => !n.classes || classMatch(n.classes,c)).filter(n => !n.level || n.level <= c.level + 8);
+  const list = UI.showAllNews ? all : rel;
+  $("#newsSub").textContent = all.length ? `${rel.length} relevant to ${c.name || c.cls}` : "";
+  let h = list.slice(0,10).map(n => `<div class="news"><div>${n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.text)}</a>`:esc(n.text)}</div><div class="when">${esc(ago(n.at))}</div></div>`).join("");
+  if(!h) h = `<div class="empty">Nothing new on the wiki yet. It's re-read every ${(S.curated||{}).refreshHours || 6} hours; new quests, rewards and camp loot that fit one of your characters show up here and as a notification.</div>`;
+  if(all.length && rel.length !== all.length) h += `<button class="more" id="nAll">${UI.showAllNews?"Only relevant":"Show everything ("+all.length+")"}</button>`;
+  $("#news").innerHTML = h;
+  if($("#nAll")) $("#nAll").onclick = () => { UI.showAllNews = !UI.showAllNews; renderNews(); };
+}
+
+function renderFoot(){
+  const src = (S.curated||{}).sources || [];
+  const where = Store.mode === "db" ? "Your characters, progress and map pins are saved to your account, so they're the same on your PC and your phone."
+    : (Store.sb ? "Your characters, progress and map pins are saved in this browser. Sign in to keep them with your account on every device." : "Your characters, progress and map pins are saved in this browser.");
+  $("#foot").innerHTML = `<p>${where} Moving over from the PC app? <button class="btn" id="impBtn">Import its characters</button></p>
+    <p>Live data from ${src.slice(0,1).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}, re-checked every ${(S.curated||{}).refreshHours || 6} hours. Hand-checked plan notes from: ${src.slice(1).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" · ")}.</p>
+    <p>Map images come from the <a href="https://monstersandmemories.miraheze.org/" target="_blank" rel="noopener">Monsters &amp; Memories community wiki</a>; each map names its maker and links its file page. The interactive community atlas is <a href="https://mnmatlas.com/" target="_blank" rel="noopener">MnM Atlas</a>. Early Access content changes often - if the game disagrees, trust the game.</p>`;
+  $("#impBtn").onclick = openImport;
+}
+
+// ------------------------------------------------------------- map
+let Z = {zones:[], byKey:{}, maps:{}, pinsByMap:{}, byPlay:{}, pins:{}};
+function buildMapIndex(){
+  const reg = (S.curated||{}).maps || {zones:[], regions:[]};
+  const snapZ = (S.snapshot||{}).zones || {};
+  const zones = (reg.zones||[]).map(z => Object.assign({}, z, {maps:z.maps||[]}));
+  const known = new Set(zones.map(z => z.slug));
+  Object.values(snapZ).forEach(sz => { if(!known.has(sz.slug)) zones.push({key:sz.slug, name:sz.name, region:"More zones", slug:sz.slug, atlas:null, maps:[]}); });
+  Z = {zones, byKey:{}, maps:{}, pinsByMap:{}, byPlay:{}, pins:{}, regions:[...(reg.regions||[]), "More zones"]};
+  zones.forEach(z => { Z.byKey[z.key] = z; z.maps.forEach(m => Z.maps[m.id] = Object.assign({zone:z.key}, m)); });
+  ((S.curated||{}).pins||[]).forEach(p => {
+    if(!Z.maps[p.map]) return;
+    Z.pins[p.id] = p; (Z.pinsByMap[p.map] = Z.pinsByMap[p.map] || []).push(p);
+    (p.plays||[]).forEach(id => (Z.byPlay[id] = Z.byPlay[id] || []).push(p));
+  });
+}
+function zoneKeyForSlug(slug){ const z = Z.zones.find(x => x.slug === slug); return z ? z.key : null; }
+
+const MAP = {map:null, overlay:null, plan:null, mine:null, markers:{}, shown:null, temp:null};
+function curZone(){
+  const c = char();
+  if(!UI.zone || !Z.byKey[UI.zone]) UI.zone = (c && Z.byKey[c.city]) ? c.city : (Z.zones[0] || {}).key;
+  return Z.byKey[UI.zone];
+}
+function curMap(z){ z = z || curZone(); if(!z || !z.maps.length) return null; return z.maps.find(m => m.id === UI.alt[z.key]) || z.maps[0]; }
+const ll = (p, m) => [-p.y * m.h, p.x * m.w];
+
+function pinState(p, c){
+  const pr = prog(c), rows = [];
+  (p.plays||[]).forEach(id => { const pl = (S.curated.plays||[]).find(x => x.id === id); if(!pl || !appliesTo(pl, c)) return; const st = playState(pl, c); rows.push({p:pl, st, done:!!pr.done[id], past:!st && !!pl.lvl && c.level > pl.lvl[1]}); });
+  let s = "none";
+  for(const o of ["now","hold","soon"]){ if(rows.some(r => !r.done && r.st && r.st.s === o)){ s = o; break; } }
+  if(s === "none" && rows.length && rows.every(r => r.done)) s = "done";
+  return {s, rows};
+}
+function stLabel(st){
+  if(st.s === "done") return "Done";
+  const r = st.rows.find(r => !r.done && r.st && r.st.s === st.s);
+  if(r) return r.st.label + " · " + r.p.title;
+  if(!st.rows.length) return "Landmark";
+  return st.rows.some(x => x.past) && !st.rows.some(x => !x.past && !x.done) ? "Earlier levels" : "Later";
+}
+
+function showMap(){
+  const z = curZone(); if(!z) return;
+  const sel = $("#zoneSel");
+  sel.innerHTML = Z.regions.map(r => { const zs = Z.zones.filter(x => x.region === r); return zs.length ? `<optgroup label="${esc(r)}">${zs.map(x => `<option value="${esc(x.key)}" ${x.key===z.key?"selected":""}>${esc(x.name)}${x.maps.length?"":" (no map yet)"}</option>`).join("")}</optgroup>` : ""; }).join("");
+  sel.onchange = () => openZone(sel.value);
+  const m = curMap(z);
+  const alt = $("#mapAlt");
+  alt.hidden = z.maps.length < 2;
+  alt.innerHTML = z.maps.length > 1 ? z.maps.map(x => `<button data-alt="${esc(x.id)}" class="${m && x.id===m.id?"on":""}">${esc(x.title)}</button>`).join("") : "";
+  $$("#mapAlt button").forEach(b => b.onclick = () => { UI.alt[z.key] = b.dataset.alt; saveUI(); setDrop(false); showMap(); });
+  $("#showPlan").checked = UI.showPlan; $("#showMine").checked = UI.showMine;
+  $("#showPlan").onchange = e => toggleLayer("plan", e.target.checked);
+  $("#showMine").onchange = e => toggleLayer("mine", e.target.checked);
+  $("#dropBtn").onclick = () => setDrop(!UI.drop);
+  const box = $("#map"), none = $("#noMap");
+  if(!m){
+    setDrop(false);
+    box.hidden = true; none.hidden = false; $("#dropBtn").disabled = true;
+    none.innerHTML = `<div class="nomap"><div><b>No map image for ${esc(z.name)} yet.</b><br>The camps and quests the wiki lists for it are alongside.${z.atlas?`<br><a href="https://mnmatlas.com/${esc(z.atlas)}/" target="_blank" rel="noopener">Open ${esc(z.name)} in MnM Atlas ↗</a>`:""}</div></div>`;
+    $("#mapCredit").innerHTML = "";
+    renderSide(z, null);
+    return;
+  }
+  box.hidden = false; none.hidden = true; $("#dropBtn").disabled = false;
+  if(typeof L === "undefined"){
+    box.innerHTML = `<div class="nomap">The map viewer didn't load. Check your connection and reload the page.</div>`;
+    renderSide(z, m); renderCredit(m); return;
+  }
+  // on narrow screens, size the box to the map's shape so it isn't a small picture in a tall frame
+  box.style.height = window.innerWidth < 980 ? Math.round(Math.min(window.innerHeight * 0.72, Math.max(320, (box.clientWidth || window.innerWidth - 32) * m.h / m.w))) + "px" : "";
+  if(!MAP.map) initMap();
+  MAP.map.invalidateSize(false);
+  if(MAP.shown !== m.id){
+    if(MAP.overlay) MAP.overlay.remove();
+    const b = L.latLngBounds([[-m.h, 0], [0, m.w]]);
+    MAP.overlay = L.imageOverlay("maps/" + m.file, b, {className:"mapimg", alt:m.title}).addTo(MAP.map);
+    MAP.map.setMaxBounds(b.pad(0.3));
+    MAP.map.setMinZoom(Math.floor((MAP.map.getBoundsZoom(b, false) - 0.75) * 4) / 4);
+    MAP.map.fitBounds(b, {animate:false});
+    MAP.shown = m.id;
+  }
+  drawPins(m); renderSide(z, m); renderCredit(m);
+}
+function openZone(key){
+  if(!Z.byKey[key]) return;
+  UI.zone = key; UI.sideMoreQ = false; setDrop(false); saveUI();
+  if(UI.view !== "map"){ UI.view = "map"; saveUI(); render(); scrollToMap(); }
+  else showMap();
+}
+function scrollToMap(){ const t = $("#mapView").getBoundingClientRect().top + window.scrollY - 8; if(t < window.scrollY || t > window.scrollY + 200) window.scrollTo({top:Math.max(0, t), behavior:"smooth"}); }
+function initMap(){
+  MAP.map = L.map("map", {crs:L.CRS.Simple, minZoom:-5, maxZoom:2, zoomSnap:0.25, zoomDelta:0.5, wheelPxPerZoomLevel:110, attributionControl:false, maxBoundsViscosity:0.7});
+  MAP.plan = L.layerGroup(); MAP.mine = L.layerGroup();
+  if(UI.showPlan) MAP.plan.addTo(MAP.map);
+  if(UI.showMine) MAP.mine.addTo(MAP.map);
+  MAP.map.on("click", onMapClick);
+  const Fit = L.Control.extend({options:{position:"topleft"}, onAdd(){
+    const d = L.DomUtil.create("div", "leaflet-bar");
+    d.innerHTML = '<a href="#" title="Show the whole map" role="button" aria-label="Show the whole map">⤢</a>';
+    L.DomEvent.disableClickPropagation(d);
+    L.DomEvent.on(d.firstChild, "click", e => { L.DomEvent.preventDefault(e); fitWhole(); });
+    return d; }});
+  new Fit().addTo(MAP.map);
+}
+function fitWhole(){ const m = curMap(); if(m && MAP.map) MAP.map.fitBounds([[-m.h, 0], [0, m.w]]); }
+function toggleLayer(kind, on){
+  if(kind === "plan") UI.showPlan = on; else UI.showMine = on;
+  saveUI();
+  const g = kind === "plan" ? MAP.plan : MAP.mine;
+  if(MAP.map && g){ if(on) g.addTo(MAP.map); else g.remove(); }
+  const cb = $(kind === "plan" ? "#showPlan" : "#showMine"); if(cb) cb.checked = on;
+}
+const mineIcon = () => L.divIcon({className:"pin mine", html:"<span><i>★</i></span>", iconSize:[24,24], iconAnchor:[12,12], popupAnchor:[0,-12]});
+function drawPins(m){
+  MAP.plan.clearLayers(); MAP.mine.clearLayers(); MAP.markers = {};
+  const c = char();
+  (Z.pinsByMap[m.id] || []).forEach((p, i) => {
+    const st = pinState(p, c);
+    const mk = L.marker(ll(p, m), {icon:L.divIcon({className:"pin s-" + st.s, html:`<span>${i+1}</span>`, iconSize:[28,28], iconAnchor:[14,14], popupAnchor:[0,-13]}), title:p.title, alt:p.title, riseOnHover:true});
+    mk.bindPopup(() => planPopup(p), {maxWidth:300, minWidth:230, autoPanPadding:[30,30]});
+    mk.addTo(MAP.plan); MAP.markers[p.id] = mk;
+  });
+  S.user.pins.filter(p => p.map === m.id).forEach(p => {
+    const mk = L.marker(ll(p, m), {icon:mineIcon(), title:p.label || "My pin", alt:p.label || "My pin", draggable:true, riseOnHover:true});
+    mk.bindPopup(() => minePopup(p, false), {maxWidth:300, minWidth:240, autoPanPadding:[30,30]});
+    mk.on("dragend", () => { const q = mk.getLatLng(); p.x = clamp01(q.lng / m.w); p.y = clamp01(-q.lat / m.h); save(); renderSide(curZone(), m); });
+    mk.addTo(MAP.mine); MAP.markers[p.id] = mk;
+  });
+}
+function planPopup(p){
+  const st = pinState(p, char());
+  const d = document.createElement("div"); d.className = "pop";
+  d.innerHTML = `<h5>${esc(p.title)}</h5>${p.approx ? '<div class="approx">Approximate spot</div>' : ""}<p>${esc(p.note)}</p>`
+    + st.rows.map(r => `<div class="pl"><span class="badge b-${r.done ? "info" : (r.st ? r.st.s : "info")}">${r.done ? "Done" : (r.st ? esc(r.st.label) : (r.past ? "Earlier" : "Later"))}</span><span>${esc(r.p.title)}</span>${r.st && !r.done ? `<button class="more" data-goplan="${esc(r.p.id)}">see plan</button>` : ""}</div>`).join("");
+  d.querySelectorAll("[data-goplan]").forEach(b => b.onclick = () => goPlan(b.dataset.goplan));
+  return d;
+}
+function minePopup(p, isNew){
+  const d = document.createElement("div"); d.className = "pop";
+  d.innerHTML = `<h5>${isNew ? "New pin" : "Your pin"}</h5>
+    <input class="pi" maxlength="80" placeholder="Label, e.g. wererat pull spot" value="${esc(p.label)}" aria-label="Pin label">
+    <textarea class="pn" rows="3" maxlength="400" placeholder="Notes (optional)" aria-label="Pin notes">${esc(p.note)}</textarea>
+    <div class="pact">${isNew ? "" : `<button class="btn del" data-a="del">Remove</button>`}<button class="btn" data-a="cancel">${isNew ? "Cancel" : "Close"}</button><button class="btn primary" data-a="save">Save</button></div>
+    ${isNew ? "" : `<div class="hint">Drag the pin to move it.</div>`}`;
+  const inp = d.querySelector(".pi"), note = d.querySelector(".pn");
+  const doSave = () => {
+    p.label = inp.value.trim().slice(0,80) || "My pin"; p.note = note.value.trim().slice(0,400);
+    if(isNew){ S.user.pins.push(p); const tm = MAP.temp; MAP.temp = null; if(tm) tm.remove(); if(!UI.showMine) toggleLayer("mine", true); }
+    save(); MAP.map.closePopup(); drawPins(curMap()); renderSide(curZone(), curMap());
+  };
+  d.querySelector('[data-a="save"]').onclick = doSave;
+  inp.onkeydown = e => { if(e.key === "Enter"){ e.preventDefault(); doSave(); } };
+  d.querySelector('[data-a="cancel"]').onclick = () => MAP.map.closePopup();
+  const del = d.querySelector('[data-a="del"]');
+  if(del) del.onclick = () => {
+    if(!del.dataset.arm){ del.dataset.arm = "1"; del.textContent = "Remove it?"; return; }
+    S.user.pins = S.user.pins.filter(x => x.id !== p.id); save(); MAP.map.closePopup(); drawPins(curMap()); renderSide(curZone(), curMap());
+  };
+  if(isNew) setTimeout(() => inp.focus(), 60);
+  return d;
+}
+function onMapClick(e){
+  if(!UI.drop) return;
+  const m = curMap(); if(!m) return;
+  setDrop(false);
+  const p = {id:"p" + Date.now().toString(36), map:m.id, x:clamp01(e.latlng.lng / m.w), y:clamp01(-e.latlng.lat / m.h), label:"", note:"", at:new Date().toISOString()};
+  if(MAP.temp) MAP.temp.remove();
+  const tm = MAP.temp = L.marker(ll(p, m), {icon:mineIcon()}).addTo(MAP.map);
+  tm.bindPopup(minePopup(p, true), {maxWidth:300, minWidth:240, closeOnClick:false, autoPanPadding:[30,30]}).openPopup();
+  tm.on("popupclose", () => { if(MAP.temp === tm){ tm.remove(); MAP.temp = null; } });
+}
+function setDrop(on){
+  UI.drop = !!on;
+  const b = $("#dropBtn"); if(b){ b.classList.toggle("primary", UI.drop); b.textContent = UI.drop ? "Click the map…" : "Drop a pin"; }
+  const mp = $("#map"); if(mp) mp.classList.toggle("dropping", UI.drop);
+}
+function renderCredit(m){
+  $("#mapCredit").innerHTML = `Map: ${esc(m.title)}${m.author ? " by " + esc(m.author) : ""} · <a href="${esc(m.wiki)}" target="_blank" rel="noopener">community wiki file page</a>${m.license ? " · " + esc(m.license) : ""}. Scroll or pinch to zoom, drag to pan.`;
+}
+function renderSide(z, m){
+  const c = char(), L = c.level, group = c.solo === false;
+  const sz = ((S.snapshot||{}).zones||{})[z.slug];
+  const zname = (sz && sz.name) || z.name;
+  let h = `<header><h3>${esc(z.name)}</h3><span class="sub">${esc(z.region)}</span></header><div class="body">`;
+  h += `<div class="zlinks">${sz ? `<a href="${esc(sz.url)}" target="_blank" rel="noopener">Wiki zone page ↗</a>` : ""}${z.atlas ? `<a href="https://mnmatlas.com/${esc(z.atlas)}/" target="_blank" rel="noopener">Open in MnM Atlas ↗</a>` : ""}</div>`;
+  if(m){
+    const pins = Z.pinsByMap[m.id] || [];
+    if(pins.length) h += `<div class="sh">Plan spots</div>` + pins.map((p, i) => { const st = pinState(p, c); return `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-${st.s}">${i+1}</span><span><b>${esc(p.title)}</b><small>${esc(stLabel(st))}</small></span></button>`; }).join("");
+    const mine = S.user.pins.filter(p => p.map === m.id);
+    h += `<div class="sh">Your pins</div>` + (mine.length ? mine.map(p => `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-mine"><i>★</i></span><span><b>${esc(p.label || "My pin")}</b>${p.note ? `<small>${esc(trimDrop(p.note))}</small>` : ""}</span></button>`).join("")
+      : `<div class="empty">Press <b>Drop a pin</b>, then click the map to mark a camp, a pull spot or where you died. Pins are kept with your characters.</div>`);
+  }
+  const camps = ((sz && sz.camps) || []).map(cp => ({cp, r:campRange(cp, group)})).filter(x => x.r).sort((a,b) => a.r[0] - b.r[0] || a.r[1] - b.r[1]);
+  if(camps.length) h += `<div class="sh">Camps by level · ${group ? "group" : "solo"}</div>` + camps.map(({cp, r}) => { const fit = r[0] <= L + 1 && r[1] >= L - 1; return `<div class="crow ${fit ? "fit" : ""}"><span class="lvp num">${r[0]}-${r[1]}</span><span><b>${esc(cp.area)}</b>${fit ? '<span class="tag fit">your level</span>' : ""}<small>${esc(cp.mobs)}</small>${cp.note ? `<small class="cn">${esc(cp.note)}</small>` : ""}</span></div>`; }).join("");
+  const qs = ((S.snapshot||{}).quests || []).filter(q => norm(q.zone) === norm(zname) && classMatch(q.classes, c)).map(q => ({q, lv:questLevel(q)})).sort((a,b) => a.lv - b.lv || a.q.name.localeCompare(b.q.name));
+  if(qs.length){
+    const lim = UI.sideMoreQ ? qs.length : 8;
+    h += `<div class="sh">Quests here</div>` + qs.slice(0, lim).map(({q, lv}) => `<div class="crow ${lv <= L ? "" : "later"}"><span class="lvp num">${lv}+</span><span><a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.name)}</a>${q.reward ? `<small>Reward: ${esc(q.reward)}</small>` : ""}</span></div>`).join("")
+      + (qs.length > lim ? `<button class="more" id="sideMoreQ">Show all ${qs.length}</button>` : "");
+  }
+  if(!camps.length && !qs.length && !(m && (Z.pinsByMap[m.id] || []).length)) h += `<div class="empty" style="margin-top:10px">The wiki doesn't list camps or quests for this zone yet.</div>`;
+  h += `</div>`;
+  $("#side").innerHTML = h;
+  $$("#side [data-pin]").forEach(b => b.onclick = () => focusPin(b.dataset.pin));
+  if($("#sideMoreQ")) $("#sideMoreQ").onclick = () => { UI.sideMoreQ = true; renderSide(z, m); };
+}
+function goToMap(mapId){
+  const m = Z.maps[mapId]; if(!m) return false;
+  const wasPlan = UI.view !== "map";
+  UI.view = "map"; UI.zone = m.zone; UI.alt[m.zone] = m.id; setDrop(false); saveUI();
+  render();
+  if(wasPlan) scrollToMap();
+  return !!MAP.map && MAP.shown === m.id;
+}
+function focusPin(id){
+  let p = Z.pins[id], mine = false;
+  if(!p){ p = S.user.pins.find(x => x.id === id); mine = true; }
+  if(!p) return;
+  if(mine && !UI.showMine) toggleLayer("mine", true);
+  if(!mine && !UI.showPlan) toggleLayer("plan", true);
+  if(!goToMap(p.map)) return;
+  const mk = MAP.markers[id]; if(!mk) return;
+  MAP.map.setView(mk.getLatLng(), Math.max(MAP.map.getZoom(), -1), {animate:true});
+  setTimeout(() => mk.openPopup(), 280);
+}
+function focusPlay(playId){
+  const pins = Z.byPlay[playId] || []; if(!pins.length) return;
+  const mapId = pins[0].map, here = pins.filter(p => p.map === mapId);
+  if(here.length === 1) return focusPin(here[0].id);
+  if(!UI.showPlan) toggleLayer("plan", true);
+  if(!goToMap(mapId)) return;
+  const m = Z.maps[mapId];
+  MAP.map.fitBounds(L.latLngBounds(here.map(p => ll(p, m))), {padding:[70,70], maxZoom:-1});
+  setTimeout(() => here.forEach(p => { const el = MAP.markers[p.id] && MAP.markers[p.id].getElement(); if(el){ el.classList.remove("hl"); void el.offsetWidth; el.classList.add("hl"); } }), 300);
+}
+function goPlan(playId){
+  if(MAP.map) MAP.map.closePopup();
+  UI.view = "plan"; UI.openPlays[playId] = true; saveUI(); render();
+  const el = document.querySelector(`[data-play="${CSS.escape(playId)}"]`);
+  if(el){ el.scrollIntoView({block:"center", behavior:"smooth"}); el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1800); }
+}
+
+// ------------------------------------------------------------- editor + import
+function openEditor(c){
+  const isNew = !c;
+  const cur = S.curated || {};
+  const d = c || {name:"", race:"", cls:"", city:"night-harbor", level:1, solo:true};
+  const first = !S.user.characters.length;
+  $("#modal").innerHTML = `<h3>${first ? "Your first character" : (isNew ? "Add an alt" : "Edit character")}</h3>
+    <div class="f"><label for="eName">Name</label><input id="eName" value="${esc(d.name)}" placeholder="e.g. Grubnak" maxlength="40"></div>
+    <div class="two"><div class="f"><label for="eRace">Race</label><input id="eRace" list="races" value="${esc(d.race)}" placeholder="Human" maxlength="30"><datalist id="races">${(cur.races||[]).map(r => `<option value="${esc(r)}">`).join("")}</datalist></div>
+      <div class="f"><label for="eLvl">Level</label><input id="eLvl" type="number" min="1" max="60" value="${esc(d.level)}"></div></div>
+    <div class="f"><label for="eCls">Class</label><select id="eCls">${(cur.classes||[]).map(k => `<option ${k.name===d.cls?"selected":""}>${esc(k.name)}</option>`).join("")}</select></div>
+    <div class="f"><label for="eCity">Starting city</label><select id="eCity">${(cur.cities||[]).map(k => `<option value="${esc(k.key)}" ${k.key===d.city?"selected":""}>${esc(k.name)}</option>`).join("")}</select><div class="hint" id="eWho"></div></div>
+    <div class="mfoot">${!isNew && S.user.characters.length>1?`<button class="btn del" id="eDel">Delete</button>`:""}<button class="btn" id="eCancel">Cancel</button><button class="btn primary" id="eSave">${isNew?"Add":"Save"}</button></div>`;
+  const who = () => { const k = (cur.cities||[]).find(x => x.key === $("#eCity").value); $("#eWho").textContent = k ? k.who : ""; };
+  $("#eCity").onchange = who; who();
+  openModal(); $("#eName").focus();
+  $("#eCancel").onclick = closeModal;
+  const del = $("#eDel");
+  if(del) del.onclick = () => {
+    if(!del.dataset.arm){ del.dataset.arm = "1"; del.textContent = `Delete ${c.name || "this character"} for good?`; return; }
+    S.user.characters = S.user.characters.filter(x => x.id !== c.id); delete S.user.progress[c.id]; S.user.active = S.user.characters[0].id; save(); closeModal(); render();
+  };
+  $("#eSave").onclick = () => {
+    const v = {name:$("#eName").value.trim().slice(0,40) || $("#eCls").value, race:$("#eRace").value.trim().slice(0,30) || "Human", cls:$("#eCls").value, city:$("#eCity").value, level:Math.max(1,Math.min(60,parseInt($("#eLvl").value)||1))};
+    if(isNew){ const id = "c"+Date.now().toString(36); S.user.characters.push(Object.assign({id, solo:true, created:new Date().toISOString()}, v)); S.user.active = id; }
+    else Object.assign(c, v);
+    save(); closeModal(); render();
+  };
+}
+function openImport(){
+  $("#modal").innerHTML = `<h3>Import from the PC app</h3>
+    <p class="mtext">The PC app keeps your characters and progress in <code>C:\\Users\\&lt;you&gt;\\MnM-Companion\\data\\user.json</code> (on a Mac, <code>~/MnM-Companion/data/user.json</code>). Choose that file, or open it in Notepad and paste what's inside. Importing replaces the characters and progress here; your map pins stay.</p>
+    <div class="f"><label for="iFile">File</label><input type="file" id="iFile" accept=".json,application/json"></div>
+    <div class="f"><label for="iText">Or paste it</label><textarea id="iText" rows="5" placeholder='{"characters": [ ... ]}'></textarea><div class="hint" id="iMsg"></div></div>
+    <div class="mfoot"><button class="btn" id="iCancel">Cancel</button><button class="btn primary" id="iGo">Import</button></div>`;
+  openModal();
+  const msg = (t, bad) => { const m = $("#iMsg"); m.textContent = t; m.classList.toggle("bad", !!bad); };
+  $("#iFile").onchange = async () => { const f = $("#iFile").files[0]; if(!f) return; try{ $("#iText").value = await f.text(); msg("Read " + f.name + ". Press Import."); }catch(_){ msg("Couldn't read that file - paste its contents instead.", true); } };
+  $("#iCancel").onclick = closeModal;
+  $("#iGo").onclick = () => {
+    let u; try{ u = JSON.parse($("#iText").value); }catch(_){ msg("That isn't the user.json text - it should start with {", true); return; }
+    const n = normUser(u);
+    if(!n.characters.length){ msg("No characters found in it.", true); return; }
+    n.pins = S.user.pins;
+    S.user = n; save(); closeModal(); render();
+  };
+}
+function openModal(){ $("#scrim").classList.add("on"); }
+function closeModal(){ $("#scrim").classList.remove("on"); }
+$("#scrim").addEventListener("click", e => { if(e.target.id === "scrim") closeModal(); });
+document.addEventListener("keydown", e => { if(e.key === "Escape"){ closeModal(); if(UI.drop) setDrop(false); } });
+setInterval(() => { if(S.loaded) renderStatus(); }, 60000);
+load();
+</script>
+
+</body></html>
