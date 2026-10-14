@@ -1,8 +1,8 @@
 {
  "meta": {
-  "lastFull": "2026-10-13T19:52:31+00:00",
+  "lastFull": "2026-10-14T17:11:18+00:00",
   "itemDetailsPending": 0,
-  "lastScan": "2026-10-14T11:52:13+00:00",
+  "lastScan": "2026-10-14T17:11:30+00:00",
   "lastError": null,
   "counts": {
    "quests": 127,
@@ -13511,7 +13511,7 @@
    "name": "Copper Spear",
    "url": "https://storiesofmnm.com/wiki/item/copper-spear/",
    "type": "weapon",
-   "slot": "",
+   "slot": "primary,secondary",
    "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR RANGER ROGUE SHADOW_KNIGHT SHAMAN",
    "statKeys": "DAMAGE DELAY",
    "races": "All",
@@ -15335,7 +15335,7 @@
    "name": "Darkened Iron Greaves",
    "url": "https://storiesofmnm.com/wiki/item/darkened-iron-greaves/",
    "type": "armor",
-   "slot": "",
+   "slot": "legs",
    "classes": "CLERIC FIGHTER INQUISITOR PALADIN SHADOW_KNIGHT",
    "statKeys": "AC STR STA AGI DEX HP",
    "races": "All",
@@ -20155,7 +20155,7 @@
    "name": "Fine Wood Recurve Bow",
    "url": "https://storiesofmnm.com/wiki/item/fine-wood-recurve-bow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
    "statKeys": "DAMAGE DELAY",
    "races": "All",
@@ -21500,7 +21500,7 @@
    "name": "Giant Bow",
    "url": "https://storiesofmnm.com/wiki/item/giant-bow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BEASTMASTER FIGHTER PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
    "statKeys": "STR STA DEX HP DAMAGE DELAY",
    "races": "All",
@@ -27195,7 +27195,7 @@
    "name": "Longbow",
    "url": "https://storiesofmnm.com/wiki/item/longbow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
    "statKeys": "DAMAGE DELAY",
    "races": "All",
@@ -27958,7 +27958,7 @@
    "name": "Mark of the Lamplighters",
    "url": "https://storiesofmnm.com/wiki/item/mark-of-the-lamplighters/",
    "type": "jewelry",
-   "slot": "",
+   "slot": "ear",
    "classes": "ROGUE",
    "statKeys": "AC STR DEX HP",
    "races": "All",
@@ -31469,7 +31469,7 @@
    "name": "Pasha’s Favor",
    "url": "https://storiesofmnm.com/wiki/item/pashas-favor/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
    "statKeys": "STR STA HP DAMAGE DELAY",
    "races": "All",
@@ -34722,7 +34722,7 @@
    "name": "Robe of the Namon Ka Har",
    "url": "https://storiesofmnm.com/wiki/item/robe-of-the-namon-ka-har/",
    "type": "armor",
-   "slot": "",
+   "slot": "chest",
    "classes": "ALL",
    "statKeys": "AC STA INT CHA HP MANA",
    "races": "All",
@@ -38923,7 +38923,7 @@
    "name": "Seafarer’s Hide Boots",
    "url": "https://storiesofmnm.com/wiki/item/seafarers-hide-boots/",
    "type": "armor",
-   "slot": "",
+   "slot": "feet",
    "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
    "statKeys": "AC WIS HP",
    "races": "All",
@@ -40933,7 +40933,7 @@
    "name": "Skin Bound Staff",
    "url": "https://storiesofmnm.com/wiki/item/skin-bound-staff/",
    "type": "armor",
-   "slot": "",
+   "slot": "primary,secondary",
    "classes": "BARD BEASTMASTER CLERIC DRUID ELEMENTALIST ENCHANTER FIGHTER INQUISITOR MONK NECROMANCER PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE WIZARD",
    "statKeys": "AC STA INT HP MANA DAMAGE DELAY",
    "races": "All",
@@ -41008,7 +41008,7 @@
    "name": "Skintaker Ritual Dagger",
    "url": "https://storiesofmnm.com/wiki/item/skintaker-ritual-dagger/",
    "type": "weapon",
-   "slot": "",
+   "slot": "primary,secondary",
    "classes": "ARCHER BARD BEASTMASTER ELEMENTALIST ENCHANTER FIGHTER INQUISITOR NECROMANCER RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE WIZARD",
    "statKeys": "DEX INT MANA DAMAGE DELAY",
    "races": "All",
@@ -41228,7 +41228,7 @@
    "name": "Skri’Var Ranger’s Bow",
    "url": "https://storiesofmnm.com/wiki/item/skrivar-rangers-bow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
    "statKeys": "STR STA DEX HP MANA DAMAGE DELAY",
    "races": "All",
@@ -44375,7 +44375,7 @@
    "name": "Tanned Sinew Bracers",
    "url": "https://storiesofmnm.com/wiki/item/tanned-sinew-bracers/",
    "type": "armor",
-   "slot": "",
+   "slot": "wrist",
    "classes": "ALL",
    "statKeys": "AC WIS HP",
    "races": "All",
@@ -46244,7 +46244,7 @@
    "name": "Throwing Dagger",
    "url": "https://storiesofmnm.com/wiki/item/throwing-dagger/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BARD BEASTMASTER FIGHTER MONK RANGER ROGUE SPELLBLADE",
    "statKeys": "DAMAGE DELAY",
    "races": "All",
@@ -47517,7 +47517,7 @@
    "slot": "chest",
    "classes": "ALL",
    "statKeys": "AC HP MANA",
-   "races": "HUM OGR DEF ELD GIE TRL",
+   "races": "HUM OGR DEF ELF HIE TRL",
    "levelMin": "",
    "excerpt": "A large sized sand-pelted tunic from an archer of the Vale.",
    "detail": {
@@ -48702,7 +48702,7 @@
    "name": "Warrenmother’s Rod",
    "url": "https://storiesofmnm.com/wiki/item/warrenmothers-rod/",
    "type": "weapon",
-   "slot": "",
+   "slot": "primary,secondary",
    "classes": "BEASTMASTER DRUID RANGER",
    "statKeys": "DEX WIS HP MANA DAMAGE DELAY",
    "races": "All",
@@ -49778,7 +49778,7 @@
    "name": "Worn Bow",
    "url": "https://storiesofmnm.com/wiki/item/worn-bow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
    "statKeys": "DAMAGE DELAY",
    "races": "All",
@@ -49894,7 +49894,7 @@
    "name": "Worn Fine Wood Bow",
    "url": "https://storiesofmnm.com/wiki/item/worn-fine-wood-bow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
    "statKeys": "DAMAGE DELAY",
    "races": "All",
@@ -49926,7 +49926,7 @@
    "name": "Worn Ironbark Bow",
    "url": "https://storiesofmnm.com/wiki/item/worn-ironbark-bow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ranged",
    "classes": "ARCHER BEASTMASTER FIGHTER PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
    "statKeys": "DAMAGE DELAY",
    "races": "All",
@@ -50608,37 +50608,37 @@
    "slug": "kroths-warplate-girdle",
    "name": "Kroths Warplate Girdle",
    "url": "https://storiesofmnm.com/wiki/item/kroths-warplate-girdle/",
-   "detailAt": "2026-10-13T19:52:35+00:00"
+   "detailAt": "2026-10-14T17:11:21+00:00"
   },
   "iremgorges-luminous-core": {
    "slug": "iremgorges-luminous-core",
    "name": "Iremgorges Luminous Core",
    "url": "https://storiesofmnm.com/wiki/item/iremgorges-luminous-core/",
-   "detailAt": "2026-10-13T19:52:42+00:00"
+   "detailAt": "2026-10-14T17:11:23+00:00"
   },
   "tharnixs-root-bound-girdle": {
    "slug": "tharnixs-root-bound-girdle",
    "name": "Tharnixs Root Bound Girdle",
    "url": "https://storiesofmnm.com/wiki/item/tharnixs-root-bound-girdle/",
-   "detailAt": "2026-10-13T19:52:44+00:00"
+   "detailAt": "2026-10-14T17:11:25+00:00"
   },
   "gillmarked-bracer": {
    "slug": "gillmarked-bracer",
    "name": "Gillmarked Bracer",
    "url": "https://storiesofmnm.com/wiki/item/gillmarked-bracer/",
-   "detailAt": "2026-10-13T19:52:46+00:00"
+   "detailAt": "2026-10-14T17:11:27+00:00"
   },
   "blightfathers-warmaul": {
    "slug": "blightfathers-warmaul",
    "name": "Blightfathers Warmaul",
    "url": "https://storiesofmnm.com/wiki/item/blightfathers-warmaul/",
-   "detailAt": "2026-10-13T19:52:48+00:00"
+   "detailAt": "2026-10-14T17:11:28+00:00"
   },
   "kells-hollow-standard": {
    "slug": "kells-hollow-standard",
    "name": "Kells Hollow Standard",
    "url": "https://storiesofmnm.com/wiki/item/kells-hollow-standard/",
-   "detailAt": "2026-10-13T19:52:49+00:00"
+   "detailAt": "2026-10-14T17:11:30+00:00"
   }
  },
  "guides": {
@@ -50946,7 +50946,7 @@
      "why": "Dense camps where a self-healing tank shines."
     }
    ],
-   "at": "2026-10-13T19:52:33+00:00"
+   "at": "2026-10-14T17:11:20+00:00"
   }
  },
  "news": []
