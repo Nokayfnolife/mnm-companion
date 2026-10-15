@@ -1,8 +1,8 @@
 {
  "meta": {
-  "lastFull": "2026-10-14T17:11:18+00:00",
+  "lastFull": "2026-10-15T17:01:51+00:00",
   "itemDetailsPending": 0,
-  "lastScan": "2026-10-15T11:29:08+00:00",
+  "lastScan": "2026-10-15T17:02:03+00:00",
   "lastError": null,
   "counts": {
    "quests": 127,
@@ -7232,7 +7232,7 @@
    "name": "Arrow",
    "url": "https://storiesofmnm.com/wiki/item/arrow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ALL",
    "statKeys": "",
    "races": "All",
@@ -8979,7 +8979,7 @@
    "name": "Black Feather Arrow",
    "url": "https://storiesofmnm.com/wiki/item/black-feather-arrow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ALL",
    "statKeys": "DAMAGE",
    "races": "All",
@@ -27641,7 +27641,7 @@
    "name": "Mana Bloodstone",
    "url": "https://storiesofmnm.com/wiki/item/mana-bloodstone/",
    "type": "jewelry",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ALL",
    "statKeys": "HP MANA",
    "races": "All",
@@ -30711,7 +30711,7 @@
    "name": "Onyx Bat Figurine",
    "url": "https://storiesofmnm.com/wiki/item/onyx-bat-figurine/",
    "type": "jewelry",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ALL",
    "statKeys": "",
    "races": "All",
@@ -31886,7 +31886,7 @@
    "name": "Pitch-Wrapped Arrow",
    "url": "https://storiesofmnm.com/wiki/item/pitch-wrapped-arrow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ARCHER",
    "statKeys": "",
    "races": "All",
@@ -35219,7 +35219,7 @@
    "name": "Runestone of Pride",
    "url": "https://storiesofmnm.com/wiki/item/runestone-of-pride/",
    "type": "jewelry",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ALL",
    "statKeys": "CHA HP MANA",
    "races": "All",
@@ -41601,7 +41601,7 @@
    "name": "Smoke Bomb Arrow",
    "url": "https://storiesofmnm.com/wiki/item/smoke-bomb-arrow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ARCHER",
    "statKeys": "",
    "races": "All",
@@ -42249,7 +42249,7 @@
    "name": "Sphalerite Spider Figurine",
    "url": "https://storiesofmnm.com/wiki/item/sphalerite-spider-figurine/",
    "type": "jewelry",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ALL",
    "statKeys": "",
    "races": "All",
@@ -43734,7 +43734,7 @@
    "name": "Stonehead Arrow",
    "url": "https://storiesofmnm.com/wiki/item/stonehead-arrow/",
    "type": "weapon",
-   "slot": "",
+   "slot": "ammo",
    "classes": "ALL",
    "statKeys": "DAMAGE",
    "races": "All",
@@ -50608,37 +50608,37 @@
    "slug": "kroths-warplate-girdle",
    "name": "Kroths Warplate Girdle",
    "url": "https://storiesofmnm.com/wiki/item/kroths-warplate-girdle/",
-   "detailAt": "2026-10-14T17:11:21+00:00"
+   "detailAt": "2026-10-15T17:01:54+00:00"
   },
   "iremgorges-luminous-core": {
    "slug": "iremgorges-luminous-core",
    "name": "Iremgorges Luminous Core",
    "url": "https://storiesofmnm.com/wiki/item/iremgorges-luminous-core/",
-   "detailAt": "2026-10-14T17:11:23+00:00"
+   "detailAt": "2026-10-15T17:01:56+00:00"
   },
   "tharnixs-root-bound-girdle": {
    "slug": "tharnixs-root-bound-girdle",
    "name": "Tharnixs Root Bound Girdle",
    "url": "https://storiesofmnm.com/wiki/item/tharnixs-root-bound-girdle/",
-   "detailAt": "2026-10-14T17:11:25+00:00"
+   "detailAt": "2026-10-15T17:01:57+00:00"
   },
   "gillmarked-bracer": {
    "slug": "gillmarked-bracer",
    "name": "Gillmarked Bracer",
    "url": "https://storiesofmnm.com/wiki/item/gillmarked-bracer/",
-   "detailAt": "2026-10-14T17:11:27+00:00"
+   "detailAt": "2026-10-15T17:02:00+00:00"
   },
   "blightfathers-warmaul": {
    "slug": "blightfathers-warmaul",
    "name": "Blightfathers Warmaul",
    "url": "https://storiesofmnm.com/wiki/item/blightfathers-warmaul/",
-   "detailAt": "2026-10-14T17:11:28+00:00"
+   "detailAt": "2026-10-15T17:02:01+00:00"
   },
   "kells-hollow-standard": {
    "slug": "kells-hollow-standard",
    "name": "Kells Hollow Standard",
    "url": "https://storiesofmnm.com/wiki/item/kells-hollow-standard/",
-   "detailAt": "2026-10-14T17:11:30+00:00"
+   "detailAt": "2026-10-15T17:02:03+00:00"
   }
  },
  "guides": {
@@ -50946,7 +50946,7 @@
      "why": "Dense camps where a self-healing tank shines."
     }
    ],
-   "at": "2026-10-14T17:11:20+00:00"
+   "at": "2026-10-15T17:01:52+00:00"
   }
  },
  "news": []
