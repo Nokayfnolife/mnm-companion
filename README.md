@@ -1,6 +1,8 @@
-# MnM Companion
+# Monsters and Memories Companion
 
 A level-by-level planner for **Monsters & Memories**: what to do next, gear by slot, quests, camps, armor sets, spells and zone maps with your own pins. Each character follows its level slider. Players sign in to keep their characters, progress and pins on every device.
+
+The site has ten themes, each named after an area of the world (Night Harbor at night is the default). They live as CSS variables at the top of the stylesheet in `site/index.html`; the theme menu list is `THEMES` in the script. Six use a darkened community zone map as the sign-in backdrop (`site/img/vista-*.webp`).
 
 - `site/` is the static website, served by GitHub Pages
 - `site/data/wiki.json` is a copy of storiesofmnm.com. A GitHub Action refreshes it every 6 hours.
