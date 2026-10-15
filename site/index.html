@@ -1,5 +1,21 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>MnM Companion</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MnM Companion: a Monsters &amp; Memories leveling planner</title>
+<meta name="description" content="Set your level and see what to do next in Monsters &amp; Memories: quests, hunting spots, the best gear for every slot, armor sets and zone maps. Free, synced across PC and phone.">
+<link rel="canonical" href="https://mnmcompanion.gg/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mnmcompanion.gg/">
+<meta property="og:title" content="MnM Companion">
+<meta property="og:description" content="A leveling planner for Monsters &amp; Memories: what to do at your level, the gear worth chasing, and where it all is on the map.">
+<meta property="og:image" content="https://mnmcompanion.gg/img/vista.webp">
+<meta name="theme-color" content="#15120e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%2316120e' stroke='%23d4a446' stroke-width='2.5'/%3E%3Cpath d='M16 4.5l2.6 8.9 8.9 2.6-8.9 2.6L16 27.5l-2.6-8.9L4.5 16l8.9-2.6z' fill='%23f0cd7c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700;800&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* Leaflet 1.9.4 (BSD-2-Clause) */
 .leaflet-pane,
@@ -580,305 +596,492 @@ svg.leaflet-image-layer.leaflet-interactive path {
 		print-color-adjust: exact;
 		}
 	}
+/* ============================================================
+   MnM Companion theme: stone + iron game windows
+   ============================================================ */
 :root{
   color-scheme:dark;
-  --bg:#121019; --bg2:#191523; --panel:#1e1929; --panel2:#251f33; --line:rgba(214,168,92,.16); --line2:rgba(214,168,92,.32);
-  --brass:#d6a85c; --brass2:#f0c983; --sand:#ece2cf; --muted:#a3967f; --dim:#7a705f;
-  --now:#7cc4a4; --soon:#d6a85c; --hold:#d9785f; --info:#8fb3e0; --none:#8a7f6c;
-  --r:10px; --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 8px 24px rgba(0,0,0,.25);
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,system-ui,sans-serif;
+  --void:#0d0b09; --stone:#171410; --stone2:#1f1b16; --stone3:#29241d; --slab:#352d24;
+  --well:#0f0d0a;
+  --iron:#4d4335; --iron2:#76654c; --rim:rgba(255,226,170,.09);
+  --gilt:#d4a446; --gilt2:#f0cd7c; --parch:#ece0c5; --ash:#ab9f88; --soot:#7d7361;
+  --now:#79c26d; --soon:#d4a446; --hold:#d06a4f; --info:#7fa6dc; --none:#857b6a;
+  --q-plain:#9a9182; --q-stat:#f4eddd; --q-fx:#86d472; --q-lore:#ecb850;
+  --display:"Alegreya SC","Palatino Linotype",Palatino,Georgia,serif;
+  --body:"Alegreya Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  /* older names still used by map pins and inline styles */
+  --brass:var(--gilt); --brass2:var(--gilt2); --sand:var(--parch); --muted:var(--ash); --dim:var(--soot);
+  --bg2:var(--well); --panel:var(--stone2); --panel2:var(--stone3);
+  --line:rgba(236,224,197,.08); --line2:rgba(212,164,70,.3);
+  --serif:var(--display); --sans:var(--body);
+  --frame:0 0 0 1px var(--iron), inset 0 1px 0 var(--rim);
+  --r:4px;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-body{margin:0;background:radial-gradient(1200px 500px at 70% -200px,#2b2140 0%,transparent 60%),var(--bg);background-color:var(--bg);color:var(--sand);font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh}
-a{color:var(--brass2);text-decoration:none;border-bottom:1px solid rgba(240,201,131,.25)}
-a:hover{border-bottom-color:var(--brass2)}
+html{background:var(--void)}
+body{margin:0;min-height:100vh;color:var(--parch);font:16px/1.5 var(--body);-webkit-font-smoothing:antialiased;
+  background-color:var(--void);
+  background-image:
+    radial-gradient(1100px 520px at 50% -260px, rgba(212,164,70,.11), transparent 70%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .62  0 0 0 0 .54  0 0 0 0 .42  0 0 0 .075 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");}
+a{color:var(--gilt2);text-decoration:none;border-bottom:1px solid rgba(240,205,124,.28)}
+a:hover{border-bottom-color:var(--gilt2)}
 button{font:inherit;color:inherit;cursor:pointer}
-code{font:12.5px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--bg2);border:1px solid var(--line);border-radius:4px;padding:0 4px;word-break:break-all}
-.wrap{max-width:1280px;margin:0 auto;padding:0 20px 60px}
+:focus-visible{outline:2px solid var(--gilt2);outline-offset:2px}
+code{font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--well);border:1px solid #000;border-radius:3px;padding:0 4px;word-break:break-all}
 .num{font-variant-numeric:tabular-nums}
-.loading{color:var(--muted);padding:40px 0}
+.loading{color:var(--ash);padding:40px 0}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px 60px}
 
-/* top bar */
-.top{display:flex;align-items:center;gap:12px 16px;padding:18px 0 10px;flex-wrap:wrap}
-.brand{display:flex;align-items:baseline;gap:10px}
-.brand h1{font:600 22px/1 var(--serif);letter-spacing:.06em;margin:0;color:var(--sand)}
-.brand h1 b{color:var(--brass)}
-.brand span{color:var(--muted);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
-.viewseg button{padding:6px 16px;font-size:13.5px}
-.status{margin-left:auto;display:flex;align-items:center;gap:6px 14px;color:var(--muted);font-size:13px;flex-wrap:wrap}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--now);display:inline-block;margin-right:6px;box-shadow:0 0 0 3px rgba(124,196,164,.15)}
-.dot.warn{background:var(--brass);box-shadow:0 0 0 3px rgba(214,168,92,.15)}
-.dot.err{background:var(--hold)}
-.sync{font-size:12px;border:1px solid var(--line2);border-radius:999px;padding:1px 9px;color:var(--muted)}
-.sync.db{color:var(--now);border-color:rgba(124,196,164,.35)}
-.btn{background:var(--panel2);border:1px solid var(--line2);border-radius:8px;padding:6px 12px;font-size:13px;color:var(--sand)}
-.btn:hover{border-color:var(--brass)}
-.btn.primary{background:linear-gradient(180deg,#e0b46a,#b98a3e);color:#1a1408;border-color:#e6bd77;font-weight:600}
-.btn.ghost{background:transparent}
+/* ---------- shared parts: windows, buttons, toggles ---------- */
+.win,.card{position:relative;background:linear-gradient(180deg,var(--stone2),var(--stone) 140px);border:1px solid #000;border-radius:var(--r);box-shadow:var(--frame),0 12px 30px rgba(0,0,0,.45);min-width:0}
+.card>header,.win>.tb{position:relative;display:flex;align-items:baseline;gap:4px 10px;flex-wrap:wrap;padding:9px 16px 8px 22px;background:linear-gradient(180deg,var(--slab),var(--stone3));border-bottom:1px solid #000;box-shadow:0 1px 0 rgba(118,101,76,.55);border-radius:3px 3px 0 0}
+.card>header::before,.card>header::after,.win>.tb::before,.win>.tb::after{content:"";position:absolute;top:50%;margin-top:-3px;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d4bf96,#5a4b37 70%);box-shadow:0 0 0 1px #000}
+.card>header::before,.win>.tb::before{left:8px}
+.card>header::after,.win>.tb::after{right:8px}
+.card>header h3,.win>.tb h1,.win>.tb h2{font:700 18px/1.15 var(--display);letter-spacing:.01em;color:var(--gilt2);text-shadow:0 1px 0 #000;margin:0}
+.card>header .sub{color:var(--ash);font-size:14px}
+.card>header .right{margin-left:auto;margin-right:6px;display:flex;gap:6px;align-items:center}
+.body{padding:12px 16px 16px}
+.empty{color:var(--soot);font-size:14.5px;padding:6px 0}
+.empty b{color:var(--ash)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(180deg,#3d352a,#27211a);border:1px solid #000;border-radius:3px;box-shadow:0 0 0 1px var(--iron),inset 0 1px 0 rgba(255,230,180,.14);padding:6px 13px;font:600 14.5px/1.2 var(--body);color:var(--parch)}
+.btn:hover{box-shadow:0 0 0 1px var(--iron2),inset 0 1px 0 rgba(255,230,180,.22);color:#fff}
+.btn:active{background:linear-gradient(180deg,#211c16,#2c261e)}
+.btn.primary{background:linear-gradient(180deg,#f2cb6d,#c8912f 55%,#9a691b);color:#1b1206;box-shadow:0 0 0 1px #6d4c14,inset 0 1px 0 rgba(255,246,214,.6);text-shadow:0 1px 0 rgba(255,236,190,.35)}
+.btn.primary:hover{color:#000;filter:brightness(1.06)}
+.btn.ghost{background:transparent;box-shadow:none;color:var(--ash)}
+.btn.ghost:hover{color:var(--parch);box-shadow:0 0 0 1px var(--iron)}
+.btn.discord{background:linear-gradient(180deg,#7079f3,#4e58d4);color:#fff;box-shadow:0 0 0 1px #2b318c,inset 0 1px 0 rgba(255,255,255,.28)}
+.btn.discord:hover{filter:brightness(1.08)}
+.btn.big{padding:11px 18px;font-size:16px;width:100%}
 .btn:disabled{opacity:.45;cursor:default}
+.btn svg{width:18px;height:18px;flex:none}
 
-/* character tabs */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:8px 0 14px;border-bottom:1px solid var(--line)}
-.tab{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;font-size:13.5px}
-.tab .crest{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--line2);font:700 10px/1 var(--sans);letter-spacing:.04em;color:var(--brass)}
-.tab .lv{color:var(--muted);font-size:12px}
-.tab.on{border-color:var(--brass);background:linear-gradient(180deg,#2c2338,#231d2f)}
-.tab.on .crest{background:var(--brass);color:#1a1408;border-color:var(--brass)}
-.tab.add{padding:6px 14px;color:var(--brass);border-style:dashed}
+.seg{display:inline-flex;flex-wrap:wrap;background:var(--well);border:1px solid #000;border-radius:3px;box-shadow:0 0 0 1px var(--iron);padding:2px;gap:2px}
+.seg button{background:transparent;border:0;border-radius:2px;padding:4px 11px;font:600 14px/1.2 var(--body);color:var(--ash)}
+.seg button:hover{color:var(--parch)}
+.seg button.on{background:linear-gradient(180deg,#4b4031,#332b21);color:var(--gilt2);box-shadow:inset 0 1px 0 rgba(255,230,180,.16),0 0 0 1px #000}
 
-/* hero */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 28px;align-items:center;padding:22px 0 8px}
-.who h2{font:600 30px/1.1 var(--serif);margin:0 0 6px;letter-spacing:.01em}
-.who .meta{color:var(--muted);font-size:14px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}
-.who .meta b{color:var(--sand);font-weight:500}
-.lvlbig{text-align:right}
-.lvlbig .n{font:600 64px/0.9 var(--serif);color:var(--brass2);font-variant-numeric:tabular-nums}
-.lvlbig .l{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.slider{grid-column:1/-1;position:relative;padding:6px 0 4px}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:0}
-input[type=range]::-webkit-slider-runnable-track{height:8px;border-radius:8px;background:linear-gradient(90deg,var(--brass) 0 var(--fill,5%),#2d2638 var(--fill,5%) 100%);border:1px solid var(--line2)}
-input[type=range]::-moz-range-track{height:8px;border-radius:8px;background:#2d2638;border:1px solid var(--line2)}
-input[type=range]::-moz-range-progress{height:8px;border-radius:8px;background:var(--brass)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe2a8,#c8923a 60%,#8a5f1f);border:2px solid #1a1408;margin-top:-10px;box-shadow:0 0 0 4px rgba(214,168,92,.18)}
-input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#d6a85c;border:2px solid #1a1408}
-.ticks{position:absolute;left:13px;right:13px;top:36px;height:30px;pointer-events:none}
-.tick{position:absolute;transform:translateX(-50%);font-size:10.5px;color:var(--dim);white-space:nowrap;text-align:center;line-height:1.15}
-.tick::before{content:"";display:block;width:1px;height:6px;background:var(--line2);margin:0 auto 3px}
-.tick.hit{color:var(--brass)}
-.upnext{display:flex;gap:8px 14px;flex-wrap:wrap;align-items:baseline;margin-top:26px;font-size:13px;color:#cfc3ad}
-.upnext .ul{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-.upnext .un b{color:var(--brass2);margin-right:3px}
+/* item names: color says what kind of item it is */
+.q-plain{color:var(--q-plain)!important} .q-stat{color:var(--q-stat)!important} .q-fx{color:var(--q-fx)!important} .q-lore{color:var(--q-lore)!important}
+a.ilink,span.ilink{border-bottom:0;font-weight:700}
+a.ilink:hover{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:0;z-index:2000;background:linear-gradient(180deg,#231e18,#15120e);border-bottom:1px solid #000;box-shadow:0 1px 0 var(--iron),0 8px 20px rgba(0,0,0,.45)}
+.bar>.in{max-width:1280px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:10px 16px}
+.mark{display:flex;align-items:center;gap:9px;border:0;color:var(--parch);flex:none}
+.mark svg{width:30px;height:30px}
+.mark b{font:800 21px/1 var(--display);color:var(--gilt2);text-shadow:0 1px 0 #000;letter-spacing:.01em}
+.mark:hover{border:0}
+.search{position:relative;flex:1 1 320px;max-width:560px;margin-left:8px}
+.search input{width:100%;height:38px;padding:0 38px 0 36px;background:#0b0907;border:1px solid #000;border-radius:3px;box-shadow:0 0 0 1px var(--iron),inset 0 2px 6px rgba(0,0,0,.75);color:var(--parch);font:16px/1 var(--body);-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:var(--soot)}
+.search input:focus{outline:0;box-shadow:0 0 0 1px var(--gilt),inset 0 2px 6px rgba(0,0,0,.75)}
+.search input::-webkit-search-cancel-button{display:none}
+.search .mag{position:absolute;left:11px;top:11px;width:16px;height:16px;color:var(--ash);pointer-events:none}
+.search kbd{position:absolute;right:9px;top:9px;font:600 12px/18px var(--body);color:var(--soot);border:1px solid var(--iron);border-radius:3px;padding:0 6px;background:var(--stone2)}
+.search input:focus~kbd{display:none}
+.viewseg button{padding:6px 15px;font-size:14.5px}
+.acct{margin-left:auto;display:flex;align-items:center;gap:8px 10px;flex:none;font-size:14px;color:var(--ash)}
+.acct .who-am{max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acct .coffee{font-size:14px;color:var(--gilt2)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--now);display:inline-block;box-shadow:0 0 0 3px rgba(121,194,109,.15);flex:none}
+.dot.warn{background:var(--gilt);box-shadow:0 0 0 3px rgba(212,164,70,.15)}
+.dot.err{background:var(--hold)}
+
+/* search results */
+.sres{position:absolute;left:0;right:0;top:calc(100% + 8px);max-height:min(72vh,600px);overflow:auto;z-index:2100;padding-bottom:4px}
+.sg{padding:9px 14px 3px;font:700 15px/1.2 var(--display);color:var(--ash)}
+.sr{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px 10px;align-items:center;padding:6px 14px;cursor:pointer;border-top:1px solid var(--line)}
+.sg+.sr{border-top:0}
+.sr.on,.sr:hover{background:rgba(212,164,70,.11)}
+.sr .k{font:800 14px/1 var(--display);color:var(--gilt2);text-align:center;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px #3a3229;border-radius:2px;padding:6px 0}
+.sr .k.ic{color:var(--ash);font-size:13px}
+.sr .t{font-weight:700;font-size:15px;line-height:1.25;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sr .d{grid-column:2;color:var(--ash);font-size:13px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sr mark{background:none;color:inherit;text-decoration:underline;text-decoration-color:rgba(240,205,124,.55);text-underline-offset:3px}
+.sr.ask .k{background:radial-gradient(circle at 40% 35%,#55452c,#1d1812);color:var(--gilt2)}
+.sr.ask .t{color:var(--gilt2)}
+.snone{padding:12px 14px;color:var(--ash);font-size:14.5px}
+
+/* ---------- character plates ---------- */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:16px 0 0}
+.tab{display:flex;align-items:center;gap:9px;background:linear-gradient(180deg,#2a241d,#1b1814);border:1px solid #000;border-radius:3px;box-shadow:var(--frame);padding:5px 14px 5px 6px;font:700 15px/1.2 var(--body);color:var(--parch)}
+.tab:hover{box-shadow:0 0 0 1px var(--iron2),inset 0 1px 0 var(--rim)}
+.tab .crest{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 40% 35%,#3c3327,#17130f);box-shadow:0 0 0 1px #000,0 0 0 2px var(--iron);font:800 11px/1 var(--display);color:var(--gilt2)}
+.tab .lv{color:var(--ash);font-size:13.5px;font-weight:600}
+.tab.on{color:var(--gilt2);box-shadow:0 0 0 1px var(--gilt),inset 0 1px 0 rgba(255,230,180,.2),0 0 16px rgba(212,164,70,.16)}
+.tab.on .crest{background:radial-gradient(circle at 40% 35%,#f4d58c,#b9832a 70%);color:#1b1206;box-shadow:0 0 0 1px #000,0 0 0 2px var(--gilt)}
+.tab.add{background:transparent;box-shadow:0 0 0 1px var(--iron);border-style:dashed;border-color:transparent;color:var(--gilt2);padding:5px 14px}
+
+/* ---------- nameplate + experience bar ---------- */
+.hero{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 16px;align-items:center;margin:14px 0 0;padding:16px 20px 12px}
+.crestbig{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 40% 35%,#3e3529,#16120e);box-shadow:0 0 0 2px #000,0 0 0 4px var(--iron2),inset 0 1px 0 var(--rim);font:800 18px/1 var(--display);color:var(--gilt2);text-shadow:0 1px 0 #000}
+.who{min-width:0}
+.who h2{font:800 31px/1.05 var(--display);margin:0 0 4px;color:var(--parch);text-shadow:0 2px 0 #000;overflow-wrap:anywhere}
+.who .meta{color:var(--ash);font-size:15px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}
+.who .meta b{color:var(--parch);font-weight:600}
+.lvlbig{text-align:center;min-width:84px}
+.lvlbig .n{font:800 58px/.86 var(--display);color:var(--gilt2);text-shadow:0 2px 0 #000,0 0 26px rgba(212,164,70,.28);font-variant-numeric:tabular-nums}
+.lvlbig .l{font:700 15px/1.2 var(--display);color:var(--ash);margin-top:2px}
+.slider{grid-column:1/-1;position:relative;padding:12px 0 2px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:14px;border-radius:2px;border:1px solid #000;box-shadow:0 0 0 1px var(--iron),inset 0 2px 4px rgba(0,0,0,.85);
+  background:
+    repeating-linear-gradient(90deg,transparent 0 calc(100%/12 - 2px),rgba(0,0,0,.9) calc(100%/12 - 2px) calc(100%/12)),
+    linear-gradient(180deg,#f7d98a,#cf9733 50%,#8a5c19) 0 0/var(--fill,5%) 100% no-repeat,
+    linear-gradient(180deg,#0b0907,#1c1813)}
+input[type=range]::-moz-range-track{height:14px;border-radius:2px;border:1px solid #000;box-shadow:0 0 0 1px var(--iron);background:repeating-linear-gradient(90deg,transparent 0 calc(100%/12 - 2px),rgba(0,0,0,.9) calc(100%/12 - 2px) calc(100%/12)),linear-gradient(180deg,#0b0907,#1c1813)}
+input[type=range]::-moz-range-progress{height:14px;border-radius:2px;background:linear-gradient(180deg,#f7d98a,#cf9733 50%,#8a5c19)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;margin-top:-6px;background:radial-gradient(circle at 35% 30%,#fff4c8,#e5af4a 45%,#71490f);border:2px solid #120e08;box-shadow:0 0 0 2px var(--gilt),0 0 14px rgba(240,205,124,.55)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff4c8,#e5af4a 45%,#71490f);border:2px solid #120e08;box-shadow:0 0 0 2px var(--gilt)}
+input[type=range]:focus-visible{outline:0}
+input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(--gilt2),0 0 0 5px rgba(240,205,124,.35)}
+.ticks{position:absolute;left:12px;right:12px;top:42px;height:30px;pointer-events:none}
+.tick{position:absolute;transform:translateX(-50%);font:700 12.5px/1.15 var(--body);color:var(--soot);white-space:nowrap;text-align:center}
+.tick::before{content:"";display:block;width:2px;height:6px;background:var(--iron);margin:0 auto 2px}
+.tick.hit{color:var(--gilt)}
+.upnext{display:flex;gap:6px 16px;flex-wrap:wrap;align-items:baseline;margin-top:26px;font-size:14.5px;color:#d8ccb2}
+.upnext .ul{font:700 14px/1 var(--display);color:var(--soot)}
+.upnext .un b{color:var(--gilt2);margin-right:4px}
 .modes{display:flex;gap:6px;align-items:center}
-.seg{display:inline-flex;border:1px solid var(--line2);border-radius:8px;overflow:hidden;flex-wrap:wrap}
-.seg button{background:transparent;border:0;padding:5px 11px;font-size:12.5px;color:var(--muted)}
-.seg button.on{background:var(--brass);color:#1a1408;font-weight:600}
-.mapmode .hero{padding:12px 0 2px;gap:6px 20px}
-.mapmode .who h2{font-size:22px;margin-bottom:3px}
+.mapmode .hero{padding:12px 18px 8px}
+.mapmode .who h2{font-size:23px}
+.mapmode .crestbig{width:44px;height:44px;font-size:14px}
 .mapmode .lvlbig .n{font-size:40px}
 .mapmode .ticks,.mapmode .upnext{display:none}
-.onboard{grid-column:1/-1;background:var(--panel);border:1px solid var(--line2);border-radius:var(--r);padding:22px;max-width:640px}
-.onboard h2{font:600 24px/1.2 var(--serif);margin:0 0 6px}
-.onboard p{color:#cfc3ad;margin:0 0 14px}
-.onboard .btn{margin-right:8px}
+.onboard{grid-column:1/-1;max-width:640px;margin-top:18px}
+.onboard .body{padding:18px 20px 20px}
+.onboard h2{font:800 26px/1.15 var(--display);margin:0 0 6px;color:var(--parch)}
+.onboard p{color:#d8ccb2;margin:0 0 14px}
+.onboard .btn{margin:0 8px 6px 0}
 
-/* layout */
-.grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:18px;align-items:start;margin-top:8px}
+/* ---------- layout ---------- */
+.grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:18px;align-items:start;margin-top:18px}
 .col{display:grid;gap:18px;min-width:0}
-.card{background:linear-gradient(180deg,var(--panel),#1b1726);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);min-width:0}
-.card>header{display:flex;align-items:baseline;gap:6px 10px;padding:14px 16px 10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.card>header h3{font:600 15px/1.2 var(--serif);letter-spacing:.08em;text-transform:uppercase;margin:0;color:var(--brass2)}
-.card>header .sub{color:var(--muted);font-size:12.5px}
-.card>header .right{margin-left:auto;display:flex;gap:6px;align-items:center}
-.body{padding:12px 16px 16px}
-.empty{color:var(--dim);font-size:13.5px;padding:6px 0}
-.empty b{color:var(--muted)}
 
 /* plays */
 .play{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 12px;padding:12px 0;border-top:1px solid var(--line);transition:background .6s}
 .play:first-child{border-top:0;padding-top:4px}
-.play.flash{background:rgba(214,168,92,.1)}
-.badge{font:600 10px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:5px 7px;border-radius:5px;border:1px solid;white-space:nowrap;align-self:start;margin-top:3px;display:inline-block}
-.b-now{color:var(--now);border-color:rgba(124,196,164,.4);background:rgba(124,196,164,.08)}
-.b-soon{color:var(--soon);border-color:rgba(214,168,92,.4);background:rgba(214,168,92,.08)}
-.b-hold{color:var(--hold);border-color:rgba(217,120,95,.45);background:rgba(217,120,95,.08)}
-.b-info{color:var(--info);border-color:rgba(143,179,224,.4);background:rgba(143,179,224,.07)}
-.play h4{margin:0;font:600 15.5px/1.3 var(--sans);color:var(--sand)}
-.play .why{color:#cfc3ad;font-size:13.5px;margin-top:3px}
-.play ol{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:13px}
+.play.flash{background:rgba(212,164,70,.12)}
+.badge{font:700 14px/1 var(--display);padding:4px 8px 5px;border-radius:2px;border:1px solid;white-space:nowrap;align-self:start;margin-top:2px;display:inline-block}
+.b-now{color:var(--now);border-color:rgba(121,194,109,.45);background:rgba(121,194,109,.09)}
+.b-soon{color:var(--soon);border-color:rgba(212,164,70,.45);background:rgba(212,164,70,.09)}
+.b-hold{color:var(--hold);border-color:rgba(208,106,79,.5);background:rgba(208,106,79,.09)}
+.b-info{color:var(--info);border-color:rgba(127,166,220,.45);background:rgba(127,166,220,.08)}
+.play h4{margin:0;font:700 16.5px/1.3 var(--body);color:var(--parch)}
+.play .why{color:#d6cab0;font-size:14.5px;margin-top:3px}
+.play ol{margin:8px 0 0;padding-left:20px;color:var(--ash);font-size:14px}
 .play ol li{margin:2px 0}
-.play .kind{color:var(--dim);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-left:6px;font-weight:500}
-.acts{display:flex;gap:4px 16px;flex-wrap:wrap;align-items:baseline;margin-top:2px}
-.acts a{font-size:12.5px}
-.chk{appearance:none;width:18px;height:18px;border:1.5px solid var(--line2);border-radius:5px;margin:3px 0 0;cursor:pointer;display:grid;place-items:center;background:var(--bg2)}
-.chk:checked{background:var(--brass);border-color:var(--brass)}
-.chk:checked::after{content:"";width:5px;height:9px;border:solid #1a1408;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.play .kind{color:var(--soot);font:600 13px/1 var(--body);margin-left:8px}
+.acts{display:flex;gap:4px 16px;flex-wrap:wrap;align-items:baseline;margin-top:3px}
+.acts a{font-size:14px}
+.chk{appearance:none;-webkit-appearance:none;width:20px;height:20px;border:1px solid #000;box-shadow:0 0 0 1px var(--iron),inset 0 2px 3px rgba(0,0,0,.7);border-radius:2px;margin:3px 0 0;cursor:pointer;display:grid;place-items:center;background:var(--well)}
+.chk:checked{background:linear-gradient(180deg,#f2cb6d,#b07c24);box-shadow:0 0 0 1px #6d4c14}
+.chk:checked::after{content:"";width:5px;height:10px;border:solid #1b1206;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
 .done{opacity:.45}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.chip{display:inline-flex;gap:6px;align-items:baseline;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:12.5px;max-width:100%;flex-wrap:wrap}
-.chip .s{color:var(--muted);font-size:11.5px}
+.chip{display:inline-flex;gap:6px;align-items:baseline;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px #3a3229;border-radius:2px;padding:3px 8px;font-size:14px;max-width:100%;flex-wrap:wrap}
+.chip .s{color:var(--ash);font-size:13px}
 .chip.no{opacity:.5}
-.more{background:none;border:0;color:var(--brass);font-size:12.5px;padding:6px 0 0}
-.more.maplink::before{content:"◎ ";}
+.more{background:none;border:0;color:var(--gilt2);font:600 14px/1.3 var(--body);padding:6px 0 0}
+.more:hover{text-decoration:underline;text-underline-offset:3px}
+.more.maplink::before{content:"◎ "}
 
-/* gear grid */
-.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-.slot{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:10px 11px;min-width:0}
-.slot .sl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);display:flex;justify-content:space-between}
-.slot .it{font-weight:600;font-size:14px;margin-top:3px;line-height:1.3}
-.slot .it a{color:var(--sand);border-bottom-color:rgba(236,226,207,.15)}
-.slot .st{color:var(--muted);font-size:12px;margin-top:2px}
-.slot .src{color:var(--dim);font-size:11.5px;margin-top:3px;line-height:1.35}
-.slot .nx{margin-top:8px;padding-top:7px;border-top:1px dashed var(--line);font-size:12.5px;color:#cfc3ad}
-.slot .nx b{color:var(--brass2);font-weight:600}
-.slot.none .it{color:var(--dim);font-weight:400}
-.up{color:var(--now);font-weight:600}
-.lvtag{font-size:11px;color:var(--brass);border:1px solid var(--line2);border-radius:20px;padding:0 6px;white-space:nowrap}
-.own{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);margin-top:6px;cursor:pointer}
-.own input{accent-color:#d6a85c}
+/* gear: inventory slots */
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:8px}
+.slot{background:linear-gradient(180deg,#13100d,#1b1713);border:1px solid #000;border-radius:3px;box-shadow:0 0 0 1px #3b3229,inset 0 2px 8px rgba(0,0,0,.6);padding:9px 11px 10px;min-width:0}
+.slot .sl{font:700 14px/1.2 var(--display);color:var(--soot);display:flex;justify-content:space-between;gap:6px}
+.slot .it{font-size:15.5px;margin-top:3px;line-height:1.3}
+.slot .st{color:var(--ash);font-size:13.5px;margin-top:2px}
+.slot .src{color:var(--soot);font-size:13px;margin-top:3px;line-height:1.35}
+.slot .nx{margin-top:8px;padding-top:7px;border-top:1px dashed rgba(118,101,76,.45);font-size:14px;color:#d8ccb2}
+.slot.none .it{color:var(--soot);font-weight:500}
+.up{color:var(--now);font-weight:700}
+.lvtag{font:600 12.5px/1.5 var(--body);color:var(--gilt2);border:1px solid rgba(212,164,70,.35);border-radius:2px;padding:0 6px;white-space:nowrap}
+.own{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ash);margin-top:6px;cursor:pointer}
+.own input{accent-color:#d4a446}
+.qkey{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:13px;color:var(--ash);margin-top:10px}
+.qkey span{font-weight:700}
 
 /* lists */
-.row{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:54px minmax(0,1fr);gap:11px;padding:9px 0;border-top:1px solid var(--line)}
 .row:first-child{border-top:0}
-.row .lv{font:600 13px/1.2 var(--sans);color:var(--brass2);text-align:center;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:5px 2px;align-self:start}
-.row .lv small{display:block;font-size:9.5px;color:var(--dim);font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-top:1px}
-.row .t{font-weight:600;font-size:14px}
-.row .d{color:var(--muted);font-size:12.5px;margin-top:1px}
-.row .x{color:#cfc3ad;font-size:12.5px;margin-top:3px}
-.tag{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:1px}
-.tag.new{color:#1a1408;background:var(--brass);border-color:var(--brass)}
-.tag.cls,.tag.fit{color:var(--now);border-color:rgba(124,196,164,.35)}
+.row .lv{font:800 15px/1.1 var(--display);color:var(--gilt2);text-align:center;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px #3b3229;border-radius:2px;padding:5px 2px;align-self:start}
+.row .lv small{display:block;font:600 12px/1.2 var(--body);color:var(--soot);margin-top:1px}
+.row .t{font-weight:700;font-size:15.5px}
+.row .d{color:var(--ash);font-size:14px;margin-top:1px}
+.row .x{color:#d6cab0;font-size:14px;margin-top:3px}
+.tag{display:inline-block;font:600 12.5px/1.5 var(--body);color:var(--ash);border:1px solid rgba(118,101,76,.6);border-radius:2px;padding:0 6px;margin-left:6px;vertical-align:1px}
+.tag.new{color:#1b1206;background:var(--gilt);border-color:var(--gilt)}
+.tag.cls,.tag.fit{color:var(--now);border-color:rgba(121,194,109,.4)}
 
 /* sets */
 .set{padding:4px 0 10px}
 .set+.set{border-top:1px solid var(--line);padding-top:12px}
-.set h4{margin:0;font:600 15px/1.3 var(--serif);letter-spacing:.03em}
-.set .meta{color:var(--muted);font-size:12.5px;margin:2px 0 8px}
-.piece{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px;padding:7px 0;border-top:1px dashed var(--line)}
-.piece .n{font-weight:600;font-size:13.5px}
-.piece .w{color:var(--muted);font-size:12px}
-.piece .need{color:#cfc3ad;font-size:12px}
-.mats{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;margin-top:10px;background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
-.mats .h{grid-column:1/-1;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:2px}
-.mat{font-size:13px;align-self:center}
+.set h4{margin:0;font:700 17px/1.3 var(--display);color:var(--parch)}
+.set .meta{color:var(--ash);font-size:14px;margin:2px 0 8px}
+.piece{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px;padding:7px 0;border-top:1px dashed rgba(118,101,76,.4)}
+.piece .n{font-size:15px}
+.piece .w{color:var(--ash);font-size:13.5px}
+.piece .need{color:#d6cab0;font-size:13.5px}
+.mats{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 10px;margin-top:10px;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px #3b3229;border-radius:3px;padding:10px 12px}
+.mats .h{grid-column:1/-1;font:700 15px/1.2 var(--display);color:var(--ash);margin-bottom:2px}
+.mat{font-size:14px;align-self:center}
 .mat.ok{color:var(--now)}
-.ctr{display:inline-flex;align-items:center;gap:0;border:1px solid var(--line2);border-radius:6px;overflow:hidden}
-.ctr button{background:var(--panel2);border:0;width:26px;height:26px;font-size:14px;line-height:1}
-.ctr span{min-width:58px;text-align:center;font-size:12.5px;font-variant-numeric:tabular-nums}
-.tip{margin-top:8px;color:var(--muted);font-size:12.5px;border-left:2px solid var(--brass);padding-left:9px}
+.ctr{display:inline-flex;align-items:center;border:1px solid #000;box-shadow:0 0 0 1px var(--iron);border-radius:2px;overflow:hidden}
+.ctr button{background:linear-gradient(180deg,#3d352a,#27211a);border:0;width:28px;height:28px;font-size:15px;line-height:1}
+.ctr span{min-width:60px;text-align:center;font-size:13.5px;font-variant-numeric:tabular-nums}
+.tip{margin-top:8px;color:var(--ash);font-size:14px;border-left:2px solid var(--gilt);padding-left:10px}
 
-/* spells */
-.sp{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;padding:6px 0;font-size:13px;border-top:1px solid var(--line)}
+/* spells, news */
+.sp{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;padding:6px 0;font-size:14.5px;border-top:1px solid var(--line)}
 .sp:first-child{border-top:0}
-.sp .lv{color:var(--dim);font-variant-numeric:tabular-nums;font-weight:600}
+.sp .lv{color:var(--soot);font-variant-numeric:tabular-nums;font-weight:700}
 .sp.now .lv{color:var(--now)}
-.sp.next .lv{color:var(--brass2)}
+.sp.next .lv{color:var(--gilt2)}
 .sp.past{opacity:.45}
-
-/* news */
-.news{font-size:13px;padding:7px 0;border-top:1px solid var(--line)}
+.news{font-size:14.5px;padding:7px 0;border-top:1px solid var(--line)}
 .news:first-child{border-top:0}
-.news .when{color:var(--dim);font-size:11.5px}
+.news .when{color:var(--soot);font-size:13px}
 
-/* map view */
-.mapbar{display:flex;gap:10px 12px;align-items:center;flex-wrap:wrap;padding:10px 0 12px}
-.mapbar select{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:7px 10px;color:var(--sand);font:inherit;font-size:14px;max-width:100%}
+/* ---------- map view ---------- */
+.mapbar{display:flex;gap:10px 12px;align-items:center;flex-wrap:wrap;padding:14px 0 12px}
+.mapbar select,.f select{-webkit-appearance:none;appearance:none;background:var(--well) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23d4a446' stroke-width='2'/></svg>") no-repeat right 11px center;border:1px solid #000;box-shadow:0 0 0 1px var(--iron);border-radius:3px;padding:8px 32px 8px 11px;color:var(--parch);font:600 15px/1.2 var(--body);max-width:100%}
 .mtools{margin-left:auto;display:flex;gap:8px 14px;align-items:center;flex-wrap:wrap}
-.mtools .own{margin:0;font-size:12.5px}
-.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px;align-items:start}
+.mtools .own{margin:0;font-size:14px}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:18px;align-items:start}
 .mapcol{min-width:0}
-.map{position:relative;z-index:0;isolation:isolate;height:calc(100vh - 250px);min-height:460px;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:#0d0b12}
+.map{position:relative;z-index:0;isolation:isolate;height:calc(100vh - 270px);min-height:460px;border:1px solid #000;box-shadow:0 0 0 1px var(--iron),0 0 0 4px #15120e,0 0 0 5px var(--iron);border-radius:2px;overflow:hidden;background:#0b0907;margin:5px}
 .map.dropping,.map.dropping .leaflet-grab,.map.dropping .leaflet-interactive{cursor:crosshair}
-.nomap{display:grid;place-items:center;text-align:center;color:var(--muted);padding:30px;height:100%;font-size:14px;line-height:1.7}
-.nomap b{color:var(--sand)}
-#noMap{height:280px;border:1px dashed var(--line2);border-radius:var(--r)}
-.credit{font-size:12px;color:var(--dim);margin-top:7px;line-height:1.5}
-.credit a{color:var(--muted)}
-.side{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
-.side .sh{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:16px 0 4px}
+.nomap{display:grid;place-items:center;text-align:center;color:var(--ash);padding:30px;height:100%;font-size:15px;line-height:1.7}
+.nomap b{color:var(--parch)}
+#noMap{height:280px;border:1px dashed var(--iron);border-radius:var(--r)}
+.credit{font-size:13px;color:var(--soot);margin-top:9px;line-height:1.5}
+.credit a{color:var(--ash)}
+.side{position:sticky;top:70px;max-height:calc(100vh - 84px);overflow:auto}
+.side .sh{font:700 15px/1.2 var(--display);color:var(--ash);margin:16px 0 4px}
 .side .sh:first-of-type{margin-top:8px}
-.zlinks{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:12.5px}
+.zlinks{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:14px}
 .pinrow{display:grid;grid-template-columns:24px minmax(0,1fr);gap:9px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 2px;color:inherit;align-items:start;border-radius:0}
-.pinrow:hover{background:rgba(214,168,92,.05)}
-.pinrow b{font-weight:600;font-size:13.5px;display:block;line-height:1.3}
-.pinrow small,.crow small{display:block;color:var(--muted);font-size:12px;line-height:1.35;margin-top:1px}
-.pdot{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:700 11px/1 var(--sans);color:#1a1408;background:var(--none);margin-top:1px}
+.pinrow:hover{background:rgba(212,164,70,.06)}
+.pinrow b{font-weight:700;font-size:14.5px;display:block;line-height:1.3}
+.pinrow small,.crow small{display:block;color:var(--ash);font-size:13px;line-height:1.35;margin-top:1px}
+.pdot{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:700 11px/1 var(--body);color:#1b1206;background:var(--none);margin-top:1px;box-shadow:0 0 0 1px #000}
 .pdot i{font-style:normal}
-.pdot.s-now{background:var(--now)} .pdot.s-soon{background:var(--brass)} .pdot.s-hold{background:var(--hold)} .pdot.s-done{background:#4a4352;color:#c9c0b3} .pdot.s-none{background:var(--none)}
-.pdot.s-mine{background:var(--info);border-radius:5px;transform:rotate(45deg);width:17px;height:17px;margin:3px 0 0 3px}
+.pdot.s-now{background:var(--now)} .pdot.s-soon{background:var(--gilt)} .pdot.s-hold{background:var(--hold)} .pdot.s-done{background:#4a4352;color:#c9c0b3} .pdot.s-none{background:var(--none)}
+.pdot.s-mine{background:var(--info);border-radius:4px;transform:rotate(45deg);width:17px;height:17px;margin:3px 0 0 3px}
 .pdot.s-mine i{transform:rotate(-45deg);font-size:10px}
-.crow{display:grid;grid-template-columns:46px minmax(0,1fr);gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:13px}
-.crow b{font-weight:600}
-.crow .lvp{font:600 12px/1.2 var(--sans);color:var(--muted);text-align:center;background:var(--bg2);border:1px solid var(--line);border-radius:5px;padding:4px 2px;align-self:start}
-.crow.fit .lvp{color:#1a1408;background:var(--now);border-color:var(--now)}
+.crow{display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.crow b{font-weight:700}
+.crow .lvp{font:800 13px/1.2 var(--display);color:var(--ash);text-align:center;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px #3b3229;border-radius:2px;padding:4px 2px;align-self:start}
+.crow.fit .lvp{color:#10200c;background:var(--now)}
 .crow.later{opacity:.55}
-.crow .cn{color:#cfc3ad}
-.legend{display:flex;gap:4px 12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:4px}
-.legend span{display:inline-flex;align-items:center;gap:5px}
-.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.crow .cn{color:#d6cab0}
+.legend{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:13px;color:var(--ash);margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:50%;display:inline-block;box-shadow:0 0 0 1px #000}
 
 /* leaflet skin */
-.leaflet-container{font-family:var(--sans);background:#0d0b12}
-.leaflet-container a{color:var(--brass2)}
-.leaflet-bar{border:1px solid var(--line2)!important;box-shadow:0 4px 14px rgba(0,0,0,.4)!important}
-.leaflet-bar a,.leaflet-bar a:hover{background:var(--panel2);color:var(--sand);border-bottom:1px solid var(--line2);width:32px;height:32px;line-height:32px;font-size:18px}
-.leaflet-bar a:hover{background:#30283f}
-.leaflet-bar a.leaflet-disabled{background:var(--panel);color:var(--dim)}
-.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--sand);border:1px solid var(--line2);box-shadow:0 8px 28px rgba(0,0,0,.55)}
-.leaflet-popup-content{margin:12px 14px;font:13px/1.45 var(--sans)}
-.leaflet-container a.leaflet-popup-close-button{color:var(--muted);border:0}
+.leaflet-container{font-family:var(--body);background:#0b0907}
+.leaflet-container a{color:var(--gilt2)}
+.leaflet-bar{border:1px solid #000!important;box-shadow:0 0 0 1px var(--iron),0 4px 14px rgba(0,0,0,.5)!important;border-radius:3px!important}
+.leaflet-bar a,.leaflet-bar a:hover{background:linear-gradient(180deg,#3d352a,#27211a);color:var(--parch);border-bottom:1px solid #000;width:32px;height:32px;line-height:32px;font-size:18px}
+.leaflet-bar a:hover{color:#fff}
+.leaflet-bar a.leaflet-disabled{background:var(--stone2);color:var(--soot)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--stone2);color:var(--parch);border:1px solid #000;box-shadow:0 0 0 1px var(--iron),0 10px 28px rgba(0,0,0,.6);border-radius:4px}
+.leaflet-popup-content{margin:12px 14px;font:14.5px/1.45 var(--body)}
+.leaflet-container a.leaflet-popup-close-button{color:var(--ash);border:0}
 .mapimg{image-rendering:auto}
 .pin{background:none;border:0}
-.pin span{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;font:700 12px/1 var(--sans);color:#1a1408;border:2px solid #1a1408;box-shadow:0 2px 7px rgba(0,0,0,.65),0 0 0 2px rgba(255,255,255,.22);background:var(--none)}
-.pin.s-now span{background:var(--now)} .pin.s-soon span{background:var(--brass)} .pin.s-hold span{background:var(--hold)} .pin.s-done span{background:#4a4352;color:#c9c0b3}
-.pin.mine span{background:var(--info);border-radius:5px;transform:rotate(45deg)}
+.pin span{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;font:700 12px/1 var(--body);color:#1b1206;border:2px solid #120e08;box-shadow:0 2px 7px rgba(0,0,0,.65),0 0 0 2px rgba(255,236,190,.25);background:var(--none)}
+.pin.s-now span{background:var(--now)} .pin.s-soon span{background:var(--gilt)} .pin.s-hold span{background:var(--hold)} .pin.s-done span{background:#4a4352;color:#c9c0b3}
+.pin.mine span{background:var(--info);border-radius:4px;transform:rotate(45deg)}
 .pin.mine span i{transform:rotate(-45deg);font-style:normal;font-size:11px}
 .pin.hl span{animation:ping 1.1s ease-out 4}
-@keyframes ping{0%{box-shadow:0 0 0 0 rgba(240,201,131,.95),0 2px 7px rgba(0,0,0,.65)}100%{box-shadow:0 0 0 20px rgba(240,201,131,0),0 2px 7px rgba(0,0,0,.65)}}
-.pop h5{margin:0 0 4px;font:600 14px/1.3 var(--sans);color:var(--sand);padding-right:14px}
-.pop p{margin:0 0 8px;color:#cfc3ad}
-.pop .approx{font-size:11px;color:var(--brass);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
-.pop .pl{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;padding:4px 0;border-top:1px solid var(--line);font-size:12.5px}
-.pop .pl .badge{margin-top:0}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(240,205,124,.95),0 2px 7px rgba(0,0,0,.65)}100%{box-shadow:0 0 0 20px rgba(240,205,124,0),0 2px 7px rgba(0,0,0,.65)}}
+.pop h5{margin:0 0 4px;font:700 15.5px/1.3 var(--body);color:var(--parch);padding-right:14px}
+.pop p{margin:0 0 8px;color:#d6cab0}
+.pop .approx{font:700 13px/1.2 var(--display);color:var(--gilt);margin-bottom:4px}
+.pop .pl{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;padding:4px 0;border-top:1px solid var(--line);font-size:14px}
+.pop .pl .badge{margin-top:0;font-size:13px}
 .pop .pl .more{padding:0}
-.pop input,.pop textarea{width:100%;background:var(--bg2);border:1px solid var(--line2);border-radius:6px;color:var(--sand);padding:7px 8px;font:inherit;margin:0 0 6px;resize:vertical}
+.pop input,.pop textarea{width:100%;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--iron);border-radius:3px;color:var(--parch);padding:7px 8px;font:inherit;margin:0 0 6px;resize:vertical}
 .pop .pact{display:flex;gap:6px;justify-content:flex-end;margin-top:2px}
 .pop .pact .del{margin-right:auto}
-.pop .hint{font-size:11.5px;color:var(--dim);margin-top:6px}
+.pop .hint{font-size:13px;color:var(--soot);margin-top:6px}
 
-/* modal */
-.scrim{position:fixed;inset:0;background:rgba(8,6,12,.7);display:none;align-items:center;justify-content:center;padding:16px;z-index:3000}
+/* ---------- item tooltip + inspect ---------- */
+.itip{position:fixed;z-index:4000;width:310px;max-width:calc(100vw - 16px);pointer-events:none;padding:11px 13px 12px;font-size:14.5px;line-height:1.4}
+.ins h5{margin:0;font:700 18px/1.2 var(--body)}
+.ins .tg{color:var(--ash);font-size:14px;margin-top:2px}
+.ins .tg b{color:var(--parch);font-weight:600}
+.ins .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 10px;margin:9px 0 6px;padding:8px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ins .stats span{white-space:nowrap}
+.ins .stats i{font-style:normal;color:var(--ash);font-weight:600;margin-right:4px}
+.ins .stats .pos{color:var(--q-fx)}
+.ins .fx{color:var(--q-fx);margin-top:4px}
+.ins .lore{color:var(--q-lore);font-weight:700}
+.ins .src{color:#d6cab0;margin-top:6px}
+.ins .meta{color:var(--soot);font-size:13px;margin-top:6px}
+.ins .acts{margin-top:12px;display:flex;gap:8px 14px;flex-wrap:wrap;align-items:center}
+
+/* ---------- modal ---------- */
+.scrim{position:fixed;inset:0;background:rgba(6,5,4,.72);display:none;align-items:center;justify-content:center;padding:16px;z-index:3000}
 .scrim.on{display:flex}
-.modal{background:var(--panel);border:1px solid var(--line2);border-radius:12px;max-width:460px;width:100%;padding:20px;max-height:calc(100vh - 32px);overflow:auto}
-.modal h3{font:600 20px/1.2 var(--serif);margin:0 0 14px}
-.mtext{color:#cfc3ad;font-size:13.5px;margin:0 0 12px}
+.modal{max-width:480px;width:100%;max-height:calc(100vh - 32px);overflow:auto;padding:0}
+.modal.wide{max-width:640px}
+.modal>.tb{position:sticky;top:0;z-index:1}
+.modal>.mb{padding:16px 20px 18px}
+.modal h3{font:700 19px/1.2 var(--display);margin:0;color:var(--gilt2);text-shadow:0 1px 0 #000}
+.mtext{color:#d6cab0;font-size:15px;margin:0 0 12px}
 .f{display:grid;gap:5px;margin-bottom:12px}
-.f label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.f input,.f select,.f textarea{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:9px 10px;color:var(--sand);font:inherit;width:100%}
-.f textarea{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;resize:vertical}
-.f .hint{font-size:12px;color:var(--dim)}
-.f .hint.bad{color:var(--hold)}
+.f label{font:700 15px/1.2 var(--display);color:var(--ash)}
+.f input,.f textarea{background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--iron),inset 0 2px 4px rgba(0,0,0,.6);border-radius:3px;padding:9px 10px;color:var(--parch);font:16px/1.3 var(--body);width:100%}
+.f select{width:100%}
+.f input:focus,.f textarea:focus{outline:0;box-shadow:0 0 0 1px var(--gilt),inset 0 2px 4px rgba(0,0,0,.6)}
+.f textarea{font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;resize:vertical}
+.f .hint{font-size:13.5px;color:var(--soot)}
+.f .hint.bad,.hint.bad{color:var(--hold)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.mfoot{display:flex;gap:8px;justify-content:flex-end;margin-top:6px;flex-wrap:wrap}
-.del{color:var(--hold)!important;border-color:rgba(217,120,95,.4)!important}
+.mfoot{display:flex;gap:8px;justify-content:flex-end;margin-top:8px;flex-wrap:wrap}
+.del{color:var(--hold)!important}
 .mfoot .del{margin-right:auto}
-.foot{margin-top:28px;color:var(--dim);font-size:12px;line-height:1.7}
-.foot a{color:var(--muted)}
+.or{display:flex;align-items:center;gap:10px;color:var(--soot);font-size:14px;margin:12px 0}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ask the guide */
+.askq{display:flex;gap:8px}
+.askq input{flex:1;min-width:0;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--iron),inset 0 2px 4px rgba(0,0,0,.6);border-radius:3px;padding:9px 10px;color:var(--parch);font:16px/1.3 var(--body)}
+.askq input:focus{outline:0;box-shadow:0 0 0 1px var(--gilt),inset 0 2px 4px rgba(0,0,0,.6)}
+.answer{margin-top:14px;font-size:15.5px;line-height:1.55;color:#e4d8bd}
+.answer p{margin:0 0 10px}
+.answer ul{margin:0 0 10px;padding-left:20px}
+.answer .ref{font-weight:700;border-bottom:1px dotted rgba(240,205,124,.6)}
+.answer .ref:not(.ilink){color:var(--gilt2)}
+.thinking{color:var(--ash);display:flex;align-items:center;gap:10px}
+.thinking i{width:14px;height:14px;border-radius:50%;border:2px solid var(--iron);border-top-color:var(--gilt2);animation:spin .8s linear infinite;flex:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.left{color:var(--soot);font-size:13px;margin-top:10px}
+
+/* ---------- footer ---------- */
+.foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--soot);font-size:13.5px;line-height:1.7}
+.foot a{color:var(--ash)}
 .foot p{margin:0 0 6px}
-.foot .btn{font-size:12px;padding:4px 10px;margin-left:4px}
-.banner{background:rgba(217,120,95,.08);border:1px solid rgba(217,120,95,.35);color:#f0c4b6;border-radius:8px;padding:9px 12px;font-size:13px;margin-top:10px}
+.foot .btn{font-size:13px;padding:3px 10px;margin-left:4px}
+.banner{background:rgba(208,106,79,.09);border:1px solid rgba(208,106,79,.4);color:#f0c4b6;border-radius:3px;padding:9px 12px;font-size:14px;margin-top:12px}
+
+/* ---------- landing (signed out) ---------- */
+.landing{position:relative;min-height:calc(100vh - 55px);overflow:hidden;isolation:isolate}
+.vista{position:absolute;inset:-4%;z-index:-1;background:url(img/vista.webp) 60% 40%/cover no-repeat;filter:saturate(.7) brightness(.5) sepia(.2);animation:drift 70s ease-in-out infinite alternate}
+.landing::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 90% 80% at 28% 34%,rgba(13,11,9,.2),rgba(13,11,9,.9) 70%),linear-gradient(180deg,rgba(13,11,9,.2),transparent 28%,rgba(13,11,9,.55) 62%,var(--void) 92%)}
+@keyframes drift{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-2%,-1.5%)}}
+@media (prefers-reduced-motion:reduce){.vista{animation:none}}
+.landin{max-width:1200px;margin:0 auto;padding:clamp(28px,9vh,96px) 20px 40px;display:grid;grid-template-columns:minmax(0,430px) minmax(0,1fr);gap:28px 40px;align-items:start}
+.gatewin .body{padding:18px 20px 20px}
+.gatewin .lede{font-size:17px;line-height:1.5;color:#e6dabf;margin:0 0 18px}
+.gatewin form{margin:0}
+.gatewin .f{margin:0}
+.row2{display:flex;gap:8px}
+.row2 input{flex:1;min-width:0}
+.gatewin .hint{font-size:13.5px;color:var(--soot);margin:6px 0 0}
+.carry{margin:14px 0 0;font-size:14px;color:var(--gilt2)}
+.landtitle{grid-column:1/-1;margin:0 0 4px}
+.landtitle h1{font:800 clamp(38px,6vw,66px)/.95 var(--display);margin:0;color:var(--parch);text-shadow:0 3px 0 #000,0 0 40px rgba(0,0,0,.8);letter-spacing:.005em}
+.landtitle p{font:700 clamp(17px,2vw,21px)/1.3 var(--display);color:var(--gilt2);margin:10px 0 0;text-shadow:0 2px 0 #000}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.feat .body{padding:12px 16px 14px}
+.feat p{margin:0;color:#d6cab0;font-size:15px}
+.feat .eg{margin-top:8px;font-size:14px;color:var(--ash)}
+.facts{grid-column:1/-1;color:#d6cab0;font-size:14.5px;margin:4px 0 0;text-shadow:0 1px 2px #000,0 0 10px #000}
+.lfoot{grid-column:1/-1;color:var(--ash);font-size:13.5px;line-height:1.7;margin-top:6px;text-shadow:0 1px 2px #000,0 0 10px #000}
+.lfoot a{color:#d6cab0}
+.booting #app,.booting #bar .search,.booting #viewSeg{visibility:hidden}
+.authguess #landing{display:none}
 
 @media (max-width:980px){
   .grid,.mapgrid{grid-template-columns:1fr}
-  .lvlbig .n{font-size:52px}
-  .who h2{font-size:25px}
+  .lvlbig .n{font-size:50px}
+  .who h2{font-size:26px}
   .map{height:62vh;min-height:340px}
   .side{position:static;max-height:none}
+  .landin{grid-template-columns:1fr}
+  .bar>.in{flex-wrap:wrap}
+  .search{order:5;flex-basis:100%;max-width:none;margin-left:0}
 }
 @media (max-width:560px){
   .wrap{padding:0 16px 50px}
-  .hero{grid-template-columns:1fr auto}
+  .bar>.in{padding:8px 16px}
+  .mark b{font-size:18px}
+  .hero{grid-template-columns:auto minmax(0,1fr);padding:14px 14px 10px}
+  .lvlbig{grid-column:2;text-align:left;display:flex;align-items:baseline;gap:8px}
+  .crestbig{width:46px;height:46px;font-size:15px}
   .slots{grid-template-columns:1fr}
-  .status{margin-left:0;width:100%}
-  .brand span{display:none}
   .ticks{display:none}
   .upnext{margin-top:6px}
   .mtools{margin-left:0}
   .mapbar select{width:100%}
   .two{grid-template-columns:1fr}
+  .feats{grid-template-columns:1fr}
+  .row2{flex-direction:column}
+  .acct .who-am{display:none}
+  .ins .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .search kbd{display:none}
 }
 </style>
+</head>
+<body class="booting">
+<script>try{ if(Object.keys(localStorage).some(k => /^sb-.+-auth-token$/.test(k))) document.body.classList.add("authguess"); }catch(_){}</script>
 
-<div class="wrap" id="app">
-  <div class="top">
-    <div class="brand"><h1>MnM <b>Companion</b></h1><span>Monsters &amp; Memories</span></div>
-    <div class="seg viewseg" id="viewSeg" role="tablist" aria-label="View"><button data-v="plan">Plan</button><button data-v="map">Map</button></div>
-    <div class="status" id="status"></div>
+<header class="bar" id="bar"><div class="in">
+  <a class="mark" href="./" aria-label="MnM Companion home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7d98a"/><stop offset="1" stop-color="#9a691b"/></linearGradient></defs><circle cx="16" cy="16" r="14" fill="#16120e" stroke="url(#gilt)" stroke-width="2"/><path d="M16 4.5l2.6 8.9 8.9 2.6-8.9 2.6L16 27.5l-2.6-8.9L4.5 16l8.9-2.6z" fill="url(#gilt)"/><circle cx="16" cy="16" r="2.2" fill="#16120e"/></svg><b>MnM Companion</b></a>
+  <div class="search" id="searchBox" hidden>
+    <svg class="mag" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.8" cy="6.8" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.7 10.7l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <input id="q" type="search" placeholder="Search items, quests, zones, or ask a question" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="Search items, quests and zones" role="combobox" aria-expanded="false" aria-controls="sres" aria-autocomplete="list">
+    <kbd aria-hidden="true">/</kbd>
+    <div class="sres win" id="sres" role="listbox" aria-label="Search results" hidden></div>
   </div>
+  <div class="seg viewseg" id="viewSeg" role="tablist" aria-label="View" hidden><button data-v="plan">Plan</button><button data-v="map">Map</button></div>
+  <div class="acct" id="acct"></div>
+</div></header>
+
+<main class="landing" id="landing">
+  <div class="vista" aria-hidden="true"></div>
+  <div class="landin">
+    <div class="landtitle"><h1>MnM Companion</h1><p>A leveling planner for Monsters &amp; Memories</p></div>
+    <section class="win gatewin" aria-labelledby="gateT">
+      <header class="tb"><h2 id="gateT">Sign in to start</h2></header>
+      <div class="body">
+        <p class="lede">Set your level and see what to do next, the gear worth chasing, and where it all is on the map. It's free, and your characters follow you from PC to phone.</p>
+        <button class="btn discord big" id="lgDiscord" type="button" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1A19.9 19.9 0 0 0 6.1 21l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.6ZM8 15.4c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.6 8 10.6s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>Continue with Discord</button>
+        <div class="or" id="lgOr" hidden>or</div>
+        <form class="f" id="lgForm" novalidate>
+          <label for="lgMail">Email</label>
+          <div class="row2"><input id="lgMail" type="email" autocomplete="email" placeholder="you@example.com"><button class="btn primary" id="lgGo" type="submit">Email me a link</button></div>
+          <p class="hint" id="lgMsg">We'll send a one-time sign-in link. No password needed.</p>
+        </form>
+        <p class="carry" id="lgCarry" hidden>The characters saved in this browser move into your account the first time you sign in.</p>
+      </div>
+    </section>
+    <div class="feats">
+      <article class="win feat"><header class="tb"><h2>A plan for your level</h2></header><div class="body"><p>Drag the experience bar to your level and the quests, hunting spots and armor sets re-sort around it. Each of your characters gets its own plan.</p></div></article>
+      <article class="win feat"><header class="tb"><h2>Gear by slot</h2></header><div class="body"><p>The best item for every slot your class can wear right now, the next upgrade, and what drops it.</p></div></article>
+      <article class="win feat"><header class="tb"><h2>Zone maps</h2></header><div class="body"><p>Community maps with pins for camps, quest givers and turn-ins, plus notes you drop yourself.</p></div></article>
+      <article class="win feat"><header class="tb"><h2>Search and ask</h2></header><div class="body"><p>Find any item, quest or zone as you type, or ask a question and get an answer drawn from the wiki.</p><p class="eg">“Where do I get a bigger bag at level 6?”</p></div></article>
+    </div>
+    <p class="facts" id="lgFacts">Built from the Stories of MnM wiki and re-checked every 6 hours.</p>
+    <footer class="lfoot">Fan-made, not affiliated with the Monsters &amp; Memories team. Backdrop: Night Harbor map by Maggot, from the <a href="https://monstersandmemories.miraheze.org/wiki/File:Night_harbor_V5.jpg" target="_blank" rel="noopener">community wiki</a> (CC BY-SA 4.0).<span id="lgSupport"></span></footer>
+  </div>
+</main>
+
+<div class="wrap" id="app" hidden>
   <div class="tabs" id="tabs"></div>
   <div id="warn"></div>
-  <section class="hero" id="hero"><p class="loading">Loading the wiki copy…</p></section>
+  <section class="hero win" id="hero"><p class="loading">Loading the wiki copy…</p></section>
 
   <div id="planView" hidden>
     <div class="grid">
@@ -894,7 +1097,7 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
       <div class="col">
         <div class="card" id="setsCard"><header><h3>Armor sets</h3><span class="sub">shopping list</span></header><div class="body" id="sets"></div></div>
         <div class="card"><header><h3>Where to hunt</h3><span class="sub" id="campSub"></span></header><div class="body" id="camps"></div></div>
-        <div class="card"><header><h3>Bags &amp; space</h3></header><div class="body" id="bags"></div></div>
+        <div class="card"><header><h3>Bags and space</h3></header><div class="body" id="bags"></div></div>
         <div class="card" id="spellCard"><header><h3>Spells to buy</h3><span class="sub" id="spellSub"></span></header><div class="body" id="spells"></div></div>
         <div class="card"><header><h3>New on the wiki</h3><span class="sub" id="newsSub"></span></header><div class="body" id="news"></div></div>
       </div>
@@ -922,10 +1125,11 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
     </div>
   </div>
 
-  <div class="foot" id="foot"></div>
+  <footer class="foot" id="foot"></footer>
 </div>
 
-<div class="scrim" id="scrim"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+<div class="itip win ins" id="itip" role="tooltip" hidden></div>
+<div class="scrim" id="scrim"><div class="modal win" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.min.js"></script>
@@ -1032,9 +1236,10 @@ async function onSession(session){
   const u = session && session.user ? session.user : null;
   const uid = u ? u.id : null;
   if(Store.ready && uid === Store.uid) return;
-  Store.uid = uid; Store.email = u ? (u.email || (u.user_metadata && (u.user_metadata.full_name || u.user_metadata.name)) || "your account") : null;
+  Store.uid = uid; Store.email = u ? ((u.user_metadata && (u.user_metadata.custom_claims && u.user_metadata.custom_claims.global_name || u.user_metadata.full_name || u.user_metadata.name)) || u.email || "your account") : null;
   if(Store.chan){ try{ Store.sb.removeChannel(Store.chan); }catch(_){} Store.chan = null; }
-  if(!uid){ goLocal(); return; }
+  if(!uid){ goLanding(); return; }
+  showApp();
   const {data, error} = await Store.sb.from("user_data").select("data").eq("user_id", uid).maybeSingle();
   if(error){ Store.err = "Signed in, but couldn't load your saved characters (" + error.message + "). Changes stay in this browser for now."; goLocal(); return; }
   Store.mode = "db"; Store.ready = true; Store.err = null;
@@ -1052,17 +1257,21 @@ async function signOut(){
   if(Store.pending){ clearTimeout(saveTimer); await flush(); }
   try{ await Store.sb.auth.signOut(); }catch(_){}
   S.user = normUser({}); localSet(S.user);
-  Store.uid = null; Store.ready = false; goLocal();
+  Store.uid = null; Store.ready = false; goLanding();
+}
+function modal(title, body, wide){
+  const m = $("#modal");
+  m.className = "modal win" + (wide ? " wide" : "");
+  m.innerHTML = `<header class="tb"><h3 id="mTitle">${esc(title)}</h3></header><div class="mb">${body}</div>`;
+  openModal();
 }
 function openSignIn(){
-  const prov = ((window.MNM_CONFIG || {}).providers || []).filter(p => /^[a-z]+$/.test(p));
+  const prov = providers();
   const label = p => p.charAt(0).toUpperCase() + p.slice(1);
-  $("#modal").innerHTML = `<h3>Sign in</h3>
-    <p class="mtext">Sign in to keep your characters, progress and map pins in your account, the same on every device. Anything you've set up in this browser comes with you the first time.</p>
-    ${prov.map(p => `<button class="btn" style="width:100%;margin-bottom:8px" data-prov="${esc(p)}">Continue with ${esc(label(p))}</button>`).join("")}
+  modal("Sign in", `<p class="mtext">Sign in to keep your characters, progress and map pins in your account, the same on every device. Anything you've set up in this browser comes with you the first time.</p>
+    ${prov.map(p => `<button class="btn big ${p==="discord"?"discord":""}" style="margin-bottom:8px" data-prov="${esc(p)}">Continue with ${esc(label(p))}</button>`).join("")}
     <div class="f"><label for="sEmail">Email</label><input id="sEmail" type="email" autocomplete="email" placeholder="you@example.com"><div class="hint" id="sMsg">We'll email you a one-time sign-in link. No password needed.</div></div>
-    <div class="mfoot"><button class="btn" id="sCancel">Cancel</button><button class="btn primary" id="sGo">Email me a link</button></div>`;
-  $("#scrim").classList.add("on");
+    <div class="mfoot"><button class="btn" id="sCancel">Cancel</button><button class="btn primary" id="sGo">Email me a link</button></div>`);
   const msg = (t, bad) => { const m = $("#sMsg"); m.textContent = t; m.classList.toggle("bad", !!bad); };
   $("#sCancel").onclick = closeModal;
   $$("#modal [data-prov]").forEach(b => b.onclick = async () => {
@@ -1081,7 +1290,51 @@ function openSignIn(){
 }
 function goLocal(){
   Store.mode = "local"; Store.ready = true; Store.ref = null;
+  showApp();
   render();
+}
+
+// ------------------------------------------------------------- landing (signed out) and app shell
+function providers(){ return ((window.MNM_CONFIG || {}).providers || []).filter(p => /^[a-z]+$/.test(p)); }
+function showApp(){
+  document.body.classList.remove("booting", "authguess");
+  $("#landing").hidden = true; $("#app").hidden = false;
+  $("#searchBox").hidden = false; $("#viewSeg").hidden = false;
+}
+function goLanding(){
+  Store.mode = "local"; Store.ready = true; Store.uid = null;
+  document.body.classList.remove("booting", "authguess");
+  $("#app").hidden = true; $("#searchBox").hidden = true; $("#viewSeg").hidden = true; closeSearch();
+  $("#landing").hidden = false;
+  renderStatus(); renderLanding();
+}
+function renderLanding(){
+  const has = p => providers().includes(p);
+  $("#lgDiscord").hidden = !has("discord"); $("#lgOr").hidden = !has("discord");
+  const local = localGet();
+  $("#lgCarry").hidden = !(local && (local.characters || []).length);
+  const m = (S.snapshot || {}).meta || {}, n = m.counts;
+  if(n) $("#lgFacts").textContent = `${n.quests.toLocaleString()} quests, ${n.items.toLocaleString()} items and ${n.zones} zones from the Stories of MnM wiki, re-checked every ${(S.curated||{}).refreshHours || 6} hours. Last checked ${ago(m.lastScan)}.`;
+  const don = (window.MNM_CONFIG || {}).donateUrl;
+  $("#lgSupport").innerHTML = don ? ` <a href="${esc(don)}" target="_blank" rel="noopener">Support the site</a>.` : "";
+}
+function wireLanding(){
+  const msg = (t, bad) => { const m = $("#lgMsg"); m.textContent = t; m.classList.toggle("bad", !!bad); };
+  $("#lgDiscord").onclick = async () => {
+    if(!Store.sb) return;
+    const {error} = await Store.sb.auth.signInWithOAuth({provider:"discord", options:{redirectTo:siteURL()}});
+    if(error) msg(error.message, true);
+  };
+  $("#lgForm").onsubmit = async e => {
+    e.preventDefault();
+    if(!Store.sb){ msg("Sign-in isn't available right now. Reload the page and try again.", true); return; }
+    const email = $("#lgMail").value.trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg("That doesn't look like an email address.", true); return; }
+    $("#lgGo").disabled = true;
+    const {error} = await Store.sb.auth.signInWithOtp({email, options:{emailRedirectTo:siteURL()}});
+    $("#lgGo").disabled = false;
+    if(error) msg(error.message, true); else msg(`Sign-in link sent to ${email}. Open it on this device to continue.`);
+  };
 }
 
 // ------------------------------------------------------------- loading
@@ -1089,15 +1342,19 @@ async function getJSON(u){ const r = await fetch(u, {cache:"no-store"}); if(!r.o
 async function load(){
   const local = localGet();
   if(local) S.user = normUser(local);
+  wireLanding(); wireSearch(); renderLanding();
   try{
     const [w, c] = await Promise.all([getJSON("data/wiki.json"), getJSON("curated.json")]);
     S.snapshot = w; S.curated = c;
   }catch(e){
-    $("#hero").innerHTML = `<p class="loading">Couldn't load the wiki copy (${esc(e.message)}). Reload the page to try again.</p>`;
+    const msg = `Couldn't load the wiki copy (${e.message}). Reload the page to try again.`;
+    $("#hero").innerHTML = `<p class="loading">${esc(msg)}</p>`; $("#lgFacts").textContent = msg;
+    document.body.classList.remove("booting", "authguess");
     return;
   }
-  prep(); buildMapIndex();
+  prep(); buildMapIndex(); buildSearch();
   S.loaded = true;
+  renderLanding();
   render();
   connect();
 }
@@ -1175,7 +1432,19 @@ function statLine(it){
   if(it.bagSlots) parts.unshift(it.bagSlots+" slots");
   return parts.join(" · ") || (it.hasDetail ? "no stats listed" : "stats not read yet");
 }
-function itemLink(it, cls){ return it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener" class="${cls||""}">${esc(it.name)}</a>` : esc(it.name); }
+// item kind, shown as the color of its name: grey no stats, white stats, green has an effect, gold Lore
+function quality(it){
+  if(!it) return "plain";
+  if((it.tags||[]).includes("Lore")) return "lore";
+  if(it.effect) return "fx";
+  if(Object.keys(it.stats||{}).length || it.weapon || it.bagSlots) return "stat";
+  return "plain";
+}
+function itemLink(it, cls){
+  const q = "ilink q-" + quality(it) + (cls ? " " + cls : "");
+  const slug = it.slug ? ` data-slug="${esc(it.slug)}"` : "";
+  return it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener" class="${q}"${slug}>${esc(it.name)}</a>` : `<span class="${q}"${slug} tabindex="0">${esc(it.name)}</span>`;
+}
 function classMatch(classes, c){
   const s = String(classes||"ALL").toUpperCase();
   if(!s.trim() || /\bALL\b/.test(s)) return true;
@@ -1210,10 +1479,11 @@ function renderBody(){
 }
 function renderEmpty(){
   $("#planView").hidden = true; $("#mapView").hidden = true;
+  $("#hero").className = "";
   if(!Store.ready){ $("#hero").innerHTML = `<p class="loading">Loading your characters…</p>`; return; }
-  $("#hero").innerHTML = `<div class="onboard"><h2>Add your first character</h2>
-    <p>Pick a class, race, starting city and level. The plan, gear list, camps and map pins all follow the level slider, and each alt gets its own tab.</p>
-    <button class="btn primary" id="obAdd">Add a character</button><button class="btn" id="obImp">Import from the PC app</button></div>`;
+  $("#hero").innerHTML = `<div class="onboard win"><header class="tb"><h2>Create your first character</h2></header><div class="body">
+    <p>Pick a class, race, starting city and level. The plan, gear list, hunting spots and map pins all follow the experience bar, and each alt gets its own plan.</p>
+    <button class="btn primary" id="obAdd">Add a character</button><button class="btn" id="obImp">Import from the PC app</button></div></div>`;
   $("#obAdd").onclick = () => openEditor(null);
   $("#obImp").onclick = openImport;
 }
@@ -1228,11 +1498,15 @@ function renderViewSeg(){
 function renderStatus(){
   const m = (S.snapshot||{}).meta || {}, hrs = (S.curated||{}).refreshHours || 6;
   const age = m.lastScan ? (Date.now() - new Date(m.lastScan).getTime())/3600000 : 999;
-  let h = `<span><span class="dot ${m.lastError?"err":(age > hrs*3?"warn":"")}"></span>Wiki checked <b class="num">${esc(ago(m.lastScan))}</b> · every ${hrs} h</span>`;
-  if(m.counts) h += `<span class="num">${m.counts.quests} quests · ${m.counts.items} items · ${m.counts.zones} zones</span>`;
-  h += `<span class="sync ${Store.mode}" title="${Store.mode==="db"?"Characters, progress and pins are saved to your account":"Characters, progress and pins are saved in this browser only"}">${!Store.ready?"Connecting…":(Store.mode==="db"?"Synced to your account":"Saved in this browser")}</span>`;
-  if(Store.sb && Store.ready) h += Store.uid ? `<span title="Signed in">${esc(Store.email)}</span><button class="btn ghost" id="outBtn">Sign out</button>` : `<button class="btn primary" id="inBtn">Sign in</button>`;
-  $("#status").innerHTML = h;
+  let h = "";
+  if(!$("#landing").hidden){ $("#acct").innerHTML = ""; $("#warn").innerHTML = ""; return; }
+  const dotT = `Wiki copy checked ${ago(m.lastScan)}; it's re-read every ${hrs} hours`;
+  h += `<span class="dot ${m.lastError?"err":(age > hrs*3?"warn":"")}" role="img" title="${esc(dotT)}" aria-label="${esc(dotT)}"></span>`;
+  const don = (window.MNM_CONFIG || {}).donateUrl;
+  if(don) h += `<a class="coffee" href="${esc(don)}" target="_blank" rel="noopener">Support</a>`;
+  if(Store.uid) h += `<span class="who-am" title="${Store.mode==="db"?"Signed in. Characters, progress and pins are saved to your account.":"Signed in, but saving to this browser only for now."}">${esc(Store.email)}</span><button class="btn ghost" id="outBtn">Sign out</button>`;
+  else if(Store.sb && Store.ready) h += `<button class="btn primary" id="inBtn">Sign in</button>`;
+  $("#acct").innerHTML = h;
   if($("#outBtn")) $("#outBtn").onclick = signOut;
   if($("#inBtn")) $("#inBtn").onclick = openSignIn;
   let w = "";
@@ -1260,7 +1534,9 @@ function milestones(c){
 function renderHero(){
   const c = char(), city = D.cities[c.city] || {name:c.city};
   const max = 60, fill = ((c.level-1)/(max-1))*100;
+  $("#hero").className = "hero win";
   $("#hero").innerHTML = `
+    <div class="crestbig" aria-hidden="true">${esc(clsInfo(c).abbr)}</div>
     <div class="who"><h2>${esc(c.name || c.cls)}</h2>
       <div class="meta"><span><b>${esc(c.race)}</b> ${esc(c.cls)}</span><span>starts in <b>${esc(city.name)}</b></span>
       <span class="modes"><span class="seg" id="soloSeg"><button data-v="1" class="${c.solo!==false?"on":""}">Solo</button><button data-v="0" class="${c.solo===false?"on":""}">Group</button></span></span>
@@ -1386,7 +1662,8 @@ function renderGear(){
   });
   $("#slots").innerHTML = h || `<div class="empty">No upgrades found in the next few levels.</div>`;
   const pend = ((S.snapshot||{}).meta||{}).itemDetailsPending;
-  $("#gearNote").innerHTML = `Levels with ~ are estimates from the camp or named mob that drops them. Tick “I have this” and the page compares upgrades against what you own.${pend?` ${pend} item pages still to read - more appear after each check.`:""}`;
+  $("#gearNote").innerHTML = `Levels with ~ are estimates from the camp or named mob that drops them. Tick “I have this” and upgrades are compared against what you own. Hover an item name for its stats.${pend?` ${pend} item pages still to read; more appear after each check.`:""}
+    <div class="qkey"><span class="q-stat">Stats</span><span class="q-fx">Has an effect</span><span class="q-lore">Lore (one per character)</span><span class="q-plain">No stats listed</span></div>`;
   $$("#gearMode button").forEach(b => { b.classList.toggle("on", b.dataset.v === UI.gear); b.onclick = () => { UI.gear = b.dataset.v; saveUI(); renderGear(); }; });
   $$("#slots [data-have]").forEach(b => b.onchange = () => { const pr = prog(char()); if(b.checked) pr.have[b.dataset.have] = true; else delete pr.have[b.dataset.have]; save(); renderGear(); renderSets(); });
 }
@@ -1414,7 +1691,7 @@ function renderQuests(){
     return `<div class="row ${done?"done":""}"><div class="lv num">${lv}+<small>${lv>L?"soon":"now"}</small></div><div>
       <div class="t"><a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.name)}</a>${seenIds.has(q.slug)?'<span class="tag new">new</span>':""}${!/^ALL$/i.test(q.classes)?`<span class="tag cls">${esc(q.classes.length>18?clsInfo(c).abbr:q.classes)}</span>`:""}
       <label class="own" style="float:right;margin:0"><input type="checkbox" data-qdone="${esc(q.slug)}" ${done?"checked":""}> done</label></div>
-      <div class="d">${esc(q.zone)}${q.reward?" · Reward: "+esc(q.reward):""}</div>
+      <div class="d">${esc(q.zone)}${q.reward?" · Reward: "+rewardHTML(q.reward):""}</div>
       <div class="x">${esc(q.excerpt)}</div></div></div>`;
   }).join("");
   if(qs.length > lim) h += `<button class="more" id="qMore">Show all ${qs.length}</button>`;
@@ -1521,7 +1798,9 @@ function renderFoot(){
   const src = (S.curated||{}).sources || [];
   const where = Store.mode === "db" ? "Your characters, progress and map pins are saved to your account, so they're the same on your PC and your phone."
     : (Store.sb ? "Your characters, progress and map pins are saved in this browser. Sign in to keep them with your account on every device." : "Your characters, progress and map pins are saved in this browser.");
+  const m = (S.snapshot||{}).meta || {}, don = (window.MNM_CONFIG || {}).donateUrl;
   $("#foot").innerHTML = `<p>${where} Moving over from the PC app? <button class="btn" id="impBtn">Import its characters</button></p>
+    ${m.counts ? `<p>${m.counts.quests.toLocaleString()} quests, ${m.counts.items.toLocaleString()} items and ${m.counts.zones} zones in the wiki copy, last checked ${esc(ago(m.lastScan))}.${don ? ` MnM Companion is free; if it helps you, you can <a href="${esc(don)}" target="_blank" rel="noopener">support the site</a>.` : ""}</p>` : ""}
     <p>Live data from ${src.slice(0,1).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}, re-checked every ${(S.curated||{}).refreshHours || 6} hours. Hand-checked plan notes from: ${src.slice(1).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" · ")}.</p>
     <p>Map images come from the <a href="https://monstersandmemories.miraheze.org/" target="_blank" rel="noopener">Monsters &amp; Memories community wiki</a>; each map names its maker and links its file page. The interactive community atlas is <a href="https://mnmatlas.com/" target="_blank" rel="noopener">MnM Atlas</a>. Early Access content changes often - if the game disagrees, trust the game.</p>`;
   $("#impBtn").onclick = openImport;
@@ -1772,22 +2051,324 @@ function goPlan(playId){
   if(el){ el.scrollIntoView({block:"center", behavior:"smooth"}); el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1800); }
 }
 
+// ------------------------------------------------------------- item tooltip and inspect windows
+const cap = s => String(s||"").replace(/\b\w/g, m => m.toUpperCase());
+function dropsFor(it){
+  const camps = D.camps.filter(cp => (cp.lootSlugs||[]).includes(it.slug) || (cp.loot||[]).some(n => norm(n) === norm(it.name)));
+  const quests = ((S.snapshot||{}).quests||[]).filter(q => q.reward && norm(q.reward).includes(norm(it.name)));
+  return {camps, quests};
+}
+function itemCard(it, withTitle){
+  const c = S.user.characters.length ? char() : null;
+  const order = ["AC","STR","STA","AGI","DEX","INT","WIS","CHA","HP","Mana"];
+  const keys = order.filter(k => it.stats[k] != null).concat(Object.keys(it.stats).filter(k => !order.includes(k)));
+  let stats = keys.map(k => { const v = it.stats[k]; return `<span><i>${esc(k)}</i><b class="${k !== "AC" && v > 0 ? "pos" : ""}">${k === "AC" ? v : (v > 0 ? "+" : "") + v}</b></span>`; }).join("");
+  if(it.weapon) stats += Object.entries(it.weapon).map(([k,v]) => `<span><i>${esc(cap(k))}</i><b>${esc(v)}</b></span>`).join("");
+  if(it.bagSlots) stats += `<span><i>Slots</i><b>${esc(it.bagSlots)}</b></span>`;
+  const tags = it.tags || [];
+  const where = it.slots.length ? it.slots.map(cap).join(", ") : "";
+  const lv = it.req ? `Needs level ${it.req}` : (it.lvl != null ? `Around level ${it.lvl}${it.est ? " (estimate from the " + (it.why || "drop") + ")" : ""}` : "");
+  const fit = c ? (usable(it,c) ? `<span style="color:var(--now)">${esc(c.name || c.cls)} can use this</span>` : `<span style="color:var(--hold)">${esc(c.name || c.cls)} can't use this</span>`) : "";
+  return (withTitle ? `<h5 class="q-${quality(it)}">${esc(it.name)}</h5>` : "")
+    + ((tags.includes("Lore") || tags.includes("No Drop")) ? `<div class="tg">${tags.includes("Lore") ? '<span class="lore">Lore</span> ' : ""}${tags.includes("No Drop") ? "<b>No Drop</b>" : ""}</div>` : "")
+    + `<div class="tg">${where ? `<b>${esc(where)}</b> ` : ""}${esc(it.type)}</div>`
+    + `<div class="tg">Class: ${esc(it.classes || "All")}${it.race && !/^all$/i.test(it.race) ? `. Race: ${esc(it.race)}` : ""}</div>`
+    + (stats ? `<div class="stats">${stats}</div>` : `<div class="meta">${it.hasDetail ? "No stats listed on the wiki." : "Stats not read from the wiki yet."}</div>`)
+    + (it.effect ? `<div class="fx">${esc(it.effect)}</div>` : "")
+    + (it.drop ? `<div class="src">${esc(trimDrop(it.drop))}</div>` : "")
+    + ((lv || fit) ? `<div class="meta">${esc(lv)}${lv && fit ? ". " : ""}${fit}</div>` : "");
+}
+const TIP = {slug:null, ptr:"mouse"};
+function showTip(slug, x, y){
+  const it = D.items[slug]; if(!it || $("#scrim").classList.contains("on")) return;
+  const t = $("#itip"); TIP.slug = slug;
+  t.innerHTML = itemCard(it, true); t.hidden = false; placeTip(x, y);
+}
+function placeTip(x, y){
+  const t = $("#itip"); if(t.hidden) return;
+  const w = t.offsetWidth, h = t.offsetHeight, vw = innerWidth, vh = innerHeight;
+  let l = x + 18, tp = y + 16;
+  if(l + w > vw - 8) l = Math.max(8, x - w - 14);
+  if(tp + h > vh - 8) tp = Math.max(8, y - h - 12);
+  t.style.left = l + "px"; t.style.top = tp + "px";
+}
+function hideTip(){ TIP.slug = null; $("#itip").hidden = true; }
+document.addEventListener("pointerdown", e => { TIP.ptr = e.pointerType || "mouse"; }, true);
+document.addEventListener("pointerover", e => {
+  if(e.pointerType !== "mouse") return;
+  const a = e.target.closest && e.target.closest(".ilink[data-slug]");
+  if(a && a.dataset.slug !== TIP.slug) showTip(a.dataset.slug, e.clientX, e.clientY);
+});
+document.addEventListener("pointermove", e => { if(TIP.slug && e.pointerType === "mouse") placeTip(e.clientX, e.clientY); });
+document.addEventListener("pointerout", e => {
+  const a = e.target.closest && e.target.closest(".ilink[data-slug]");
+  if(a && !(e.relatedTarget && a.contains(e.relatedTarget))) hideTip();
+});
+document.addEventListener("focusin", e => {
+  const a = e.target.closest && e.target.closest(".ilink[data-slug]");
+  if(a && e.target.matches(":focus-visible")){ const r = a.getBoundingClientRect(); showTip(a.dataset.slug, r.left, r.bottom); }
+});
+document.addEventListener("focusout", e => { if(e.target.closest && e.target.closest(".ilink[data-slug]")) hideTip(); });
+document.addEventListener("click", e => {
+  if(e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+  const el = e.target.closest && e.target.closest(".ilink[data-slug],[data-quest],[data-zoneslug],[data-camp]");
+  if(!el || !S.loaded) return;
+  e.preventDefault();
+  if(el.dataset.slug) openItem(el.dataset.slug);
+  else if(el.dataset.quest) openQuest(el.dataset.quest);
+  else if(el.dataset.zoneslug) openZoneSlug(el.dataset.zoneslug);
+  else openCamp(+el.dataset.camp);
+});
+document.addEventListener("keydown", e => {
+  if(e.key !== "Enter") return;
+  const el = e.target.closest && e.target.closest("span.ilink[data-slug]");
+  if(el){ e.preventDefault(); openItem(el.dataset.slug); }
+});
+function campLine(cp){
+  const r = campRange(cp, false) || campRange(cp, true);
+  const i = D.camps.indexOf(cp);
+  return `<div class="crow"><span class="lvp num">${r ? r[0] + "-" + r[1] : "?"}</span><span><a href="#" data-camp="${i}"><b>${esc(cp.area)}</b></a><small>${esc(cp.zone)}${cp.named && cp.named.length ? ". Named: " + esc(cp.named.join(", ")) : ""}</small></span></div>`;
+}
+function openItem(slug){
+  hideTip();
+  const it = D.items[slug]; if(!it) return;
+  const c = S.user.characters.length ? char() : null;
+  const have = c && prog(c).have[slug];
+  const dr = dropsFor(it);
+  const where = dr.camps.slice(0, 6).map(campLine).join("")
+    + dr.quests.slice(0, 4).map(q => `<div class="crow"><span class="lvp num">${questLevel(q)}+</span><span><a href="#" data-quest="${esc(q.slug)}"><b>${esc(q.name)}</b></a><small>Quest reward, ${esc(q.zone)}</small></span></div>`).join("");
+  modal(it.name, `<div class="ins">${itemCard(it, false)}
+    ${where ? `<div class="side"><div class="sh">Where to get it</div>${where}</div>` : ""}
+    <div class="acts">${c ? `<label class="own" style="margin:0"><input type="checkbox" id="insHave" ${have ? "checked" : ""}> ${esc(c.name || c.cls)} has this</label>` : ""}${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">Open on the wiki</a>` : ""}<button class="btn" id="insClose" style="margin-left:auto">Close</button></div></div>`);
+  $("#mTitle").className = "q-" + quality(it);
+  $("#insClose").onclick = closeModal;
+  if($("#insHave")) $("#insHave").onchange = e => { const pr = prog(char()); if(e.target.checked) pr.have[slug] = true; else delete pr.have[slug]; save(); renderBody(); };
+}
+function rewardHTML(r){
+  return String(r||"").split(/\s*,\s*|\s+and\s+/).filter(Boolean).map(part => { const sl = D.nameToSlug[norm(part)]; return sl && D.items[sl] ? itemLink(D.items[sl]) : esc(part); }).join(", ");
+}
+function openQuest(slug){
+  const q = ((S.snapshot||{}).quests||[]).find(x => x.slug === slug); if(!q) return;
+  const c = S.user.characters.length ? char() : null;
+  const done = c && prog(c).done["q:" + slug];
+  const rs = q.reward && D.nameToSlug[norm(q.reward)];
+  const zk = Object.values((S.snapshot||{}).zones||{}).find(z => norm(z.name) === norm(q.zone));
+  modal(q.name, `<div class="ins">
+    <div class="tg"><b>Level ${questLevel(q)}+</b> in ${zk ? `<a href="#" data-zoneslug="${esc(zk.slug)}">${esc(q.zone)}</a>` : esc(q.zone)}${q.starter ? ", class starter quest" : ""}</div>
+    <div class="tg">Class: ${esc(/^ALL$/i.test(q.classes) ? "All" : q.classes)}</div>
+    ${q.reward ? `<div class="src">Reward: ${rs && D.items[rs] ? itemLink(D.items[rs]) : rewardHTML(q.reward)}</div>` : ""}
+    ${q.excerpt ? `<p class="mtext" style="margin-top:10px">${esc(q.excerpt)}</p>` : ""}
+    <div class="acts">${c ? `<label class="own" style="margin:0"><input type="checkbox" id="qDone" ${done ? "checked" : ""}> Done on ${esc(c.name || c.cls)}</label>` : ""}<a href="${esc(q.url)}" target="_blank" rel="noopener">Full walkthrough on the wiki</a><button class="btn" id="qClose" style="margin-left:auto">Close</button></div></div>`);
+  $("#qClose").onclick = closeModal;
+  if($("#qDone")) $("#qDone").onchange = e => { const pr = prog(char()); const k = "q:" + slug; if(e.target.checked) pr.done[k] = true; else delete pr.done[k]; save(); renderBody(); };
+}
+function openZoneSlug(slug){
+  const key = zoneKeyForSlug(slug) || (Z.byKey[slug] ? slug : null);
+  const z = ((S.snapshot||{}).zones||{})[slug] || Object.values((S.snapshot||{}).zones||{}).find(x => x.slug === slug);
+  if(key && Z.byKey[key].maps.length && S.user.characters.length){ closeModal(); closeSearch(); openZone(key); return; }
+  if(!z){ if(key){ closeModal(); closeSearch(); openZone(key); } return; }
+  const camps = (z.camps || []).slice().sort((a,b) => ((campRange(a,false)||[0])[0]) - ((campRange(b,false)||[0])[0]));
+  modal(z.name, `<div class="ins"><div class="tg"><b>${esc(z.kind || "Zone")}</b>${z.levels ? `, levels ${z.levels[0]} to ${z.levels[1]}` : ""}</div>
+    ${camps.length ? `<div class="side"><div class="sh">Hunting spots</div>${camps.slice(0, 12).map(campLine).join("")}</div>` : `<p class="mtext">No hunting spots listed for this zone yet.</p>`}
+    <div class="acts">${key ? `<button class="btn" id="zMap">Open in the map view</button>` : ""}<a href="${esc(z.url)}" target="_blank" rel="noopener">Zone page on the wiki</a><button class="btn" id="zClose" style="margin-left:auto">Close</button></div></div>`, true);
+  $("#zClose").onclick = closeModal;
+  if($("#zMap")) $("#zMap").onclick = () => { closeModal(); openZone(key); };
+}
+function openCamp(i){
+  const cp = D.camps[i]; if(!cp) return;
+  const solo = cp.level && cp.level.solo, grp = cp.level && cp.level.group;
+  const loot = (cp.loot||[]).map(n => { const s = D.nameToSlug[norm(n)]; return s && D.items[s] ? itemLink(D.items[s]) : esc(n); });
+  const zk = zoneKeyForSlug(cp.zoneSlug);
+  modal(cp.area, `<div class="ins">
+    <div class="tg"><b>${esc(cp.zone)}</b>${solo ? `, solo ${solo[0]} to ${solo[1]}` : ""}${grp ? `, group ${grp[0]} to ${grp[1]}` : ""}</div>
+    ${cp.mobs ? `<div class="src">${esc(cp.mobs)}</div>` : ""}
+    ${(cp.named||[]).length ? `<div class="src">Named: ${esc(cp.named.join(", "))}</div>` : ""}
+    ${cp.note ? `<p class="mtext" style="margin-top:8px">${esc(cp.note)}</p>` : ""}
+    ${loot.length ? `<div class="chips">${loot.map(l => `<span class="chip">${l}</span>`).join("")}</div>` : ""}
+    <div class="acts">${zk && Z.byKey[zk] && Z.byKey[zk].maps.length ? `<button class="btn" id="cMap">Show ${esc(cp.zone)} on the map</button>` : ""}<button class="btn" id="cClose" style="margin-left:auto">Close</button></div></div>`);
+  $("#cClose").onclick = closeModal;
+  if($("#cMap")) $("#cMap").onclick = () => { closeModal(); openZone(zk); };
+}
+
+// ------------------------------------------------------------- search
+let SX = [];
+function buildSearch(){
+  const out = [];
+  const add = (kind, id, title, sub, extra, lv, it) => { if(title) out.push({kind, id, title, sub, lv, it, nt:norm(title), nx:norm(title + " " + (sub||"") + " " + (extra||""))}); };
+  Object.values(D.items).forEach(it => add("item", it.slug, it.name, [it.slots.map(cap).join(", ") || cap(it.type), it.hasDetail ? statLine(it) : ""].filter(Boolean).join(". "), it.drop + " " + it.classes + " " + it.type, it.req || it.lvl, it));
+  ((S.snapshot||{}).quests||[]).forEach(q => add("quest", q.slug, q.name, q.zone + (q.reward ? ". Reward: " + q.reward : ""), q.excerpt + " " + q.classes, questLevel(q)));
+  Object.values((S.snapshot||{}).zones||{}).forEach(z => add("zone", z.slug, z.name, (z.kind || "Zone") + (z.levels ? ", levels " + z.levels[0] + " to " + z.levels[1] : "") + ((z.camps||[]).length ? ", " + z.camps.length + " hunting spots" : ""), "", z.levels ? z.levels[0] : null));
+  D.camps.forEach((cp, i) => { const r = campRange(cp, false) || campRange(cp, true); add("camp", i, cp.area, cp.zone + (cp.mobs ? ". " + cp.mobs : ""), (cp.named||[]).join(" ") + " " + (cp.loot||[]).join(" "), r ? r[0] : null); });
+  SX = out;
+}
+function searchFor(qs){
+  const q = norm(qs), toks = q.split(" ").filter(Boolean);
+  if(q.length < 2 || !toks.length) return [];
+  const res = [];
+  for(const e of SX){
+    let s = 0, ok = true;
+    for(const t of toks){
+      const ti = e.nt.indexOf(t);
+      if(ti === 0) s += 6; else if(ti > 0 && e.nt[ti-1] === " ") s += 4; else if(ti > 0) s += 2;
+      else if(e.nx.includes(t)) s += 1; else { ok = false; break; }
+    }
+    if(!ok) continue;
+    if(e.nt === q) s += 12; else if(e.nt.startsWith(q)) s += 5;
+    s += {item:.3, quest:.5, zone:.8, camp:.1}[e.kind];
+    res.push({e, s});
+  }
+  res.sort((a,b) => b.s - a.s || a.e.title.length - b.e.title.length);
+  return res;
+}
+function hl(title, qs){
+  const low = title.toLowerCase(), mark = new Array(title.length).fill(false);
+  norm(qs).split(" ").filter(t => t.length > 1).forEach(t => { let i = low.indexOf(t); while(i >= 0){ for(let k = i; k < i + t.length; k++) mark[k] = true; i = low.indexOf(t, i + t.length); } });
+  let out = "", open = false;
+  for(let i = 0; i < title.length; i++){ if(mark[i] && !open){ out += "<mark>"; open = true; } if(!mark[i] && open){ out += "</mark>"; open = false; } out += esc(title[i]); }
+  return out + (open ? "</mark>" : "");
+}
+const askOn = () => (window.MNM_CONFIG || {}).ask !== false && !!Store.uid;
+const isQuestion = s => /\?\s*$/.test(s) || /^(what|where|how|who|which|when|why|is|are|can|should|do|does|best|any)\b/i.test(s.trim());
+const SR = {list:[], i:-1};
+function runSearch(){
+  const qs = $("#q").value, box = $("#sres");
+  if(!qs.trim()){ closeSearch(); return; }
+  const res = searchFor(qs);
+  const groups = [["zone","Zones",3],["item","Items",6],["quest","Quests",4],["camp","Hunting spots",3]];
+  const picked = {};
+  groups.forEach(([k,,n]) => picked[k] = res.filter(r => r.e.kind === k).slice(0, n));
+  const best = k => picked[k].length ? picked[k][0].s : -1;
+  const order = groups.slice().sort((a,b) => best(b[0]) - best(a[0]));
+  SR.list = []; let h = "";
+  const askRow = () => { SR.list.push({kind:"ask", q:qs}); return `<div class="sr ask" role="option" data-i="${SR.list.length-1}"><span class="k" aria-hidden="true">?</span><span class="t">Ask the guide: “${esc(qs.trim())}”</span><span class="d">Get an answer drawn from the wiki copy</span></div>`; };
+  const ask = askOn(), qLike = isQuestion(qs);
+  if(ask && qLike) h += askRow();
+  order.forEach(([k, label]) => {
+    if(!picked[k].length) return;
+    h += `<div class="sg">${label}</div>`;
+    picked[k].forEach(({e}) => {
+      SR.list.push(e);
+      const left = e.lv != null ? `<span class="k num">${esc(e.lv)}</span>` : `<span class="k ic">${k === "zone" ? "zone" : "-"}</span>`;
+      const tcls = e.kind === "item" ? "q-" + quality(e.it) : "";
+      h += `<div class="sr" role="option" data-i="${SR.list.length-1}">${left}<span class="t ${tcls}">${hl(e.title, qs)}</span><span class="d">${esc(e.sub || "")}</span></div>`;
+    });
+  });
+  if(!res.length) h += `<div class="snone">Nothing in the wiki copy matches “${esc(qs.trim())}”.${ask ? " Try asking it as a question." : ""}</div>`;
+  if(ask && !qLike) h += askRow();
+  box.innerHTML = h; box.hidden = false; $("#q").setAttribute("aria-expanded", "true");
+  SR.i = SR.list.length ? 0 : -1; markSR();
+  $$("#sres .sr").forEach(el => { el.onmousedown = e => e.preventDefault(); el.onclick = () => pickSR(+el.dataset.i); });
+}
+function markSR(){ $$("#sres .sr").forEach(el => { const on = +el.dataset.i === SR.i; el.classList.toggle("on", on); el.setAttribute("aria-selected", on ? "true" : "false"); if(on) el.scrollIntoView({block:"nearest"}); }); }
+function pickSR(i){
+  const e = SR.list[i]; if(!e) return;
+  const q = $("#q").value;
+  closeSearch(); $("#q").blur();
+  if(e.kind === "ask") openAsk(e.q || q);
+  else if(e.kind === "item") openItem(e.id);
+  else if(e.kind === "quest") openQuest(e.id);
+  else if(e.kind === "zone") openZoneSlug(e.id);
+  else if(e.kind === "camp") openCamp(e.id);
+}
+function closeSearch(){ const b = $("#sres"); if(b){ b.hidden = true; b.innerHTML = ""; } const q = $("#q"); if(q) q.setAttribute("aria-expanded", "false"); SR.list = []; SR.i = -1; }
+function wireSearch(){
+  const q = $("#q");
+  let t = null;
+  q.addEventListener("input", () => { clearTimeout(t); t = setTimeout(runSearch, 60); });
+  q.addEventListener("focus", () => { if(q.value.trim()) runSearch(); });
+  q.addEventListener("blur", () => setTimeout(closeSearch, 120));
+  q.addEventListener("keydown", e => {
+    if(e.key === "ArrowDown" || e.key === "ArrowUp"){ if(!SR.list.length) return; e.preventDefault(); SR.i = (SR.i + (e.key === "ArrowDown" ? 1 : -1) + SR.list.length) % SR.list.length; markSR(); }
+    else if(e.key === "Enter"){ e.preventDefault(); if(SR.i >= 0) pickSR(SR.i); else if(askOn() && q.value.trim()) { const v = q.value; closeSearch(); openAsk(v); } }
+    else if(e.key === "Escape"){ closeSearch(); q.blur(); }
+  });
+  document.addEventListener("keydown", e => {
+    if($("#searchBox").hidden || $("#scrim").classList.contains("on")) return;
+    const typing = /^(input|textarea|select)$/i.test((e.target.tagName || "")) || e.target.isContentEditable;
+    if((e.key === "/" && !typing) || (e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey))){ e.preventDefault(); q.focus(); q.select(); }
+  });
+}
+
+// ------------------------------------------------------------- ask the guide (AI, signed-in only)
+function refLink(name){
+  const n = norm(name);
+  const slug = D.nameToSlug[n];
+  if(slug && D.items[slug]) return itemLink(D.items[slug], "ref");
+  const q = ((S.snapshot||{}).quests||[]).find(x => norm(x.name) === n);
+  if(q) return `<a href="${esc(q.url)}" class="ref" data-quest="${esc(q.slug)}">${esc(q.name)}</a>`;
+  const z = Object.values((S.snapshot||{}).zones||{}).find(x => norm(x.name) === n);
+  if(z) return `<a href="${esc(z.url)}" class="ref" data-zoneslug="${esc(z.slug)}">${esc(z.name)}</a>`;
+  const ci = D.camps.findIndex(cp => norm(cp.area) === n);
+  if(ci >= 0) return `<a href="#" class="ref" data-camp="${ci}">${esc(D.camps[ci].area)}</a>`;
+  return `<b>${esc(name)}</b>`;
+}
+function inl(s){
+  return s.split(/(\[\[[^\]]{1,90}\]\]|\*\*[^*]{1,120}\*\*)/).map(p => {
+    if(/^\[\[.*\]\]$/.test(p)) return refLink(p.slice(2, -2));
+    if(/^\*\*.*\*\*$/.test(p)) return `<b>${esc(p.slice(2, -2))}</b>`;
+    return esc(p);
+  }).join("");
+}
+function answerHTML(text){
+  const lines = String(text).replace(/\r/g, "").split("\n");
+  let h = "", list = false, para = [];
+  const flush = () => { if(para.length){ h += `<p>${inl(para.join(" "))}</p>`; para = []; } };
+  lines.forEach(l => {
+    const m = l.match(/^\s*(?:[-*•]|\d+[.)])\s+(.*)$/);
+    if(m){ flush(); if(!list){ h += "<ul>"; list = true; } h += `<li>${inl(m[1])}</li>`; return; }
+    if(list){ h += "</ul>"; list = false; }
+    if(!l.trim()){ flush(); return; }
+    para.push(l.trim().replace(/^#+\s*/, ""));
+  });
+  flush(); if(list) h += "</ul>";
+  return h;
+}
+const askNote = "Answers come from the wiki copy this site keeps and can be wrong. Early Access content changes often.";
+function openAsk(q){
+  closeSearch();
+  modal("Ask the guide", `<form class="askq" id="askF"><input id="askQ" value="${esc(q||"")}" placeholder="Where do I get a bigger bag at level 6?" maxlength="300" aria-label="Your question"><button class="btn primary" type="submit">Ask</button></form>
+    <div class="answer" id="askA" aria-live="polite"></div><div class="left" id="askL">${esc(askNote)}</div>`, true);
+  const inp = $("#askQ");
+  $("#askF").onsubmit = e => { e.preventDefault(); runAsk(inp.value); };
+  if(q && q.trim()) runAsk(q); else inp.focus();
+}
+async function runAsk(q){
+  q = String(q||"").trim();
+  const out = $("#askA"); if(!out) return;
+  if(q.length < 4){ out.innerHTML = `<p class="hint bad">Ask a full question, like “Which quests reward a cloak around level 10?”</p>`; return; }
+  if(!Store.sb || !Store.uid){ out.innerHTML = `<p class="hint bad">Sign in to ask the guide.</p>`; return; }
+  out.innerHTML = `<div class="thinking"><i></i>Reading the wiki copy…</div>`;
+  const c = S.user.characters.length ? char() : null;
+  try{
+    const {data, error} = await Store.sb.functions.invoke("ask", {body:{q, char: c ? {cls:c.cls, race:c.race, level:c.level, city:(D.cities[c.city]||{}).name || c.city, solo:c.solo !== false} : null}});
+    if(error){
+      let msg = "The guide isn't answering right now. Try again in a moment.";
+      try{ const b = await error.context.json(); if(b && b.error) msg = b.error; }catch(_){}
+      if($("#askA")) $("#askA").innerHTML = `<p class="hint bad">${esc(msg)}</p>`;
+      return;
+    }
+    if(!$("#askA")) return;
+    $("#askA").innerHTML = answerHTML(data && data.answer || "No answer came back. Try rephrasing the question.");
+    $("#askL").textContent = (data && data.left != null ? `${data.left} question${data.left === 1 ? "" : "s"} left today. ` : "") + askNote;
+  }catch(e){ if($("#askA")) $("#askA").innerHTML = `<p class="hint bad">Couldn't reach the guide. Check your connection and try again.</p>`; }
+}
+
 // ------------------------------------------------------------- editor + import
 function openEditor(c){
   const isNew = !c;
   const cur = S.curated || {};
   const d = c || {name:"", race:"", cls:"", city:"night-harbor", level:1, solo:true};
   const first = !S.user.characters.length;
-  $("#modal").innerHTML = `<h3>${first ? "Your first character" : (isNew ? "Add an alt" : "Edit character")}</h3>
+  modal(first ? "Your first character" : (isNew ? "Add an alt" : "Edit character"), `
     <div class="f"><label for="eName">Name</label><input id="eName" value="${esc(d.name)}" placeholder="e.g. Grubnak" maxlength="40"></div>
     <div class="two"><div class="f"><label for="eRace">Race</label><input id="eRace" list="races" value="${esc(d.race)}" placeholder="Human" maxlength="30"><datalist id="races">${(cur.races||[]).map(r => `<option value="${esc(r)}">`).join("")}</datalist></div>
       <div class="f"><label for="eLvl">Level</label><input id="eLvl" type="number" min="1" max="60" value="${esc(d.level)}"></div></div>
     <div class="f"><label for="eCls">Class</label><select id="eCls">${(cur.classes||[]).map(k => `<option ${k.name===d.cls?"selected":""}>${esc(k.name)}</option>`).join("")}</select></div>
     <div class="f"><label for="eCity">Starting city</label><select id="eCity">${(cur.cities||[]).map(k => `<option value="${esc(k.key)}" ${k.key===d.city?"selected":""}>${esc(k.name)}</option>`).join("")}</select><div class="hint" id="eWho"></div></div>
-    <div class="mfoot">${!isNew && S.user.characters.length>1?`<button class="btn del" id="eDel">Delete</button>`:""}<button class="btn" id="eCancel">Cancel</button><button class="btn primary" id="eSave">${isNew?"Add":"Save"}</button></div>`;
+    <div class="mfoot">${!isNew && S.user.characters.length>1?`<button class="btn del" id="eDel">Delete</button>`:""}<button class="btn" id="eCancel">Cancel</button><button class="btn primary" id="eSave">${isNew?"Add":"Save"}</button></div>`);
   const who = () => { const k = (cur.cities||[]).find(x => x.key === $("#eCity").value); $("#eWho").textContent = k ? k.who : ""; };
   $("#eCity").onchange = who; who();
-  openModal(); $("#eName").focus();
+  $("#eName").focus();
   $("#eCancel").onclick = closeModal;
   const del = $("#eDel");
   if(del) del.onclick = () => {
@@ -1802,12 +2383,11 @@ function openEditor(c){
   };
 }
 function openImport(){
-  $("#modal").innerHTML = `<h3>Import from the PC app</h3>
+  modal("Import from the PC app", `
     <p class="mtext">The PC app keeps your characters and progress in <code>C:\\Users\\&lt;you&gt;\\MnM-Companion\\data\\user.json</code> (on a Mac, <code>~/MnM-Companion/data/user.json</code>). Choose that file, or open it in Notepad and paste what's inside. Importing replaces the characters and progress here; your map pins stay.</p>
     <div class="f"><label for="iFile">File</label><input type="file" id="iFile" accept=".json,application/json"></div>
     <div class="f"><label for="iText">Or paste it</label><textarea id="iText" rows="5" placeholder='{"characters": [ ... ]}'></textarea><div class="hint" id="iMsg"></div></div>
-    <div class="mfoot"><button class="btn" id="iCancel">Cancel</button><button class="btn primary" id="iGo">Import</button></div>`;
-  openModal();
+    <div class="mfoot"><button class="btn" id="iCancel">Cancel</button><button class="btn primary" id="iGo">Import</button></div>`);
   const msg = (t, bad) => { const m = $("#iMsg"); m.textContent = t; m.classList.toggle("bad", !!bad); };
   $("#iFile").onchange = async () => { const f = $("#iFile").files[0]; if(!f) return; try{ $("#iText").value = await f.text(); msg("Read " + f.name + ". Press Import."); }catch(_){ msg("Couldn't read that file - paste its contents instead.", true); } };
   $("#iCancel").onclick = closeModal;
@@ -1826,5 +2406,3 @@ document.addEventListener("keydown", e => { if(e.key === "Escape"){ closeModal()
 setInterval(() => { if(S.loaded) renderStatus(); }, 60000);
 load();
 </script>
-
-</body></html>

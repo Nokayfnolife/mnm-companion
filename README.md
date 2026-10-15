@@ -15,7 +15,8 @@ A level-by-level planner for **Monsters & Memories**: what to do next, gear by s
    2. Open **SQL Editor** and run `supabase/schema.sql`.
    3. Under **Authentication → URL Configuration**, set *Site URL* to your Pages URL (for example `https://<user>.github.io/mnm-companion/`) and add the same URL under *Redirect URLs*.
    4. Optional: enable Discord or Google under **Authentication → Providers**, then list them in `providers` in `site/config.js`.
-2. **Config.** Put the Project URL and the anon public key in `site/config.js`. Never put the `service_role` key in this repo.
+   5. For **Ask the guide**: run `supabase/ask.sql` in the SQL Editor, deploy `supabase/functions/ask/index.ts` as an Edge Function named `ask`, and add an `ANTHROPIC_API_KEY` secret under **Edge Functions → Secrets**. Optional secrets: `ASK_DAILY_LIMIT` (questions per player per day, default 25) and `ASK_MODEL`.
+2. **Config.** Put the Project URL and the anon public key in `site/config.js`. Never put the `service_role` key in this repo. `donateUrl` adds a "Support the site" link; `ask: false` hides the AI helper.
 3. **GitHub Pages.** Go to **Settings → Pages → Source** and choose **GitHub Actions**. Every push to `site/` deploys the site.
 4. **Wiki refresh.** `Refresh wiki data` runs every 6 hours. You can also start it from the **Actions** tab.
 

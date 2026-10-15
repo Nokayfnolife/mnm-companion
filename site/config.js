@@ -3,6 +3,10 @@
 window.MNM_CONFIG = {
   supabaseUrl: "https://tdmkwojyhzptdgvsjjmi.supabase.co",
   supabaseAnonKey: "sb_publishable_HU7B86p_zQ1v-A1VlkEoIg_oFz0cntY",
-  // OAuth providers enabled in Supabase > Authentication > Providers, e.g. ["discord", "google"]
-  providers: []
+  // Sign-in options shown next to email, enabled in Supabase > Authentication > Providers
+  providers: ["discord"],
+  // "Ask the guide" uses the Supabase Edge Function in supabase/functions/ask
+  ask: true,
+  // Link for a "Support the site" button (Buy Me a Coffee, Ko-fi, ...). Leave empty to hide it.
+  donateUrl: ""
 };
