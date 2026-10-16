@@ -1284,11 +1284,11 @@ html.lock,html.lock body{overflow:hidden}
 .tour-veil{position:absolute;inset:0}
 .tour-spot{position:fixed;border-radius:8px;box-shadow:0 0 0 2px var(--gilt),0 0 0 6px color-mix(in srgb,var(--gilt) 30%,transparent),0 0 0 9999px rgba(8,6,4,.55);pointer-events:none;transition:left .3s ease,top .3s ease,width .3s ease,height .3s ease}
 .tour-spot.none{box-shadow:0 0 0 9999px rgba(8,6,4,.55);left:50%!important;top:40%!important;width:0!important;height:0!important}
-.tour-card{position:fixed;width:min(430px,calc(100vw - 24px));display:grid;grid-template-columns:86px minmax(0,1fr);gap:8px 14px;padding:14px 16px 12px;transition:left .3s ease,top .3s ease;--g-bg:var(--stone2);--g-fire:var(--accent);color:var(--parch)}
+.tour-card{position:fixed;width:min(520px,calc(100vw - 24px));display:grid;grid-template-columns:160px minmax(0,1fr);gap:8px 14px;padding:14px 16px 12px;transition:left .3s ease,top .3s ease;color:var(--parch)}
 .tour-card::before{content:"";position:absolute;left:var(--ax,40px);width:14px;height:14px;background:var(--stone2);transform:rotate(45deg);display:none}
 .tour-card.below::before{display:block;top:-8px;border-left:1px solid #000;border-top:1px solid #000}
 .tour-card.above::before{display:block;bottom:-8px;border-right:1px solid #000;border-bottom:1px solid #000}
-.tg-pic{width:86px;height:89px;color:var(--gilt2);overflow:visible;align-self:start}
+.tg-pic{display:block;width:160px;height:auto;aspect-ratio:428/382;object-fit:contain;align-self:end;margin:-6px 0 -4px -6px;user-select:none;-webkit-user-drag:none}
 .tg-name{font:700 18px/1.15 var(--display);color:var(--gilt2)}
 .tg-name small{display:block;font:600 13.5px/1.3 var(--body);color:var(--ash);margin-top:2px}
 .tg-text{margin:6px 0 0;font-size:15.5px;line-height:1.5;color:var(--text2)}
@@ -1297,9 +1297,8 @@ html.lock,html.lock body{overflow:hidden}
 .tg-dots i{width:7px;height:7px;border-radius:50%;background:var(--iron)}
 .tg-dots i.on{background:var(--gilt)}
 .tour-card .btn{padding:6px 12px}
-[data-look="journal"] .tour-card{--g-bg:var(--paper);color:var(--text)}
+[data-look="journal"] .tour-card{color:var(--text)}
 [data-look="journal"] .tour-card::before{background:var(--paper);border-color:var(--edge2)!important}
-[data-look="journal"] .tg-pic{color:var(--text)}
 [data-look="journal"] .tg-name{font:400 22px/1.1 var(--display);color:var(--text)}
 [data-look="journal"] .tg-name small{font:600 19px/1.1 var(--hand);color:var(--accent)}
 [data-look="journal"] .tg-text{font-size:16px;color:var(--text2)}
@@ -1307,9 +1306,9 @@ html.lock,html.lock body{overflow:hidden}
 [data-look="journal"] .tour-spot.none{box-shadow:0 0 0 9999px color-mix(in srgb,var(--text) 45%,transparent)}
 .acct #tourBtn{width:32px;height:32px;padding:0;border-radius:50%;font:700 16px/1 var(--display)}
 @media (max-width:560px){
-  .tour-card{left:8px!important;right:8px;top:auto!important;bottom:calc(8px + env(safe-area-inset-bottom));width:auto;grid-template-columns:62px minmax(0,1fr);gap:6px 12px;padding:12px 14px 10px}
+  .tour-card{left:8px!important;right:8px;top:auto!important;bottom:calc(8px + env(safe-area-inset-bottom));width:auto;grid-template-columns:100px minmax(0,1fr);gap:6px 12px;padding:12px 14px 10px}
   .tour-card::before{display:none!important}
-  .tg-pic{width:62px;height:64px}
+  .tg-pic{width:100px;margin:-4px 0 -2px -4px}
   .tg-text{font-size:15px}
   .tour-card .btn{flex:1 1 auto}
   .tg-dots{flex-basis:100%}
@@ -1586,29 +1585,7 @@ html.lock,html.lock body{overflow:hidden}
 <clipPath id="lgClip"><circle cx="100" cy="100" r="85"/></clipPath>
 <g id="lgDragon"><path d="M112 94C106 90 100 88 94 90" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M95 90l-6-4M95 90l-7 0M95 90l-5 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path fill="currentColor" d="M62 68L68 62L72 60C76 56 80 53 84 52C88 49 93 48 98 48C106 46 114 52 116 62C118 70 118 76 122 82C130 90 142 100 150 112C156 116 166 120 174 128C182 136 186 148 180 158L186 165L172 167L170 160C176 152 174 142 166 136C162 142 158 148 152 150L150 155L153 161L140 162L134 160L139 157L143 156L140 147C134 142 130 134 126 126C120 123 112 118 108 112C104 106 102 100 102 94C102 86 98 80 92 77L84 79L66 81L71 77L79 73L67 71Z"/><path fill="currentColor" d="M90 50C94 40 102 33 112 30C106 37 103 43 101 50ZM97 49C104 43 112 41 120 43C113 46 109 50 106 55Z"/><path fill="currentColor" d="M112 51l7-5l-1 8ZM117 62l8-3l-3 7ZM121 74l8-1l-4 7ZM134 92l8 1l-5 6ZM150 110l8 2l-6 5Z"/><path d="M108 102C102 110 96 112 90 108" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M90 108l-7-5M90 108l-8 1M90 108l-5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M103 92l6-1M104 100l6-2M107 108l6-3M112 115l6-4M118 120l5-4" fill="none" style="stroke:var(--logo-bg)" stroke-width="1.1" stroke-linecap="round"/><path d="M80 57l6-1.5l-2 3Z" style="fill:var(--logo-bg)"/></g>
 <g id="lgKnight"><path fill="currentColor" d="M34 104C24 114 18 128 16 148L24 142L25 154L33 140L36 120Z"/><path fill="currentColor" d="M20 161L29 161L36 141L43 150L45 161L55 161L50 144L46 131L46 116L50 110L47 106L47 92C47 87 35 87 35 92L35 106L31 110L29 123L32 133Z"/><path d="M37 98H45M41 98V104" fill="none" style="stroke:var(--logo-bg)" stroke-width="1.6"/><path d="M33 110L26 92" fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="round"/><path d="M26 92L38 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M20 90L33 95" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><g transform="rotate(-24 58 106)"><path d="M47 92L69 92C69 108 65 118 58 125C51 118 47 108 47 92Z" style="fill:var(--logo-bg)" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M50 99L58 108L66 99" fill="none" style="stroke:var(--logo-fire)" stroke-width="2.6"/></g></g>
-<g id="gnome" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
-<path d="M14 122C16 106 26 98 38 96L66 96C78 98 88 106 90 122Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
-<path d="M30 104L34 122M74 104L70 122" fill="none" stroke-width="1.4"/>
-<path d="M72 100C82 94 90 88 96 82L102 88C96 96 86 104 76 110Z" style="fill:var(--g-bg)" stroke-width="2.2"/>
-<path d="M96 82C98 78 102 77 104 80L114 72C116 71 118 73 116 75L107 84C107 88 104 90 101 88Z" style="fill:var(--g-bg)" stroke-width="2"/>
-<path d="M33 78C28 92 30 106 40 114C44 110 47 112 50 118C53 112 57 112 60 117C63 111 67 111 70 113C78 104 79 90 72 78C66 88 58 92 52 92C45 92 38 88 33 78Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
-<path d="M42 98C44 104 43 108 41 111M52 99C53 105 52 110 51 114M61 98C62 104 62 108 64 111" fill="none" stroke-width="1.3"/>
-<path d="M35 74C35 62 42 56 52 56C62 56 70 62 70 74C70 80 66 84 52 84C40 84 35 80 35 74Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
-<path d="M36 70L24 62L36 78" style="fill:var(--g-bg)" stroke-width="2.2"/>
-<path d="M69 69L82 60L69 77" style="fill:var(--g-bg)" stroke-width="2.2"/>
-<circle cx="45" cy="70" r="5.4" fill="none" stroke-width="1.8"/><circle cx="59.5" cy="70" r="5.4" fill="none" stroke-width="1.8"/>
-<path d="M50.4 70L54.1 70" stroke-width="1.6"/>
-<circle cx="45.5" cy="70.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="59.5" cy="70.5" r="1.5" fill="currentColor" stroke="none"/>
-<path d="M38 63C41 60 46 60 49 62M56 62C59 60 64 60 67 63" fill="none" stroke-width="2.6"/>
-<path d="M52 72C47 74 46 82 52 84C58 84 58 76 54 72Z" style="fill:var(--g-fire)" stroke-width="2"/>
-<path d="M52 84C47 87 40 87 34 82C37 90 46 92 52 88C58 92 67 90 71 82C64 87 57 87 52 84Z" style="fill:var(--g-bg)" stroke-width="2"/>
-<path d="M26 58C34 38 46 20 64 10C74 4 86 4 96 8C88 10 80 16 76 24C72 34 72 46 78 56Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
-<path d="M18 60C32 52 68 50 86 56C89 60 86 64 80 63C62 59 36 61 22 66C16 66 14 62 18 60Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
-<path d="M96 8C100 6 104 8 102 12C100 14 97 12 98 10" fill="none" stroke-width="1.8"/>
-<path d="M56 26C52 30 52 36 56 38C60 36 61 31 58 27C58 30 57 31 56 30Z" style="fill:var(--g-fire)" stroke-width="1.4"/>
-<path d="M12 94C6 88 8 80 14 74C14 80 18 80 18 76C22 82 22 90 16 94C15 96 13 96 12 94Z" style="fill:var(--g-fire)" stroke-width="1.8"/>
-<path d="M8 100l-3 2M20 100l3 2M14 101v4" fill="none" stroke-width="1.4"/>
-</g>
+
 <path id="lgFire" d="M70 76Q57 79 42 88Q56 84 70 80ZM70 78Q58 86 47 100Q60 90 71 82ZM71 80Q64 92 57 105Q68 95 72 84ZM46 84l-6 1l4-4ZM42 94l-6 3l3-5Z"/>
 <g id="lgSketch" filter="url(#lgRough)">
 <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1.1"/>
@@ -1757,7 +1734,7 @@ html.lock,html.lock body{overflow:hidden}
   <div class="tour-veil"></div>
   <div class="tour-spot" id="tourSpot"></div>
   <section class="tour-card win" id="tourCard" role="dialog" aria-modal="true" aria-labelledby="tourName" aria-describedby="tourText">
-    <svg class="tg-pic" viewBox="0 0 120 124" aria-hidden="true"><use href="#gnome"/></svg>
+    <img class="tg-pic" id="tourPic" src="img/wallabik/01-welcome.webp" width="428" height="382" alt="" decoding="async">
     <div class="tg-body">
       <div class="tg-name" id="tourName">Wallabik Ningel <small>Master Elementalist</small></div>
       <p class="tg-text" id="tourText" aria-live="polite"></p>
@@ -2046,20 +2023,20 @@ const cardOf = sel => { const el = $(sel); return el ? (el.closest(".card") || e
 function tourSteps(){
   const c = S.user.characters.length ? char() : null, classic = isClassic(c), name = c ? (c.name || c.cls) : "your hero";
   return [
-    {t:() => null, x:`Well met! I'm Wallabik Ningel, gnome, Master Elementalist, and the one who built this companion. Give me a minute and I'll show you where everything is.`},
-    {t:() => $("#tabs"), x:`Each of your characters gets a bookmark up here. Make an alt with “+ Add alt” and it gets a plan all its own.`},
-    {t:() => $("#hero .slider"), x:`This is ${esc(name)}'s experience bar. Drag it to your level and everything below rearranges itself. No arcane formulas required.`},
-    {t:() => $("#modeSeg"), x:`Guided or Classic. Guided lays out a path for you; Classic is just your character sheet. Flip between them whenever you like.`},
-    {t:() => classic ? null : cardOf("#plays"), x:`What's worth doing at your level, best first. Tick a box when it's done and I'll stop nagging you about it.`},
-    {t:() => classic ? $("#portrait") : null, x:`Your class and starting stats. Spend the ten bonus points the way you did at character creation and the totals add themselves up.`},
-    {t:() => cardOf(classic ? "#equip" : "#slots"), x:`Tell me what you're wearing in each slot. I'll only point out gear that actually beats it${classic ? ", and only if you ask" : ", and where it drops"}.`},
-    {t:() => classic ? null : cardOf("#sets"), x:`Armor sets you can collect, trimmed to the pieces that beat what you've got, with the materials to gather.`},
-    {t:() => classic ? null : cardOf("#camps"), x:`Where to hunt at your level. Switch Solo to Group up top and the list changes with you.`},
-    {t:() => $("#searchBox"), x:`Hunting for something specific? Type an item, quest or zone here, or press / from anywhere.`},
-    {t:() => $("#viewSeg"), x:`The maps live here: community zone maps with pins for camps, quest givers, and notes you drop yourself.`},
-    {t:() => $("#thm"), x:`Fancy different colors? Pick a corner of the world and I'll dress the pages to match.`},
-    {t:() => $("#setBtn"), x:`Settings holds the look, field journal or game window, and your account.`},
-    {t:() => $("#tourBtn"), x:`That's the grand tour! If you ever get lost, press this and I'll come running. Now go find some loot.`}
+    {p:"01-welcome", t:() => null, x:`Well met! I'm Wallabik Ningel, gnome, Master Elementalist, and the one who built this companion. Give me a minute and I'll show you where everything is.`},
+    {p:"02-characters", t:() => $("#tabs"), x:`Each of your characters gets a bookmark up here. Make an alt with “+ Add alt” and it gets a plan all its own.`},
+    {p:"03-level", t:() => $("#hero .slider"), x:`This is ${esc(name)}'s experience bar. Drag it to your level and everything below rearranges itself. No arcane formulas required.`},
+    {p:"04-modes", t:() => $("#modeSeg"), x:`Guided or Classic. Guided lays out a path for you; Classic is just your character sheet. Flip between them whenever you like.`},
+    {p:"05-do-next", t:() => classic ? null : cardOf("#plays"), x:`What's worth doing at your level, best first. Tick a box when it's done and I'll stop nagging you about it.`},
+    {p:"06-class", t:() => classic ? $("#portrait") : null, x:`Your class and starting stats. Spend the ten bonus points the way you did at character creation and the totals add themselves up.`},
+    {p:"07-gear", t:() => cardOf(classic ? "#equip" : "#slots"), x:`Tell me what you're wearing in each slot. I'll only point out gear that actually beats it${classic ? ", and only if you ask" : ", and where it drops"}.`},
+    {p:"08-armor-sets", t:() => classic ? null : cardOf("#sets"), x:`Armor sets you can collect, trimmed to the pieces that beat what you've got, with the materials to gather.`},
+    {p:"09-hunt", t:() => classic ? null : cardOf("#camps"), x:`Where to hunt at your level. Switch Solo to Group up top and the list changes with you.`},
+    {p:"10-search", t:() => $("#searchBox"), x:`Hunting for something specific? Type an item, quest or zone here, or press / from anywhere.`},
+    {p:"11-map", t:() => $("#viewSeg"), x:`The maps live here: community zone maps with pins for camps, quest givers, and notes you drop yourself.`},
+    {p:"12-theme", t:() => $("#thm"), x:`Fancy different colors? Pick a corner of the world and I'll dress the pages to match.`},
+    {p:"13-settings", t:() => $("#setBtn"), x:`Settings holds the look, field journal or game window, and your account.`},
+    {p:"14-help", t:() => $("#tourBtn"), x:`That's the grand tour! If you ever get lost, press this and I'll come running. Now go find some loot.`}
   ];
 }
 function tourVisible(el){ if(!el) return false; const r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0 && getComputedStyle(el).visibility !== "hidden"; }
@@ -2085,6 +2062,8 @@ function endTour(){
 function showTourStep(){
   const st = TOUR.steps[TOUR.i], last = TOUR.i === TOUR.steps.length - 1;
   $("#tourText").innerHTML = st.x;
+  $("#tourPic").src = "img/wallabik/" + st.p + ".webp";
+  const nx = TOUR.steps[TOUR.i + 1]; if(nx) (new Image()).src = "img/wallabik/" + nx.p + ".webp";   // fetch the next pose ahead
   $("#tourDots").innerHTML = TOUR.steps.map((_, n) => `<i class="${n === TOUR.i ? "on" : ""}"></i>`).join("");
   $("#tourBack").hidden = TOUR.i === 0;
   $("#tourSkip").hidden = last;

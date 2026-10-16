@@ -11,7 +11,7 @@ The zone maps are Leaflet image overlays with no zoom snapping; the whole map fi
 
 Starting stats per race and class come from the race pages on storiesofmnm.com (`races` in `site/data/wiki.json`, refreshed with the daily full scan).
 
-The first time someone signs in, Wallabik Ningel (a gnome Master Elementalist, drawn in `#gnome` in the page's SVG defs) walks them around the page; the steps are `tourSteps()` in the script, and the ? button or Settings replays it.
+The first time someone signs in, Wallabik Ningel (a gnome Master Elementalist) walks them around the page; the steps are `tourSteps()` in the script, each with its own pose from `site/img/wallabik/` (transparent WebP, all on one 428×382 canvas at the same scale with his feet on the same line, so he doesn't jump in size between steps). The ? button or Settings replays it.
 
 Players pick a look under **Settings** (it opens by itself the first time someone signs in): **Field journal** (paper, ink and margin notes; the default, styled by the `html[data-look="journal"]` block at the end of the stylesheet) or **Game window**, which uses the area themes below.
 
