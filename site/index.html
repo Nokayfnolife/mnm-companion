@@ -1243,6 +1243,33 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
   .attrs .tot{font-size:19px}
 }
 
+/* ---------- windows that scroll well on phones ---------- */
+/* dvh is the screen height that's actually visible (iPhone toolbars excluded); vh stays as the fallback */
+html.lock,html.lock body{overflow:hidden}
+.scrim{overscroll-behavior:contain}
+.modal{max-height:calc(100dvh - 32px);overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.modal .mfoot{position:sticky;bottom:0;z-index:1;margin:14px -20px -18px;padding:12px 20px 14px;background:var(--stone);border-top:1px solid var(--line)}
+.modal.picker{display:flex;flex-direction:column;height:min(720px,calc(100vh - 32px));height:min(720px,calc(100dvh - 32px));overflow:hidden}
+.modal.picker>.mb{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;padding-bottom:0}
+.modal.picker .plist{flex:1 1 auto;max-height:none;min-height:120px;overscroll-behavior:contain}
+.modal.picker .mfoot{position:static;margin:0 -20px;padding:10px 20px 14px}
+.thmenu{max-height:calc(100vh - 90px);max-height:calc(100dvh - 90px);overflow:auto;overscroll-behavior:contain}
+.sres{overscroll-behavior:contain}
+@media (max-width:560px){
+  .scrim{align-items:flex-end;padding:0}
+  .modal,.modal.wide{max-width:none;width:100%;max-height:calc(100vh - 12px);max-height:calc(100dvh - 12px);border-radius:14px 14px 0 0}
+  .modal>.mb{padding:14px 16px calc(16px + env(safe-area-inset-bottom))}
+  .modal .mfoot{margin:14px -16px calc(-16px - env(safe-area-inset-bottom));padding:10px 16px calc(12px + env(safe-area-inset-bottom))}
+  .modal .mfoot .btn{flex:1 1 auto;padding:11px 14px}
+  .modal .mfoot .del{flex:0 1 auto}
+  .modal.picker{height:calc(100vh - 12px);height:calc(100dvh - 12px)}
+  .modal.picker .mfoot{margin:0 -16px;padding:10px 16px calc(12px + env(safe-area-inset-bottom))}
+  .thmenu{position:fixed;left:0;right:0;top:auto;bottom:0;width:100%;max-height:78vh;max-height:78dvh;border-radius:14px 14px 0 0;padding-bottom:env(safe-area-inset-bottom)}
+  .sres{max-height:60vh;max-height:60dvh}
+}
+[data-look="journal"] .modal.win>.tb,[data-look="journal"] .thmenu.win>.tb{background:var(--paper)}
+[data-look="journal"] .modal .mfoot{border-top-color:var(--rule)}
+
 /* ============================================================
    Field journal look: paper, ink and notes in the margin.
    Chosen in Settings (html[data-look="journal"]); the game look is html[data-look="game"].
@@ -1766,9 +1793,10 @@ async function signOut(){
   S.user = normUser({}); localSet(S.user);
   Store.uid = null; Store.ready = false; goLanding();
 }
-function modal(title, body, wide){
+function modal(title, body, wide, cls){
   const m = $("#modal");
-  m.className = "modal win" + (wide ? " wide" : "");
+  m.className = "modal win" + (wide ? " wide" : "") + (cls ? " " + cls : "");
+  m.scrollTop = 0;
   m.innerHTML = `<header class="tb"><h3 id="mTitle">${esc(title)}</h3></header><div class="mb">${body}</div>`;
   openModal();
 }
@@ -2517,7 +2545,7 @@ function openPicker(k){
   const pool = () => Object.values(D.items).filter(it => it.slots.includes(base) && (all || usable(it, c))).sort((a,b) => a.name.localeCompare(b.name));
   modal(`${label}: what are you wearing?`, `<div class="pkbar"><input id="pkQ" type="search" autocomplete="off" spellcheck="false" aria-label="Search ${esc(label.toLowerCase())} items"><label class="tgl"><input type="checkbox" id="pkAll"> Other classes too</label></div>
     <div class="plist" id="pkL"></div>
-    <div class="mfoot">${cur ? `<button class="btn" id="pkOff">Take it off</button>` : ""}<button class="btn" id="pkCancel">Cancel</button></div>`, true);
+    <div class="mfoot">${cur ? `<button class="btn" id="pkOff">Take it off</button>` : ""}<button class="btn" id="pkCancel">Cancel</button></div>`, true, "picker");
   const draw = () => {
     const list = pool(), q = norm($("#pkQ").value);
     $("#pkQ").placeholder = `Search ${list.length} ${label.toLowerCase()} items`;
@@ -3300,8 +3328,8 @@ function openImport(){
     S.user = n; save(); closeModal(); render();
   };
 }
-function openModal(){ $("#scrim").classList.add("on"); }
-function closeModal(){ $("#scrim").classList.remove("on"); }
+function openModal(){ $("#scrim").classList.add("on"); document.documentElement.classList.add("lock"); }
+function closeModal(){ $("#scrim").classList.remove("on"); document.documentElement.classList.remove("lock"); }
 $("#scrim").addEventListener("click", e => { if(e.target.id === "scrim") closeModal(); });
 document.addEventListener("keydown", e => { if(e.key === "Escape"){ closeModal(); if(UI.drop) setDrop(false); } });
 setInterval(() => { if(S.loaded) renderStatus(); }, 60000);
