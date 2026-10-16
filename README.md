@@ -1,6 +1,6 @@
 # Monsters and Memories Companion
 
-A level-by-level planner for **Monsters & Memories**: what to do next, gear by slot, quests, camps, armor sets, spells and zone maps with your own pins. Each character follows its level slider. Players sign in to keep their characters, progress and pins on every device.
+A level-by-level planner for **Monsters & Memories**: what to do next, gear by slot, quests, camps, armor sets, spells and zone maps with your own pins. Each character follows its level slider. Signing in is optional: "Start without an account" (or "jump straight in") keeps everything in that browser and is remembered there (`mnm-guest`), so the next visit opens straight into the app. Signing in keeps characters, progress, pins and timers on every device; a guest who signs in later brings this browser's characters and pins into the account (only guest data is merged, never an old copy of the account).
 
 Each character runs in one of two modes, picked when it's created and switchable from the character header:
 

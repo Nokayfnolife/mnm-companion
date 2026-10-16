@@ -1226,6 +1226,10 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
 .row2 input{flex:1;min-width:0}
 .gatewin .hint{font-size:13.5px;color:var(--soot);margin:6px 0 0}
 .carry{margin:14px 0 0;font-size:14px;color:var(--gilt2)}
+#lgGuest{width:100%}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--gilt2);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+[data-look="journal"] .linkbtn{color:var(--info)}
+.gatewin .hint.guest{margin:6px 0 0}
 .landtitle{grid-column:1/-1;margin:0 0 4px;display:flex;align-items:center;gap:clamp(14px,2.4vw,28px)}
 .landtitle{padding-right:clamp(0px,9vw,130px)}
 .landtitle h1{font:800 clamp(34px,5.2vw,60px)/.98 var(--display);margin:0;color:var(--parch);text-shadow:0 3px 0 var(--tsh),0 0 40px rgb(var(--sh) / calc(.8 * var(--sha)));letter-spacing:.005em}
@@ -1812,7 +1816,7 @@ html.lock,html.lock body{overflow:hidden}
 </g>
 </g>
 </defs></svg>
-<script>try{ if(Object.keys(localStorage).some(k => /^sb-.+-auth-token$/.test(k))) document.body.classList.add("authguess"); }catch(_){}</script>
+<script>try{ if(localStorage.getItem("mnm-guest") === "1" || Object.keys(localStorage).some(k => /^sb-.+-auth-token$/.test(k))) document.body.classList.add("authguess"); }catch(_){}</script>
 
 <header class="bar" id="bar"><div class="in">
   <a class="mark" href="./" aria-label="Monsters and Memories Companion home"><svg class="logo" viewBox="0 0 200 200" aria-hidden="true"><use href="#lgSmall"/></svg><b>Monsters and Memories<small>Companion</small></b></a>
@@ -1835,9 +1839,9 @@ html.lock,html.lock body{overflow:hidden}
   <div class="landin">
     <div class="landtitle"><svg class="emblem" viewBox="0 0 200 200" aria-hidden="true"><use class="em-j" href="#lgSketch"/><use class="em-g" href="#lgFlat"/></svg><div><h1>Monsters and Memories Companion</h1><p>A leveling planner for quests, gear and zone maps</p></div></div>
     <section class="win gatewin" aria-labelledby="gateT">
-      <header class="tb"><h2 id="gateT">Sign in to start</h2></header>
+      <header class="tb"><h2 id="gateT">Get started</h2></header>
       <div class="body">
-        <p class="lede">Set your level and see what to do next, the gear worth chasing, and where it all is on the map. It's free, and your characters follow you from PC to phone.</p>
+        <p class="lede">Set your level and see what to do next, the gear worth chasing, and where it all is on the map. It's free. Sign in to keep your characters on your PC and phone, or <button type="button" class="linkbtn" id="lgGuest2">jump straight in</button>.</p>
         <button class="btn discord big" id="lgDiscord" type="button" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1A19.9 19.9 0 0 0 6.1 21l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.6ZM8 15.4c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.6 8 10.6s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>Continue with Discord</button>
         <div class="or" id="lgOr" hidden>or</div>
         <form class="f" id="lgForm" novalidate>
@@ -1845,7 +1849,10 @@ html.lock,html.lock body{overflow:hidden}
           <div class="row2"><input id="lgMail" type="email" autocomplete="email" placeholder="you@example.com"><button class="btn primary" id="lgGo" type="submit">Email me a link</button></div>
           <p class="hint" id="lgMsg">We'll send a one-time sign-in link. No password needed.</p>
         </form>
-        <p class="carry" id="lgCarry" hidden>The characters saved in this browser move into your account the first time you sign in.</p>
+        <div class="or">or</div>
+        <button class="btn big" id="lgGuest" type="button">Start without an account</button>
+        <p class="hint guest">Your characters stay in this browser. Sign in any time to keep them on every device.</p>
+        <p class="carry" id="lgCarry" hidden>The characters saved in this browser come with you into your account when you sign in.</p>
       </div>
     </section>
     <div class="feats">
@@ -2092,13 +2099,18 @@ async function onSession(session){
   if(Store.ready && uid === Store.uid) return;
   Store.uid = uid; Store.email = u ? ((u.user_metadata && (u.user_metadata.custom_claims && u.user_metadata.custom_claims.global_name || u.user_metadata.full_name || u.user_metadata.name)) || u.email || "your account") : null;
   if(Store.chan){ try{ Store.sb.removeChannel(Store.chan); }catch(_){} Store.chan = null; }
-  if(!uid){ goLanding(); return; }
+  if(!uid){ if(isGuest()) goLocal(); else goLanding(); return; }
   showApp();
   const {data, error} = await Store.sb.from("user_data").select("data").eq("user_id", uid).maybeSingle();
   if(error){ Store.err = "Signed in, but couldn't load your saved characters (" + error.message + "). Changes stay in this browser for now."; goLocal(); return; }
   Store.mode = "db"; Store.ready = true; Store.err = null;
-  if(data && data.data){ S.user = normUser(data.data); localSet(S.user); render(); }
+  if(data && data.data){
+    const acc = normUser(data.data), added = isGuest() ? mergeGuest(acc, S.user) : 0;
+    S.user = acc; localSet(S.user); render();
+    if(added){ Store.pending = true; flush(); toast(`Added ${added} character${added > 1 ? "s" : ""} from this browser to your account.`); }
+  }
   else { render(); if((S.user.characters || []).length){ Store.pending = true; flush(); } } // first sign-in: bring this browser's characters along
+  try{ localStorage.removeItem("mnm-guest"); }catch(_){}
   PL.at = 0; loadPlaces(true);
   if(!S.user.look) setTimeout(() => { if(Store.uid === uid && !S.user.look && !$("#scrim").classList.contains("on")) openSettings(true); }, 400);
   Store.chan = Store.sb.channel("ud-" + uid)
@@ -2109,10 +2121,21 @@ async function onSession(session){
       S.user = d; localSet(S.user); render();
     }).subscribe();
 }
+// guest data only (never an old copy of the account, which could bring back characters deleted elsewhere)
+function mergeGuest(acc, loc){
+  if(!loc || !(loc.characters || []).length) return 0;
+  const ids = new Set(acc.characters.map(c => c.id)); let added = 0;
+  loc.characters.forEach(c => { if(ids.has(c.id)) return; acc.characters.push(c); if(loc.progress && loc.progress[c.id]) acc.progress[c.id] = loc.progress[c.id]; added++; });
+  const pids = new Set(acc.pins.map(p => p.id));
+  (loc.pins || []).forEach(p => { if(!pids.has(p.id)) acc.pins.push(p); });
+  if(added && !acc.characters.some(c => c.id === acc.active)) acc.active = acc.characters[0].id;
+  return added;
+}
 async function signOut(){
   if(Store.pending){ clearTimeout(saveTimer); await flush(); }
   try{ await Store.sb.auth.signOut(); }catch(_){}
   S.user = normUser({}); localSet(S.user);
+  try{ localStorage.removeItem("mnm-guest"); }catch(_){}
   Store.uid = null; Store.ready = false; goLanding();
 }
 function modal(title, body, wide, cls){
@@ -2149,6 +2172,13 @@ function goLocal(){
   Store.mode = "local"; Store.ready = true; Store.ref = null;
   showApp();
   render();
+}
+const isGuest = () => { try{ return localStorage.getItem("mnm-guest") === "1"; }catch(_){ return false; } };
+function startGuest(){
+  try{ localStorage.setItem("mnm-guest", "1"); }catch(_){}
+  goLocal();
+  if(!S.user.look) openSettings(true);
+  else if(!S.user.characters.length) openEditor(null);
 }
 
 // ------------------------------------------------------------- landing (signed out) and app shell
@@ -2354,7 +2384,7 @@ function placeTour(){
 function maybeTour(){
   clearTimeout(TOUR.timer);
   TOUR.timer = setTimeout(() => {
-    if(TOUR.on || S.user.toured || !S.loaded || !Store.uid || Store.mode !== "db" || !S.user.characters.length) return;
+    if(TOUR.on || S.user.toured || !S.loaded || !Store.ready || !S.user.characters.length) return;
     if($("#scrim").classList.contains("on") || !$("#landing").hidden || !S.user.look) return;
     startTour();
   }, 700);
@@ -2414,6 +2444,7 @@ function renderLanding(){
   $("#lgSupport").innerHTML = don ? ` <a href="${esc(don)}" target="_blank" rel="noopener">Support the site</a>.` : "";
 }
 function wireLanding(){
+  $("#lgGuest").onclick = startGuest; $("#lgGuest2").onclick = startGuest;
   const msg = (t, bad) => { const m = $("#lgMsg"); m.textContent = t; m.classList.toggle("bad", !!bad); };
   $("#lgDiscord").onclick = async () => {
     if(!Store.sb) return;
@@ -3678,12 +3709,14 @@ async function loadPlaces(force){
 }
 const SUG_LABEL = {pending:"Suggested · waiting for review", approved:"On the map for everyone", rejected:"Not added this time"};
 function suggestHTML(p){
-  if(!Store.sb || !Store.uid || PL.off) return "";
+  if(!Store.sb || PL.off) return "";
+  if(!Store.uid) return `<div class="psug"><button class="more" data-a="signin" style="padding:0;justify-self:start">Sign in to suggest it for everyone</button></div>`;
   if(p.sug) return `<div class="psug sg-${esc(p.sugSt || "pending")}">${esc(SUG_LABEL[p.sugSt || "pending"])}${(p.sugSt || "pending") === "pending" ? ` <button class="more" data-a="unsug">Withdraw</button>` : ""}</div>`;
   const c = char();
   return `<div class="psug"><button class="btn" data-a="sug">Suggest for everyone</button><label class="own"><input type="checkbox" class="sgname" checked> Show ${esc(c.name || "my character's name")}</label><div class="hint">A moderator checks it before it goes on everyone's map.</div></div>`;
 }
 function wireSuggest(d, p){
+  const si = d.querySelector('[data-a="signin"]'); if(si) si.onclick = () => { MAP.map.closePopup(); openSignIn(); };
   const b = d.querySelector('[data-a="sug"]');
   if(b) b.onclick = async () => {
     if(!p.label || p.label === "My pin"){ b.textContent = "Give it a label first"; return; }
