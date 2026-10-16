@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Monsters and Memories Companion: leveling planner, gear and maps</title>
-<script>try{var t=localStorage.getItem("mnm-theme");if(t&&/^[a-z-]+$/.test(t))document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<script>(function(){var d=document.documentElement,l="journal";try{var t=localStorage.getItem("mnm-theme");if(t&&/^[a-z-]+$/.test(t))d.setAttribute("data-theme",t);var k=localStorage.getItem("mnm-look");if(k==="game"||k==="journal")l=k;}catch(e){}d.setAttribute("data-look",l);})();</script>
 <meta name="description" content="Set your level and see what to do next in Monsters &amp; Memories: quests, hunting spots, the best gear for every slot, armor sets and zone maps. Free, synced across PC and phone.">
 <link rel="canonical" href="https://mnmcompanion.gg/">
 <meta property="og:type" content="website">
@@ -16,7 +16,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cmask id='m'%3E%3Crect width='32' height='32' fill='white'/%3E%3Ccircle cx='19.6' cy='12.6' r='7.4'/%3E%3C/mask%3E%3Ccircle cx='16' cy='16' r='14' fill='%230b0f1f' stroke='%23e9b75e' stroke-width='2.5'/%3E%3Ccircle cx='15' cy='16.6' r='8.8' fill='%23f2cf86' mask='url%28%23m%29'/%3E%3Cpath d='M21.2 9.6l.75 1.95 1.95.75-1.95.75-.75 1.95-.75-1.95-1.95-.75 1.95-.75z' fill='%23f6dda0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700;800&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700;800&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Caveat:wght@500;600&family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 /* Leaflet 1.9.4 (BSD-2-Clause) */
 .leaflet-pane,
@@ -1242,6 +1242,245 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
   .attrs{gap:5px 9px}
   .attrs .tot{font-size:19px}
 }
+
+/* ============================================================
+   Field journal look: paper, ink and notes in the margin.
+   Chosen in Settings (html[data-look="journal"]); the game look is html[data-look="game"].
+   ============================================================ */
+:root[data-look="journal"]{
+  color-scheme:light;
+  --void:#DED2B6; --panel:#EFE6D1; --edge:#B9A985; --accent:#A5402D; --on-accent:#F7F0DF;
+  --text:#2A2119; --muted:#5E5142;
+  --sky1:#DED2B6; --sky2:#DED2B6; --glow:transparent;
+  --starfield:none; --moon:none; --dunes:none; --vista:none; --vista-filter:none;
+  --now:#3B6B2C; --hold:#A5402D; --info:#2F4468; --soon:#8A5A12;
+  --q-plain:#7A6C58; --q-stat:#2A2119; --q-fx:#2F6A3A; --q-lore:#8A5A12;
+  --display:"IM Fell English SC",Georgia,"Times New Roman",serif;
+  --body:"Spectral",Georgia,"Times New Roman",serif;
+  --hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+  --stone:#EFE6D1; --stone2:#F3EBD9; --stone3:#E9DFC7; --slab:#F6EFDF;
+  --well:#E6DBC2; --iron:#B9A985; --iron2:#9C8B6C; --frame2:#CDBF9F;
+  --rim:transparent; --rim2:transparent;
+  --gilt:#A5402D; --gilt2:#8E3322; --accent-hi:#C45B44; --accent-lo:#7E2E1F;
+  --parch:#2A2119; --text2:#3D3226; --ash:#5E5142; --soot:#6E604D;
+  --btn1:#F3EBD9; --btn2:#E9DFC7; --bar1:#DED2B6; --bar2:#DED2B6; --none:#8E8068;
+  --line:rgba(42,33,25,.14); --line2:rgba(165,64,45,.3);
+  --frame:none; --paper:#EFE6D1; --rule:#D3C4A4;
+}
+[data-look="journal"] body{background:#DED2B6;background-image:none}
+[data-look="journal"] a{color:var(--info);border-bottom-color:rgba(47,68,104,.35)}
+[data-look="journal"] a:hover{border-bottom-color:var(--info)}
+[data-look="journal"] :focus-visible{outline-color:var(--accent)}
+
+/* top bar: ink on the desk */
+[data-look="journal"] .bar{background:#DED2B6;border-bottom:1.5px solid var(--text);box-shadow:none}
+[data-look="journal"] .mark b{font:400 20px/1 var(--display);color:var(--text);text-shadow:none}
+[data-look="journal"] .mark b small{font:600 19px/1 var(--hand);color:var(--accent);margin-top:0}
+[data-look="journal"] .search input{background:transparent;border:0;border-bottom:1.5px solid var(--muted);border-radius:0;box-shadow:none;font:italic 16px/1 var(--body);color:var(--text)}
+[data-look="journal"] .search input:focus{box-shadow:none;border-bottom-color:var(--accent)}
+[data-look="journal"] .search kbd{background:transparent;border-color:var(--iron2);color:var(--muted)}
+[data-look="journal"] .thm{display:none}
+[data-look="journal"] .acct .who-am{font-style:italic}
+
+/* windows: paper cards with an ink rule (dialogs, tooltips, the landing page) */
+[data-look="journal"] .win,[data-look="journal"] .card{background:var(--paper);border:1px solid #C9BA98;border-radius:2px;box-shadow:0 2px 0 #CDBE9C,0 10px 24px rgba(60,40,15,.18)}
+[data-look="journal"] .card>header,[data-look="journal"] .win>.tb{background:none;border-bottom:1.5px solid var(--text);box-shadow:none;border-radius:0;padding:10px 18px 7px}
+[data-look="journal"] .card>header::before,[data-look="journal"] .card>header::after,[data-look="journal"] .win>.tb::before,[data-look="journal"] .win>.tb::after{display:none}
+[data-look="journal"] .card>header h3,[data-look="journal"] .win>.tb h1,[data-look="journal"] .win>.tb h2,[data-look="journal"] .modal h3{font:400 25px/1.15 var(--display);color:var(--text);text-shadow:none}
+[data-look="journal"] .card>header .sub{font-style:italic;color:var(--muted);font-size:15px}
+
+/* the app itself is one sheet of paper with a red margin line */
+[data-look="journal"] #app{position:relative;max-width:1280px;margin:16px auto 40px;background:var(--paper);border:1px solid #C9BA98;box-shadow:0 2px 0 #CDBE9C,0 12px 28px rgba(60,40,15,.2);padding:6px clamp(16px,3.6vw,48px) 48px clamp(34px,6.2vw,92px)}
+[data-look="journal"] #app::before{content:"";position:absolute;top:0;bottom:0;left:clamp(20px,4.4vw,64px);width:2px;background:#D59A88;pointer-events:none}
+[data-look="journal"] #app .card,[data-look="journal"] #app .win{background:none;border:0;border-radius:0;box-shadow:none}
+[data-look="journal"] #app .card>header{padding:4px 0 6px}
+[data-look="journal"] #app .card>header h3{font-size:27px}
+[data-look="journal"] #app .body{padding:10px 0 4px}
+[data-look="journal"] .grid,[data-look="journal"] .sheet{gap:44px 48px;margin-top:28px}
+[data-look="journal"] .col{gap:40px}
+
+/* buttons, switches, segmented choices */
+[data-look="journal"] .btn{background:transparent;border:1.5px solid var(--text);border-radius:2px;box-shadow:none;color:var(--text);font:600 15px/1.2 var(--body)}
+[data-look="journal"] .btn:hover{background:rgba(42,33,25,.06);box-shadow:none;color:var(--text)}
+[data-look="journal"] .btn.primary{background:var(--text);border-color:var(--text);color:#F5EDDA}
+[data-look="journal"] .btn.primary:hover{background:#3D3226;color:#F5EDDA;filter:none}
+[data-look="journal"] .btn.ghost{border-color:transparent;color:var(--muted)}
+[data-look="journal"] .btn.ghost:hover{border-color:transparent;color:var(--text);text-decoration:underline;text-underline-offset:3px}
+[data-look="journal"] .btn.discord,[data-look="journal"] .btn.discord:hover{background:#5865F2;border-color:#4e58d4;color:#fff}
+[data-look="journal"] #lgCredit{display:none}
+[data-look="journal"] .seg{background:none;border:0;box-shadow:none;padding:0;gap:2px}
+[data-look="journal"] .seg button{color:var(--muted);font:500 15.5px/1.2 var(--body);padding:5px 10px;border:2px solid transparent;border-radius:50%}
+[data-look="journal"] .seg button:hover{color:var(--text)}
+[data-look="journal"] .seg button.on{background:none;box-shadow:none;color:var(--text);font-weight:600;border-color:var(--accent);transform:rotate(-2deg)}
+[data-look="journal"] .more{color:var(--info);font:italic 15px/1.3 var(--body)}
+[data-look="journal"] .chk{background:transparent;border:1.5px solid var(--text);box-shadow:none}
+[data-look="journal"] .chk:checked{background:var(--text);box-shadow:none}
+[data-look="journal"] .chk:checked::after{border-color:#F5EDDA}
+[data-look="journal"] .tgl input{background:#E6DBC2;border-color:var(--iron2);box-shadow:none}
+[data-look="journal"] .tgl input::after{background:#9C8B6C}
+[data-look="journal"] .tgl input:checked{background:var(--accent)}
+[data-look="journal"] .tgl{font:italic 15px/1.2 var(--body)}
+[data-look="journal"] .f input,[data-look="journal"] .f textarea,[data-look="journal"] .askq input,[data-look="journal"] .pkbar input[type=search]{background:#F6EFDF;border:1px solid var(--iron2);box-shadow:none}
+[data-look="journal"] .f input:focus,[data-look="journal"] .f textarea:focus,[data-look="journal"] .pkbar input[type=search]:focus{box-shadow:0 0 0 1px var(--accent)}
+[data-look="journal"] .mapbar select,[data-look="journal"] .f select{background-color:#F6EFDF;border:1px solid var(--iron2);box-shadow:none}
+
+/* character bookmarks and the name page */
+[data-look="journal"] .tabs{padding-top:14px;gap:4px 14px}
+[data-look="journal"] .tab{background:none;border:0;box-shadow:none;padding:4px 2px;font:500 16px/1.2 var(--body);color:var(--muted);gap:8px}
+[data-look="journal"] .tab:hover{box-shadow:none;color:var(--text)}
+[data-look="journal"] .tab .crest{background:none;box-shadow:none;border:1.5px solid var(--muted);color:var(--muted);font:400 11px/1 var(--display)}
+[data-look="journal"] .tab.on{color:var(--text);box-shadow:none;border-bottom:2px solid var(--accent);font-weight:600}
+[data-look="journal"] .tab.on .crest{background:none;box-shadow:none;border-color:var(--accent);color:var(--accent)}
+[data-look="journal"] .tab.add{border:0;box-shadow:none;color:var(--info);font-style:italic}
+[data-look="journal"] .hero{margin-top:14px;padding:22px 0 16px;border-bottom:1.5px solid var(--text)}
+[data-look="journal"] .crestbig{width:88px;height:88px;background:none;border:3px solid var(--accent);box-shadow:inset 0 0 0 4px var(--paper),inset 0 0 0 6px var(--accent);transform:rotate(-7deg)}
+[data-look="journal"] .crestbig .emb,[data-look="journal"] .medal .emb{color:var(--accent);filter:none}
+[data-look="journal"] .who h2{font:400 52px/1 var(--display);color:var(--text);text-shadow:none;margin-bottom:6px}
+[data-look="journal"] .who .meta{font-style:italic;color:var(--muted);font-size:16px}
+[data-look="journal"] .who .meta b{font-style:normal;color:var(--text)}
+[data-look="journal"] .lvlbig .n{font:600 64px/.85 var(--hand);color:var(--accent);text-shadow:none}
+[data-look="journal"] .lvlbig .l{font:italic 15px/1.2 var(--body);color:var(--muted)}
+[data-look="journal"] input[type=range]::-webkit-slider-runnable-track{border-color:var(--iron2);box-shadow:none}
+[data-look="journal"] input[type=range]::-webkit-slider-thumb{border-color:var(--paper);box-shadow:0 0 0 2px var(--accent)}
+[data-look="journal"] .tick.hit{color:var(--accent)}
+[data-look="journal"] .upnext .ul{font-family:var(--display)}
+[data-look="journal"] .upnext .un b{font:600 20px/1 var(--hand);color:var(--accent)}
+[data-look="journal"] .mapmode .crestbig{width:56px;height:56px}
+[data-look="journal"] .mapmode .who h2{font-size:32px}
+[data-look="journal"] .mapmode .lvlbig .n{font-size:44px}
+
+/* plan lists */
+[data-look="journal"] .badge{background:none!important;border-width:1.5px;font:400 14px/1 var(--display);transform:rotate(-3deg);padding:5px 8px 4px}
+[data-look="journal"] .play{border-top-color:var(--rule)}
+[data-look="journal"] .play h4{font:600 17.5px/1.3 var(--body)}
+[data-look="journal"] .play .kind{font:italic 14px/1 var(--body)}
+[data-look="journal"] .chip{background:none;border:1px dashed var(--iron2);box-shadow:none}
+[data-look="journal"] .row .lv,[data-look="journal"] .crow .lvp,[data-look="journal"] .sr .k{background:none;border:0;box-shadow:none;font:600 21px/1 var(--hand);color:var(--accent);padding:2px 0}
+[data-look="journal"] .row .lv small{font:italic 12.5px/1.2 var(--body);color:var(--muted)}
+[data-look="journal"] .crow.fit .lvp{background:none;color:var(--now)}
+[data-look="journal"] .row,[data-look="journal"] .crow,[data-look="journal"] .sp,[data-look="journal"] .news,[data-look="journal"] .set+.set,[data-look="journal"] .pinrow{border-top-color:var(--rule)}
+[data-look="journal"] .tag{border-style:dotted;color:var(--muted)}
+[data-look="journal"] .tag.new{background:none;color:var(--accent);border:1.5px solid var(--accent);transform:rotate(-3deg)}
+[data-look="journal"] .tag.cls,[data-look="journal"] .tag.fit{color:var(--now)}
+[data-look="journal"] .set h4{font:400 20px/1.3 var(--display)}
+[data-look="journal"] .piece{border-top:1px dotted var(--iron2)}
+[data-look="journal"] .mats{background:none;border:1.5px dashed var(--iron2);box-shadow:none}
+[data-look="journal"] .mats .h{font-family:var(--display)}
+[data-look="journal"] .ctr{border-color:var(--iron2);box-shadow:none}
+[data-look="journal"] .ctr button{background:#E9DFC7}
+[data-look="journal"] .tip{font-style:italic;border-left-color:#D59A88}
+[data-look="journal"] .skipped{font-family:var(--hand);font-size:19px;color:var(--muted)}
+[data-look="journal"] .gnote{background:none;border:1.5px dashed var(--accent);box-shadow:none;font-style:italic}
+[data-look="journal"] .gnote b{font-style:normal;color:var(--accent)}
+[data-look="journal"] .banner{background:rgba(165,64,45,.08);border-color:rgba(165,64,45,.45);color:#7E2E1F}
+[data-look="journal"] .sp .lv{font:600 19px/1 var(--hand)}
+[data-look="journal"] .lvtag{border:0;padding:0;font:italic 13.5px/1.5 var(--body);color:var(--muted)}
+[data-look="journal"] .foot{border-top:1.5px solid var(--text);font-style:italic}
+
+/* equipment as ledger lines, upgrades written in the margin */
+[data-look="journal"] .slots{display:block}
+[data-look="journal"] .slot{display:grid;grid-template-columns:96px minmax(0,1fr) minmax(0,1fr);column-gap:20px;row-gap:6px;align-items:start;background:none;border:0;border-bottom:1px solid var(--rule);border-radius:0;box-shadow:none;padding:10px 0 9px}
+[data-look="journal"] .slot:first-child{border-top:1.5px solid var(--text)}
+[data-look="journal"] .slot>.sl{grid-column:1;grid-row:1 / span 2;display:block;font:400 17px/1.3 var(--display);color:var(--muted)}
+[data-look="journal"] .slot>.sl .lvtag{display:block;margin-top:2px}
+[data-look="journal"] .slot>.wear{grid-column:2;grid-row:1}
+[data-look="journal"] .slot>.ups{grid-column:3;grid-row:1}
+[data-look="journal"] .ups>.upg+.upg{margin-top:6px}
+[data-look="journal"] .pick{margin:0;background:none;border:0;border-bottom:1px dotted var(--iron2);border-radius:0;box-shadow:none;padding:0 0 2px;font:500 17.5px/1.3 var(--body);color:var(--text)}
+[data-look="journal"] .pick:hover{box-shadow:none;border-bottom-color:var(--accent)}
+[data-look="journal"] .slot.none .pick{color:var(--soot);font-style:italic}
+[data-look="journal"] .slot .st{font:italic 14px/1.4 var(--body);color:var(--muted)}
+[data-look="journal"] .upg{margin:0 0 4px;padding:0;border:0;font:500 21px/1.15 var(--hand);color:var(--accent)}
+[data-look="journal"] .upg .ul{font-size:0;margin:0}
+[data-look="journal"] .upg .ul::before{content:"→ ";font:500 21px/1.15 var(--hand);color:var(--accent)}
+[data-look="journal"] .upg .ul.soon::before{content:"later: ";color:var(--muted)}
+[data-look="journal"] .upg:has(.ul.soon){color:var(--muted)}
+[data-look="journal"] .upg .ilink{color:inherit!important;font-weight:500}
+[data-look="journal"] .upg .lvtag{font:inherit;color:inherit;opacity:.85}
+[data-look="journal"] .upg .dl{font-size:18px;margin-top:0;gap:0 10px}
+[data-look="journal"] .upg .dl .p{color:inherit}
+[data-look="journal"] .upg .dl .m{color:var(--muted)}
+[data-look="journal"] .upg .src{font:italic 14px/1.4 var(--body);color:var(--muted)}
+[data-look="journal"] .upg .more{font:italic 14.5px/1.3 var(--body);padding-top:1px}
+[data-look="journal"] .qkey{font-style:italic}
+
+/* character sheet */
+[data-look="journal"] .portrait .body{background:none;padding:18px 0 8px}
+[data-look="journal"] .medal{width:136px;background:none;border:3px solid var(--accent);box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 8px var(--accent);transform:rotate(-7deg)}
+[data-look="journal"] .portrait h2{font:400 38px/1 var(--display);color:var(--text);text-shadow:none}
+[data-look="journal"] .portrait .role{font:600 25px/1.1 var(--hand);color:var(--accent)}
+[data-look="journal"] .portrait .pl{font-style:italic}
+[data-look="journal"] .attrs .h{font:italic 13px/1.2 var(--body);text-transform:none;letter-spacing:0}
+[data-look="journal"] .attrs .k{font:400 18px/1 var(--display);color:var(--text)}
+[data-look="journal"] .attrs .k.key{color:var(--accent)}
+[data-look="journal"] .attrs .pts button{background:none;border:1.5px solid var(--iron2);box-shadow:none;color:var(--text)}
+[data-look="journal"] .attrs .pts b{color:var(--accent);font-family:var(--hand);font-size:20px}
+[data-look="journal"] .attrs .g{color:var(--now)}
+[data-look="journal"] .attrs .tot{font:600 22px/1 var(--body);color:var(--text)}
+[data-look="journal"] .attrs .b input{background:#F6EFDF;border-color:var(--iron2);box-shadow:none}
+[data-look="journal"] .gearsum{border-top:1px dotted var(--iron2)}
+[data-look="journal"] .gearsum .lb{font-family:var(--display)}
+[data-look="journal"] .mcard{background:#F6EFDF;box-shadow:0 0 0 1px var(--frame2)}
+[data-look="journal"] .mcard[aria-checked="true"]{background:#F6EFDF;box-shadow:0 0 0 2px var(--accent)}
+[data-look="journal"] .mcard[aria-checked="true"] b{color:var(--accent)}
+[data-look="journal"] .popt{background:#F6EFDF;box-shadow:0 0 0 1px var(--frame2)}
+[data-look="journal"] .popt.on{box-shadow:0 0 0 2px var(--accent)}
+
+/* dialogs, search results, tooltips, map */
+[data-look="journal"] .scrim{background:rgba(42,33,25,.45)}
+[data-look="journal"] .sres{border-color:#C9BA98}
+[data-look="journal"] .sr.on,[data-look="journal"] .sr:hover{background:rgba(165,64,45,.08)}
+[data-look="journal"] .sr mark{text-decoration-color:var(--accent)}
+[data-look="journal"] .sr.ask .k{background:none}
+[data-look="journal"] .th,[data-look="journal"] .lookcard{background:#F6EFDF;box-shadow:0 0 0 1px var(--frame2)}
+[data-look="journal"] .map{border-color:var(--iron2);box-shadow:0 0 0 4px var(--paper),0 0 0 5px var(--iron2)}
+[data-look="journal"] .pin span,[data-look="journal"] .pdot{color:#F7F0DF;border-color:#2A2119}
+[data-look="journal"] .leaflet-popup-content-wrapper,[data-look="journal"] .leaflet-popup-tip{background:var(--paper);box-shadow:0 0 0 1px var(--iron2),0 8px 20px rgba(60,40,15,.25)}
+[data-look="journal"] .leaflet-bar a,[data-look="journal"] .leaflet-bar a:hover{background:var(--paper);color:var(--text)}
+
+/* landing page on the desk */
+[data-look="journal"] .landing{background:#DED2B6}
+[data-look="journal"] .landing::before,[data-look="journal"] .landing::after,[data-look="journal"] .vista,[data-look="journal"] .moon,[data-look="journal"] .dunes{display:none}
+[data-look="journal"] .landtitle h1{font:400 clamp(38px,5.6vw,66px)/1 var(--display);color:var(--text);text-shadow:none}
+[data-look="journal"] .landtitle p{font:600 clamp(22px,2.6vw,28px)/1.2 var(--hand);color:var(--accent);text-shadow:none}
+[data-look="journal"] .facts,[data-look="journal"] .lfoot{text-shadow:none;color:var(--muted);font-style:italic}
+[data-look="journal"] .lfoot a{color:var(--info)}
+[data-look="journal"] .carry{color:var(--accent)}
+
+@media (max-width:700px){
+  [data-look="journal"] .slot{grid-template-columns:82px minmax(0,1fr)}
+  [data-look="journal"] .slot>.ups{grid-column:2;grid-row:2}
+  [data-look="journal"] .who h2{font-size:40px}
+  [data-look="journal"] .crestbig{width:60px;height:60px}
+  [data-look="journal"] .attrs .pts button{width:30px;height:30px}
+}
+
+/* ---------- Settings: look picker ---------- */
+.looks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lookcard{display:grid;align-content:start;gap:4px;text-align:left;padding:10px 10px 12px;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--frame2);border-radius:3px;color:var(--text2);font:14px/1.4 var(--body)}
+.lookcard b{font:700 17px/1.2 var(--display);color:var(--parch);margin-top:4px}
+.lookcard[aria-checked="true"]{box-shadow:0 0 0 2px var(--accent),0 0 14px color-mix(in srgb,var(--accent) 22%,transparent)}
+.lookcard[aria-checked="true"] b{color:var(--gilt2)}
+.lkprev{position:relative;display:block;height:76px;border-radius:2px;overflow:hidden}
+.lkprev i{position:absolute;left:30px;height:5px;border-radius:2px}
+.lkprev i:nth-child(1){top:16px;width:46%;height:9px}
+.lkprev i:nth-child(2){top:36px;width:58%}
+.lkprev i:nth-child(3){top:50px;width:40%}
+.lkprev em{position:absolute;right:10px;top:34px;font-style:normal}
+.lp-journal{background:#EFE6D1;box-shadow:inset 0 0 0 1px #C9BA98}
+.lp-journal::before{content:"";position:absolute;left:18px;top:0;bottom:0;width:2px;background:#D59A88}
+.lp-journal i{background:#2A2119;opacity:.8}
+.lp-journal i:nth-child(1){opacity:1}
+.lp-journal em{font:600 19px/1 "Caveat",cursive;color:#A5402D;transform:rotate(-4deg)}
+.lp-game{background:linear-gradient(180deg,#1b2654,#0c1126);box-shadow:inset 0 0 0 1px #3a4466}
+.lp-game::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:#2a3352;border-bottom:1px solid #000}
+.lp-game i{background:#a6acc4;left:14px}
+.lp-game i:nth-child(1){background:#e9b75e;top:22px}
+.lp-game em{right:12px;top:30px;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#f6dda0,#8a6420);box-shadow:0 0 0 1px #000,0 0 0 2px #3a4466}
+.stacct{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--text2)}
+.stacct b{color:var(--parch)}
+#modal .thgrid.st{padding:0}
+@media (max-width:560px){ .looks{grid-template-columns:1fr} }
 </style>
 </head>
 <body class="booting">
@@ -1418,6 +1657,7 @@ function normUser(u){
   const active = chars.some(c => c.id === u.active) ? u.active : (chars[0] ? chars[0].id : null);
   const out = {characters:chars, active, progress, pins};
   if(typeof u.theme === "string" && /^[a-z-]{2,30}$/.test(u.theme)) out.theme = u.theme;
+  if(u.look === "journal" || u.look === "game") out.look = u.look;
   return out;
 }
 
@@ -1489,6 +1729,7 @@ async function onSession(session){
   Store.mode = "db"; Store.ready = true; Store.err = null;
   if(data && data.data){ S.user = normUser(data.data); localSet(S.user); render(); }
   else { render(); if((S.user.characters || []).length){ Store.pending = true; flush(); } } // first sign-in: bring this browser's characters along
+  if(!S.user.look) setTimeout(() => { if(Store.uid === uid && !S.user.look && !$("#scrim").classList.contains("on")) openSettings(true); }, 400);
   Store.chan = Store.sb.channel("ud-" + uid)
     .on("postgres_changes", {event:"*", schema:"public", table:"user_data", filter:"user_id=eq." + uid}, p => {
       if(Store.pending || Store.inflight || !p.new || !p.new.data) return;
@@ -1578,10 +1819,46 @@ function applyTheme(key, persist){
   const t = THEMES.find(x => x.key === key) || THEMES[0];
   document.documentElement.setAttribute("data-theme", t.key);
   try{ localStorage.setItem("mnm-theme", t.key); }catch(_){}
-  const mc = document.querySelector('meta[name="theme-color"]'); if(mc) mc.setAttribute("content", t.s2);
+  const mc = document.querySelector('meta[name="theme-color"]'); if(mc && lookKey() !== "journal") mc.setAttribute("content", t.s2);
   if(persist && S.user.theme !== t.key){ S.user.theme = t.key; save(); }
   renderThemeMenu();
   if($("#lgCredit")) $("#lgCredit").innerHTML = themeCredit(t);
+}
+// ---- look: Field journal (paper and ink) or Game window (dark MMO windows with area themes)
+const LOOKS = ["journal", "game"];
+function lookKey(){ const k = document.documentElement.getAttribute("data-look"); return LOOKS.includes(k) ? k : "journal"; }
+function applyLook(key, persist){
+  const k = LOOKS.includes(key) ? key : "journal";
+  document.documentElement.setAttribute("data-look", k);
+  try{ localStorage.setItem("mnm-look", k); }catch(_){}
+  if(k === "journal"){ const mc = document.querySelector('meta[name="theme-color"]'); if(mc) mc.setAttribute("content", "#DED2B6"); }
+  else applyTheme(themeKey(), false);
+  if(persist && S.user.look !== k){ S.user.look = k; save(); }
+}
+function openSettings(first){
+  let look = lookKey();
+  if(first) applyLook(look, true);      // ask once: the default sticks if they just close it
+  modal(first ? "Welcome to the Companion" : "Settings", `
+    ${first ? `<p class="mtext">Pick how the site looks. You can change it any time under Settings at the top of the page.</p>` : ""}
+    <div class="f"><label id="stLookL">Look</label><div class="looks" role="radiogroup" aria-labelledby="stLookL">
+      <button type="button" class="lookcard" data-look="journal" role="radio"><span class="lkprev lp-journal" aria-hidden="true"><i></i><i></i><i></i><em>→ upgrade</em></span><b>Field journal</b><span>Paper, ink and notes in the margin, like a player's own notebook.</span></button>
+      <button type="button" class="lookcard" data-look="game" role="radio"><span class="lkprev lp-game" aria-hidden="true"><i></i><i></i><i></i><em></em></span><b>Game window</b><span>Dark in-game windows, with ten area themes from Night Harbor to Faelindral.</span></button>
+    </div></div>
+    <div class="f" id="stThemeF"><label id="stThL">Area theme</label><div class="thgrid st" id="stGrid" role="radiogroup" aria-labelledby="stThL"></div></div>
+    ${Store.uid ? `<div class="f"><label>Account</label><div class="stacct"><span>Signed in as <b>${esc(Store.email)}</b></span><button class="btn" id="stOut">Sign out</button></div></div>` : ""}
+    <div class="mfoot"><button class="btn primary" id="stDone">${first ? "Start" : "Done"}</button></div>`, true);
+  const draw = () => {
+    $$("#modal [data-look]").forEach(b => b.setAttribute("aria-checked", b.dataset.look === look ? "true" : "false"));
+    $("#stThemeF").hidden = look !== "game";
+    if(look !== "game") return;
+    const cur = themeKey();
+    $("#stGrid").innerHTML = THEMES.map(t => `<button type="button" class="th" role="radio" aria-checked="${t.key === cur}" data-st="${t.key}"><span class="sw" style="--s1:${t.s1};--s2:${t.s2};--e:${t.e};--a:${t.a}" aria-hidden="true"></span><span><b>${esc(t.name)}</b><small>${esc(t.region)}. ${esc(t.mood)}</small></span></button>`).join("");
+    $$("#stGrid [data-st]").forEach(b => b.onclick = () => { applyTheme(b.dataset.st, true); draw(); const n = $(`#stGrid [data-st="${b.dataset.st}"]`); if(n) n.focus(); });
+  };
+  $$("#modal [data-look]").forEach(b => b.onclick = () => { look = b.dataset.look; applyLook(look, true); draw(); });
+  if($("#stOut")) $("#stOut").onclick = () => { closeModal(); signOut(); };
+  $("#stDone").onclick = () => { closeModal(); if(first && S.loaded && !S.user.characters.length) openEditor(null); };
+  draw();
 }
 function renderThemeMenu(){
   const cur = themeKey();
@@ -1646,7 +1923,7 @@ async function getJSON(u){ const r = await fetch(u, {cache:"no-store"}); if(!r.o
 async function load(){
   const local = localGet();
   if(local) S.user = normUser(local);
-  wireThemes(); applyTheme(S.user.theme || themeKey(), false);
+  wireThemes(); applyTheme(S.user.theme || themeKey(), false); applyLook(S.user.look || lookKey(), false);
   wireLanding(); wireSearch(); renderLanding();
   try{
     const [w, c] = await Promise.all([getJSON("data/wiki.json"), getJSON("curated.json")]);
@@ -1781,6 +2058,7 @@ function appliesTo(p, c){ return (!p.cities || p.cities.includes(c.city)) && (!p
 function render(){
   if(!S.loaded) return;
   if(S.user.theme && S.user.theme !== themeKey()) applyTheme(S.user.theme, false);
+  if(S.user.look && S.user.look !== lookKey()) applyLook(S.user.look, false);
   $("#app").classList.toggle("mapmode", UI.view === "map");
   migrateGear();
   const classic = isClassic(S.user.characters.length ? char() : null);
@@ -1833,9 +2111,12 @@ function renderStatus(){
   h += `<span class="dot ${m.lastError?"err":(age > hrs*3?"warn":"")}" role="img" title="${esc(dotT)}" aria-label="${esc(dotT)}"></span>`;
   const don = (window.MNM_CONFIG || {}).donateUrl;
   if(don) h += `<a class="coffee" href="${esc(don)}" target="_blank" rel="noopener">Support</a>`;
-  if(Store.uid) h += `<span class="who-am" title="${Store.mode==="db"?"Signed in. Characters, progress and pins are saved to your account.":"Signed in, but saving to this browser only for now."}">${esc(Store.email)}</span><button class="btn ghost" id="outBtn">Sign out</button>`;
+  if(Store.uid) h += `<span class="who-am" title="${Store.mode==="db"?"Signed in. Characters, progress and pins are saved to your account.":"Signed in, but saving to this browser only for now."}">${esc(Store.email)}</span>`;
+  h += `<button class="btn ghost" id="setBtn" aria-haspopup="dialog">Settings</button>`;
+  if(Store.uid) h += `<button class="btn ghost" id="outBtn">Sign out</button>`;
   else if(Store.sb && Store.ready) h += `<button class="btn primary" id="inBtn">Sign in</button>`;
   $("#acct").innerHTML = h;
+  $("#setBtn").onclick = () => openSettings(false);
   if($("#outBtn")) $("#outBtn").onclick = signOut;
   if($("#inBtn")) $("#inBtn").onclick = openSignIn;
   let w = "";
@@ -2155,10 +2436,9 @@ function equipHTML(c, upOnly){
     const it = eqItem(c, k), u = ups && ups[k];
     if(upOnly && !(u && (u.now || u.next))) return;
     h += `<div class="slot ${it ? "" : "none"}"><div class="sl"><span>${label}</span>${it && lvTxt(it) ? `<span class="lvtag">${lvTxt(it)}</span>` : ""}</div>
-      <button type="button" class="pick" data-pick="${k}"${it ? ` data-tip="${esc(it.slug)}"` : ""} aria-label="${esc(label)}: ${it ? esc(it.name) : "empty"}. Change">${it ? `<span class="q-${quality(it)}">${esc(it.name)}</span>` : `<span>Empty</span>`}</button>
-      ${it ? `<div class="st">${esc(statLine(it))}</div>` : ""}`;
-    if(u && u.now) h += upLine("now", k, u.now.it, it, c);
-    if(u && u.next) h += upLine("next", k, u.next.it, u.now ? u.now.it : it, c);
+      <div class="wear"><button type="button" class="pick" data-pick="${k}"${it ? ` data-tip="${esc(it.slug)}"` : ""} aria-label="${esc(label)}: ${it ? esc(it.name) : "empty"}. Change">${it ? `<span class="q-${quality(it)}">${esc(it.name)}</span>` : `<span>Empty</span>`}</button>
+      ${it ? `<div class="st">${esc(statLine(it))}</div>` : ""}</div>`;
+    if(u && (u.now || u.next)) h += `<div class="ups">${u.now ? upLine("now", k, u.now.it, it, c) : ""}${u.next ? upLine("next", k, u.next.it, u.now ? u.now.it : it, c) : ""}</div>`;
     h += `</div>`;
   });
   return h;

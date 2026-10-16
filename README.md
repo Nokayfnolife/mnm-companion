@@ -9,7 +9,9 @@ Each character runs in one of two modes, picked when it's created and switchable
 
 Starting stats per race and class come from the race pages on storiesofmnm.com (`races` in `site/data/wiki.json`, refreshed with the daily full scan).
 
-The site has ten themes, each named after an area of the world (Night Harbor at night is the default). They live as CSS variables at the top of the stylesheet in `site/index.html`; the theme menu list is `THEMES` in the script. Six use a darkened community zone map as the sign-in backdrop (`site/img/vista-*.webp`).
+Players pick a look under **Settings** (it opens by itself the first time someone signs in): **Field journal** (paper, ink and margin notes; the default, styled by the `html[data-look="journal"]` block at the end of the stylesheet) or **Game window**, which uses the area themes below.
+
+The game look has ten themes, each named after an area of the world (Night Harbor at night is the default). They live as CSS variables at the top of the stylesheet in `site/index.html`; the theme menu list is `THEMES` in the script. Six use a darkened community zone map as the sign-in backdrop (`site/img/vista-*.webp`).
 
 - `site/` is the static website, served by GitHub Pages
 - `site/data/wiki.json` is a copy of storiesofmnm.com. A GitHub Action refreshes it every 6 hours.
