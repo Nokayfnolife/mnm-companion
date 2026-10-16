@@ -13,7 +13,7 @@
 <meta property="og:description" content="A leveling planner for Monsters &amp; Memories: what to do at your level, the gear worth chasing, and where it all is on the map.">
 <meta property="og:image" content="https://mnmcompanion.gg/img/vista-night-harbor.webp">
 <meta name="theme-color" content="#0f1426">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cmask id='m'%3E%3Crect width='32' height='32' fill='white'/%3E%3Ccircle cx='19.6' cy='12.6' r='7.4'/%3E%3C/mask%3E%3Ccircle cx='16' cy='16' r='14' fill='%230b0f1f' stroke='%23e9b75e' stroke-width='2.5'/%3E%3Ccircle cx='15' cy='16.6' r='8.8' fill='%23f2cf86' mask='url%28%23m%29'/%3E%3Cpath d='M21.2 9.6l.75 1.95 1.95.75-1.95.75-.75 1.95-.75-1.95-1.95-.75 1.95-.75z' fill='%23f6dda0'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='98' fill='%23EFE6D1'/%3E%3Cg fill='none' stroke='%232A2119'%3E%3Ccircle cx='100' cy='100' r='90' stroke-width='10'/%3E%3C/g%3E%3Cpath d='M121 84L140 62L126 30C134 30 142 26 150 20C152 30 160 36 172 36C168 46 174 56 186 60C178 68 178 78 182 88C170 86 158 92 150 104C146 98 138 96 132 98Z' fill='%232A2119'/%3E%3Cpath d='M140 62L150 20M140 62L172 36M140 62L186 60' stroke='%23EFE6D1' stroke-width='4'/%3E%3Cpath d='M62 68L68 62L72 60C76 56 80 53 84 52C88 49 93 48 98 48C106 46 114 52 116 62C118 70 118 76 122 82C130 90 142 100 150 112C156 116 166 120 174 128C182 136 186 148 180 158L186 165L172 167L170 160C176 152 174 142 166 136C162 142 158 148 152 150L150 155L153 161L140 162L134 160L139 157L143 156L140 147C134 142 130 134 126 126C120 123 112 118 108 112C104 106 102 100 102 94C102 86 98 80 92 77L84 79L66 81L71 77L79 73L67 71Z' fill='%232A2119'/%3E%3Cpath d='M90 50C94 40 102 33 112 30C106 37 103 43 101 50ZM97 49C104 43 112 41 120 43C113 46 109 50 106 55Z' fill='%232A2119'/%3E%3Cpath d='M108 102C102 110 96 112 88 108' fill='none' stroke='%232A2119' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M70 76Q57 79 42 88Q56 84 70 80ZM70 78Q58 86 47 100Q60 90 71 82ZM71 80Q64 92 57 105Q68 95 72 84ZM46 84l-6 1l4-4ZM42 94l-6 3l3-5Z' fill='%23A5402D'/%3E%3Cpath d='M34 104C24 114 18 128 16 148L24 142L25 154L33 140L36 120Z' fill='%232A2119'/%3E%3Cpath d='M20 161L29 161L36 141L43 150L45 161L55 161L50 144L46 131L46 116L50 110L47 106L47 92C47 87 35 87 35 92L35 106L31 110L29 123L32 133Z' fill='%232A2119'/%3E%3Cpath d='M33 110L26 92M26 92L38 50' stroke='%232A2119' stroke-width='6' stroke-linecap='round'/%3E%3Cg transform='rotate%28-24 58 106%29'%3E%3Cpath d='M47 92L69 92C69 108 65 118 58 125C51 118 47 108 47 92Z' fill='%23EFE6D1' stroke='%232A2119' stroke-width='5'/%3E%3C/g%3E%3Cpath d='M18 162H182' stroke='%232A2119' stroke-width='6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700;800&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Caveat:wght@500;600&family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -765,7 +765,15 @@ a.ilink:hover{text-decoration:underline;text-decoration-style:dotted;text-underl
 .bar{position:sticky;top:0;z-index:2000;background:linear-gradient(180deg,var(--bar1),var(--bar2));border-bottom:1px solid #000;box-shadow:0 1px 0 var(--iron),0 8px 20px rgba(0,0,0,.45)}
 .bar>.in{max-width:1280px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:10px 16px}
 .mark{display:flex;align-items:center;gap:9px;border:0;color:var(--parch);flex:none}
-.mark svg{width:30px;height:30px}
+.mark svg{width:40px;height:40px;flex:none}
+.lgdefs{position:absolute;width:0;height:0;overflow:hidden}
+.logo,.emblem{color:var(--gilt2);--logo-bg:var(--bar1);--logo-fire:var(--accent);overflow:visible}
+[data-look="journal"] .logo,[data-look="journal"] .emblem{color:var(--text);--logo-bg:var(--desk);--logo-fire:var(--accent)}
+.emblem{--logo-bg:var(--void);width:clamp(84px,11vw,136px);height:auto;aspect-ratio:1;flex:none;filter:drop-shadow(0 3px 0 rgba(0,0,0,.6))}
+[data-look="journal"] .emblem{filter:none}
+.emblem .em-j{display:none}
+[data-look="journal"] .emblem .em-j{display:inline}
+[data-look="journal"] .emblem .em-g{display:none}
 .mark b{font:800 21px/1 var(--display);color:var(--gilt2);text-shadow:0 1px 0 #000;letter-spacing:.01em}
 .mark:hover{border:0}
 .search{position:relative;flex:1 1 320px;max-width:560px;margin-left:8px}
@@ -1072,7 +1080,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
 .landing{background:linear-gradient(180deg,var(--sky1),var(--sky2) 60%,var(--void))}
 .landing::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 90% 80% at 28% 34%,color-mix(in srgb,var(--void) 15%,transparent),color-mix(in srgb,var(--void) 88%,transparent) 70%),linear-gradient(180deg,color-mix(in srgb,var(--sky2) 35%,transparent),transparent 28%,color-mix(in srgb,var(--void) 55%,transparent) 62%,var(--void) 94%)}
 .landing::after{content:"";position:absolute;inset:0 0 40% 0;z-index:-2;background:var(--starfield),radial-gradient(900px 420px at 78% 0,var(--glow),transparent 70%);-webkit-mask-image:linear-gradient(#000 40%,transparent);mask-image:linear-gradient(#000 40%,transparent)}
-.moon{display:var(--moon);position:absolute;z-index:-2;top:clamp(22px,5vh,56px);right:clamp(14px,3.5vw,64px);width:clamp(64px,8vw,104px);aspect-ratio:1;border-radius:50%;box-shadow:inset calc(clamp(64px,8vw,104px) * -.27) calc(clamp(64px,8vw,104px) * .1) 0 0 #f6eed6;transform:rotate(-18deg);filter:drop-shadow(0 0 26px rgba(246,238,214,.45))}
+.moon{display:var(--moon);position:absolute;z-index:-2;top:clamp(22px,5vh,56px);right:clamp(14px,3.5vw,64px);width:clamp(54px,6.5vw,86px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 38% 36%,#fbf6e6,#ebe2c8 55%,#cfc4a4);box-shadow:0 0 34px rgba(246,238,214,.35),0 0 90px rgba(246,238,214,.12);opacity:.92}
 .dunes{display:var(--dunes);position:absolute;left:0;right:0;bottom:0;width:100%;height:clamp(110px,22vh,230px);z-index:-1;pointer-events:none}
 .dunes .d1{fill:var(--dune1)} .dunes .d2{fill:var(--dune2)}
 @keyframes drift{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-2%,-1.5%)}}
@@ -1086,7 +1094,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
 .row2 input{flex:1;min-width:0}
 .gatewin .hint{font-size:13.5px;color:var(--soot);margin:6px 0 0}
 .carry{margin:14px 0 0;font-size:14px;color:var(--gilt2)}
-.landtitle{grid-column:1/-1;margin:0 0 4px}
+.landtitle{grid-column:1/-1;margin:0 0 4px;display:flex;align-items:center;gap:clamp(14px,2.4vw,28px)}
 .landtitle{padding-right:clamp(0px,9vw,130px)}
 .landtitle h1{font:800 clamp(34px,5.2vw,60px)/.98 var(--display);margin:0;color:var(--parch);text-shadow:0 3px 0 #000,0 0 40px rgba(0,0,0,.8);letter-spacing:.005em}
 .landtitle p{font:700 clamp(17px,2vw,21px)/1.3 var(--display);color:var(--gilt2);margin:10px 0 0;text-shadow:0 2px 0 #000}
@@ -1214,7 +1222,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
   .acct{gap:6px}
   .acct .btn{padding:5px 9px}
   .landtitle{padding-right:64px}
-  .mark svg{width:26px;height:26px}
+  .mark svg{width:32px;height:32px}
   .mark{gap:7px}
   .mark b{font-size:14px}
   .mark b small{font-size:12px}
@@ -1533,10 +1541,43 @@ html.lock,html.lock body{overflow:hidden}
 </style>
 </head>
 <body class="booting">
+<svg class="lgdefs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+<filter id="lgRough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="1.8"/></filter>
+<pattern id="lgHatch" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)"><line x1="0" y1="0" x2="0" y2="4.5" style="stroke:var(--text)" stroke-width="1"/></pattern>
+<clipPath id="lgClip"><circle cx="100" cy="100" r="85"/></clipPath>
+<g id="lgDragon"><path d="M112 94C106 90 100 88 94 90" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M95 90l-6-4M95 90l-7 0M95 90l-5 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path fill="currentColor" d="M62 68L68 62L72 60C76 56 80 53 84 52C88 49 93 48 98 48C106 46 114 52 116 62C118 70 118 76 122 82C130 90 142 100 150 112C156 116 166 120 174 128C182 136 186 148 180 158L186 165L172 167L170 160C176 152 174 142 166 136C162 142 158 148 152 150L150 155L153 161L140 162L134 160L139 157L143 156L140 147C134 142 130 134 126 126C120 123 112 118 108 112C104 106 102 100 102 94C102 86 98 80 92 77L84 79L66 81L71 77L79 73L67 71Z"/><path fill="currentColor" d="M90 50C94 40 102 33 112 30C106 37 103 43 101 50ZM97 49C104 43 112 41 120 43C113 46 109 50 106 55Z"/><path fill="currentColor" d="M112 51l7-5l-1 8ZM117 62l8-3l-3 7ZM121 74l8-1l-4 7ZM134 92l8 1l-5 6ZM150 110l8 2l-6 5Z"/><path d="M108 102C102 110 96 112 90 108" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M90 108l-7-5M90 108l-8 1M90 108l-5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M103 92l6-1M104 100l6-2M107 108l6-3M112 115l6-4M118 120l5-4" fill="none" style="stroke:var(--logo-bg)" stroke-width="1.1" stroke-linecap="round"/><path d="M80 57l6-1.5l-2 3Z" style="fill:var(--logo-bg)"/></g>
+<g id="lgKnight"><path fill="currentColor" d="M34 104C24 114 18 128 16 148L24 142L25 154L33 140L36 120Z"/><path fill="currentColor" d="M20 161L29 161L36 141L43 150L45 161L55 161L50 144L46 131L46 116L50 110L47 106L47 92C47 87 35 87 35 92L35 106L31 110L29 123L32 133Z"/><path d="M37 98H45M41 98V104" fill="none" style="stroke:var(--logo-bg)" stroke-width="1.6"/><path d="M33 110L26 92" fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="round"/><path d="M26 92L38 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M20 90L33 95" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><g transform="rotate(-24 58 106)"><path d="M47 92L69 92C69 108 65 118 58 125C51 118 47 108 47 92Z" style="fill:var(--logo-bg)" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M50 99L58 108L66 99" fill="none" style="stroke:var(--logo-fire)" stroke-width="2.6"/></g></g>
+<path id="lgFire" d="M70 76Q57 79 42 88Q56 84 70 80ZM70 78Q58 86 47 100Q60 90 71 82ZM71 80Q64 92 57 105Q68 95 72 84ZM46 84l-6 1l4-4ZM42 94l-6 3l3-5Z"/>
+<g id="lgSketch" filter="url(#lgRough)">
+<circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1.1"/>
+<g clip-path="url(#lgClip)"><path d="M10 154L30 140L44 147L62 132L78 144L92 140L108 150L196 150L196 162L10 162Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 140L36 150M62 132L68 150M62 132L56 150" fill="none" stroke="currentColor" stroke-width=".9"/></g>
+<path d="M40 37.4L41.29 40.71L44.6 42L41.29 43.29L40 46.6L38.71 43.29L35.4 42L38.71 40.71ZM62 23.6L62.95 26.05L65.4 27L62.95 27.95L62 30.4L61.05 27.95L58.6 27L61.05 26.05ZM30 65L30.84 67.16L33 68L30.84 68.84L30 71L29.16 68.84L27 68L29.16 67.16ZM86 19.4L86.73 21.27L88.6 22L86.73 22.73L86 24.6L85.27 22.73L83.4 22L85.27 21.27Z" fill="currentColor"/>
+<path d="M14 160L30 159L60 162L92 158L124 161L160 157L186 160C182 172 170 182 156 188C120 198 80 198 44 188C30 182 20 172 14 160Z" fill="url(#lgHatch)"/><path d="M14 160L30 159L60 162L92 158L124 161L160 157L186 160" fill="none" stroke="currentColor" stroke-width="2"/>
+<path d="M121 84L140 62L126 30C134 30 142 26 150 20C152 30 160 36 172 36C168 46 174 56 186 60C178 68 178 78 182 88" fill="none" style="stroke:var(--logo-bg)" stroke-width="7"/>
+<path d="M121 84L140 62L126 30C134 30 142 26 150 20C152 30 160 36 172 36C168 46 174 56 186 60C178 68 178 78 182 88C170 86 158 92 150 104C146 98 138 96 132 98Z" fill="url(#lgHatch)" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M140 62L126 30M140 62L150 20M140 62L172 36M140 62L186 60M140 62L182 88" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<use href="#lgDragon"/><use href="#lgFire" style="fill:var(--logo-fire)"/><use href="#lgKnight"/>
+</g>
+<g id="lgFlat">
+<path d="M100 7A93 93 0 1 0 186 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M10 154L30 140L44 147L62 132L78 144L92 140L108 150" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" opacity=".55"/>
+<path d="M40 36.25L41.61 40.39L45.75 42L41.61 43.61L40 47.75L38.39 43.61L34.25 42L38.39 40.39ZM62 22.75L63.19 25.81L66.25 27L63.19 28.19L62 31.25L60.81 28.19L57.75 27L60.81 25.81ZM30 64.25L31.05 66.95L33.75 68L31.05 69.05L30 71.75L28.95 69.05L26.25 68L28.95 66.95ZM86 18.75L86.91 21.09L89.25 22L86.91 22.91L86 25.25L85.09 22.91L82.75 22L85.09 21.09Z" fill="currentColor"/>
+<path d="M28 161H172" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M121 84L140 62L126 30C134 30 142 26 150 20C152 30 160 36 172 36C168 46 174 56 186 60C178 68 178 78 182 88C170 86 158 92 150 104C146 98 138 96 132 98Z" fill="currentColor"/><path d="M140 62L126 30M140 62L150 20M140 62L172 36M140 62L186 60M140 62L182 88" fill="none" style="stroke:var(--logo-bg)" stroke-width="2.2" stroke-linecap="round"/>
+<use href="#lgDragon"/><use href="#lgFire" style="fill:var(--logo-fire)"/><use href="#lgKnight"/>
+</g>
+<g id="lgSmall">
+<path d="M100 8A92 92 0 1 0 184 62" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+<path d="M22 154L36 141L48 147L64 133L80 144L92 141L104 150" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" opacity=".6"/>
+<path d="M40 33.260000000000005L42.45 39.55L48.739999999999995 42L42.45 44.45L40 50.739999999999995L37.55 44.45L31.26 42L37.55 39.55ZM62 20.54L63.81 25.19L68.46 27L63.81 28.81L62 33.46L60.19 28.81L55.54 27L60.19 25.19ZM30 62.3L31.60 66.40L35.7 68L31.60 69.60L30 73.7L28.40 69.60L24.3 68L28.40 66.40ZM86 17.060000000000002L87.38 20.62L90.94 22L87.38 23.38L86 26.939999999999998L84.62 23.38L81.06 22L84.62 20.62Z" fill="currentColor"/>
+<path d="M20 162H180" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+<path d="M121 84L140 62L126 30C134 30 142 26 150 20C152 30 160 36 172 36C168 46 174 56 186 60C178 68 178 78 182 88C170 86 158 92 150 104C146 98 138 96 132 98Z" fill="currentColor"/><path d="M140 62L150 20M140 62L172 36M140 62L186 60" fill="none" style="stroke:var(--logo-bg)" stroke-width="3.4"/>
+<use href="#lgDragon"/><use href="#lgFire" style="fill:var(--logo-fire)"/><use href="#lgKnight"/>
+</g>
+</defs></svg>
 <script>try{ if(Object.keys(localStorage).some(k => /^sb-.+-auth-token$/.test(k))) document.body.classList.add("authguess"); }catch(_){}</script>
 
 <header class="bar" id="bar"><div class="in">
-  <a class="mark" href="./" aria-label="Monsters and Memories Companion home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--accent-hi)"/><stop offset="1" style="stop-color:var(--accent-lo)"/></linearGradient><mask id="cres"><rect width="32" height="32" fill="#fff"/><circle cx="19.6" cy="12.6" r="7.4" fill="#000"/></mask></defs><circle cx="16" cy="16" r="14" style="fill:var(--well)" stroke="url(#gilt)" stroke-width="2"/><circle cx="15" cy="16.6" r="8.8" fill="url(#gilt)" mask="url(#cres)"/><path d="M21.2 9.6l.75 1.95 1.95.75-1.95.75-.75 1.95-.75-1.95-1.95-.75 1.95-.75z" style="fill:var(--accent-hi)"/></svg><b>Monsters and Memories<small>Companion</small></b></a>
+  <a class="mark" href="./" aria-label="Monsters and Memories Companion home"><svg class="logo" viewBox="0 0 200 200" aria-hidden="true"><use href="#lgSmall"/></svg><b>Monsters and Memories<small>Companion</small></b></a>
   <div class="search" id="searchBox" hidden>
     <svg class="mag" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.8" cy="6.8" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.7 10.7l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     <input id="q" type="search" placeholder="Search items, quests, zones, or ask a question" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="Search items, quests and zones" role="combobox" aria-expanded="false" aria-controls="sres" aria-autocomplete="list">
@@ -1554,7 +1595,7 @@ html.lock,html.lock body{overflow:hidden}
   <i class="moon" aria-hidden="true"></i>
   <svg class="dunes" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path class="d2" d="M0 120C180 70 330 60 520 95S860 150 1040 105 1320 50 1440 80V220H0Z"/><path class="d1" d="M0 165C220 120 420 118 610 150S980 200 1180 158 1380 120 1440 135V220H0Z"/></svg>
   <div class="landin">
-    <div class="landtitle"><h1>Monsters and Memories Companion</h1><p>A leveling planner for quests, gear and zone maps</p></div>
+    <div class="landtitle"><svg class="emblem" viewBox="0 0 200 200" aria-hidden="true"><use class="em-j" href="#lgSketch"/><use class="em-g" href="#lgFlat"/></svg><div><h1>Monsters and Memories Companion</h1><p>A leveling planner for quests, gear and zone maps</p></div></div>
     <section class="win gatewin" aria-labelledby="gateT">
       <header class="tb"><h2 id="gateT">Sign in to start</h2></header>
       <div class="body">
