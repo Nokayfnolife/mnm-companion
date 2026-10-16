@@ -1279,6 +1279,44 @@ html.lock,html.lock body{overflow:hidden}
 [data-look="journal"] .modal.win>.tb,[data-look="journal"] .thmenu.win>.tb{background:var(--paper)}
 [data-look="journal"] .modal .mfoot{border-top-color:var(--rule)}
 
+/* ---------- the guided tour with Wallabik Ningel ---------- */
+.tour{position:fixed;inset:0;z-index:3500}
+.tour-veil{position:absolute;inset:0}
+.tour-spot{position:fixed;border-radius:8px;box-shadow:0 0 0 2px var(--gilt),0 0 0 6px color-mix(in srgb,var(--gilt) 30%,transparent),0 0 0 9999px rgba(8,6,4,.55);pointer-events:none;transition:left .3s ease,top .3s ease,width .3s ease,height .3s ease}
+.tour-spot.none{box-shadow:0 0 0 9999px rgba(8,6,4,.55);left:50%!important;top:40%!important;width:0!important;height:0!important}
+.tour-card{position:fixed;width:min(430px,calc(100vw - 24px));display:grid;grid-template-columns:86px minmax(0,1fr);gap:8px 14px;padding:14px 16px 12px;transition:left .3s ease,top .3s ease;--g-bg:var(--stone2);--g-fire:var(--accent);color:var(--parch)}
+.tour-card::before{content:"";position:absolute;left:var(--ax,40px);width:14px;height:14px;background:var(--stone2);transform:rotate(45deg);display:none}
+.tour-card.below::before{display:block;top:-8px;border-left:1px solid #000;border-top:1px solid #000}
+.tour-card.above::before{display:block;bottom:-8px;border-right:1px solid #000;border-bottom:1px solid #000}
+.tg-pic{width:86px;height:89px;color:var(--gilt2);overflow:visible;align-self:start}
+.tg-name{font:700 18px/1.15 var(--display);color:var(--gilt2)}
+.tg-name small{display:block;font:600 13.5px/1.3 var(--body);color:var(--ash);margin-top:2px}
+.tg-text{margin:6px 0 0;font-size:15.5px;line-height:1.5;color:var(--text2)}
+.tg-foot{grid-column:1/-1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:10px}
+.tg-dots{display:flex;gap:5px;margin-right:auto}
+.tg-dots i{width:7px;height:7px;border-radius:50%;background:var(--iron)}
+.tg-dots i.on{background:var(--gilt)}
+.tour-card .btn{padding:6px 12px}
+[data-look="journal"] .tour-card{--g-bg:var(--paper);color:var(--text)}
+[data-look="journal"] .tour-card::before{background:var(--paper);border-color:var(--edge2)!important}
+[data-look="journal"] .tg-pic{color:var(--text)}
+[data-look="journal"] .tg-name{font:400 22px/1.1 var(--display);color:var(--text)}
+[data-look="journal"] .tg-name small{font:600 19px/1.1 var(--hand);color:var(--accent)}
+[data-look="journal"] .tg-text{font-size:16px;color:var(--text2)}
+[data-look="journal"] .tour-spot{border-radius:4px;box-shadow:0 0 0 2px var(--accent),0 0 0 9999px color-mix(in srgb,var(--text) 45%,transparent)}
+[data-look="journal"] .tour-spot.none{box-shadow:0 0 0 9999px color-mix(in srgb,var(--text) 45%,transparent)}
+.acct #tourBtn{width:32px;height:32px;padding:0;border-radius:50%;font:700 16px/1 var(--display)}
+@media (max-width:560px){
+  .tour-card{left:8px!important;right:8px;top:auto!important;bottom:calc(8px + env(safe-area-inset-bottom));width:auto;grid-template-columns:62px minmax(0,1fr);gap:6px 12px;padding:12px 14px 10px}
+  .tour-card::before{display:none!important}
+  .tg-pic{width:62px;height:64px}
+  .tg-text{font-size:15px}
+  .tour-card .btn{flex:1 1 auto}
+  .tg-dots{flex-basis:100%}
+  .acct #outBtn{display:none}
+}
+@media (prefers-reduced-motion:reduce){.tour-spot,.tour-card{transition:none}}
+
 /* ============================================================
    Field journal look: paper, ink and notes in the margin.
    Chosen in Settings (html[data-look="journal"]); the game look is html[data-look="game"].
@@ -1548,6 +1586,29 @@ html.lock,html.lock body{overflow:hidden}
 <clipPath id="lgClip"><circle cx="100" cy="100" r="85"/></clipPath>
 <g id="lgDragon"><path d="M112 94C106 90 100 88 94 90" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M95 90l-6-4M95 90l-7 0M95 90l-5 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path fill="currentColor" d="M62 68L68 62L72 60C76 56 80 53 84 52C88 49 93 48 98 48C106 46 114 52 116 62C118 70 118 76 122 82C130 90 142 100 150 112C156 116 166 120 174 128C182 136 186 148 180 158L186 165L172 167L170 160C176 152 174 142 166 136C162 142 158 148 152 150L150 155L153 161L140 162L134 160L139 157L143 156L140 147C134 142 130 134 126 126C120 123 112 118 108 112C104 106 102 100 102 94C102 86 98 80 92 77L84 79L66 81L71 77L79 73L67 71Z"/><path fill="currentColor" d="M90 50C94 40 102 33 112 30C106 37 103 43 101 50ZM97 49C104 43 112 41 120 43C113 46 109 50 106 55Z"/><path fill="currentColor" d="M112 51l7-5l-1 8ZM117 62l8-3l-3 7ZM121 74l8-1l-4 7ZM134 92l8 1l-5 6ZM150 110l8 2l-6 5Z"/><path d="M108 102C102 110 96 112 90 108" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M90 108l-7-5M90 108l-8 1M90 108l-5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M103 92l6-1M104 100l6-2M107 108l6-3M112 115l6-4M118 120l5-4" fill="none" style="stroke:var(--logo-bg)" stroke-width="1.1" stroke-linecap="round"/><path d="M80 57l6-1.5l-2 3Z" style="fill:var(--logo-bg)"/></g>
 <g id="lgKnight"><path fill="currentColor" d="M34 104C24 114 18 128 16 148L24 142L25 154L33 140L36 120Z"/><path fill="currentColor" d="M20 161L29 161L36 141L43 150L45 161L55 161L50 144L46 131L46 116L50 110L47 106L47 92C47 87 35 87 35 92L35 106L31 110L29 123L32 133Z"/><path d="M37 98H45M41 98V104" fill="none" style="stroke:var(--logo-bg)" stroke-width="1.6"/><path d="M33 110L26 92" fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="round"/><path d="M26 92L38 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M20 90L33 95" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><g transform="rotate(-24 58 106)"><path d="M47 92L69 92C69 108 65 118 58 125C51 118 47 108 47 92Z" style="fill:var(--logo-bg)" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M50 99L58 108L66 99" fill="none" style="stroke:var(--logo-fire)" stroke-width="2.6"/></g></g>
+<g id="gnome" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+<path d="M14 122C16 106 26 98 38 96L66 96C78 98 88 106 90 122Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
+<path d="M30 104L34 122M74 104L70 122" fill="none" stroke-width="1.4"/>
+<path d="M72 100C82 94 90 88 96 82L102 88C96 96 86 104 76 110Z" style="fill:var(--g-bg)" stroke-width="2.2"/>
+<path d="M96 82C98 78 102 77 104 80L114 72C116 71 118 73 116 75L107 84C107 88 104 90 101 88Z" style="fill:var(--g-bg)" stroke-width="2"/>
+<path d="M33 78C28 92 30 106 40 114C44 110 47 112 50 118C53 112 57 112 60 117C63 111 67 111 70 113C78 104 79 90 72 78C66 88 58 92 52 92C45 92 38 88 33 78Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
+<path d="M42 98C44 104 43 108 41 111M52 99C53 105 52 110 51 114M61 98C62 104 62 108 64 111" fill="none" stroke-width="1.3"/>
+<path d="M35 74C35 62 42 56 52 56C62 56 70 62 70 74C70 80 66 84 52 84C40 84 35 80 35 74Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
+<path d="M36 70L24 62L36 78" style="fill:var(--g-bg)" stroke-width="2.2"/>
+<path d="M69 69L82 60L69 77" style="fill:var(--g-bg)" stroke-width="2.2"/>
+<circle cx="45" cy="70" r="5.4" fill="none" stroke-width="1.8"/><circle cx="59.5" cy="70" r="5.4" fill="none" stroke-width="1.8"/>
+<path d="M50.4 70L54.1 70" stroke-width="1.6"/>
+<circle cx="45.5" cy="70.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="59.5" cy="70.5" r="1.5" fill="currentColor" stroke="none"/>
+<path d="M38 63C41 60 46 60 49 62M56 62C59 60 64 60 67 63" fill="none" stroke-width="2.6"/>
+<path d="M52 72C47 74 46 82 52 84C58 84 58 76 54 72Z" style="fill:var(--g-fire)" stroke-width="2"/>
+<path d="M52 84C47 87 40 87 34 82C37 90 46 92 52 88C58 92 67 90 71 82C64 87 57 87 52 84Z" style="fill:var(--g-bg)" stroke-width="2"/>
+<path d="M26 58C34 38 46 20 64 10C74 4 86 4 96 8C88 10 80 16 76 24C72 34 72 46 78 56Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
+<path d="M18 60C32 52 68 50 86 56C89 60 86 64 80 63C62 59 36 61 22 66C16 66 14 62 18 60Z" style="fill:var(--g-bg)" stroke-width="2.4"/>
+<path d="M96 8C100 6 104 8 102 12C100 14 97 12 98 10" fill="none" stroke-width="1.8"/>
+<path d="M56 26C52 30 52 36 56 38C60 36 61 31 58 27C58 30 57 31 56 30Z" style="fill:var(--g-fire)" stroke-width="1.4"/>
+<path d="M12 94C6 88 8 80 14 74C14 80 18 80 18 76C22 82 22 90 16 94C15 96 13 96 12 94Z" style="fill:var(--g-fire)" stroke-width="1.8"/>
+<path d="M8 100l-3 2M20 100l3 2M14 101v4" fill="none" stroke-width="1.4"/>
+</g>
 <path id="lgFire" d="M70 76Q57 79 42 88Q56 84 70 80ZM70 78Q58 86 47 100Q60 90 71 82ZM71 80Q64 92 57 105Q68 95 72 84ZM46 84l-6 1l4-4ZM42 94l-6 3l3-5Z"/>
 <g id="lgSketch" filter="url(#lgRough)">
 <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1.1"/>
@@ -1692,6 +1753,18 @@ html.lock,html.lock body{overflow:hidden}
 </div>
 
 <div class="itip win ins" id="itip" role="tooltip" hidden></div>
+<div class="tour" id="tour" hidden>
+  <div class="tour-veil"></div>
+  <div class="tour-spot" id="tourSpot"></div>
+  <section class="tour-card win" id="tourCard" role="dialog" aria-modal="true" aria-labelledby="tourName" aria-describedby="tourText">
+    <svg class="tg-pic" viewBox="0 0 120 124" aria-hidden="true"><use href="#gnome"/></svg>
+    <div class="tg-body">
+      <div class="tg-name" id="tourName">Wallabik Ningel <small>Master Elementalist</small></div>
+      <p class="tg-text" id="tourText" aria-live="polite"></p>
+    </div>
+    <div class="tg-foot"><span class="tg-dots" id="tourDots" aria-hidden="true"></span><button class="btn ghost" id="tourSkip" type="button">Skip tour</button><button class="btn" id="tourBack" type="button">Back</button><button class="btn primary" id="tourNext" type="button">Next</button></div>
+  </section>
+</div>
 <div class="scrim" id="scrim"><div class="modal win" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
@@ -1755,6 +1828,7 @@ function normUser(u){
   const out = {characters:chars, active, progress, pins};
   if(typeof u.theme === "string" && /^[a-z-]{2,30}$/.test(u.theme)) out.theme = u.theme;
   if(u.look === "journal" || u.look === "game") out.look = u.look;
+  if(u.toured === true) out.toured = true;
   return out;
 }
 
@@ -1942,6 +2016,7 @@ function openSettings(first){
       <button type="button" class="lookcard" data-look="game" role="radio"><span class="lkprev lp-game" aria-hidden="true"><i></i><i></i><i></i><em></em></span><b>Game window</b><span>Dark in-game windows, lit like the area you pick below.</span></button>
     </div></div>
     <div class="f" id="stThemeF"><label id="stThL">Area theme</label><div class="thgrid st" id="stGrid" role="radiogroup" aria-labelledby="stThL"></div></div>
+    ${S.user.characters.length ? `<div class="f"><label>Guide</label><div class="stacct"><span>Wallabik Ningel can walk you through the page again.</span><button class="btn" id="stTour">Show me around</button></div></div>` : ""}
     ${Store.uid ? `<div class="f"><label>Account</label><div class="stacct"><span>Signed in as <b>${esc(Store.email)}</b></span><button class="btn" id="stOut">Sign out</button></div></div>` : ""}
     <div class="mfoot"><button class="btn primary" id="stDone">${first ? "Start" : "Done"}</button></div>`, true);
   const draw = () => {
@@ -1952,6 +2027,7 @@ function openSettings(first){
   };
   $$("#modal [data-look]").forEach(b => b.onclick = () => { look = b.dataset.look; applyLook(look, true); draw(); });
   if($("#stOut")) $("#stOut").onclick = () => { closeModal(); signOut(); };
+  if($("#stTour")) $("#stTour").onclick = () => { closeModal(); startTour(); };
   $("#stDone").onclick = () => { closeModal(); if(first && S.loaded && !S.user.characters.length) openEditor(null); };
   draw();
 }
@@ -1963,6 +2039,114 @@ function themeButton(t, cur, attr){
 function syncThemeColor(){
   const t = THEMES.find(x => x.key === themeKey()) || THEMES[0], mc = document.querySelector('meta[name="theme-color"]');
   if(mc) mc.setAttribute("content", lookKey() === "journal" ? t.j.d : t.s2);
+}
+// ---- the guided tour: Wallabik Ningel, Master Elementalist, shows new players around
+const TOUR = {on:false, i:0, steps:[], timer:null};
+const cardOf = sel => { const el = $(sel); return el ? (el.closest(".card") || el) : null; };
+function tourSteps(){
+  const c = S.user.characters.length ? char() : null, classic = isClassic(c), name = c ? (c.name || c.cls) : "your hero";
+  return [
+    {t:() => null, x:`Well met! I'm Wallabik Ningel, gnome, Master Elementalist, and the one who built this companion. Give me a minute and I'll show you where everything is.`},
+    {t:() => $("#tabs"), x:`Each of your characters gets a bookmark up here. Make an alt with “+ Add alt” and it gets a plan all its own.`},
+    {t:() => $("#hero .slider"), x:`This is ${esc(name)}'s experience bar. Drag it to your level and everything below rearranges itself. No arcane formulas required.`},
+    {t:() => $("#modeSeg"), x:`Guided or Classic. Guided lays out a path for you; Classic is just your character sheet. Flip between them whenever you like.`},
+    {t:() => classic ? null : cardOf("#plays"), x:`What's worth doing at your level, best first. Tick a box when it's done and I'll stop nagging you about it.`},
+    {t:() => classic ? $("#portrait") : null, x:`Your class and starting stats. Spend the ten bonus points the way you did at character creation and the totals add themselves up.`},
+    {t:() => cardOf(classic ? "#equip" : "#slots"), x:`Tell me what you're wearing in each slot. I'll only point out gear that actually beats it${classic ? ", and only if you ask" : ", and where it drops"}.`},
+    {t:() => classic ? null : cardOf("#sets"), x:`Armor sets you can collect, trimmed to the pieces that beat what you've got, with the materials to gather.`},
+    {t:() => classic ? null : cardOf("#camps"), x:`Where to hunt at your level. Switch Solo to Group up top and the list changes with you.`},
+    {t:() => $("#searchBox"), x:`Hunting for something specific? Type an item, quest or zone here, or press / from anywhere.`},
+    {t:() => $("#viewSeg"), x:`The maps live here: community zone maps with pins for camps, quest givers, and notes you drop yourself.`},
+    {t:() => $("#thm"), x:`Fancy different colors? Pick a corner of the world and I'll dress the pages to match.`},
+    {t:() => $("#setBtn"), x:`Settings holds the look, field journal or game window, and your account.`},
+    {t:() => $("#tourBtn"), x:`That's the grand tour! If you ever get lost, press this and I'll come running. Now go find some loot.`}
+  ];
+}
+function tourVisible(el){ if(!el) return false; const r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0 && getComputedStyle(el).visibility !== "hidden"; }
+function startTour(){
+  if(!S.loaded || !S.user.characters.length) return;
+  clearTimeout(TOUR.timer);
+  if($("#scrim").classList.contains("on")) closeModal();
+  hideTip(); closeSearch();
+  if(UI.view !== "plan"){ UI.view = "plan"; saveUI(); render(); }
+  // keep only steps whose spot is on screen right now (the intro has none)
+  TOUR.steps = tourSteps().filter((st, n) => n === 0 || tourVisible(st.t()));
+  TOUR.i = 0; TOUR.on = true;
+  if(!S.user.toured){ S.user.toured = true; save(); }
+  $("#tour").hidden = false;
+  document.documentElement.classList.add("touring");
+  showTourStep();
+}
+function endTour(){
+  TOUR.on = false; $("#tour").hidden = true;
+  document.documentElement.classList.remove("touring");
+  const b = $("#tourBtn"); if(b) b.focus();
+}
+function showTourStep(){
+  const st = TOUR.steps[TOUR.i], last = TOUR.i === TOUR.steps.length - 1;
+  $("#tourText").innerHTML = st.x;
+  $("#tourDots").innerHTML = TOUR.steps.map((_, n) => `<i class="${n === TOUR.i ? "on" : ""}"></i>`).join("");
+  $("#tourBack").hidden = TOUR.i === 0;
+  $("#tourSkip").hidden = last;
+  $("#tourNext").textContent = TOUR.i === 0 ? "Show me around" : (last ? "Thanks, Wallabik" : "Next");
+  const el = st.t();
+  if(el){
+    const phone = innerWidth <= 560, bar = $("#bar").getBoundingClientRect().height;
+    const r = el.getBoundingClientRect(), inBar = !!el.closest("#bar");
+    if(!inBar){
+      const want = phone ? r.top + scrollY - bar - 12 : r.top + scrollY - Math.max(bar + 16, (innerHeight - Math.min(r.height, innerHeight * .5)) / 2 - 90);
+      window.scrollTo({top:Math.max(0, want), behavior:matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    }
+    setTimeout(placeTour, inBar ? 0 : 380);
+    if(!inBar) setTimeout(placeTour, 900);           // once a long smooth scroll has settled
+  } else placeTour();
+  setTimeout(() => $("#tourNext").focus({preventScroll:true}), 30);
+}
+function placeTour(){
+  if(!TOUR.on) return;
+  const st = TOUR.steps[TOUR.i], el = st && st.t(), spot = $("#tourSpot"), card = $("#tourCard");
+  card.classList.remove("above", "below");
+  if(!el){
+    spot.classList.add("none");
+    card.style.left = Math.max(12, (innerWidth - card.offsetWidth) / 2) + "px";
+    card.style.top = Math.max(12, (innerHeight - card.offsetHeight) / 2) + "px";
+    return;
+  }
+  spot.classList.remove("none");
+  const r = el.getBoundingClientRect(), pad = 6;
+  const top = Math.max(4, r.top - pad), height = Math.min(r.bottom + pad, innerHeight - 4) - top;
+  Object.assign(spot.style, {left:(r.left - pad) + "px", top:top + "px", width:(r.width + pad * 2) + "px", height:Math.max(12, height) + "px"});
+  if(innerWidth <= 560) return;                       // on phones the card sits at the bottom
+  const cw = card.offsetWidth, ch = card.offsetHeight, gap = 16;
+  const below = r.bottom + gap + ch < innerHeight - 8 || r.top - gap - ch < 8;
+  let t = below ? Math.min(r.bottom + gap, innerHeight - ch - 8) : r.top - gap - ch;
+  let l = Math.min(Math.max(12, r.left + r.width / 2 - cw / 2), innerWidth - cw - 12);
+  card.style.left = l + "px"; card.style.top = Math.max(8, t) + "px";
+  card.classList.add(below ? "below" : "above");
+  card.style.setProperty("--ax", Math.min(Math.max(18, r.left + r.width / 2 - l - 7), cw - 32) + "px");
+}
+// first visit after signing in: once the welcome and first-character windows are out of the way
+function maybeTour(){
+  clearTimeout(TOUR.timer);
+  TOUR.timer = setTimeout(() => {
+    if(TOUR.on || S.user.toured || !S.loaded || !Store.uid || Store.mode !== "db" || !S.user.characters.length) return;
+    if($("#scrim").classList.contains("on") || !$("#landing").hidden || !S.user.look) return;
+    startTour();
+  }, 700);
+}
+function wireTour(){
+  $("#tourNext").onclick = () => { if(TOUR.i >= TOUR.steps.length - 1) endTour(); else { TOUR.i++; showTourStep(); } };
+  $("#tourBack").onclick = () => { if(TOUR.i > 0){ TOUR.i--; showTourStep(); } };
+  $("#tourSkip").onclick = endTour;
+  document.addEventListener("keydown", e => {
+    if(!TOUR.on) return;
+    if(e.key === "Escape"){ e.stopPropagation(); endTour(); }
+    else if(e.key === "ArrowRight") $("#tourNext").click();
+    else if(e.key === "ArrowLeft") $("#tourBack").click();
+  }, true);
+  let raf = 0;
+  const again = () => { if(!TOUR.on) return; cancelAnimationFrame(raf); raf = requestAnimationFrame(placeTour); };
+  addEventListener("resize", again); addEventListener("scroll", again, {passive:true});
 }
 function renderThemeMenu(){
   const cur = themeKey();
@@ -2028,7 +2212,7 @@ async function load(){
   const local = localGet();
   if(local) S.user = normUser(local);
   wireThemes(); applyTheme(S.user.theme || themeKey(), false); applyLook(S.user.look || lookKey(), false);
-  wireLanding(); wireSearch(); renderLanding();
+  wireLanding(); wireSearch(); wireTour(); renderLanding();
   try{
     const [w, c] = await Promise.all([getJSON("data/wiki.json"), getJSON("curated.json")]);
     S.snapshot = w; S.curated = c;
@@ -2174,6 +2358,7 @@ function render(){
   $("#mapView").hidden = UI.view !== "map";
   renderHero();
   renderBody();
+  if(!S.user.toured) maybeTour();
 }
 function renderBody(){
   if(UI.view !== "plan"){ showMap(); return; }
@@ -2216,11 +2401,13 @@ function renderStatus(){
   const don = (window.MNM_CONFIG || {}).donateUrl;
   if(don) h += `<a class="coffee" href="${esc(don)}" target="_blank" rel="noopener">Support</a>`;
   if(Store.uid) h += `<span class="who-am" title="${Store.mode==="db"?"Signed in. Characters, progress and pins are saved to your account.":"Signed in, but saving to this browser only for now."}">${esc(Store.email)}</span>`;
+  if(S.user.characters.length) h += `<button class="btn ghost" id="tourBtn" type="button" title="Show me around" aria-label="Show me around">?</button>`;
   h += `<button class="btn ghost" id="setBtn" aria-haspopup="dialog">Settings</button>`;
   if(Store.uid) h += `<button class="btn ghost" id="outBtn">Sign out</button>`;
   else if(Store.sb && Store.ready) h += `<button class="btn primary" id="inBtn">Sign in</button>`;
   $("#acct").innerHTML = h;
   $("#setBtn").onclick = () => openSettings(false);
+  if($("#tourBtn")) $("#tourBtn").onclick = startTour;
   if($("#outBtn")) $("#outBtn").onclick = signOut;
   if($("#inBtn")) $("#inBtn").onclick = openSignIn;
   let w = "";
@@ -3377,7 +3564,7 @@ function openImport(){
   };
 }
 function openModal(){ $("#scrim").classList.add("on"); document.documentElement.classList.add("lock"); }
-function closeModal(){ $("#scrim").classList.remove("on"); document.documentElement.classList.remove("lock"); }
+function closeModal(){ $("#scrim").classList.remove("on"); document.documentElement.classList.remove("lock"); if(!S.user.toured) maybeTour(); }
 $("#scrim").addEventListener("click", e => { if(e.target.id === "scrim") closeModal(); });
 document.addEventListener("keydown", e => { if(e.key === "Escape"){ closeModal(); if(UI.drop) setDrop(false); } });
 setInterval(() => { if(S.loaded) renderStatus(); }, 60000);
