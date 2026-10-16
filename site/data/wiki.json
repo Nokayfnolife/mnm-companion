@@ -1688,6 +1688,9 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "underdocks-zone-info-and-map"
    ]
   },
   "ancient-crypt": {
@@ -1824,6 +1827,11 @@
       "orb-of-the-fading-flame"
      ]
     }
+   ],
+   "links": [
+    "shaded-dunes",
+    "tomb-of-the-last-wyrmsbane",
+    "caves-of-irem"
    ]
   },
   "blacktide-bay": {
@@ -1984,6 +1992,10 @@
       "tuskhook-earrings"
      ]
     }
+   ],
+   "links": [
+    "keepers-bight",
+    "evershade-weald"
    ]
   },
   "caves-of-irem": {
@@ -2161,6 +2173,12 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "shaded-dunes",
+    "tomb-of-the-last-wyrmsbane",
+    "ancient-crypt",
+    "rothold"
    ]
   },
   "evershade-weald": {
@@ -2425,6 +2443,12 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "keepers-bight",
+    "faelindral",
+    "glinting-hollow",
+    "blacktide-bay"
    ]
   },
   "faelindral": {
@@ -2433,7 +2457,10 @@
    "url": "https://storiesofmnm.com/zone/faelindral/",
    "kind": "",
    "levels": null,
-   "camps": []
+   "camps": [],
+   "links": [
+    "evershade-weald"
+   ]
   },
   "fallen-pass": {
    "slug": "fallen-pass",
@@ -2834,6 +2861,11 @@
       "pestilence-shard-of-the-blightspire"
      ]
     }
+   ],
+   "links": [
+    "shaded-dunes",
+    "vale-of-zintar",
+    "fallen-watch"
    ]
   },
   "fallen-watch": {
@@ -3198,6 +3230,9 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "fallen-pass"
    ]
   },
   "glass-flats": {
@@ -3404,6 +3439,10 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "sungreet-strand",
+    "vale-of-zintar"
    ]
   },
   "glinting-hollow": {
@@ -3555,6 +3594,9 @@
       "glacial-fists"
      ]
     }
+   ],
+   "links": [
+    "evershade-weald"
    ]
   },
   "grain-cellar": {
@@ -3707,6 +3749,9 @@
       "bloodsoaked-amulet"
      ]
     }
+   ],
+   "links": [
+    "sungreet-strand"
    ]
   },
   "grimtide-sanctum": {
@@ -3811,6 +3856,9 @@
       "whisperless-veil"
      ]
     }
+   ],
+   "links": [
+    "shallow-shoals"
    ]
   },
   "infested-crypt": {
@@ -3903,6 +3951,9 @@
       "broodwarden-carapace"
      ]
     }
+   ],
+   "links": [
+    "shaded-dunes"
    ]
   },
   "keepers-bight": {
@@ -4090,6 +4141,13 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "blacktide-bay",
+    "evershade-weald",
+    "scarwood",
+    "vale-of-zintar",
+    "shallow-shoals"
    ]
   },
   "night-harbor": {
@@ -4334,6 +4392,12 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "shaded-dunes",
+    "sungreet-strand",
+    "tomb-of-the-last-wyrmsbane",
+    "night-harbor-sewers"
    ]
   },
   "night-harbor-sewers": {
@@ -4364,6 +4428,9 @@
      "loot": [],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "night-harbor"
    ]
   },
   "rothold": {
@@ -4534,6 +4601,9 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "caves-of-irem"
    ]
   },
   "scarwood": {
@@ -4643,6 +4713,9 @@
       "voice-of-the-land-sabatons"
      ]
     }
+   ],
+   "links": [
+    "keepers-bight"
    ]
   },
   "shaded-dunes": {
@@ -4748,6 +4821,14 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "night-harbor",
+    "tel-ekir",
+    "caves-of-irem",
+    "ancient-crypt",
+    "infested-crypt",
+    "fallen-pass"
    ]
   },
   "shallow-shoals": {
@@ -5120,6 +5201,12 @@
       "seal-of-elements"
      ]
     }
+   ],
+   "links": [
+    "vale-of-zintar",
+    "keepers-bight",
+    "shaded-dunes",
+    "fallen-pass"
    ]
   },
   "sungreet-strand": {
@@ -5476,6 +5563,12 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "night-harbor",
+    "tel-ekir",
+    "glass-flats",
+    "grain-cellar"
    ]
   },
   "tel-ekir": {
@@ -5856,6 +5949,10 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "shaded-dunes",
+    "sungreet-strand"
    ]
   },
   "tomb-of-the-last-wyrmsbane": {
@@ -6066,6 +6163,11 @@
       "idol-of-bone"
      ]
     }
+   ],
+   "links": [
+    "night-harbor",
+    "ancient-crypt",
+    "caves-of-irem"
    ]
   },
   "underdocks-zone-info-and-map": {
@@ -6239,6 +6341,11 @@
      ],
      "lootSlugs": []
     }
+   ],
+   "links": [
+    "ailvorith-zone-info-and-map",
+    "night-harbor",
+    "caves-of-irem"
    ]
   },
   "vale-of-zintar": {
@@ -6405,6 +6512,12 @@
       "whalebone-spear"
      ]
     }
+   ],
+   "links": [
+    "fallen-pass",
+    "glass-flats",
+    "shallow-shoals",
+    "keepers-bight"
    ]
   }
  },

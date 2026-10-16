@@ -470,6 +470,14 @@ def parse_zone_page(root: Node, zone_slug: str, zone_name: str) -> dict:
             "loot": items,
             "lootSlugs": [slug_from(l["href"], "wiki/item") for l in (loot.links("wiki/item") if loot else [])],
         })
+    # "Travel To & From": the zones next door
+    travel = root.find("div", "zone-travel")
+    links = []
+    for l in (travel.links("zone") if travel is not None else []):
+        s2 = slug_from(l["href"], "zone")
+        if s2 and s2 != zone_slug and s2 not in links:
+            links.append(s2)
+    zone["links"] = links
     return zone
 
 

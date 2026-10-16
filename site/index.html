@@ -707,6 +707,94 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --serif:var(--display); --sans:var(--body);
   --frame:0 0 0 1px var(--iron), inset 0 1px 0 var(--rim);
 }
+
+/* places on the maps: an icon chip per kind; labels only when zoomed in (layoutLabels adds .lab) */
+.place,.pin{background:none;border:0}
+.place .pk{display:grid;place-items:center;width:22px;height:22px;margin:1px;border-radius:6px;background:var(--pf,var(--stone2));color:var(--pi,var(--gilt2));box-shadow:0 0 0 1px var(--k),0 2px 6px rgb(var(--sh) / calc(.55 * var(--sha)))}
+.place .pk svg,.pchip .pk svg,.pdot.s-place svg,.pdot.s-mine svg{width:14px;height:14px;display:block}
+.place.k-camp{--pf:var(--none);--pi:var(--on-accent)} .place.k-camp.fit{--pf:var(--now)}
+.place.k-named{--pf:var(--hold);--pi:var(--on-accent)}
+.place.k-quest{--pf:var(--q-lore);--pi:var(--on-accent)}
+.place.k-trainer{--pf:var(--info);--pi:var(--on-accent)}
+.place.k-vendor{--pf:color-mix(in oklab,var(--q-lore),var(--hold) 40%);--pi:var(--on-accent)}
+.place.k-craft{--pf:var(--q-fx);--pi:var(--on-accent)}
+.place.k-exit,.place.k-travel{--pf:var(--gilt);--pi:var(--on-accent)}
+.place.k-landmark .pk,.place.k-other .pk{width:18px;height:18px;margin:3px;border-radius:50%}
+.place.mine .pk{box-shadow:0 0 0 2px var(--info),0 0 0 3px var(--k),0 2px 6px rgb(var(--sh) / calc(.55 * var(--sha)))}
+.place.mine::after{content:"★";position:absolute;right:-5px;top:-7px;font:700 10px/1 var(--body);color:var(--info);text-shadow:0 0 2px var(--stone)}
+.place.timed .pk{outline:2px dashed var(--gilt);outline-offset:2px}
+.plab{position:absolute;left:28px;top:50%;transform:translateY(-50%);display:none;white-space:nowrap;max-width:240px;overflow:hidden;text-overflow:ellipsis;font:600 12.5px/1.25 var(--body);color:var(--parch);background:color-mix(in srgb,var(--stone) 90%,transparent);padding:2px 7px;border-radius:3px;box-shadow:0 0 0 1px var(--iron);pointer-events:none}
+.plab small{font-weight:700;color:var(--gilt2);margin-left:3px}
+.pin .plab{left:32px}
+.leaflet-marker-icon.lab .plab,.leaflet-marker-icon:hover .plab,.leaflet-marker-icon:focus-visible .plab{display:block}
+.pfilter{display:flex;flex-wrap:wrap;gap:6px;margin:-4px 0 10px}
+.pchip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px 3px 4px;border-radius:999px;background:var(--well);border:1px solid var(--k);box-shadow:0 0 0 1px var(--iron);font:600 13px/1.2 var(--body);color:var(--ash);opacity:.62}
+.pchip .pk{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--pf,var(--stone3));color:var(--pi,var(--text2))}
+.pchip small{color:var(--soot);font-weight:700}
+.pchip.on{opacity:1;color:var(--parch);box-shadow:0 0 0 1px var(--iron2)}
+.pchip.lvl{padding-left:10px}
+.pchip.k-camp{--pf:var(--now);--pi:var(--on-accent)} .pchip.k-named{--pf:var(--hold);--pi:var(--on-accent)} .pchip.k-quest{--pf:var(--q-lore);--pi:var(--on-accent)}
+.pchip.k-trainer{--pf:var(--info);--pi:var(--on-accent)} .pchip.k-vendor{--pf:color-mix(in oklab,var(--q-lore),var(--hold) 40%);--pi:var(--on-accent)} .pchip.k-craft{--pf:var(--q-fx);--pi:var(--on-accent)}
+.pchip.k-exit,.pchip.k-travel{--pf:var(--gilt);--pi:var(--on-accent)}
+.pdot.s-place{background:var(--stone3);color:var(--gilt2)} .pdot.s-mine{color:var(--on-accent)}
+.pop .pkind{font:700 11.5px/1.3 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--soot);margin-bottom:2px}
+.pop .psrc{margin-top:8px;font-size:12.5px;color:var(--soot)}
+.pop .psrc .more{padding:0;font-size:12.5px}
+.pop .ptm{margin-top:8px}
+.pop .pkrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+.pop .pkrow select,.pop .pto{background:var(--well);border:1px solid var(--k);box-shadow:0 0 0 1px var(--iron);border-radius:3px;color:var(--parch);font:14px/1.2 var(--body);padding:5px 6px;max-width:100%}
+.pop .pto{width:100%;margin-bottom:6px}
+.pop .plv{display:inline-flex;align-items:center;gap:4px;font-size:13px;color:var(--ash)}
+.pop .plv input{width:46px;padding:4px 5px}
+.pop .psug{margin-top:10px;padding-top:8px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ash);display:grid;gap:6px}
+.pop .psug .btn{justify-self:start}
+.pop .psug label.own{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--ash)}
+.pop .psug label.own input{width:16px;height:16px;margin:0;padding:0;flex:none;accent-color:var(--gilt)}
+.psug.sg-approved,.sgst.sg-approved{color:var(--now)} .psug.sg-rejected,.sgst.sg-rejected{color:var(--hold)}
+.zchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.zchip{padding:4px 10px;border-radius:999px;background:var(--well);border:1px solid var(--k);box-shadow:0 0 0 1px var(--iron);font:600 13.5px/1.2 var(--body);color:var(--gilt2)}
+.zchip small{color:var(--soot);font-weight:400}
+.zchip:hover{box-shadow:0 0 0 1px var(--gilt)}
+/* respawn timers */
+.cact{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
+.cact .more{padding:0}
+.tslot{display:inline-flex;align-items:center;gap:4px}
+.tgo{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;background:var(--well);border:1px solid var(--k);box-shadow:0 0 0 1px var(--iron);font:600 13px/1.2 var(--body);color:var(--ash)}
+.tgo:hover{color:var(--parch);box-shadow:0 0 0 1px var(--gilt)}
+.tic{width:11px;height:11px;border-radius:50%;box-shadow:inset 0 0 0 1.6px currentColor;position:relative}
+.tic::after{content:"";position:absolute;left:5px;top:2px;width:1.6px;height:4px;background:currentColor;border-radius:1px}
+.tl{min-width:46px;padding:2px 8px;border-radius:999px;background:var(--stone3);font:700 13.5px/1.3 var(--body);font-variant-numeric:tabular-nums;color:var(--parch);text-align:center;box-shadow:0 0 0 1px var(--iron)}
+.tl.up{background:var(--now);color:var(--on-accent);animation:tup 1.6s ease-in-out infinite}
+@keyframes tup{50%{filter:brightness(1.18)}}
+@media (prefers-reduced-motion:reduce){.tl.up{animation:none}}
+.tbtn{width:24px;height:24px;padding:0;display:grid;place-items:center;border-radius:50%;background:var(--well);border:1px solid var(--k);box-shadow:0 0 0 1px var(--iron);color:var(--ash);font:700 14px/1 var(--body)}
+.tbtn:hover{color:var(--parch)}
+.alts{display:grid;gap:3px;margin-top:6px;padding:6px 9px;border-left:2px solid var(--gilt);background:color-mix(in srgb,var(--gilt) 7%,transparent);font-size:13.5px;color:var(--text2)}
+.alts[hidden]{display:none}
+.alts .altl{font-weight:700;color:var(--ash)} .alts .more{padding:0}
+.tray{position:fixed;left:12px;bottom:12px;z-index:900;width:min(320px,calc(100vw - 24px));padding:0;max-height:min(46vh,420px);display:flex;flex-direction:column}
+.tray header{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line)}
+.tray header b{font:700 14px/1.2 var(--display);color:var(--gilt2);margin-right:auto}
+.tray header .more{padding:0;font-size:13px}
+.tray .trl{overflow:auto;padding:4px 12px 8px}
+.tray .trr{display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px solid var(--line)}
+.tray .trr:first-child{border-top:0}
+.tray .trn{flex:1;min-width:0;display:grid}
+.tray .trn b{font-size:14px;color:var(--parch);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tray .trn small{font-size:12.5px;color:var(--soot)}
+.tray .trn .more{padding:0 3px;font-size:13px}
+html.touring .tray{display:none}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:4000;max-width:min(560px,calc(100vw - 24px));padding:9px 14px;border-radius:6px;background:var(--stone3);color:var(--parch);box-shadow:0 0 0 1px var(--iron2),0 8px 24px rgb(var(--sh) / calc(.55 * var(--sha)));font:600 14px/1.4 var(--body);overflow-wrap:anywhere}
+.rv{display:grid;gap:8px;padding:10px 0;border-top:1px solid var(--line)}
+.rv .rvt{display:flex;gap:10px;align-items:flex-start}
+.rv .rvt small{display:block;color:var(--soot);font-size:13px}
+.rv .rvt p{margin:4px 0 0;font-size:14px;color:var(--text2)}
+.rv .rva{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+@media (max-width:560px){
+  .tray{left:8px;right:8px;width:auto;bottom:calc(8px + env(safe-area-inset-bottom))}
+  .pfilter{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;margin-right:-16px;scrollbar-width:none}
+  .pchip{flex:none}
+}
 /* ---- light mode for the game window: daylit windows, same areas (html[data-mode="light"]) */
 :root[data-look="game"][data-mode="light"]{
   color-scheme:light;
@@ -1452,6 +1540,19 @@ html.lock,html.lock body{overflow:hidden}
 [data-look="journal"][data-mode="dark"] .tour-spot.none{box-shadow:0 0 0 9999px rgba(0,0,0,.6)}
 
 [data-look="journal"] body{background:var(--desk);background-image:none}
+[data-look="journal"] .pdot.s-place{color:var(--text);background:transparent}
+[data-look="journal"] .place .pk{border-radius:50%;box-shadow:0 0 0 1.5px var(--text),0 1px 3px rgb(0 0 0 / .18)}
+[data-look="journal"] .place.mine .pk{box-shadow:0 0 0 2px var(--info),0 0 0 3.5px var(--text)}
+[data-look="journal"] .plab{background:color-mix(in srgb,var(--paper) 92%,transparent);box-shadow:0 0 0 1px var(--edge2);font:400 17px/1.15 var(--hand);color:var(--text)}
+[data-look="journal"] .plab small{font:inherit;color:var(--accent)}
+[data-look="journal"] .pchip,[data-look="journal"] .zchip,[data-look="journal"] .tgo,[data-look="journal"] .tbtn{background:transparent;border:1px solid var(--iron2);box-shadow:none}
+[data-look="journal"] .pchip.on{border-color:var(--text)}
+[data-look="journal"] .tl{background:transparent;box-shadow:0 0 0 1px var(--iron2);font:400 19px/1.1 var(--hand);color:var(--accent)}
+[data-look="journal"] .tl.up{background:var(--now);color:var(--on-accent)}
+[data-look="journal"] .tray header b{font:400 19px/1.1 var(--display);color:var(--text)}
+[data-look="journal"] .alts{border-left-color:var(--accent);background:transparent}
+[data-look="journal"] .toast{background:var(--text);color:var(--paper2);box-shadow:none}
+
 [data-look="journal"] a{color:var(--info);border-bottom-color:color-mix(in srgb,var(--info) 35%,transparent)}
 [data-look="journal"] a:hover{border-bottom-color:var(--info)}
 [data-look="journal"] :focus-visible{outline-color:var(--accent)}
@@ -1804,9 +1905,12 @@ html.lock,html.lock body{overflow:hidden}
       <div class="mtools">
         <label class="own"><input type="checkbox" id="showPlan"> Plan spots</label>
         <label class="own"><input type="checkbox" id="showMine"> My pins</label>
+        <button class="btn" id="rvBtn" type="button" hidden>Review</button>
+        <button class="btn" id="shareZone" type="button" title="Copy a link to this map">Share</button>
         <button class="btn" id="dropBtn">Drop a pin</button>
       </div>
     </div>
+    <div class="pfilter" id="pFilter" role="group" aria-label="Show on the map" hidden></div>
     <div class="mapgrid">
       <div class="mapcol">
         <div id="map" class="map"></div>
@@ -1822,6 +1926,8 @@ html.lock,html.lock body{overflow:hidden}
 </div>
 
 <div class="itip win ins" id="itip" role="tooltip" hidden></div>
+<aside class="tray win" id="tray" aria-label="Respawn timers" hidden></aside>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <div class="tour" id="tour" hidden>
   <div class="tour-veil"></div>
   <div class="tour-spot" id="tourSpot"></div>
@@ -1854,10 +1960,11 @@ const UI = Object.assign({view:"plan", gear:"all", qScope:"home", zone:null, alt
   {showAllQ:false, showAllCamps:false, showAllNews:false, openPlays:{}, drop:false, sideMoreQ:false});
 if(UI.view !== "map") UI.view = "plan";
 if(!UI.alt || typeof UI.alt !== "object") UI.alt = {};
+if(!UI.hideKinds || typeof UI.hideKinds !== "object") UI.hideKinds = {landmark:true};
 let saveTimer = null;
 
 function loadUI(){ try{ const v = JSON.parse(localStorage.getItem("mnm-ui") || "{}"); return v && typeof v === "object" ? v : {}; }catch(_){ return {}; } }
-function saveUI(){ try{ localStorage.setItem("mnm-ui", JSON.stringify({view:UI.view, gear:UI.gear, qScope:UI.qScope, zone:UI.zone, alt:UI.alt, showPlan:UI.showPlan, showMine:UI.showMine, hideGNote:!!UI.hideGNote})); }catch(_){} }
+function saveUI(){ try{ localStorage.setItem("mnm-ui", JSON.stringify({view:UI.view, gear:UI.gear, qScope:UI.qScope, zone:UI.zone, alt:UI.alt, showPlan:UI.showPlan, showMine:UI.showMine, hideGNote:!!UI.hideGNote, hideKinds:UI.hideKinds || {}, myLevel:!!UI.myLevel, trayMin:!!UI.trayMin})); }catch(_){} }
 function localGet(){ try{ const u = localStorage.getItem("mnm-user"); return u ? JSON.parse(u) : null; }catch(_){ return null; } }
 function localSet(u){ try{ localStorage.setItem("mnm-user", JSON.stringify(u)); }catch(_){} }
 
@@ -1895,11 +2002,28 @@ function normUser(u){
       gear:(c.gear && typeof c.gear === "object" && !Array.isArray(c.gear)) ? gearMap(c.gear) : null};
   });
   const progress = (u.progress && typeof u.progress === "object" && !Array.isArray(u.progress)) ? u.progress : {};
-  const pins = (Array.isArray(u.pins) ? u.pins : []).filter(p => p && p.map && isFinite(p.x) && isFinite(p.y)).map(p => ({
-    id:String(p.id || ("p" + Math.random().toString(36).slice(2,8))).slice(0,40), map:String(p.map).slice(0,60), x:clamp01(+p.x), y:clamp01(+p.y),
-    label:String(p.label || "").slice(0,80), note:String(p.note || "").slice(0,400), at:p.at || null}));
+  const pins = (Array.isArray(u.pins) ? u.pins : []).filter(p => p && p.map && isFinite(p.x) && isFinite(p.y)).map(p => {
+    const o = {id:String(p.id || ("p" + Math.random().toString(36).slice(2,8))).slice(0,40), map:String(p.map).slice(0,60), x:clamp01(+p.x), y:clamp01(+p.y),
+      label:String(p.label || "").slice(0,80), note:String(p.note || "").slice(0,400), at:p.at || null};
+    if(PKIND_LIST.includes(p.kind) && p.kind !== "other") o.kind = p.kind;
+    const lo = parseInt((p.lvl || [])[0]), hi = parseInt((p.lvl || [])[1]);
+    if(lo >= 1 && lo <= 60) o.lvl = [lo, hi >= lo && hi <= 60 ? hi : lo];
+    if(typeof p.to === "string" && p.to) o.to = p.to.slice(0,60);
+    if(typeof p.sug === "string" && /^[\w-]{8,40}$/.test(p.sug)){ o.sug = p.sug; if(["pending","approved","rejected"].includes(p.sugSt)) o.sugSt = p.sugSt; }
+    return o;
+  });
+  // respawn timers run on end times, so every device shows the same countdown; stale ones drop off after a few hours
+  const timers = {}, now = Date.now();
+  if(u.timers && typeof u.timers === "object" && !Array.isArray(u.timers)) Object.entries(u.timers).slice(0,40).forEach(([k, t]) => {
+    if(!t || !isFinite(t.e) || now - t.e > 3 * 3600e3) return;
+    timers[String(k).slice(0,90)] = {e:+t.e, m:Math.max(1, Math.min(120, parseInt(t.m) || 10)), n:String(t.n || "").slice(0,60), z:String(t.z || "").slice(0,40)};
+  });
+  const respawn = {};
+  if(u.respawn && typeof u.respawn === "object" && !Array.isArray(u.respawn)) Object.entries(u.respawn).slice(0,200).forEach(([k, m]) => { m = parseInt(m); if(m >= 1 && m <= 120) respawn[String(k).slice(0,90)] = m; });
   const active = chars.some(c => c.id === u.active) ? u.active : (chars[0] ? chars[0].id : null);
   const out = {characters:chars, active, progress, pins};
+  if(Object.keys(timers).length) out.timers = timers;
+  if(Object.keys(respawn).length) out.respawn = respawn;
   if(typeof u.theme === "string" && /^[a-z-]{2,30}$/.test(u.theme)) out.theme = u.theme;
   if(u.look === "journal" || u.look === "game") out.look = u.look;
   if(["light","dark","auto"].includes(u.mode)) out.mode = u.mode;
@@ -1975,6 +2099,7 @@ async function onSession(session){
   Store.mode = "db"; Store.ready = true; Store.err = null;
   if(data && data.data){ S.user = normUser(data.data); localSet(S.user); render(); }
   else { render(); if((S.user.characters || []).length){ Store.pending = true; flush(); } } // first sign-in: bring this browser's characters along
+  PL.at = 0; loadPlaces(true);
   if(!S.user.look) setTimeout(() => { if(Store.uid === uid && !S.user.look && !$("#scrim").classList.contains("on")) openSettings(true); }, 400);
   Store.chan = Store.sb.channel("ud-" + uid)
     .on("postgres_changes", {event:"*", schema:"public", table:"user_data", filter:"user_id=eq." + uid}, p => {
@@ -2034,6 +2159,7 @@ function showApp(){
   $("#searchBox").hidden = false; $("#viewSeg").hidden = false;
 }
 function goLanding(){
+  if(/[?&](zone|place|pin)=/.test(location.search)) try{ localStorage.setItem("mnm-link", JSON.stringify({q:location.search, at:Date.now()})); }catch(_){}
   Store.mode = "local"; Store.ready = true; Store.uid = null;
   document.body.classList.remove("booting", "authguess");
   $("#app").hidden = true; $("#searchBox").hidden = true; $("#viewSeg").hidden = true; closeSearch();
@@ -2153,7 +2279,7 @@ function tourSteps(){
     {p:"08-armor-sets", t:() => classic ? null : cardOf("#sets"), x:`Armor sets you can collect, trimmed to the pieces that beat what you've got, with the materials to gather.`},
     {p:"09-hunt", t:() => classic ? null : cardOf("#camps"), x:`Where to hunt at your level. Switch Solo to Group up top and the list changes with you.`},
     {p:"10-search", t:() => $("#searchBox"), x:`Hunting for something specific? Type an item, quest or zone here, or press / from anywhere.`},
-    {p:"11-map", t:() => $("#viewSeg"), x:`The maps live here: community zone maps with pins for camps, quest givers, and notes you drop yourself.`},
+    {p:"11-map", t:() => $("#viewSeg"), x:`The maps live here: guild halls, markets, exits and camps on community zone maps, filters by type, respawn timers, and pins you drop yourself.`},
     {p:"12-theme", t:() => $("#thm"), x:`Fancy different colors? Pick a corner of the world and I'll dress the pages to match.`},
     {p:"13-settings", t:() => $("#setBtn"), x:`Settings holds the look, field journal or game window, and your account.`},
     {p:"14-help", t:() => $("#tourBtn"), x:`That's the grand tour! If you ever get lost, press this and I'll come running. Now go find some loot.`}
@@ -2459,6 +2585,8 @@ function render(){
   $("#mapView").hidden = UI.view !== "map";
   renderHero();
   renderBody();
+  renderTray();
+  if(!LINK.done) applyLink();
   if(!S.user.toured) maybeTour();
 }
 function renderBody(){
@@ -3078,17 +3206,20 @@ function renderCamps(){
   cs.sort((a,b) => Math.round(Math.abs(((a.r[0]+a.r[1])/2)-L)) - Math.round(Math.abs(((b.r[0]+b.r[1])/2)-L)) || hi(a.cp.zone) - hi(b.cp.zone));
   $("#campSub").textContent = `${group?"group":"solo"} range around ${L}`;
   const lim = UI.showAllCamps ? cs.length : 7;
-  let h = cs.slice(0,lim).map(({cp,r}) => {
+  let h = cs.slice(0,lim).map(({cp,r}, i) => {
     const loot = (cp.loot||[]).map(n => { const s = D.nameToSlug[norm(n)]; const it = s && D.items[s]; return it ? `<span class="chip ${usable(it,c)?"":"no"}">${itemLink(it)}${it.hasDetail?` <span class="s">${esc(statLine(it))}</span>`:""}</span>` : `<span class="chip">${esc(n)}</span>`; }).join("");
     const zk = zoneKeyForSlug(cp.zoneSlug);
     return `<div class="row"><div class="lv num">${r[0]}-${r[1]}<small>${group&&cp.level.group?"group":"solo"}</small></div><div>
       <div class="t">${esc(cp.area)}</div><div class="d">${esc(cp.zone)} · ${esc(cp.mobs)}${zk && Z.byKey[zk].maps.length ? ` · <button class="more maplink" style="padding:0" data-zone="${esc(zk)}">map</button>` : ""}</div>
-      ${cp.note?`<div class="x">${esc(cp.note)}</div>`:""}${loot?`<div class="chips">${loot}</div>`:""}</div></div>`;
+      ${cp.note?`<div class="x">${esc(cp.note)}</div>`:""}${loot?`<div class="chips">${loot}</div>`:""}
+      <div class="cact">${timerHTML(campKey(cp), campName(cp), zk || "")}<button class="more" data-taken="${i}">Taken?</button></div><div class="alts" data-alts="${i}" hidden></div></div></div>`;
   }).join("");
   if(cs.length > lim) h += `<button class="more" id="cMore">Show all ${cs.length}</button>`;
   $("#camps").innerHTML = h || `<div class="empty">No mapped camps for level ${L} ${UI.qScope==="home"?"near home - try All zones on the quest list":"yet"}.</div>`;
   if($("#cMore")) $("#cMore").onclick = () => { UI.showAllCamps = true; renderCamps(); };
   $$("#camps [data-zone]").forEach(b => b.onclick = () => openZone(b.dataset.zone));
+  wireTimers($("#camps"));
+  $$("#camps [data-taken]").forEach(b => b.onclick = () => toggleAlts($("#camps"), b.dataset.taken, cs[+b.dataset.taken].cp));
 }
 
 // ---- bags
@@ -3199,12 +3330,16 @@ function showMap(){
   $("#showPlan").closest("label").hidden = classic;
   $("#mapLegend").hidden = classic;
   $("#showPlan").onchange = e => toggleLayer("plan", e.target.checked);
+  $("#shareZone").onclick = () => { const mm = curMap(); copyLink({zone:z.key, map:mm && z.maps.length > 1 ? mm.id : ""}); };
+  const pend = PL.rows.filter(r => r.status === "pending").length;
+  $("#rvBtn").hidden = !(PL.mod && pend); $("#rvBtn").innerHTML = `Review <b class="num">${pend}</b>`; $("#rvBtn").onclick = openReview;
   $("#showMine").onchange = e => toggleLayer("mine", e.target.checked);
   $("#dropBtn").onclick = () => setDrop(!UI.drop);
   const box = $("#map"), none = $("#noMap");
   if(!m){
     setDrop(false);
     box.hidden = true; none.hidden = false; $("#dropBtn").disabled = true;
+    $("#pFilter").hidden = true;
     none.innerHTML = `<div class="nomap"><div><b>No map image for ${esc(z.name)} yet.</b><br>${showWhere(char()) ? "The camps and quests the wiki lists for it are alongside." : ""}${z.atlas?`<br><a href="https://mnmatlas.com/${esc(z.atlas)}/" target="_blank" rel="noopener">Open ${esc(z.name)} in MnM Atlas ↗</a>`:""}</div></div>`;
     $("#mapCredit").innerHTML = "";
     renderSide(z, null);
@@ -3227,8 +3362,9 @@ function showMap(){
     MAP.shown = m.id; MAP.fitFor = null;
   }
   fitIfReady();
-  drawPins(m); renderSide(z, m); renderCredit(m);
+  drawPins(m); renderSide(z, m); renderCredit(m); renderPFilter(m, char());
   syncPlanLayer();
+  loadPlaces(false);
 }
 // the box has no size while the page is still loading or the map tab is hidden: fit the map the first time it has one,
 // and keep the "zoomed all the way out" stop matched to the box
@@ -3236,7 +3372,8 @@ function fitIfReady(){
   const m = MAP.map && Z.maps[MAP.shown]; if(!m) return;
   const box = $("#map"); if(!box.clientWidth || !box.clientHeight) return;
   const b = L.latLngBounds([[-m.h, 0], [0, m.w]]);
-  MAP.map.setMinZoom(MAP.map.getBoundsZoom(b, false) - 0.5);
+  MAP.fitZoom = MAP.map.getBoundsZoom(b, false);
+  MAP.map.setMinZoom(MAP.fitZoom - 0.5);
   if(MAP.fitFor !== m.id){ MAP.map.fitBounds(b, {animate:false}); MAP.fitFor = m.id; }
 }
 // Guided shows the plan's spots; Classic keeps the map to your own pins, plus any spot you asked to see from your sheet
@@ -3255,8 +3392,9 @@ function initMap(){
   MAP.map = L.map("map", {crs:L.CRS.Simple, minZoom:-5, maxZoom:0.5, zoomSnap:0, zoomDelta:0.5, wheelPxPerZoomLevel:120, attributionControl:false, maxBoundsViscosity:0.8});
   MAP.map.on("resize", fitIfReady);
   if(window.ResizeObserver) new ResizeObserver(() => { if(MAP.map && $("#map").clientWidth) MAP.map.invalidateSize(false); fitIfReady(); }).observe($("#map"));
-  MAP.plan = L.layerGroup(); MAP.mine = L.layerGroup();
+  MAP.plan = L.layerGroup(); MAP.mine = L.layerGroup(); MAP.places = L.layerGroup().addTo(MAP.map);
   if(planLayerOn()) MAP.plan.addTo(MAP.map);
+  MAP.map.on("zoomend moveend", schedLabels);
   if(UI.showMine) MAP.mine.addTo(MAP.map);
   MAP.map.on("click", onMapClick);
   const Fit = L.Control.extend({options:{position:"topleft"}, onAdd(){
@@ -3283,16 +3421,28 @@ function drawPins(m){
   (Z.pinsByMap[m.id] || []).forEach((p, i) => {
     if(peek && !peek.includes(p.id)) return;
     const st = pinState(p, c);
-    const mk = L.marker(ll(p, m), {icon:L.divIcon({className:"pin s-" + st.s, html:`<span>${i+1}</span>`, iconSize:[28,28], iconAnchor:[14,14], popupAnchor:[0,-13]}), title:p.title, alt:p.title, riseOnHover:true});
+    const mk = L.marker(ll(p, m), {icon:L.divIcon({className:"pin s-" + st.s, html:`<span>${i+1}</span><b class="plab">${esc(p.title)}</b>`, iconSize:[28,28], iconAnchor:[14,14], popupAnchor:[0,-13]}), riseOnHover:true});
     mk.bindPopup(() => planPopup(p), {maxWidth:300, minWidth:230, autoPanPadding:[30,30]});
-    mk.addTo(MAP.plan); MAP.markers[p.id] = mk;
+    labelled(mk, 0, false, (i+1) + ". " + p.title); mk.addTo(MAP.plan); MAP.markers[p.id] = mk;
   });
+  MAP.places.clearLayers();
+  placesFor(m).forEach(p => {
+    if(!placeShown(p, c) && MAP.force !== p.id) return;
+    const mk = L.marker(ll(p, m), {icon:placeIcon(p, c), riseOnHover:true, keyboard:true});
+    mk.bindPopup(() => placePopup(p), {maxWidth:300, minWidth:230, autoPanPadding:[30,30]});
+    labelled(mk, (PKINDS[p.kind] || PKINDS.other).lp, p.onMap, (PKINDS[p.kind] || PKINDS.other).l + ": " + p.title); mk.addTo(MAP.places); MAP.markers[p.id] = mk;
+  });
+  const live = new Set(PL.rows.filter(r => r.status === "approved").map(r => r.id));
   S.user.pins.filter(p => p.map === m.id).forEach(p => {
-    const mk = L.marker(ll(p, m), {icon:mineIcon(), title:p.label || "My pin", alt:p.label || "My pin", draggable:true, riseOnHover:true});
+    if(p.sug && live.has(p.sug)) return;                         // everyone's copy is on the map now
+    if(UI.hideKinds[p.kind || "other"] && MAP.force !== p.id) return;
+    const mk = L.marker(ll(p, m), {icon:placeIcon(Object.assign({}, p, {title:p.label || "My pin", src:"mine"}), c, true), draggable:true, riseOnHover:true});
     mk.bindPopup(() => minePopup(p, false), {maxWidth:300, minWidth:240, autoPanPadding:[30,30]});
     mk.on("dragend", () => { const q = mk.getLatLng(); p.x = clamp01(q.lng / m.w); p.y = clamp01(-q.lat / m.h); save(); renderSide(curZone(), m); });
-    mk.addTo(MAP.mine); MAP.markers[p.id] = mk;
+    labelled(mk, 2, false, "Your pin: " + (p.label || "My pin")); mk.addTo(MAP.mine); MAP.markers[p.id] = mk;
   });
+  MAP.force = null;
+  schedLabels();
 }
 function planPopup(p){
   const st = pinState(p, char());
@@ -3304,16 +3454,28 @@ function planPopup(p){
 }
 function minePopup(p, isNew){
   const d = document.createElement("div"); d.className = "pop";
+  const kind = p.kind || "other", zones = Z.zones.slice().sort((a,b) => a.name.localeCompare(b.name));
   d.innerHTML = `<h5>${isNew ? "New pin" : "Your pin"}</h5>
+    <div class="pkrow"><select class="pkind" aria-label="What is it">${PKIND_LIST.map(k => `<option value="${k}" ${k === kind ? "selected" : ""}>${esc(PKINDS[k].l)}</option>`).join("")}</select>
+      <span class="plv">Levels <input class="lo" type="number" min="1" max="60" inputmode="numeric" value="${p.lvl ? p.lvl[0] : ""}" aria-label="Lowest level">–<input class="hi" type="number" min="1" max="60" inputmode="numeric" value="${p.lvl ? p.lvl[1] : ""}" aria-label="Highest level"></span></div>
+    <select class="pto" aria-label="Leads to"><option value="">Leads to…</option>${zones.map(z => `<option value="${esc(z.key)}" ${z.key === p.to ? "selected" : ""}>${esc(z.name)}</option>`).join("")}</select>
     <input class="pi" maxlength="80" placeholder="Label, e.g. wererat pull spot" value="${esc(p.label)}" aria-label="Pin label">
     <textarea class="pn" rows="3" maxlength="400" placeholder="Notes (optional)" aria-label="Pin notes">${esc(p.note)}</textarea>
     <div class="pact">${isNew ? "" : `<button class="btn del" data-a="del">Remove</button>`}<button class="btn" data-a="cancel">${isNew ? "Cancel" : "Close"}</button><button class="btn primary" data-a="save">Save</button></div>
-    ${isNew ? "" : `<div class="hint">Drag the pin to move it.</div>`}`;
-  const inp = d.querySelector(".pi"), note = d.querySelector(".pn");
+    ${isNew ? "" : `<div class="hint">Drag the pin to move it.</div>${suggestHTML(p)}`}`;
+  const inp = d.querySelector(".pi"), note = d.querySelector(".pn"), ksel = d.querySelector(".pkind");
+  const syncKind = () => { const k = ksel.value; d.querySelector(".plv").hidden = !["camp","named","quest"].includes(k); d.querySelector(".pto").hidden = !["exit","travel"].includes(k); };
+  ksel.onchange = syncKind; syncKind();
+  wireSuggest(d, p);
   const doSave = () => {
     p.label = inp.value.trim().slice(0,80) || "My pin"; p.note = note.value.trim().slice(0,400);
+    const k = ksel.value; if(k && k !== "other") p.kind = k; else delete p.kind;
+    const lo = parseInt(d.querySelector(".lo").value), hi = parseInt(d.querySelector(".hi").value);
+    if(["camp","named","quest"].includes(k) && lo >= 1 && lo <= 60) p.lvl = [lo, hi >= lo && hi <= 60 ? hi : lo]; else delete p.lvl;
+    const to = d.querySelector(".pto").value; if(["exit","travel"].includes(k) && to) p.to = to; else delete p.to;
     if(isNew){ S.user.pins.push(p); const tm = MAP.temp; MAP.temp = null; if(tm) tm.remove(); if(!UI.showMine) toggleLayer("mine", true); }
-    save(); MAP.map.closePopup(); drawPins(curMap()); renderSide(curZone(), curMap());
+    if(UI.hideKinds[p.kind || "other"]){ delete UI.hideKinds[p.kind || "other"]; saveUI(); }
+    save(); MAP.map.closePopup(); drawPins(curMap()); renderSide(curZone(), curMap()); renderPFilter(curMap(), char());
   };
   d.querySelector('[data-a="save"]').onclick = doSave;
   inp.onkeydown = e => { if(e.key === "Enter"){ e.preventDefault(); doSave(); } };
@@ -3351,17 +3513,23 @@ function renderSide(z, m){
   let h = `<header><h3>${esc(z.name)}</h3><span class="sub">${esc(z.region)}</span></header><div class="body">`;
   h += `<div class="zlinks">${sz ? `<a href="${esc(sz.url)}" target="_blank" rel="noopener">Wiki zone page ↗</a>` : ""}${z.atlas ? `<a href="https://mnmatlas.com/${esc(z.atlas)}/" target="_blank" rel="noopener">Open in MnM Atlas ↗</a>` : ""}</div>`;
   const classic = isClassic(c), spoil = showWhere(c);
+  const next = zoneLinks(z.slug).map(sl => ({k:zoneKeyFor(sl), n:zoneName(sl)})).filter(x => x.k);
+  if(next.length) h += `<div class="sh">Next door</div><div class="zchips">${next.map(x => `<button class="zchip" data-zone="${esc(x.k)}">${esc(x.n)}${Z.byKey[x.k].maps.length ? "" : " <small>no map</small>"}</button>`).join("")}</div>`;
   if(m){
+    const here = placesFor(m), guild = here.find(p => p.kind === "trainer" && norm(p.title).includes(norm(c.cls)));
+    const ways = here.filter(p => p.kind === "exit" || p.kind === "travel");
+    if(guild) h += `<div class="sh">Your guild</div><button class="pinrow" data-pin="${esc(guild.id)}"><span class="pdot s-place">${placeGlyph("trainer")}</span><span><b>${esc(guild.title)}</b>${guild.note ? `<small>${esc(guild.note)}</small>` : ""}</span></button>`;
+    if(ways.length) h += `<div class="sh">Ways out</div>` + ways.map(p => `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-place">${placeGlyph(p.kind)}</span><span><b>${esc(p.title)}</b>${p.note ? `<small>${esc(p.note)}</small>` : ""}</span></button>`).join("");
     const all = Z.pinsByMap[m.id] || [], peek = MAP.peek || [];
     const pins = classic ? all.filter(p => peek.includes(p.id)) : all;
     if(pins.length) h += `<div class="sh">${classic ? "Spots you asked to see" : "Plan spots"}</div>` + pins.map(p => { const st = pinState(p, c); return `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-${st.s}">${all.indexOf(p)+1}</span><span><b>${esc(p.title)}</b><small>${esc(stLabel(st))}</small></span></button>`; }).join("")
       + (classic && pins.length ? `<button class="more" id="hidePeek">Hide these spots</button>` : "");
     const mine = S.user.pins.filter(p => p.map === m.id);
-    h += `<div class="sh">Your pins</div>` + (mine.length ? mine.map(p => `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-mine"><i>★</i></span><span><b>${esc(p.label || "My pin")}</b>${p.note ? `<small>${esc(trimDrop(p.note))}</small>` : ""}</span></button>`).join("")
+    h += `<div class="sh">Your pins</div>` + (mine.length ? mine.map(p => `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-mine">${placeGlyph(p.kind || "other")}</span><span><b>${esc(p.label || "My pin")}</b>${p.sugSt ? `<small class="sgst sg-${p.sugSt}">${esc(SUG_LABEL[p.sugSt])}</small>` : ""}${p.note ? `<small>${esc(trimDrop(p.note))}</small>` : ""}</span></button>`).join("")
       : `<div class="empty">Press <b>Drop a pin</b>, then click the map to mark a camp, a pull spot or where you died. Pins are kept with your characters.</div>`);
   }
   const camps = spoil ? ((sz && sz.camps) || []).map(cp => ({cp, r:campRange(cp, group)})).filter(x => x.r).sort((a,b) => a.r[0] - b.r[0] || a.r[1] - b.r[1]) : [];
-  if(camps.length) h += `<div class="sh">Camps by level · ${group ? "group" : "solo"}</div>` + camps.map(({cp, r}) => { const fit = r[0] <= L + 1 && r[1] >= L - 1; return `<div class="crow ${fit ? "fit" : ""}"><span class="lvp num">${r[0]}-${r[1]}</span><span><b>${esc(cp.area)}</b>${fit ? '<span class="tag fit">your level</span>' : ""}<small>${esc(cp.mobs)}</small>${cp.note ? `<small class="cn">${esc(cp.note)}</small>` : ""}</span></div>`; }).join("");
+  if(camps.length) h += `<div class="sh">Camps by level · ${group ? "group" : "solo"}</div>` + camps.map(({cp, r}, i) => { const fit = r[0] <= L + 1 && r[1] >= L - 1; return `<div class="crow ${fit ? "fit" : ""}"><span class="lvp num">${r[0]}-${r[1]}</span><span><b>${esc(cp.area)}</b>${fit ? '<span class="tag fit">your level</span>' : ""}<small>${esc(cp.mobs)}</small>${cp.note ? `<small class="cn">${esc(cp.note)}</small>` : ""}<span class="cact">${timerHTML(campKey(cp), campName(cp), z.key)}<button class="more" data-taken="${i}">Taken?</button></span><span class="alts" data-alts="${i}" hidden></span></span></div>`; }).join("");
   const qs = spoil ? ((S.snapshot||{}).quests || []).filter(q => norm(q.zone) === norm(zname) && classMatch(q.classes, c)).map(q => ({q, lv:questLevel(q)})).sort((a,b) => a.lv - b.lv || a.q.name.localeCompare(b.q.name)) : [];
   if(qs.length){
     const lim = UI.sideMoreQ ? qs.length : 8;
@@ -3373,9 +3541,301 @@ function renderSide(z, m){
   h += `</div>`;
   $("#side").innerHTML = h;
   $$("#side [data-pin]").forEach(b => b.onclick = () => focusPin(b.dataset.pin));
+  $$("#side [data-zone]").forEach(b => b.onclick = () => openZone(b.dataset.zone));
+  wireTimers($("#side"));
+  $$("#side [data-taken]").forEach(b => b.onclick = () => toggleAlts($("#side"), b.dataset.taken, camps[+b.dataset.taken].cp));
   const hp = $("#hidePeek"); if(hp) hp.onclick = () => { MAP.peek = null; if(MAP.map) MAP.map.closePopup(); const m2 = curMap(); if(m2 && MAP.map){ drawPins(m2); syncPlanLayer(); } renderSide(curZone(), m2); };
   if($("#sideMoreQ")) $("#sideMoreQ").onclick = () => { UI.sideMoreQ = true; renderSide(z, m); };
 }
+
+// ------------------------------------------------------------- places on the maps
+// Guild halls, markets, exits, camps... from three sources: the site's own list (curated.json), places players suggested
+// and a moderator approved (Supabase "places"), and your own pins. Each has a kind, an icon and, when zoomed in, a label.
+const PKINDS = {
+  camp:{l:"Hunting camp", p:"Camps", lp:3}, named:{l:"Named mob", p:"Named", lp:2}, quest:{l:"Quest / turn-in", p:"Quests", lp:5},
+  trainer:{l:"Guild / trainer", p:"Guilds", lp:4}, vendor:{l:"Vendor / market", p:"Vendors", lp:6}, craft:{l:"Tradeskill", p:"Crafting", lp:7},
+  exit:{l:"Zone exit", p:"Exits", lp:1}, travel:{l:"Boat / teleporter", p:"Travel", lp:1}, landmark:{l:"Landmark", p:"Landmarks", lp:9}, other:{l:"Note", p:"Notes", lp:8}
+};
+const PKIND_LIST = Object.keys(PKINDS);
+const PICON = {
+  camp:'<path d="M3.5 3.5l9 9M12.5 3.5l-9 9M2.5 10.5l3 3M10.5 13.5l3-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>',
+  named:'<path d="M2 12.5h12L13 4.8l-3 3.1L8 3.5 6 7.9 3 4.8z" fill="currentColor"/>',
+  quest:'<path d="M8 2.6v7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><circle cx="8" cy="13" r="1.5" fill="currentColor"/>',
+  trainer:'<path d="M2.5 3.5h3.7A1.8 1.8 0 018 5.3v8a1.6 1.6 0 00-1.6-1.6H2.5zM13.5 3.5H9.8A1.8 1.8 0 008 5.3v8a1.6 1.6 0 011.6-1.6h3.9z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+  vendor:'<path d="M4.6 5.5h6.8l1.6 8H3z" fill="currentColor"/><path d="M6 5.5C6 3.8 6.9 2.6 8 2.6s2 1.2 2 2.9" fill="none" stroke="currentColor" stroke-width="1.5"/>',
+  craft:'<path d="M3.2 13l5.6-5.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M7.6 3.2l5.2 5.2-2.1 2.1-5.2-5.2z" fill="currentColor"/>',
+  exit:'<path d="M2.8 8h8M7.6 4.4L11.2 8l-3.6 3.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.6 3v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>',
+  travel:'<path d="M2 10h12l-2.4 3.2H4.4z" fill="currentColor"/><path d="M8 2.5v7M8 3.2l4 5H8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>',
+  landmark:'<path d="M4.2 14V2.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4.2 3h8l-2 2.7 2 2.7h-8z" fill="currentColor"/>',
+  other:'<circle cx="8" cy="8" r="3.2" fill="currentColor"/>'
+};
+const placeGlyph = k => `<svg viewBox="0 0 16 16" aria-hidden="true">${PICON[PKINDS[k] ? k : "other"]}</svg>`;
+const lvlText = l => l ? l[0] + (l[1] !== l[0] ? "-" + l[1] : "") : "";
+function zoneKeyFor(x){ return x ? (Z.byKey[x] ? x : zoneKeyForSlug(x)) : null; }
+function zoneName(x){ const k = zoneKeyFor(x); if(k) return Z.byKey[k].name; const z = ((S.snapshot||{}).zones||{})[x]; return z ? z.name : String(x || ""); }
+// the zones next door, from the wiki's "Travel To & From" in both directions
+function zoneLinks(slug){
+  const zs = (S.snapshot||{}).zones || {}, out = new Set(((zs[slug] || {}).links) || []);
+  Object.values(zs).forEach(z => { if((z.links || []).includes(slug)) out.add(z.slug); });
+  out.delete(slug); return [...out];
+}
+
+const PL = {rows:[], off:false, mod:false, at:0, busy:false};
+const rowPlace = r => ({id:"c-" + r.id, rid:r.id, src:"community", map:r.map, x:r.x, y:r.y, kind:PKINDS[r.kind] ? r.kind : "other", title:r.title, note:r.note,
+  lvl:r.lvl_lo ? [r.lvl_lo, r.lvl_hi || r.lvl_lo] : null, to:r.to_zone, by:r.author});
+function placesFor(m){
+  const out = ((S.curated||{}).places || []).filter(p => p.map === m.id).map(p => Object.assign({src:"site"}, p));
+  PL.rows.forEach(r => { if(r.status === "approved" && r.map === m.id) out.push(rowPlace(r)); });
+  return out;
+}
+function placeById(id){
+  const p = ((S.curated||{}).places || []).find(x => x.id === id); if(p) return Object.assign({src:"site"}, p);
+  const r = PL.rows.find(x => "c-" + x.id === id && x.status === "approved"); return r ? rowPlace(r) : null;
+}
+// camps, named and quests are "where to find it" spoilers: Classic shows them only with that switch on
+function placeShown(p, c){
+  if(UI.hideKinds[p.kind]) return false;
+  if(["camp","named","quest"].includes(p.kind) && !showWhere(c)) return false;
+  if(UI.myLevel && p.lvl && !(p.lvl[0] <= c.level + 2 && p.lvl[1] >= c.level - 2)) return false;
+  return true;
+}
+function placeIcon(p, c, mine){
+  const k = PKINDS[p.kind] ? p.kind : "other", fit = p.lvl && c && p.lvl[0] <= c.level + 1 && p.lvl[1] >= c.level - 1;
+  const t = timers()[placeTK(p)];
+  return L.divIcon({className:`place k-${k}${fit ? " fit" : ""}${mine ? " mine" : ""}${p.src === "community" ? " comm" : ""}${t ? " timed" : ""}`,
+    html:`<span class="pk">${placeGlyph(k)}</span><b class="plab">${esc(p.title || PKINDS[k].l)}${p.lvl ? ` <small>${lvlText(p.lvl)}</small>` : ""}</b>`,
+    iconSize:[24,24], iconAnchor:[12,12], popupAnchor:[0,-12]});
+}
+function placePopup(p){
+  const k = PKINDS[p.kind] ? p.kind : "other", d = document.createElement("div"); d.className = "pop";
+  const toK = zoneKeyFor(p.to), z = curZone();
+  const tk = (k === "camp" || k === "named") ? placeTK(p) : null;
+  d.innerHTML = `<div class="pkind">${esc(PKINDS[k].l)}${p.lvl ? ` · levels ${lvlText(p.lvl)}` : ""}</div><h5>${esc(p.title)}</h5>${p.note ? `<p>${esc(p.note)}</p>` : ""}
+    ${toK ? `<button class="btn" data-a="go">${Z.byKey[toK].maps.length ? "Open the " + esc(Z.byKey[toK].name) + " map" : "Go to " + esc(Z.byKey[toK].name)} →</button>` : ""}
+    ${tk ? `<div class="ptm">${timerHTML(tk, p.title, z ? z.key : "")}</div>` : ""}
+    <div class="psrc">${p.src === "community" ? `Added by ${esc(p.by || "a player")}, checked before it went up.` : "From the map's own labels."} <button class="more" data-a="link">Copy link</button></div>`;
+  const go = d.querySelector('[data-a="go"]'); if(go) go.onclick = () => { MAP.map.closePopup(); openZone(toK); };
+  d.querySelector('[data-a="link"]').onclick = () => copyLink({place:p.id});
+  wireTimers(d);
+  return d;
+}
+
+// labels: only once zoomed in past the whole-map view, highest priority first, never on top of each other
+let labRaf = 0;
+function schedLabels(){ cancelAnimationFrame(labRaf); labRaf = requestAnimationFrame(layoutLabels); }
+function labelled(mk, lp, quiet, name){
+  mk.on("add", () => { const el = mk.getElement(); if(!el) return; el.dataset.lp = lp; if(quiet) el.dataset.quiet = "1"; if(name){ el.setAttribute("aria-label", name); el.setAttribute("role", "button"); } });
+}
+function layoutLabels(){
+  const map = MAP.map, box = $("#map"); if(!map || !box) return;
+  const els = [...box.querySelectorAll(".leaflet-marker-icon[data-lp]")];
+  els.forEach(e => e.classList.remove("lab"));
+  if(map.getZoom() < (MAP.fitZoom == null ? 0 : MAP.fitZoom + 1)) return;
+  const cands = els.filter(e => !e.dataset.quiet && e.querySelector(".plab")).sort((a,b) => (+a.dataset.lp) - (+b.dataset.lp));
+  cands.forEach(e => e.classList.add("lab"));
+  const r0 = box.getBoundingClientRect(), rects = cands.map(e => e.querySelector(".plab").getBoundingClientRect());
+  cands.forEach(e => e.classList.remove("lab"));
+  const taken = [];
+  cands.forEach((e, i) => {
+    const r = rects[i];
+    if(r.right < r0.left || r.left > r0.right || r.bottom < r0.top || r.top > r0.bottom) return;
+    if(taken.some(t => r.left < t.right + 4 && r.right > t.left - 4 && r.top < t.bottom + 2 && r.bottom > t.top - 2)) return;
+    taken.push(r); e.classList.add("lab");
+  });
+}
+
+// the row of type filters above the map
+function renderPFilter(m, c){
+  const el = $("#pFilter"); if(!el) return;
+  if(!m){ el.hidden = true; return; }
+  const counts = {}; let leveled = false;
+  placesFor(m).forEach(p => { if(["camp","named","quest"].includes(p.kind) && !showWhere(c)) return; counts[p.kind] = (counts[p.kind] || 0) + 1; if(p.lvl) leveled = true; });
+  S.user.pins.filter(p => p.map === m.id).forEach(p => { const k = p.kind || "other"; counts[k] = (counts[k] || 0) + 1; });
+  const ks = PKIND_LIST.filter(k => counts[k]);
+  el.hidden = !ks.length;
+  el.innerHTML = ks.map(k => `<button type="button" class="pchip k-${k} ${UI.hideKinds[k] ? "" : "on"}" data-pk="${k}" aria-pressed="${!UI.hideKinds[k]}"><span class="pk">${placeGlyph(k)}</span>${esc(PKINDS[k].p)} <small>${counts[k]}</small></button>`).join("")
+    + (leveled ? `<button type="button" class="pchip lvl ${UI.myLevel ? "on" : ""}" data-pl aria-pressed="${!!UI.myLevel}">Only my level</button>` : "");
+  el.querySelectorAll("[data-pk]").forEach(b => b.onclick = () => { const k = b.dataset.pk; if(UI.hideKinds[k]) delete UI.hideKinds[k]; else UI.hideKinds[k] = true; saveUI(); drawPins(m); renderPFilter(m, c); const n = el.querySelector(`[data-pk="${k}"]`); if(n) n.focus(); });
+  const lv = el.querySelector("[data-pl]"); if(lv) lv.onclick = () => { UI.myLevel = !UI.myLevel; saveUI(); drawPins(m); renderPFilter(m, c); const n = el.querySelector("[data-pl]"); if(n) n.focus(); };
+}
+
+// ---- community places (Supabase table "places"; supabase/places.sql sets it up)
+async function loadPlaces(force){
+  if(!Store.sb || PL.off || PL.busy) return;
+  if(!force && Date.now() - PL.at < 5 * 60e3) return;
+  PL.busy = true; PL.at = Date.now();
+  try{
+    const {data, error} = await Store.sb.from("places").select("id,user_id,map,x,y,kind,title,note,lvl_lo,lvl_hi,to_zone,author,status,created_at").order("created_at", {ascending:false}).limit(3000);
+    if(error){ if(/does not exist|schema cache|42P01|PGRST20[45]/i.test((error.message || "") + " " + (error.code || ""))) PL.off = true; return; }
+    PL.rows = data || [];
+    if(Store.uid){ const r = await Store.sb.from("place_mods").select("user_id").eq("user_id", Store.uid).maybeSingle(); PL.mod = !!(r && r.data); }
+    // keep the status of your own suggestions up to date
+    let changed = false;
+    S.user.pins.forEach(p => { if(!p.sug) return; const r = PL.rows.find(x => x.id === p.sug); const st = r ? r.status : null; if(!st){ delete p.sug; delete p.sugSt; changed = true; } else if(p.sugSt !== st){ p.sugSt = st; changed = true; } });
+    if(changed) save();
+    if(UI.view === "map" && S.user.characters.length && MAP.map) showMap();
+  }catch(_){}finally{ PL.busy = false; }
+}
+const SUG_LABEL = {pending:"Suggested · waiting for review", approved:"On the map for everyone", rejected:"Not added this time"};
+function suggestHTML(p){
+  if(!Store.sb || !Store.uid || PL.off) return "";
+  if(p.sug) return `<div class="psug sg-${esc(p.sugSt || "pending")}">${esc(SUG_LABEL[p.sugSt || "pending"])}${(p.sugSt || "pending") === "pending" ? ` <button class="more" data-a="unsug">Withdraw</button>` : ""}</div>`;
+  const c = char();
+  return `<div class="psug"><button class="btn" data-a="sug">Suggest for everyone</button><label class="own"><input type="checkbox" class="sgname" checked> Show ${esc(c.name || "my character's name")}</label><div class="hint">A moderator checks it before it goes on everyone's map.</div></div>`;
+}
+function wireSuggest(d, p){
+  const b = d.querySelector('[data-a="sug"]');
+  if(b) b.onclick = async () => {
+    if(!p.label || p.label === "My pin"){ b.textContent = "Give it a label first"; return; }
+    b.disabled = true; b.textContent = "Sending…";
+    const c = char(), named = d.querySelector(".sgname");
+    const row = {map:p.map, x:p.x, y:p.y, kind:p.kind || "other", title:p.label.slice(0,80), note:(p.note || "").slice(0,400), lvl_lo:p.lvl ? p.lvl[0] : null, lvl_hi:p.lvl ? p.lvl[1] : null, to_zone:p.to || null, author:named && named.checked ? (c.name || null) : null};
+    const {data, error} = await Store.sb.from("places").insert(row).select("id").single();
+    if(error){ b.disabled = false; b.textContent = /25 places/.test(error.message) ? "25 already waiting" : "Couldn't send it. Try again"; return; }
+    p.sug = data.id; p.sugSt = "pending"; save(); PL.at = 0; loadPlaces(true);
+    MAP.map.closePopup(); toast("Sent. It goes on everyone's map once a moderator approves it.");
+    renderSide(curZone(), curMap());
+  };
+  const u = d.querySelector('[data-a="unsug"]');
+  if(u) u.onclick = async () => {
+    const {error} = await Store.sb.from("places").delete().eq("id", p.sug);
+    if(error){ u.textContent = "Couldn't withdraw it"; return; }
+    delete p.sug; delete p.sugSt; save(); PL.at = 0; loadPlaces(true); MAP.map.closePopup(); renderSide(curZone(), curMap());
+  };
+}
+function openReview(){
+  const rows = PL.rows.filter(r => r.status === "pending").sort((a,b) => a.created_at.localeCompare(b.created_at));
+  const mapName = id => { const mm = Z.maps[id]; return mm ? Z.byKey[mm.zone].name + (Z.byKey[mm.zone].maps.length > 1 ? " · " + mm.title : "") : id; };
+  modal("Suggested places", (rows.length ? `<p class="mtext">Approve a place and it shows on everyone's map. Turn it down and only the player who sent it sees that.</p>` + rows.map(r => `<div class="rv" data-id="${esc(r.id)}">
+      <div class="rvt"><span class="pdot s-place">${placeGlyph(r.kind)}</span><div><b>${esc(r.title)}</b> <small>${esc((PKINDS[r.kind] || PKINDS.other).l)}${r.lvl_lo ? " · levels " + r.lvl_lo + (r.lvl_hi && r.lvl_hi !== r.lvl_lo ? "-" + r.lvl_hi : "") : ""}${r.to_zone ? " · to " + esc(zoneName(r.to_zone)) : ""}</small>
+        <small>${esc(mapName(r.map))} · from ${esc(r.author || "a player")} · ${esc(ago(r.created_at))}</small>${r.note ? `<p>${esc(r.note)}</p>` : ""}</div></div>
+      <div class="rva"><button class="btn" data-rv="see">See it</button><button class="btn del" data-rv="rejected">Turn down</button><button class="btn primary" data-rv="approved">Approve</button></div></div>`).join("")
+    : `<p class="mtext">Nothing waiting for review.</p>`) + `<div class="mfoot"><button class="btn" id="rvDone">Done</button></div>`, true);
+  $("#rvDone").onclick = closeModal;
+  $$("#modal [data-rv]").forEach(b => b.onclick = async () => {
+    const id = b.closest("[data-id]").dataset.id, r = PL.rows.find(x => x.id === id); if(!r) return;
+    if(b.dataset.rv === "see"){ closeModal(); seeSpot(r); return; }
+    b.disabled = true;
+    const {error} = await Store.sb.from("places").update({status:b.dataset.rv, reviewed_at:new Date().toISOString()}).eq("id", id);
+    if(error){ b.disabled = false; b.textContent = "Couldn't save"; return; }
+    r.status = b.dataset.rv; PL.at = 0; await loadPlaces(true); openReview();
+  });
+}
+function seeSpot(r){
+  if(!goToMap(r.map)) return;
+  const m = Z.maps[r.map], at = ll(r, m);
+  MAP.map.setView(at, Math.max(MAP.map.getZoom(), (MAP.fitZoom || -2) + 1.2), {animate:true});
+  const ring = L.circleMarker(at, {radius:18, color:"#e5795f", weight:3, fill:false}).addTo(MAP.map);
+  L.popup({autoPanPadding:[30,30]}).setLatLng(at).setContent(`<div class="pop"><div class="pkind">Waiting for review</div><h5>${esc(r.title)}</h5><button class="btn" onclick="openReview()">Back to the list</button></div>`).openOn(MAP.map);
+  setTimeout(() => ring.remove(), 8000);
+}
+
+// ---- respawn timers: "Killed it" starts a countdown that every device you're signed in on can see
+const RESPAWN_DEFAULT = 10;
+const timers = () => S.user.timers || (S.user.timers = {});
+const timerKey = (scope, name) => String(scope || "") + "|" + norm(name).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
+const campKey = cp => timerKey(cp.zoneSlug, cp.area + " " + ((cp.named || [])[0] || ""));
+const campName = cp => (cp.named || [])[0] ? cp.named[0] + " · " + cp.area : cp.area;
+const placeTK = p => timerKey((Z.byKey[(Z.maps[p.map] || {}).zone] || {}).slug || p.map, p.title);
+const respawnOf = key => ((S.user.respawn || {})[key]) || RESPAWN_DEFAULT;
+function fmtLeft(ms){ if(ms <= 0) return "Up"; const sec = Math.ceil(ms / 1000), m = Math.floor(sec / 60); return m >= 60 ? Math.floor(m / 60) + "h " + String(m % 60).padStart(2, "0") + "m" : m + ":" + String(sec % 60).padStart(2, "0"); }
+function timerHTML(key, name, zone){
+  const t = timers()[key];
+  const inner = t ? `<b class="tl ${t.e <= Date.now() ? "up" : ""}" data-tleft="${esc(key)}" title="Respawn timer, ${t.m} min">${fmtLeft(t.e - Date.now())}</b><button type="button" class="tbtn" data-tgo="${esc(key)}" title="Killed it again: restart" aria-label="Restart the timer">↻</button><button type="button" class="tbtn" data-tstop="${esc(key)}" title="Stop the timer" aria-label="Stop the timer">×</button>`
+    : `<button type="button" class="tgo" data-tgo="${esc(key)}" title="Start a ${respawnOf(key)}-minute respawn timer, shown on all your devices"><i class="tic" aria-hidden="true"></i>Killed it</button>`;
+  return `<span class="tslot${t ? " on" : ""}" data-tslot="${esc(key)}" data-tn="${esc(name)}" data-tz="${esc(zone || "")}">${inner}</span>`;
+}
+function startTimer(key, name, zone){ const m = respawnOf(key); timers()[key] = {e:Date.now() + m * 60e3, m, n:String(name || "").slice(0,60), z:zone || ""}; TMR.rang.delete(key); save(); refreshTimers(); }
+function stopTimer(key){ delete timers()[key]; TMR.rang.delete(key); save(); refreshTimers(); }
+function setRespawn(key, m){
+  m = Math.max(1, Math.min(120, parseInt(m) || RESPAWN_DEFAULT)); (S.user.respawn = S.user.respawn || {})[key] = m;
+  const t = timers()[key]; if(t){ t.e += (m - t.m) * 60e3; t.m = m; if(t.e > Date.now()) TMR.rang.delete(key); }
+  save(); refreshTimers();
+}
+function wireTimers(root){
+  if(!root) return;
+  root.querySelectorAll("[data-tgo]").forEach(b => b.onclick = e => { e.stopPropagation(); const sl = b.closest("[data-tslot]"); startTimer(b.dataset.tgo, sl ? sl.dataset.tn : "", sl ? sl.dataset.tz : ""); });
+  root.querySelectorAll("[data-tstop]").forEach(b => b.onclick = e => { e.stopPropagation(); stopTimer(b.dataset.tstop); });
+}
+function refreshTimers(){
+  $$("[data-tslot]").forEach(sl => { if(sl.closest("#tray")) return; const tmp = document.createElement("span"); tmp.innerHTML = timerHTML(sl.dataset.tslot, sl.dataset.tn, sl.dataset.tz); const n = tmp.firstElementChild; sl.replaceWith(n); wireTimers(n); });
+  renderTray(); tickTimers();
+  if(UI.view === "map" && MAP.map && MAP.places && S.user.characters.length && curMap()) drawPins(curMap());
+}
+const TMR = {rang:new Set(), title:document.title};
+const notifyOn = () => { try{ return localStorage.getItem("mnm-notify") === "1" && window.Notification && Notification.permission === "granted"; }catch(_){ return false; } };
+function tickTimers(){
+  const now = Date.now(), all = timers();
+  $$("[data-tleft]").forEach(b => { const t = all[b.dataset.tleft]; if(!t) return; b.textContent = fmtLeft(t.e - now); b.classList.toggle("up", t.e <= now); });
+  const up = Object.entries(all).filter(([, t]) => t.e <= now);
+  up.forEach(([k, t]) => {
+    if(TMR.rang.has(k)) return; TMR.rang.add(k);
+    if(now - t.e < 90e3 && notifyOn()) try{ new Notification("Up: " + t.n, {body:(Z.byKey[t.z] || {}).name || "Respawn timer", tag:k}); }catch(_){}
+  });
+  document.title = up.length ? `(${up.length}) Up: ${up.map(([, t]) => t.n).join(", ").slice(0, 60)} · ${TMR.title}` : TMR.title;
+}
+setInterval(() => { if(Object.keys(S.user.timers || {}).length) tickTimers(); else if(document.title !== TMR.title) document.title = TMR.title; }, 1000);
+function renderTray(){
+  const tr = $("#tray"); if(!tr) return;
+  const list = Object.entries(timers()).sort((a,b) => a[1].e - b[1].e);
+  tr.hidden = !list.length || $("#app").hidden || !S.user.characters.length;
+  if(tr.hidden) return;
+  const canNote = !!window.Notification && Notification.permission !== "denied";
+  tr.innerHTML = `<header><b>Respawn timers</b>${canNote ? `<button type="button" class="more" id="trNote">${notifyOn() ? "Alerts on" : "Alert me"}</button>` : ""}<button type="button" class="more" id="trMin" aria-expanded="${!UI.trayMin}">${UI.trayMin ? "Show " + list.length : "Hide"}</button></header>`
+    + (UI.trayMin ? "" : `<div class="trl">${list.map(([k, t]) => `<div class="trr"><span class="trn"><b>${esc(t.n || "Timer")}</b><small>${t.z && Z.byKey[t.z] ? esc(Z.byKey[t.z].name) + " · " : ""}<button type="button" class="more" data-tm="${esc(k)}|-1" aria-label="One minute shorter">−</button> ${t.m} min <button type="button" class="more" data-tm="${esc(k)}|1" aria-label="One minute longer">+</button></small></span>${timerHTML(k, t.n, t.z)}</div>`).join("")}</div>`);
+  wireTimers(tr);
+  tr.querySelectorAll("[data-tm]").forEach(b => b.onclick = () => { const v = b.dataset.tm, i = v.lastIndexOf("|"), k = v.slice(0, i); setRespawn(k, (timers()[k] || {m:respawnOf(k)}).m + parseInt(v.slice(i + 1))); });
+  $("#trMin").onclick = () => { UI.trayMin = !UI.trayMin; saveUI(); renderTray(); };
+  const nb = $("#trNote");
+  if(nb) nb.onclick = async () => {
+    if(notifyOn()){ try{ localStorage.setItem("mnm-notify", "0"); }catch(_){} renderTray(); return; }
+    let perm = Notification.permission; if(perm !== "granted") perm = await Notification.requestPermission();
+    try{ localStorage.setItem("mnm-notify", perm === "granted" ? "1" : "0"); }catch(_){}
+    renderTray();
+  };
+}
+// "Camp taken?": the nearest other camps for your level, same zone first, then the zones next door
+function campAlts(cp, c){
+  const L = c.level, group = c.solo === false, near = new Set(zoneLinks(cp.zoneSlug));
+  const rank = x => x.zoneSlug === cp.zoneSlug ? 0 : near.has(x.zoneSlug) ? 1 : 2;
+  return D.camps.filter(x => x !== cp && !(x.zoneSlug === cp.zoneSlug && x.area === cp.area)).map(x => ({x, r:campRange(x, group)}))
+    .filter(o => o.r && o.r[0] <= L + 1 && o.r[1] >= L - 1)
+    .sort((a,b) => rank(a.x) - rank(b.x) || Math.abs((a.r[0] + a.r[1]) / 2 - L) - Math.abs((b.r[0] + b.r[1]) / 2 - L)).slice(0, 3);
+}
+function toggleAlts(root, i, cp){
+  const box = root.querySelector(`[data-alts="${i}"]`); if(!box) return;
+  if(!box.hidden){ box.hidden = true; return; }
+  const alts = campAlts(cp, char());
+  box.innerHTML = alts.length ? `<span class="altl">Try instead:</span>` + alts.map(({x, r}) => { const zk = zoneKeyForSlug(x.zoneSlug); return `<span class="alt"><b>${esc(x.area)}</b> ${esc(x.zone)} · ${r[0]}-${r[1]}${zk ? ` <button class="more" data-zone="${esc(zk)}">map</button>` : ""}</span>`; }).join("") : `<span class="altl">No other camp for your level on the list yet.</span>`;
+  box.hidden = false;
+  box.querySelectorAll("[data-zone]").forEach(b => b.onclick = () => openZone(b.dataset.zone));
+}
+
+// ---- links to a zone, a map or a place
+const LINK = {done:false};
+function linkTo(o){ const q = new URLSearchParams(); Object.entries(o).forEach(([k, v]) => { if(v) q.set(k, v); }); return siteURL() + "?" + q.toString(); }
+async function copyLink(o){
+  const u = linkTo(o);
+  try{ await navigator.clipboard.writeText(u); toast("Link copied. Anyone signed in can open it."); }
+  catch(_){ toast(u, 9000); }
+}
+function applyLink(){
+  if(!S.user.characters.length || !Z.zones.length) return;
+  LINK.done = true;
+  let q = location.search;
+  if(!/[?&](zone|place|pin)=/.test(q)){ try{ const st = JSON.parse(localStorage.getItem("mnm-link") || "null"); if(st && Date.now() - st.at < 3600e3) q = st.q; }catch(_){} }
+  try{ localStorage.removeItem("mnm-link"); }catch(_){}
+  if(location.search) history.replaceState(null, "", location.pathname + location.hash);
+  if(!/[?&](zone|place|pin)=/.test(q)) return;
+  const pr = new URLSearchParams(q), place = pr.get("place") || pr.get("pin"), zone = zoneKeyFor(pr.get("zone")), map = pr.get("map");
+  setTimeout(() => {
+    if(place && (placeById(place) || Z.pins[place])) return focusPin(place);
+    if(zone){ if(map && Z.maps[map]) UI.alt[zone] = map; openZone(zone); }
+  }, 80);
+}
+let toastT = 0;
+function toast(t, ms){ const el = $("#toast"); el.textContent = t; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => el.hidden = true, ms || 3200); }
+
 function goToMap(mapId){
   const m = Z.maps[mapId]; if(!m) return false;
   const wasPlan = UI.view !== "map";
@@ -3386,6 +3846,16 @@ function goToMap(mapId){
 }
 function focusPin(id){
   let p = Z.pins[id], mine = false;
+  const pl = !p && placeById(id);
+  if(pl){
+    if(UI.hideKinds[pl.kind]){ delete UI.hideKinds[pl.kind]; saveUI(); }
+    MAP.force = pl.id;
+    if(!goToMap(pl.map)) return;
+    const mk = MAP.markers[pl.id]; if(!mk) return;
+    MAP.map.setView(mk.getLatLng(), Math.max(MAP.map.getZoom(), (MAP.fitZoom || -2) + 1), {animate:true});
+    setTimeout(() => mk.openPopup(), 300);
+    return;
+  }
   if(!p){ p = S.user.pins.find(x => x.id === id); mine = true; }
   if(!p) return;
   if(mine && !UI.showMine) toggleLayer("mine", true);

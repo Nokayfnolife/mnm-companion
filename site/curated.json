@@ -2539,5 +2539,439 @@
    "approx": false
   }
  ],
+ "placesNote": "Places drawn on the maps for everyone: guild halls, markets, temples, exits and camps. Night Harbor's are read off the map's own labels (Maggot's v5 map, CC BY-SA 4.0); onMap means the map already prints the name, so the site shows it on hover only.",
+ "places": [
+  {
+   "id": "nh-g-nec-shd",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Necromancer & Shadow Knight guild",
+   "x": 0.55,
+   "y": 0.226,
+   "note": "The Concourse of Souls (NEC/SHD on the map).",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-clr-pal",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Cleric & Paladin guild",
+   "x": 0.2164,
+   "y": 0.3764,
+   "note": "At the Hospice (CLR/PAL on the map).",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-bst-shm",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Beastmaster & Shaman guild",
+   "x": 0.5986,
+   "y": 0.4294,
+   "note": "BST/SHM on the map.",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-dru",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Druid guild",
+   "x": 0.61,
+   "y": 0.5134,
+   "note": "DRU on the map.",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-brd",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Bard guild",
+   "x": 0.3143,
+   "y": 0.5167,
+   "note": "BRD on the map.",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-rog",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Rogue guild",
+   "x": 0.3607,
+   "y": 0.5898,
+   "note": "ROG on the map.",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-arc-ftr-rng",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Archer, Fighter & Ranger guild",
+   "x": 0.2271,
+   "y": 0.6008,
+   "note": "ARC/FTR/RNG on the map, by the Steel Talon Garrison.",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-ele-mnk",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Elementalist & Monk guild",
+   "x": 0.5521,
+   "y": 0.6025,
+   "note": "ELE/MNK on the map.",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-wiz",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Wizard guild",
+   "x": 0.8179,
+   "y": 0.3495,
+   "note": "WIZ on the map, in Sageside.",
+   "onMap": true
+  },
+  {
+   "id": "nh-g-enc-inq-spb",
+   "map": "night-harbor-v5",
+   "kind": "trainer",
+   "title": "Enchanter, Inquisitor & Spellblade guild",
+   "x": 0.8571,
+   "y": 0.3092,
+   "note": "ENC/INQ/SPB on the map, by the Temples to Vespyra & Tilustra.",
+   "onMap": true
+  },
+  {
+   "id": "nh-x-tomb",
+   "map": "night-harbor-v5",
+   "kind": "exit",
+   "title": "To the Tomb of the Last Wyrmsbane",
+   "x": 0.12,
+   "y": 0.2706,
+   "note": "Cave in the western cliffs.",
+   "to": "tomb-of-the-last-wyrmsbane"
+  },
+  {
+   "id": "nh-x-dunes",
+   "map": "night-harbor-v5",
+   "kind": "exit",
+   "title": "To Shaded Dunes",
+   "x": 0.0457,
+   "y": 0.5041,
+   "note": "Out through the West Gate.",
+   "to": "shaded-dunes"
+  },
+  {
+   "id": "nh-x-strand",
+   "map": "night-harbor-v5",
+   "kind": "exit",
+   "title": "To Sungreet Strand",
+   "x": 0.7357,
+   "y": 0.0504,
+   "note": "North road past the North Gate.",
+   "to": "sungreet-strand"
+  },
+  {
+   "id": "nh-x-sewers",
+   "map": "night-harbor-v5",
+   "kind": "exit",
+   "title": "To the Sewers",
+   "x": 0.6093,
+   "y": 0.6201,
+   "to": "night-harbor-sewers",
+   "onMap": true
+  },
+  {
+   "id": "nh-t-keepers",
+   "map": "night-harbor-v5",
+   "kind": "travel",
+   "title": "Boat to Keeper's Bight",
+   "x": 0.6121,
+   "y": 0.8007,
+   "note": "From Twilight Harbor.",
+   "to": "keepers-bight",
+   "onMap": true
+  },
+  {
+   "id": "nh-t-docks",
+   "map": "night-harbor-v5",
+   "kind": "travel",
+   "title": "Teleporter to the Docks",
+   "x": 0.725,
+   "y": 0.3958,
+   "onMap": true
+  },
+  {
+   "id": "nh-t-sageside",
+   "map": "night-harbor-v5",
+   "kind": "travel",
+   "title": "Teleporter to Sageside",
+   "x": 0.7214,
+   "y": 0.5898,
+   "onMap": true
+  },
+  {
+   "id": "nh-v-market",
+   "map": "night-harbor-v5",
+   "kind": "vendor",
+   "title": "Night Market",
+   "x": 0.3914,
+   "y": 0.5134,
+   "note": "Bags; cloth, chain and plate armor; used weapons; grocer and butcher; cobbler; herbs and spices; general goods.",
+   "onMap": true
+  },
+  {
+   "id": "nh-v-bazaar",
+   "map": "night-harbor-v5",
+   "kind": "vendor",
+   "title": "Blackfeather Bazaar",
+   "x": 0.6193,
+   "y": 0.1857,
+   "note": "Food and animal parts; used armor; weaponsmith; used weapons; butcher and cook; pelt trader.",
+   "onMap": true
+  },
+  {
+   "id": "nh-v-halftown",
+   "map": "night-harbor-v5",
+   "kind": "vendor",
+   "title": "Little Half Town",
+   "x": 0.5086,
+   "y": 0.5705,
+   "note": "Bags; cloth, chain, leather and plate armor; reagents; cobbler; general goods.",
+   "onMap": true
+  },
+  {
+   "id": "nh-v-sageside",
+   "map": "night-harbor-v5",
+   "kind": "vendor",
+   "title": "Sageside",
+   "x": 0.7,
+   "y": 0.3386,
+   "note": "Used armor; used weapons; food; general goods; bags; leatherworker.",
+   "onMap": true
+  },
+  {
+   "id": "nh-l-matswar",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Temple to the Matswar",
+   "x": 0.4857,
+   "y": 0.2025,
+   "note": "God of Death.",
+   "onMap": true
+  },
+  {
+   "id": "nh-l-eltindra",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Temple to Eltindra",
+   "x": 0.275,
+   "y": 0.3,
+   "note": "Goddess of Travelers.",
+   "onMap": true
+  },
+  {
+   "id": "nh-l-relle",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Temple to Relle",
+   "x": 0.2914,
+   "y": 0.5672,
+   "note": "Goddess of Fertility.",
+   "onMap": true
+  },
+  {
+   "id": "nh-l-haradrel",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Temple to Haradrel",
+   "x": 0.2257,
+   "y": 0.673,
+   "note": "God of War.",
+   "onMap": true
+  },
+  {
+   "id": "nh-l-yuum",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Temple to Yuum",
+   "x": 0.7,
+   "y": 0.7066,
+   "note": "God of Sanctuary.",
+   "onMap": true
+  },
+  {
+   "id": "nh-l-vesp-til",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Temples to Vespyra & Tilustra",
+   "x": 0.8321,
+   "y": 0.2924,
+   "note": "Goddesses of Magic and of Knowledge.",
+   "onMap": true
+  },
+  {
+   "id": "nh-l-porbor",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Shrine to Porbor",
+   "x": 0.3964,
+   "y": 0.5562,
+   "note": "God of Pots.",
+   "onMap": true
+  },
+  {
+   "id": "nh-l-arena",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "The Arena",
+   "x": 0.4257,
+   "y": 0.2588,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-palace",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "The Palace",
+   "x": 0.7071,
+   "y": 0.4462,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-library",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Library",
+   "x": 0.8271,
+   "y": 0.3756,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-inn",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Shaded Bloom Inn",
+   "x": 0.2986,
+   "y": 0.4176,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-sojourner",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Sojourner's Camp",
+   "x": 0.2786,
+   "y": 0.3369,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-bath",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Bathhouse",
+   "x": 0.27,
+   "y": 0.5243,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-northgate",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "North Gate",
+   "x": 0.7214,
+   "y": 0.284,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-westgate",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "West Gate",
+   "x": 0.2007,
+   "y": 0.4999,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-garrison",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Steel Talon Garrison",
+   "x": 0.2257,
+   "y": 0.6537,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-naval",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Steel Talon Naval Base",
+   "x": 0.3257,
+   "y": 0.6991,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-twilight",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Twilight Harbor",
+   "x": 0.5964,
+   "y": 0.7789,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-bends",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "The Bends",
+   "x": 0.8214,
+   "y": 0.589,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-crypt",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Night Harbor Crypt",
+   "x": 0.5071,
+   "y": 0.3252,
+   "onMap": true
+  },
+  {
+   "id": "nh-l-gravedigger",
+   "map": "night-harbor-v5",
+   "kind": "landmark",
+   "title": "Grave Digger Camp",
+   "x": 0.6286,
+   "y": 0.0395,
+   "onMap": true
+  },
+  {
+   "id": "nh-c-inn-basement",
+   "map": "night-harbor-v5",
+   "kind": "camp",
+   "title": "Shaded Bloom Inn Basement",
+   "x": 0.3071,
+   "y": 0.4436,
+   "note": "Beetles and rats. A quiet alternative to the gates.",
+   "lvl": [
+    1,
+    3
+   ]
+  },
+  {
+   "id": "nh-c-saltbreeze",
+   "map": "night-harbor-v5",
+   "kind": "camp",
+   "title": "Saltbreeze Park",
+   "x": 0.5093,
+   "y": 0.4605,
+   "note": "Bats.",
+   "lvl": [
+    1,
+    5
+   ]
+  }
+ ],
  "refreshHours": 6
 }
