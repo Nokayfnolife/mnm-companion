@@ -1,0 +1,14 @@
+name: Probe community wiki API
+on:
+  push:
+    branches: [probe-wiki]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          UA="MnMCompanion/1.0 (https://mnmcompanion.gg; hello@mnmcompanion.gg)"
+          B="https://monstersandmemories.miraheze.org/w/api.php"
+          curl -s -o a.json -w "siteinfo HTTP %{http_code}\n" -A "$UA" "$B?action=query&meta=siteinfo&siprop=statistics&format=json"; head -c 400 a.json; echo
+          curl -s -o b.json -w "categories HTTP %{http_code}\n" -A "$UA" "$B?action=query&list=allcategories&aclimit=500&acprop=size&format=json"; python3 -c "import json;d=json.load(open('b.json'));print(sorted([(c['size'],c['*']) for c in d['query']['allcategories']],reverse=True)[:60])" || head -c 600 b.json
+          curl -s -o c.json -w "parse HTTP %{http_code}\n" -A "$UA" "$B?action=parse&page=Main_Page&prop=links&format=json"; python3 -c "import json;d=json.load(open('c.json'));print([l['*'] for l in d['parse']['links']][:120])" || head -c 400 c.json
