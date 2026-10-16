@@ -1743,7 +1743,7 @@ html.lock,html.lock body{overflow:hidden}
         <div id="map" class="map"></div>
         <div id="noMap" hidden></div>
         <div class="credit" id="mapCredit"></div>
-        <div class="legend"><span><i style="background:var(--now)"></i>for your level now</span><span><i style="background:var(--brass)"></i>soon</span><span><i style="background:var(--hold)"></i>not yet</span><span><i style="background:var(--none)"></i>landmark, earlier or later</span><span><i style="background:var(--info);border-radius:2px;transform:rotate(45deg)"></i>your pins</span></div>
+        <div class="legend" id="mapLegend"><span><i style="background:var(--now)"></i>for your level now</span><span><i style="background:var(--brass)"></i>soon</span><span><i style="background:var(--hold)"></i>not yet</span><span><i style="background:var(--none)"></i>landmark, earlier or later</span><span><i style="background:var(--info);border-radius:2px;transform:rotate(45deg)"></i>your pins</span></div>
       </div>
       <aside class="card side" id="side"></aside>
     </div>
@@ -3001,8 +3001,11 @@ function showMap(){
   const alt = $("#mapAlt");
   alt.hidden = z.maps.length < 2;
   alt.innerHTML = z.maps.length > 1 ? z.maps.map(x => `<button data-alt="${esc(x.id)}" class="${m && x.id===m.id?"on":""}">${esc(x.title)}</button>`).join("") : "";
-  $$("#mapAlt button").forEach(b => b.onclick = () => { UI.alt[z.key] = b.dataset.alt; saveUI(); setDrop(false); showMap(); });
+  $$("#mapAlt button").forEach(b => b.onclick = () => { UI.alt[z.key] = b.dataset.alt; MAP.peek = null; saveUI(); setDrop(false); showMap(); });
+  const classic = isClassic(char());
   $("#showPlan").checked = UI.showPlan; $("#showMine").checked = UI.showMine;
+  $("#showPlan").closest("label").hidden = classic;
+  $("#mapLegend").hidden = classic;
   $("#showPlan").onchange = e => toggleLayer("plan", e.target.checked);
   $("#showMine").onchange = e => toggleLayer("mine", e.target.checked);
   $("#dropBtn").onclick = () => setDrop(!UI.drop);
@@ -3010,7 +3013,7 @@ function showMap(){
   if(!m){
     setDrop(false);
     box.hidden = true; none.hidden = false; $("#dropBtn").disabled = true;
-    none.innerHTML = `<div class="nomap"><div><b>No map image for ${esc(z.name)} yet.</b><br>The camps and quests the wiki lists for it are alongside.${z.atlas?`<br><a href="https://mnmatlas.com/${esc(z.atlas)}/" target="_blank" rel="noopener">Open ${esc(z.name)} in MnM Atlas ↗</a>`:""}</div></div>`;
+    none.innerHTML = `<div class="nomap"><div><b>No map image for ${esc(z.name)} yet.</b><br>${showWhere(char()) ? "The camps and quests the wiki lists for it are alongside." : ""}${z.atlas?`<br><a href="https://mnmatlas.com/${esc(z.atlas)}/" target="_blank" rel="noopener">Open ${esc(z.name)} in MnM Atlas ↗</a>`:""}</div></div>`;
     $("#mapCredit").innerHTML = "";
     renderSide(z, null);
     return;
@@ -3024,28 +3027,44 @@ function showMap(){
   box.style.height = window.innerWidth < 980 ? Math.round(Math.min(window.innerHeight * 0.72, Math.max(320, (box.clientWidth || window.innerWidth - 32) * m.h / m.w))) + "px" : "";
   if(!MAP.map) initMap();
   MAP.map.invalidateSize(false);
+  const b = L.latLngBounds([[-m.h, 0], [0, m.w]]);
   if(MAP.shown !== m.id){
     if(MAP.overlay) MAP.overlay.remove();
-    const b = L.latLngBounds([[-m.h, 0], [0, m.w]]);
     MAP.overlay = L.imageOverlay("maps/" + m.file, b, {className:"mapimg", alt:m.title}).addTo(MAP.map);
     MAP.map.setMaxBounds(b.pad(0.3));
-    MAP.map.setMinZoom(Math.floor((MAP.map.getBoundsZoom(b, false) - 0.75) * 4) / 4);
-    MAP.map.fitBounds(b, {animate:false});
-    MAP.shown = m.id;
+    MAP.shown = m.id; MAP.fitFor = null;
   }
+  fitIfReady();
   drawPins(m); renderSide(z, m); renderCredit(m);
+  syncPlanLayer();
 }
+// the box has no size while the page is still loading or the map tab is hidden: fit the map the first time it has one,
+// and keep the "zoomed all the way out" stop matched to the box
+function fitIfReady(){
+  const m = MAP.map && Z.maps[MAP.shown]; if(!m) return;
+  const box = $("#map"); if(!box.clientWidth || !box.clientHeight) return;
+  const b = L.latLngBounds([[-m.h, 0], [0, m.w]]);
+  MAP.map.setMinZoom(MAP.map.getBoundsZoom(b, false) - 0.5);
+  if(MAP.fitFor !== m.id){ MAP.map.fitBounds(b, {animate:false}); MAP.fitFor = m.id; }
+}
+// Guided shows the plan's spots; Classic keeps the map to your own pins, plus any spot you asked to see from your sheet
+function planLayerOn(){ return isClassic(char()) ? !!(MAP.peek && MAP.peek.length) : UI.showPlan; }
+function syncPlanLayer(){ if(!MAP.map) return; const on = planLayerOn(); if(on !== MAP.map.hasLayer(MAP.plan)){ if(on) MAP.plan.addTo(MAP.map); else MAP.plan.remove(); } }
 function openZone(key){
   if(!Z.byKey[key]) return;
-  UI.zone = key; UI.sideMoreQ = false; setDrop(false); saveUI();
+  UI.zone = key; UI.sideMoreQ = false; MAP.peek = null; setDrop(false); saveUI();
   if(UI.view !== "map"){ UI.view = "map"; saveUI(); render(); scrollToMap(); }
   else showMap();
 }
 function scrollToMap(){ const t = $("#mapView").getBoundingClientRect().top + window.scrollY - 8; if(t < window.scrollY || t > window.scrollY + 200) window.scrollTo({top:Math.max(0, t), behavior:"smooth"}); }
 function initMap(){
-  MAP.map = L.map("map", {crs:L.CRS.Simple, minZoom:-5, maxZoom:2, zoomSnap:0.25, zoomDelta:0.5, wheelPxPerZoomLevel:110, attributionControl:false, maxBoundsViscosity:0.7});
+  // zoom 0 is the image's own size; past 0.5 it only gets blurrier and heavier.
+  // No zoom snapping: a pinch or a trackpad stays where you leave it instead of jumping to the next step, and the whole map fits the box exactly.
+  MAP.map = L.map("map", {crs:L.CRS.Simple, minZoom:-5, maxZoom:0.5, zoomSnap:0, zoomDelta:0.5, wheelPxPerZoomLevel:120, attributionControl:false, maxBoundsViscosity:0.8});
+  MAP.map.on("resize", fitIfReady);
+  if(window.ResizeObserver) new ResizeObserver(() => { if(MAP.map && $("#map").clientWidth) MAP.map.invalidateSize(false); fitIfReady(); }).observe($("#map"));
   MAP.plan = L.layerGroup(); MAP.mine = L.layerGroup();
-  if(UI.showPlan) MAP.plan.addTo(MAP.map);
+  if(planLayerOn()) MAP.plan.addTo(MAP.map);
   if(UI.showMine) MAP.mine.addTo(MAP.map);
   MAP.map.on("click", onMapClick);
   const Fit = L.Control.extend({options:{position:"topleft"}, onAdd(){
@@ -3060,15 +3079,17 @@ function fitWhole(){ const m = curMap(); if(m && MAP.map) MAP.map.fitBounds([[-m
 function toggleLayer(kind, on){
   if(kind === "plan") UI.showPlan = on; else UI.showMine = on;
   saveUI();
-  const g = kind === "plan" ? MAP.plan : MAP.mine;
-  if(MAP.map && g){ if(on) g.addTo(MAP.map); else g.remove(); }
+  if(kind === "plan") syncPlanLayer();
+  else if(MAP.map){ if(on) MAP.mine.addTo(MAP.map); else MAP.mine.remove(); }
   const cb = $(kind === "plan" ? "#showPlan" : "#showMine"); if(cb) cb.checked = on;
 }
 const mineIcon = () => L.divIcon({className:"pin mine", html:"<span><i>★</i></span>", iconSize:[24,24], iconAnchor:[12,12], popupAnchor:[0,-12]});
 function drawPins(m){
   MAP.plan.clearLayers(); MAP.mine.clearLayers(); MAP.markers = {};
   const c = char();
+  const peek = isClassic(c) ? (MAP.peek || []) : null;
   (Z.pinsByMap[m.id] || []).forEach((p, i) => {
+    if(peek && !peek.includes(p.id)) return;
     const st = pinState(p, c);
     const mk = L.marker(ll(p, m), {icon:L.divIcon({className:"pin s-" + st.s, html:`<span>${i+1}</span>`, iconSize:[28,28], iconAnchor:[14,14], popupAnchor:[0,-13]}), title:p.title, alt:p.title, riseOnHover:true});
     mk.bindPopup(() => planPopup(p), {maxWidth:300, minWidth:230, autoPanPadding:[30,30]});
@@ -3137,25 +3158,30 @@ function renderSide(z, m){
   const zname = (sz && sz.name) || z.name;
   let h = `<header><h3>${esc(z.name)}</h3><span class="sub">${esc(z.region)}</span></header><div class="body">`;
   h += `<div class="zlinks">${sz ? `<a href="${esc(sz.url)}" target="_blank" rel="noopener">Wiki zone page ↗</a>` : ""}${z.atlas ? `<a href="https://mnmatlas.com/${esc(z.atlas)}/" target="_blank" rel="noopener">Open in MnM Atlas ↗</a>` : ""}</div>`;
+  const classic = isClassic(c), spoil = showWhere(c);
   if(m){
-    const pins = Z.pinsByMap[m.id] || [];
-    if(pins.length) h += `<div class="sh">Plan spots</div>` + pins.map((p, i) => { const st = pinState(p, c); return `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-${st.s}">${i+1}</span><span><b>${esc(p.title)}</b><small>${esc(stLabel(st))}</small></span></button>`; }).join("");
+    const all = Z.pinsByMap[m.id] || [], peek = MAP.peek || [];
+    const pins = classic ? all.filter(p => peek.includes(p.id)) : all;
+    if(pins.length) h += `<div class="sh">${classic ? "Spots you asked to see" : "Plan spots"}</div>` + pins.map(p => { const st = pinState(p, c); return `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-${st.s}">${all.indexOf(p)+1}</span><span><b>${esc(p.title)}</b><small>${esc(stLabel(st))}</small></span></button>`; }).join("")
+      + (classic && pins.length ? `<button class="more" id="hidePeek">Hide these spots</button>` : "");
     const mine = S.user.pins.filter(p => p.map === m.id);
     h += `<div class="sh">Your pins</div>` + (mine.length ? mine.map(p => `<button class="pinrow" data-pin="${esc(p.id)}"><span class="pdot s-mine"><i>★</i></span><span><b>${esc(p.label || "My pin")}</b>${p.note ? `<small>${esc(trimDrop(p.note))}</small>` : ""}</span></button>`).join("")
       : `<div class="empty">Press <b>Drop a pin</b>, then click the map to mark a camp, a pull spot or where you died. Pins are kept with your characters.</div>`);
   }
-  const camps = ((sz && sz.camps) || []).map(cp => ({cp, r:campRange(cp, group)})).filter(x => x.r).sort((a,b) => a.r[0] - b.r[0] || a.r[1] - b.r[1]);
+  const camps = spoil ? ((sz && sz.camps) || []).map(cp => ({cp, r:campRange(cp, group)})).filter(x => x.r).sort((a,b) => a.r[0] - b.r[0] || a.r[1] - b.r[1]) : [];
   if(camps.length) h += `<div class="sh">Camps by level · ${group ? "group" : "solo"}</div>` + camps.map(({cp, r}) => { const fit = r[0] <= L + 1 && r[1] >= L - 1; return `<div class="crow ${fit ? "fit" : ""}"><span class="lvp num">${r[0]}-${r[1]}</span><span><b>${esc(cp.area)}</b>${fit ? '<span class="tag fit">your level</span>' : ""}<small>${esc(cp.mobs)}</small>${cp.note ? `<small class="cn">${esc(cp.note)}</small>` : ""}</span></div>`; }).join("");
-  const qs = ((S.snapshot||{}).quests || []).filter(q => norm(q.zone) === norm(zname) && classMatch(q.classes, c)).map(q => ({q, lv:questLevel(q)})).sort((a,b) => a.lv - b.lv || a.q.name.localeCompare(b.q.name));
+  const qs = spoil ? ((S.snapshot||{}).quests || []).filter(q => norm(q.zone) === norm(zname) && classMatch(q.classes, c)).map(q => ({q, lv:questLevel(q)})).sort((a,b) => a.lv - b.lv || a.q.name.localeCompare(b.q.name)) : [];
   if(qs.length){
     const lim = UI.sideMoreQ ? qs.length : 8;
     h += `<div class="sh">Quests here</div>` + qs.slice(0, lim).map(({q, lv}) => `<div class="crow ${lv <= L ? "" : "later"}"><span class="lvp num">${lv}+</span><span><a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.name)}</a>${q.reward ? `<small>Reward: ${esc(q.reward)}</small>` : ""}</span></div>`).join("")
       + (qs.length > lim ? `<button class="more" id="sideMoreQ">Show all ${qs.length}</button>` : "");
   }
-  if(!camps.length && !qs.length && !(m && (Z.pinsByMap[m.id] || []).length)) h += `<div class="empty" style="margin-top:10px">The wiki doesn't list camps or quests for this zone yet.</div>`;
+  if(!spoil) h += `<div class="tip" style="margin-top:14px">Classic keeps the map to you: your own pins, no plan spots. Turn on ${c.recs ? "" : "“Recommend upgrades” and "}“Show where to find them” on your sheet to see this zone's camps and quests here too.</div>`;
+  else if(!camps.length && !qs.length && !(m && !classic && (Z.pinsByMap[m.id] || []).length)) h += `<div class="empty" style="margin-top:10px">The wiki doesn't list camps or quests for this zone yet.</div>`;
   h += `</div>`;
   $("#side").innerHTML = h;
   $$("#side [data-pin]").forEach(b => b.onclick = () => focusPin(b.dataset.pin));
+  const hp = $("#hidePeek"); if(hp) hp.onclick = () => { MAP.peek = null; if(MAP.map) MAP.map.closePopup(); const m2 = curMap(); if(m2 && MAP.map){ drawPins(m2); syncPlanLayer(); } renderSide(curZone(), m2); };
   if($("#sideMoreQ")) $("#sideMoreQ").onclick = () => { UI.sideMoreQ = true; renderSide(z, m); };
 }
 function goToMap(mapId){
@@ -3171,7 +3197,7 @@ function focusPin(id){
   if(!p){ p = S.user.pins.find(x => x.id === id); mine = true; }
   if(!p) return;
   if(mine && !UI.showMine) toggleLayer("mine", true);
-  if(!mine && !UI.showPlan) toggleLayer("plan", true);
+  if(!mine){ if(isClassic(char())){ if(!(MAP.peek || []).includes(id)) MAP.peek = [id]; } else if(!UI.showPlan) toggleLayer("plan", true); }
   if(!goToMap(p.map)) return;
   const mk = MAP.markers[id]; if(!mk) return;
   MAP.map.setView(mk.getLatLng(), Math.max(MAP.map.getZoom(), -1), {animate:true});
@@ -3181,7 +3207,8 @@ function focusPlay(playId){
   const pins = Z.byPlay[playId] || []; if(!pins.length) return;
   const mapId = pins[0].map, here = pins.filter(p => p.map === mapId);
   if(here.length === 1) return focusPin(here[0].id);
-  if(!UI.showPlan) toggleLayer("plan", true);
+  if(isClassic(char())) MAP.peek = here.map(p => p.id);
+  else if(!UI.showPlan) toggleLayer("plan", true);
   if(!goToMap(mapId)) return;
   const m = Z.maps[mapId];
   MAP.map.fitBounds(L.latLngBounds(here.map(p => ll(p, m))), {padding:[70,70], maxZoom:-1});

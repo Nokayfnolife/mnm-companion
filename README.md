@@ -5,7 +5,9 @@ A level-by-level planner for **Monsters & Memories**: what to do next, gear by s
 Each character runs in one of two modes, picked when it's created and switchable from the character header:
 
 - **Guided** shows the plan for the level: what to do next, quests, hunting spots, armor sets, bags and spells, plus the gear card. Gear tips and armor-set pieces drop out once what the character wears already beats them.
-- **Classic** is a character sheet: a class emblem, starting stats with the 10-point bonus pool to spend, and the equipment picker, with totals added up. "Recommend upgrades" and its sub-option "Show where to find them" are off by default; with them off, drop sources stay hidden in item windows until the player asks.
+- **Classic** is a character sheet: a class emblem, starting stats with the 10-point bonus pool to spend, and the equipment picker, with totals added up. "Recommend upgrades" and its sub-option "Show where to find them" are off by default; with them off, drop sources stay hidden in item windows until the player asks. On the map, Classic shows only the player's own pins: plan spots appear only when the player opens one from the sheet ("Show on map"), and the zone's camps and quests are listed only with "Show where to find them" on.
+
+The zone maps are Leaflet image overlays with no zoom snapping; the whole map fits the box the first time the box has a size (`fitIfReady()`), and zoom stops at a little past the image's own size.
 
 Starting stats per race and class come from the race pages on storiesofmnm.com (`races` in `site/data/wiki.json`, refreshed with the daily full scan).
 
