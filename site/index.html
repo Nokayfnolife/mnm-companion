@@ -1204,7 +1204,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
       <article class="win feat"><header class="tb"><h2>A plan for your level</h2></header><div class="body"><p>Drag the experience bar to your level and the quests, hunting spots and armor sets re-sort around it. Each of your characters gets its own plan.</p></div></article>
       <article class="win feat"><header class="tb"><h2>Gear by slot</h2></header><div class="body"><p>The best item for every slot your class can wear right now, the next upgrade, and what drops it.</p></div></article>
       <article class="win feat"><header class="tb"><h2>Zone maps</h2></header><div class="body"><p>Community maps with pins for camps, quest givers and turn-ins, plus notes you drop yourself.</p></div></article>
-      <article class="win feat"><header class="tb"><h2>Search and ask</h2></header><div class="body"><p>Find any item, quest or zone as you type, or ask a question and get an answer drawn from the wiki.</p><p class="eg">“Where do I get a bigger bag at level 6?”</p></div></article>
+      <article class="win feat" id="lgAsk"><header class="tb"><h2>Search and ask</h2></header><div class="body"><p>Find any item, quest or zone as you type, or ask a question and get an answer drawn from the wiki.</p><p class="eg">“Where do I get a bigger bag at level 6?”</p></div></article>
     </div>
     <p class="facts" id="lgFacts">Built from the Stories of MnM wiki and re-checked every 6 hours.</p>
     <footer class="lfoot">Fan-made, not affiliated with the Monsters &amp; Memories team. <span id="lgCredit">Backdrop: Night Harbor map by Maggot, from the <a href="https://monstersandmemories.miraheze.org/wiki/File:Night_harbor_V5.jpg" target="_blank" rel="noopener">community wiki</a> (CC BY-SA 4.0).</span><span id="lgSupport"></span></footer>
@@ -1503,6 +1503,7 @@ function wireThemes(){
 }
 function renderLanding(){
   const has = p => providers().includes(p);
+  if((window.MNM_CONFIG || {}).ask === false){ const a = $("#lgAsk"); if(a && !a.dataset.off){ a.dataset.off = "1"; a.querySelector("h2").textContent = "Search everything"; a.querySelector(".body").innerHTML = "<p>Find any item, quest, zone or hunting spot as you type, with stats and where it drops.</p>"; } }
   $("#lgDiscord").hidden = !has("discord"); $("#lgOr").hidden = !has("discord");
   const local = localGet();
   $("#lgCarry").hidden = !(local && (local.characters || []).length);
