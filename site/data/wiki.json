@@ -51818,5 +51818,1011 @@
    "name": "Wood Elf",
    "url": "https://storiesofmnm.com/race/wood-elf/"
   }
+ },
+ "traits": {
+  "groups": [
+   {
+    "key": "majorCombat",
+    "name": "Major Combat",
+    "traits": [
+     {
+      "name": "Agile",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your Agility is increased by 10. Active: Increases your Agility by 200 for 15 seconds.",
+      "stats": {
+       "AGI": 10
+      }
+     },
+     {
+      "name": "Charismatic",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your Charisma is increased by 10. Active: Become charismatic, increasing your Charisma by 100 for 12 seconds.",
+      "stats": {
+       "CHA": 10
+      }
+     },
+     {
+      "name": "Cold Resistant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Cold Resistance is increased by 10. Universal Cold Resistance is increased by 10%. Active: Become immune to cold, removing all stacked Cold effects and greatly increasing your resistance to them for 15 seconds.",
+      "resists": {
+       "Cold": 10
+      }
+     },
+     {
+      "name": "Corruption Resistant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Corruption resistance is increased by 10. Elemental Corruption Resistance is increased by 10%. Active: Become immune to corruption, removing all harmful Corruption effects and greatly increasing your resistance to them for 12 seconds.",
+      "resists": {
+       "Corruption": 10
+      }
+     },
+     {
+      "name": "Dexterous",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your Dexterity is increased by 10. Active: Become dexterous, increasing your Dexterity by 10% for 12 seconds.",
+      "stats": {
+       "DEX": 10
+      }
+     },
+     {
+      "name": "Disease Resistant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Disease Resistance is increased by 10. Universal Disease Resistance is increased by 10%. Active: Become resistant to disease, removing all harmful disease effects and greatly increasing your resistance to them for 15 seconds.",
+      "resists": {
+       "Disease": 10
+      }
+     },
+     {
+      "name": "Electric Resistant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Electric Resistance is increased by 10. Elemental Electric Resistance is increased by 15%. Active: Become resistant to electricity, removing all harmful Electric effects and greatly increasing your resistance to them for 10 seconds.",
+      "resists": {
+       "Electricity": 10
+      }
+     },
+     {
+      "name": "Fire Resistant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Fire Resistance is increased by 10. Universal Fire Resistance is increased by 10%. Active: Become immune to fire, removing all harmful Fire effects and greatly increasing your resistance to them for 10 seconds.",
+      "resists": {
+       "Fire": 10
+      }
+     },
+     {
+      "name": "Holy Resistant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Holy Resistance is increased by 10. Universal Holy Resistance is increased by 15%. Active: Become resistant to holiness, removing all harmful Holy effects and greatly increasing your resistance to them for 15 seconds.",
+      "resists": {
+       "Holy": 10
+      }
+     },
+     {
+      "name": "Intelligent",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your Intelligence is increased by 10. Active: Become intelligent, increasing your Intelligence by 100 for 12 seconds.",
+      "stats": {
+       "INT": 10
+      }
+     },
+     {
+      "name": "Magic Resistant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Magic Resistance is increased by 10. Universal Magic Resistance is increased by 15%. Active: Become resistant to magic, removing all harmful Magic effects and greatly increasing your resistance to them for 15 seconds.",
+      "resists": {
+       "Magic": 10
+      }
+     },
+     {
+      "name": "Poison Resistant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Poison Resistance is increased by 10. Your total Poison Resistance is increased by 10%. Active: Become immune to poison, removing all harmful Poison effects and greatly increasing your resistance to them for 15 seconds.",
+      "resists": {
+       "Poison": 10
+      }
+     },
+     {
+      "name": "Strong",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your Strength is increased by 10. Active: Increases your Strength by 100 for 15 seconds.",
+      "stats": {
+       "STR": 10
+      }
+     },
+     {
+      "name": "Tough",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your Stamina is increased by 10. Active: Become tough, increasing your Stamina by 10% for 5 seconds.",
+      "stats": {
+       "STA": 10
+      }
+     },
+     {
+      "name": "Wise",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: Your base Wisdom is increased by 10. Active: Become wise, increasing your Wisdom by 10% for 12 seconds.",
+      "stats": {
+       "WIS": 10
+      }
+     },
+     {
+      "name": "High Ground",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Archer"
+       ]
+      },
+      "text": "Passive: Your damage dealt with a bow is increased when you are above your target. (Class-specific.)"
+     }
+    ],
+    "blurb": "Stat or resist boost + active"
+   },
+   {
+    "key": "minorCombat",
+    "name": "Minor Combat",
+    "traits": [
+     {
+      "name": "Abjurer",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Beastmaster",
+        "Druid",
+        "Elementalist",
+        "Enchanter",
+        "Inquisitor",
+        "Necromancer",
+        "Ranger",
+        "Shadow Knight",
+        "Shaman",
+        "Spellblade",
+        "Wizard"
+       ]
+      },
+      "text": "Starts your Abjuration skill 10 higher; it increases 25% faster."
+     },
+     {
+      "name": "Alterer",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Beastmaster",
+        "Cleric",
+        "Druid",
+        "Elementalist",
+        "Enchanter",
+        "Inquisitor",
+        "Necromancer",
+        "Ranger",
+        "Shadow Knight",
+        "Shaman",
+        "Spellblade",
+        "Wizard"
+       ]
+      },
+      "text": "Starts your Alteration skill 10 higher; it increases 25% faster."
+     },
+     {
+      "name": "Brawler",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Monk"
+       ]
+      },
+      "text": "Your Dual Wield skill starts at 20 and increases 25% faster."
+     },
+     {
+      "name": "Bludgeoner",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Beastmaster",
+        "Cleric",
+        "Druid",
+        "Elementalist",
+        "Enchanter",
+        "Fighter",
+        "Monk",
+        "Necromancer",
+        "Paladin",
+        "Rogue",
+        "Shaman",
+        "Spellblade",
+        "Wizard"
+       ]
+      },
+      "text": "Starts Bludgeoning 10 higher; it increases 25% faster. You start with a Trainee’s Staff instead of your default weapon."
+     },
+     {
+      "name": "Channeler",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Beastmaster",
+        "Druid",
+        "Elementalist",
+        "Enchanter",
+        "Inquisitor",
+        "Necromancer",
+        "Ranger",
+        "Shadow Knight",
+        "Shaman",
+        "Spellblade",
+        "Wizard"
+       ]
+      },
+      "text": "Starts your Channeling skill 10 higher; it increases 25% faster."
+     },
+     {
+      "name": "Conjurer",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Beastmaster",
+        "Druid",
+        "Elementalist",
+        "Enchanter",
+        "Inquisitor",
+        "Necromancer",
+        "Ranger",
+        "Shadow Knight",
+        "Shaman",
+        "Spellblade",
+        "Wizard"
+       ]
+      },
+      "text": "Starts your Conjuration skill 10 higher; it increases 25% faster."
+     },
+     {
+      "name": "Cutthroat",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Archer",
+        "Bard",
+        "Beastmaster",
+        "Fighter",
+        "Inquisitor",
+        "Ranger",
+        "Rogue",
+        "Shadow Knight",
+        "Shaman"
+       ]
+      },
+      "text": "Starts Piercing 10 higher; it increases 25% faster. You start with a Trainee’s Spear instead of your default weapon."
+     },
+     {
+      "name": "Deadeye",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Archer",
+        "Beastmaster",
+        "Fighter",
+        "Inquisitor",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shadow Knight",
+        "Spellblade"
+       ]
+      },
+      "text": "Starts Archery 10 higher; it increases 25% faster. You also start with a Trainee’s Longbow, Hip Quiver and 1,000 Trainee’s Arrows."
+     },
+     {
+      "name": "Defender",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Starts your Defense skill 5 higher; it increases 25% faster."
+     },
+     {
+      "name": "Diviner",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Beastmaster",
+        "Druid",
+        "Elementalist",
+        "Enchanter",
+        "Inquisitor",
+        "Necromancer",
+        "Ranger",
+        "Shadow Knight",
+        "Shaman",
+        "Spellblade",
+        "Wizard"
+       ]
+      },
+      "text": "Starts your Divination skill 10 higher; it increases 25% faster."
+     },
+     {
+      "name": "Evoker",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Beastmaster",
+        "Druid",
+        "Elementalist",
+        "Enchanter",
+        "Inquisitor",
+        "Necromancer",
+        "Ranger",
+        "Shadow Knight",
+        "Shaman",
+        "Spellblade",
+        "Wizard"
+       ]
+      },
+      "text": "Starts your Evocation skill 10 higher; it increases 25% faster."
+     },
+     {
+      "name": "Knife Thrower",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Archer",
+        "Beastmaster",
+        "Fighter",
+        "Monk",
+        "Ranger",
+        "Rogue",
+        "Spellblade"
+       ]
+      },
+      "text": "Starts Throwing 10 higher; it increases 25% faster. You also start with 1,000 Trainee’s Throwing Daggers."
+     },
+     {
+      "name": "Shieldman",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Cleric",
+        "Druid",
+        "Fighter",
+        "Inquisitor",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Shaman",
+        "Spellblade"
+       ]
+      },
+      "text": "Starts Block 10 higher; it increases 25% faster. You also start with a Trainee’s Buckler."
+     },
+     {
+      "name": "Swordsman",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Bard",
+        "Beastmaster",
+        "Druid",
+        "Fighter",
+        "Inquisitor",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Spellblade",
+        "Wizard"
+       ]
+      },
+      "text": "Starts Slashing 10 higher; it increases 25% faster. You start with a Trainee’s Scimitar instead of your default weapon."
+     },
+     {
+      "name": "Virtuoso",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Bard"
+       ]
+      },
+      "text": "Starts Brass, Percussion, Strings and Woodwind 25 higher; they increase 25% faster. You also start with a Trainee’s Recorder."
+     },
+     {
+      "name": "Vocalist",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Bard"
+       ]
+      },
+      "text": "Your Singing skill starts at 50 and increases 50% faster."
+     },
+     {
+      "name": "Warrior",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Starts your Offense skill 5 higher; it increases 25% faster."
+     }
+    ],
+    "blurb": "Weapon / spell school head start"
+   },
+   {
+    "key": "majorNonCombat",
+    "name": "Major Non-Combat",
+    "traits": [
+     {
+      "name": "Master Artisan",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Your Blacksmithing, Jewelcrafting, Leatherworking, Pottery, Tailoring and Woodworking skills increase 5% faster."
+     },
+     {
+      "name": "Fast Metabolism",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Your Endurance is increased by 25%, but you consume food 25% faster."
+     },
+     {
+      "name": "Infravision",
+      "races": {
+       "only": [
+        "Dwarf",
+        "Wood Elf",
+        "Gnome",
+        "Goblin",
+        "Halfling",
+        "Ogre",
+        "High Elf",
+        "Troll"
+       ]
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: grants Infravision, improving your eyesight in darkness."
+     },
+     {
+      "name": "Iron Lungs",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Your underwater air capacity is increased by 200%, but your Endurance is decreased by 25%."
+     },
+     {
+      "name": "Readiness",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Cleric",
+        "Druid",
+        "Elementalist",
+        "Enchanter",
+        "Necromancer",
+        "Shaman",
+        "Wizard"
+       ]
+      },
+      "text": "You start with an available Cantrip slot, which can be assigned to a memorized spell so it is kept after death."
+     },
+     {
+      "name": "Slow Metabolism",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Your Endurance is decreased by 25%, but you consume food 25% slower."
+     },
+     {
+      "name": "Sneak",
+      "races": {
+       "only": [
+        "Halfling"
+       ]
+      },
+      "classes": {
+       "any": true,
+       "note": "All except classes with innate Sneak"
+      },
+      "text": "Grants Sneak, making you impossible to detect from behind."
+     },
+     {
+      "name": "Ultravision",
+      "races": {
+       "only": [
+        "Deep Elf",
+        "Deep Gnome",
+        "Deep Dwarf"
+       ]
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Passive: grants Ultravision, greatly improving your eyesight in darkness, but you have difficulty seeing in bright environments."
+     }
+    ],
+    "blurb": "Vision, metabolism, utility"
+   },
+   {
+    "key": "minorNonCombat",
+    "name": "Minor Non-Combat",
+    "traits": [
+     {
+      "name": "Alchemist",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Alchemy starts 25 higher and increases 25% faster. You start with a Trainee’s Alchemist Bag."
+     },
+     {
+      "name": "Beggar",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Begging starts 50 higher and increases 25% faster."
+     },
+     {
+      "name": "Blacksmith",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Blacksmithing starts 25 higher and increases 25% faster. You start with a Trainee’s Smithing Hammer."
+     },
+     {
+      "name": "Bookworm",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "except": [
+        "Archer",
+        "Bard",
+        "Fighter",
+        "Monk",
+        "Rogue"
+       ]
+      },
+      "text": "You start with an additional Trainee’s Spellbook."
+     },
+     {
+      "name": "Brewmaster",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Brewing starts 25 higher and increases 25% faster."
+     },
+     {
+      "name": "Builder",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Construction starts 50 higher and increases 25% faster. You start with a Trainee’s Construction Hammer."
+     },
+     {
+      "name": "Carpenter",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Carpentry starts at 25 and increases 25% faster. You start with a Trainee’s Construction Hammer."
+     },
+     {
+      "name": "Chef",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Cooking starts 25 higher and increases 25% faster."
+     },
+     {
+      "name": "Disenchanter",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Disenchanting starts at 25 and increases 5% faster. You start with a Trainee’s Disenchanting Cube."
+     },
+     {
+      "name": "Enchanter",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Enchanting starts 25 higher and increases 25% faster. You start with a Trainee’s Tome of Enchantment."
+     },
+     {
+      "name": "Fisherman",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Fishing starts 25 higher and increases 25% faster. You start with a Trainee’s Fishing Pole and 1,000 Trainee’s Fishing Grubs."
+     },
+     {
+      "name": "Fletcher",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Fletching starts 25 higher and increases 25% faster. You start with a Trainee’s Fletching Kit."
+     },
+     {
+      "name": "Forager",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Forage starts 50 higher and increases 25% faster."
+     },
+     {
+      "name": "Herbalist",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Herbalism starts at 25 and increases 5% faster. You start with a Trainee’s Sickle and Trainee’s Herb Pouch."
+     },
+     {
+      "name": "Jewelcrafter",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Jewelcrafting starts 25 higher and increases 25% faster. You start with a Trainee’s Jewelcrafting Kit."
+     },
+     {
+      "name": "Leatherworker",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Leatherworking starts 25 higher and increases 25% faster. You start with a Trainee’s Leatherworking Kit."
+     },
+     {
+      "name": "Lumberjack",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Lumberjacking starts 25 higher and increases 25% faster. You start with a Trainee’s Lumberjack Axe."
+     },
+     {
+      "name": "Magical",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "You start with a base Magic Rating, and Magic Rating gained from items is increased by 200%."
+     },
+     {
+      "name": "Medicine",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "First Aid starts 25 higher and Survivalism 5 higher; First Aid increases 25% faster. You start with 20 Trainee’s Cloth Bandages and a Trainee’s Survival Kit."
+     },
+     {
+      "name": "Merchant",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Commerce starts 25 higher and increases 25% faster."
+     },
+     {
+      "name": "Miner",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Mining starts 25 higher and increases 25% faster. You start with a Trainee’s Mining Pick."
+     },
+     {
+      "name": "Poison Maker",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Poison Making starts 50 higher and increases 25% faster."
+     },
+     {
+      "name": "Potter",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Pottery starts 50 higher and increases 25% faster."
+     },
+     {
+      "name": "Researcher",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Spellcrafting starts 50 higher and increases 25% faster. You start with a Trainee’s Research Tome."
+     },
+     {
+      "name": "Smelter",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Smelting starts 25 higher and increases 25% faster."
+     },
+     {
+      "name": "Stonecutter",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Stonecutting starts at 25 and increases 5% faster. You start with a Trainee’s Hammer and Chisel."
+     },
+     {
+      "name": "Stonemason",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Masonry starts at 25 and increases 5% faster. You start with a Trainee’s Hammer and Chisel."
+     },
+     {
+      "name": "Survivalist",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Survivalism starts 25 higher and increases 25% faster. You start with a Trainee’s Survival Pouch."
+     },
+     {
+      "name": "Swimmer",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Swimming starts 50 higher and increases 25% faster."
+     },
+     {
+      "name": "Tailor",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Tailoring starts 25 higher and increases 25% faster. You start with a Trainee’s Tailoring Kit."
+     },
+     {
+      "name": "Tavern Regular",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Alcohol Tolerance starts 25 higher and increases 25% faster."
+     },
+     {
+      "name": "Tinkerer",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Tinkering starts 25 higher and increases 25% faster. You start with a Trainee’s Tinkering Toolkit."
+     },
+     {
+      "name": "Tracker",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "only": [
+        "Bard",
+        "Druid",
+        "Ranger"
+       ]
+      },
+      "text": "Tracking starts at 25 and increases 25% faster."
+     },
+     {
+      "name": "Woodworker",
+      "races": {
+       "any": true
+      },
+      "classes": {
+       "any": true
+      },
+      "text": "Woodworking starts 50 higher and increases 25% faster."
+     }
+    ],
+    "blurb": "Tradeskill head start + tool"
+   }
+  ],
+  "url": "https://storiesofmnm.com/wiki/guide/new-player-guide/"
  }
 }

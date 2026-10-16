@@ -1173,6 +1173,17 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
 .attrs .pts b{min-width:22px;text-align:center;font:700 15px/1 var(--body);color:var(--gilt2)}
 .attrs .g{color:var(--q-fx);font-size:14.5px;min-width:30px}
 .attrs .tot{font:800 21px/1 var(--display);color:var(--parch);min-width:34px}
+.attrs .trb{font:700 13px/1 var(--body);font-style:normal;color:var(--gilt2);margin-left:2px}
+.creation{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2px 16px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.creation .crh,.creation .wide{grid-column:1/-1}
+.creation .crh{font:700 13px/1.4 var(--display);color:var(--soot);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.creation .f{margin-bottom:10px;align-content:start}
+.creation .f label{font-size:14px}
+.creation .hint{line-height:1.45}
+.creation>.hint{font-size:13.5px;color:var(--soot);margin-top:2px}
+.creation .hint .bad{color:var(--hold)}
+.creation .hint .more{padding:0;font-size:inherit}
+.creation .sug{display:block;margin-top:3px;color:var(--ash)}
 .gearsum{display:grid;gap:6px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:14.5px;color:var(--text2)}
 .gearsum .ln{display:flex;flex-wrap:wrap;gap:4px 14px}
 .gearsum .lb{font:700 13px/1.6 var(--display);color:var(--soot);min-width:62px}
@@ -1514,6 +1525,10 @@ html.lock,html.lock body{overflow:hidden}
 [data-look="journal"] .attrs .tot{font:600 22px/1 var(--body);color:var(--text)}
 [data-look="journal"] .attrs .b input{background:var(--paper2);border-color:var(--iron2);box-shadow:none}
 [data-look="journal"] .gearsum{border-top:1px dotted var(--iron2)}
+[data-look="journal"] .attrs .trb{font:400 18px/1 var(--hand);color:var(--accent)}
+[data-look="journal"] .creation{border-top:1px dotted var(--iron2)}
+[data-look="journal"] .creation .crh{font:italic 14px/1.4 var(--body);text-transform:none;letter-spacing:0;color:var(--muted)}
+[data-look="journal"] .creation .sug{font:400 18px/1.25 var(--hand);color:var(--accent)}
 [data-look="journal"] .gearsum .lb{font-family:var(--display)}
 [data-look="journal"] .mcard{background:var(--paper2);box-shadow:0 0 0 1px var(--frame2)}
 [data-look="journal"] .mcard[aria-checked="true"]{background:var(--paper2);box-shadow:0 0 0 2px var(--accent)}
@@ -1785,6 +1800,11 @@ function gearMap(o){
   EQKEYS.forEach(k => { if(typeof o[k] === "string" && o[k]) out[k] = o[k].slice(0,100); });
   return out;
 }
+function traitMap(t){
+  const out = {}; if(!t || typeof t !== "object" || Array.isArray(t)) return out;
+  ["majorCombat","minorCombat","majorNonCombat","minorNonCombat"].forEach(k => { if(typeof t[k] === "string" && t[k]) out[k] = t[k].slice(0,40); });
+  return out;
+}
 function normUser(u){
   u = (u && typeof u === "object") ? u : {};
   const seen = new Set();
@@ -1794,7 +1814,7 @@ function normUser(u){
     return {id, name:String(c.name || "").slice(0,40), race:String(c.race || "Human").slice(0,30), cls:String(c.cls || "Fighter").slice(0,30),
       city:String(c.city || "night-harbor").slice(0,40), level:Math.max(1, Math.min(60, parseInt(c.level) || 1)), solo:c.solo !== false, created:c.created || null,
       mode:c.mode === "classic" ? "classic" : "guided", recs:!!c.recs, where:!!c.where,
-      alloc:statMap(c.alloc, 0, 60), baseOv:statMap(c.baseOv, 1, 99),
+      alloc:statMap(c.alloc, 0, 60), baseOv:statMap(c.baseOv, 1, 99), deity:String(c.deity || "").slice(0,40), traits:traitMap(c.traits),
       gear:(c.gear && typeof c.gear === "object" && !Array.isArray(c.gear)) ? gearMap(c.gear) : null};
   });
   const progress = (u.progress && typeof u.progress === "object" && !Array.isArray(u.progress)) ? u.progress : {};
@@ -2028,7 +2048,7 @@ function tourSteps(){
     {p:"03-level", t:() => $("#hero .slider"), x:`This is ${esc(name)}'s experience bar. Drag it to your level and everything below rearranges itself. No arcane formulas required.`},
     {p:"04-modes", t:() => $("#modeSeg"), x:`Guided or Classic. Guided lays out a path for you; Classic is just your character sheet. Flip between them whenever you like.`},
     {p:"05-do-next", t:() => classic ? null : cardOf("#plays"), x:`What's worth doing at your level, best first. Tick a box when it's done and I'll stop nagging you about it.`},
-    {p:"06-class", t:() => classic ? $("#portrait") : null, x:`Your class and starting stats. Spend the ten bonus points the way you did at character creation and the totals add themselves up.`},
+    {p:"06-class", t:() => classic ? $("#portrait") : null, x:`Your class and starting stats, plus your god and the four traits you picked at creation. Spend the ten bonus points the way you did in game and the totals add themselves up.`},
     {p:"07-gear", t:() => cardOf(classic ? "#equip" : "#slots"), x:`Tell me what you're wearing in each slot. I'll only point out gear that actually beats it${classic ? ", and only if you ask" : ", and where it drops"}.`},
     {p:"08-armor-sets", t:() => classic ? null : cardOf("#sets"), x:`Armor sets you can collect, trimmed to the pieces that beat what you've got, with the materials to gather.`},
     {p:"09-hunt", t:() => classic ? null : cardOf("#camps"), x:`Where to hunt at your level. Switch Solo to Group up top and the list changes with you.`},
@@ -2418,7 +2438,7 @@ function renderHero(){
   $("#hero").innerHTML = `
     <div class="crestbig" aria-hidden="true">${emblem(c.cls)}</div>
     <div class="who"><h2>${esc(c.name || c.cls)}</h2>
-      <div class="meta"><span><b>${esc(c.race)}</b> ${esc(c.cls)}</span><span>starts in <b>${esc(city.name)}</b></span>
+      <div class="meta"><span><b>${esc(c.race)}</b> ${esc(c.cls)}</span><span>starts in <b>${esc(city.name)}</b></span>${c.deity ? `<span>${c.deity === "Agnostic" ? "agnostic" : `follows <b>${esc(c.deity)}</b>`}</span>` : ""}
       <span class="modes"><span class="seg" id="modeSeg" role="radiogroup" aria-label="Mode"><button data-v="guided" role="radio" aria-checked="${!isClassic(c)}" class="${isClassic(c)?"":"on"}" title="A plan for your level: quests, hunting spots, armor sets and gear upgrades">Guided</button><button data-v="classic" role="radio" aria-checked="${isClassic(c)}" class="${isClassic(c)?"on":""}" title="A character sheet: stats and the gear you wear, with tips only if you ask">Classic</button></span>
       <span class="seg" id="soloSeg"><button data-v="1" class="${c.solo!==false?"on":""}">Solo</button><button data-v="0" class="${c.solo===false?"on":""}">Group</button></span></span>
       <button class="btn ghost" id="editChar">Edit</button></div></div>
@@ -2583,17 +2603,19 @@ function renderAttrs(el, sub){
   const spent = ATTRS.reduce((s,k) => s + (alloc[k]||0), 0), left = b.pool - spent;
   sub.textContent = left > 0 ? `${left} of ${b.pool} bonus points to spend` : (left === 0 ? `all ${b.pool} bonus points spent` : `${-left} points over the ${b.pool}-point pool`);
   let h = `<div class="attrs"><span class="h">Stat</span><span class="h">Base</span><span class="h">Points</span><span class="h r">Gear</span><span class="h r">Total</span>`;
+  const tb = traitBonus(c);
   ATTRS.forEach(k => {
-    const base = b.stats[k] || 0, pt = alloc[k] || 0, gv = g.t[k] || 0;
+    const base = b.stats[k] || 0, pt = alloc[k] || 0, gv = g.t[k] || 0, tv = tb.stats[k] || 0;
     h += `<span class="k ${keys.includes(k)?"key":""}" title="${keys.includes(k)?esc(c.cls)+" leans on "+k:""}">${k}</span>
-      <span class="b">${b.edit ? `<input type="number" min="1" max="99" inputmode="numeric" data-base="${k}" value="${base}" aria-label="Base ${k}">` : base}</span>
+      <span class="b">${b.edit ? `<input type="number" min="1" max="99" inputmode="numeric" data-base="${k}" value="${base}" aria-label="Base ${k}">` : base}${tv ? ` <i class="trb" title="${esc(tb.from[k] || "")} trait">+${tv}</i>` : ""}</span>
       <span class="pts"><button type="button" data-pt="${k}|-1" ${pt<=0?"disabled":""} aria-label="One less point in ${k}">−</button><b class="num">${pt}</b><button type="button" data-pt="${k}|1" ${left<=0?"disabled":""} aria-label="One more point in ${k}">+</button></span>
-      <span class="g r num">${gv ? (gv > 0 ? "+" : "") + gv : ""}</span><span class="tot r num">${base + pt + gv}</span>`;
+      <span class="g r num">${gv ? (gv > 0 ? "+" : "") + gv : ""}</span><span class="tot r num">${base + pt + gv + tv}</span>`;
   });
   h += `</div>`;
   const extra = Object.keys(g.t).filter(k => !ATTRS.includes(k) && !["AC","HP","Mana"].includes(k));
   const res = parseSaves(((b.r||{}).details||{}).Resistances);
   Object.entries(g.saves).forEach(([k,v]) => res[k] = (res[k]||0) + v);
+  Object.entries(tb.resists).forEach(([k,v]) => res[k] = (res[k]||0) + v);
   const w = eqItem(c, "primary");
   const wDmg = w && w.weapon && Object.entries(w.weapon).find(([k]) => /dmg|damage/i.test(k)), wDly = w && w.weapon && Object.entries(w.weapon).find(([k]) => /delay|dly/i.test(k));
   h += `<div class="gearsum">
@@ -2606,8 +2628,11 @@ function renderAttrs(el, sub){
     : b.src === "race" ? `The wiki lists ${esc(rname)} base stats but not the ${esc(c.cls)} bonus; adjust the base numbers to match your character.`
     : b.src === "you" ? `Base numbers you entered. The wiki doesn't list ${esc(rname)} starting stats yet.`
     : `The wiki doesn't list ${esc(rname)} starting stats yet. Type your base numbers from the game.`;
-  h += `<div class="tip">${src} ${keys.length ? `◆ marks what a ${esc(c.cls)} leans on.` : ""}${spent ? ` <button class="more" id="ptReset" style="padding:0">Reset points</button>` : ""}</div>`;
+  const trNames = pickedTraits(c).filter(t => t.stats || t.resists).map(t => t.name);
+  h += `<div class="tip">${src} ${keys.length ? `◆ marks what ${esc(aan(c.cls))} leans on.` : ""}${trNames.length ? ` Totals include your ${esc(trNames.join(" and "))} trait.` : ""}${spent ? ` <button class="more" id="ptReset" style="padding:0">Reset points</button>` : ""}</div>`;
+  h += creationHTML(c);
   el.innerHTML = h;
+  wireCreation(el, c, () => { renderAttrs(el, sub); renderHero(); });
   el.querySelectorAll("[data-pt]").forEach(btn => btn.onclick = () => {
     const [k, d] = btn.dataset.pt.split("|"); const a = c.alloc;
     a[k] = Math.max(0, (a[k]||0) + parseInt(d)); if(!a[k]) delete a[k];
@@ -2620,6 +2645,92 @@ function renderAttrs(el, sub){
     save(); renderAttrs(el, sub);
   });
   if(el.querySelector("#ptReset")) el.querySelector("#ptReset").onclick = () => { c.alloc = {}; save(); renderAttrs(el, sub); };
+}
+
+// ---- deity and the four trait picks from character creation
+const TRAIT_KEYS = [["majorCombat","Major combat trait"],["minorCombat","Minor combat trait"],["majorNonCombat","Major non-combat trait"],["minorNonCombat","Minor non-combat trait"]];
+const STAT_TRAIT = {STR:"Strong", STA:"Tough", DEX:"Dexterous", AGI:"Agile", INT:"Intelligent", WIS:"Wise", CHA:"Charismatic"};
+const traitGroups = () => (((S.snapshot||{}).traits||{}).groups) || [];
+const whoOk = (w, v) => !w || w.any || (w.only ? w.only.some(x => norm(x) === norm(v)) : !(w.except||[]).some(x => norm(x) === norm(v)));
+const traitOk = (t, c) => whoOk(t.races, c.race) && whoOk(t.classes, c.cls);
+function pickedTraits(c){
+  const tr = c.traits || {};
+  return traitGroups().map(g => g.traits.find(x => x.name === tr[g.key])).filter(Boolean);
+}
+function traitBonus(c){
+  const stats = {}, resists = {}, from = {};
+  pickedTraits(c).forEach(t => {
+    Object.entries(t.stats||{}).forEach(([k,v]) => { stats[k] = (stats[k]||0) + v; from[k] = t.name; });
+    Object.entries(t.resists||{}).forEach(([k,v]) => resists[k] = (resists[k]||0) + v);
+  });
+  return {stats, resists, from};
+}
+// which gods a race and class may follow, and where each choice lets them start
+function deityInfo(c){
+  const dd = (S.curated||{}).deities; if(!dd) return null;
+  const rows = dd.table.filter(r => norm(r.race) === norm(c.race));
+  const row = rows.find(r => r.classes.some(k => norm(k) === norm(c.cls)));
+  let starts = null;
+  if(row) starts = row.starts;
+  else if(rows.length){ starts = {}; rows.forEach(r => Object.entries(r.starts).forEach(([g, cs]) => starts[g] = [...new Set([...(starts[g]||[]), ...cs])])); }
+  return {dd, starts, exact:!!row, known:rows.length > 0};
+}
+const cityName = k => (D.cities[k] || {name:k}).name;
+const aan = w => (/^[aeiou]/i.test(String(w || "")) ? "an " : "a ") + w;
+const orList = a => a.length < 2 ? (a[0] || "") : a.slice(0, -1).join(", ") + " or " + a[a.length - 1];
+// what the new player guide suggests, for Guided (or Classic with tips on)
+function traitTip(c, key){
+  const ok = n => { const g = traitGroups().find(x => x.key === key), t = g && g.traits.find(x => x.name === n); return t && traitOk(t, c) ? t : null; };
+  if(key === "majorCombat"){ const k = keyStats(c)[0], t = k && ok(STAT_TRAIT[k]); return t ? {name:t.name, why:`it raises ${k}, the stat ${aan(c.cls)} leans on most`} : null; }
+  if(key === "majorNonCombat"){ const t = ok("Infravision") || ok("Ultravision"); return t ? {name:t.name, why:"nights are very dark, and most players who skip it regret it"} : null; }
+  return null;
+}
+function creationHTML(c){
+  const di = deityInfo(c), groups = traitGroups(), recs = showRecs(c);
+  let h = `<div class="creation"><div class="crh">Chosen at character creation</div>`;
+  if(di){
+    const gods = di.dd.gods.filter(g => !di.starts || di.starts[g.name] || g.name === c.deity);
+    const cur = c.deity && di.starts && di.starts[c.deity];
+    let hint = "";
+    if(c.deity && di.starts && !cur) hint = `<span class="bad">The wiki doesn't list ${esc(c.deity)} as a choice for ${esc(aan(c.race))} ${esc(c.cls)}.</span>`;
+    else if(cur){
+      hint = `${esc(aan(c.race)).replace(/^a/, "A")} ${esc(c.cls)} following ${esc(c.deity === "Agnostic" ? "no god" : c.deity)} starts in ${esc(orList(cur.map(cityName)))}.`;
+      if(!cur.includes(c.city)) hint += ` <span class="bad">This character is set to start in ${esc(cityName(c.city))}.</span> ${cur.map(k => `<button class="more" data-city="${esc(k)}">Start in ${esc(cityName(k))}</button>`).join(" ")}`;
+    }
+    else if(!c.deity) hint = di.known ? "Your faith decides which starting cities you can pick." : "";
+    if(di.known && !di.exact) hint += ` The wiki's table doesn't list ${esc(aan(c.race))} ${esc(c.cls)} yet, so this shows every faith ${esc(aan(c.race))} can take.`;
+    if(!di.known) hint += ` The wiki's table doesn't cover ${esc(c.race || "this race")} yet, so every god is listed.`;
+    h += `<div class="f wide"><label for="crDeity">Deity</label><select id="crDeity"><option value="">Not picked yet</option>${gods.map(g => `<option value="${esc(g.name)}" ${g.name===c.deity?"selected":""}>${esc(g.name === "Agnostic" ? "Agnostic (no god)" : g.name + ", " + g.title)}</option>`).join("")}</select><div class="hint">${hint}</div></div>`;
+  }
+  if(groups.length){
+    TRAIT_KEYS.forEach(([key, label]) => {
+      const g = groups.find(x => x.key === key); if(!g) return;
+      const curName = (c.traits || {})[key], cur = g.traits.find(t => t.name === curName);
+      const opts = g.traits.filter(t => traitOk(t, c) || t.name === curName);
+      const tip = recs && !curName ? traitTip(c, key) : null;
+      let hint = cur ? esc(cur.text) : esc(g.blurb || "");
+      if(cur && !traitOk(cur, c)) hint = `<span class="bad">The guide says ${esc(cur.name)} isn't open to ${esc(aan(c.race))} ${esc(c.cls)}.</span> ` + hint;
+      if(tip) hint += ` <span class="sug">Suggested: <button class="more" data-tsug="${key}|${esc(tip.name)}">${esc(tip.name)}</button>, ${esc(tip.why)}.</span>`;
+      h += `<div class="f"><label for="cr-${key}">${label}</label><select id="cr-${key}" data-trait="${key}"><option value="">Not picked yet</option>${opts.map(t => `<option ${t.name===curName?"selected":""}>${esc(t.name)}${traitOk(t, c) ? "" : " (not for your class or race)"}</option>`).join("")}</select><div class="hint">${hint}</div></div>`;
+    });
+    const url = ((S.snapshot||{}).traits||{}).url;
+    h += `<div class="hint wide">Trait details from the <a href="${esc(url || "#")}" target="_blank" rel="noopener">new player guide</a>${di ? `; gods and starting cities from the <a href="${esc(di.dd.source)}" target="_blank" rel="noopener">community wiki</a>` : ""}.</div>`;
+  }
+  return h + `</div>`;
+}
+function wireCreation(el, c, redraw){
+  const d = el.querySelector("#crDeity");
+  if(d) d.onchange = () => { c.deity = d.value; save(); redraw(); const n = el.querySelector("#crDeity"); if(n) n.focus(); };
+  el.querySelectorAll("[data-trait]").forEach(sel => sel.onchange = () => {
+    c.traits = c.traits || {}; const k = sel.dataset.trait;
+    if(sel.value) c.traits[k] = sel.value.replace(/ \(not for your class or race\)$/, ""); else delete c.traits[k];
+    save(); redraw(); const n = el.querySelector(`[data-trait="${k}"]`); if(n) n.focus();
+  });
+  el.querySelectorAll("[data-tsug]").forEach(b => b.onclick = () => {
+    const [k, n] = b.dataset.tsug.split("|"); c.traits = c.traits || {}; c.traits[k] = n; save(); redraw();
+    const sel = el.querySelector(`[data-trait="${k}"]`); if(sel) sel.focus();
+  });
+  el.querySelectorAll("[data-city]").forEach(b => b.onclick = () => { c.city = b.dataset.city; save(); render(); });
 }
 
 // ---- equipment and upgrades
@@ -3547,7 +3658,7 @@ function openEditor(c){
   $("#eSave").onclick = () => {
     if(!mode){ const h = $("#eModeHint"); h.textContent = "Pick Guided or Classic first."; h.classList.add("bad"); $("#modal [data-mode]").focus(); return; }
     const v = {name:$("#eName").value.trim().slice(0,40) || $("#eCls").value, race:$("#eRace").value.trim().slice(0,30) || "Human", cls:$("#eCls").value, city:$("#eCity").value, level:Math.max(1,Math.min(60,parseInt($("#eLvl").value)||1)), mode};
-    if(isNew){ const id = "c"+Date.now().toString(36); S.user.characters.push(Object.assign({id, solo:true, created:new Date().toISOString(), recs:false, where:false, alloc:{}, baseOv:{}, gear:{}}, v)); S.user.active = id; }
+    if(isNew){ const id = "c"+Date.now().toString(36); S.user.characters.push(Object.assign({id, solo:true, created:new Date().toISOString(), recs:false, where:false, alloc:{}, baseOv:{}, gear:{}, deity:"", traits:{}}, v)); S.user.active = id; }
     else Object.assign(c, v);
     save(); closeModal(); render();
   };

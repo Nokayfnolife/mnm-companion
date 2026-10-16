@@ -11,6 +11,8 @@ The zone maps are Leaflet image overlays with no zoom snapping; the whole map fi
 
 Starting stats per race and class come from the race pages on storiesofmnm.com (`races` in `site/data/wiki.json`, refreshed with the daily full scan).
 
+The Stats card also records what the player chose at character creation: a **deity** and the four **traits** (Major Combat, Minor Combat, Major Non-Combat, Minor Non-Combat). Traits come from the tables on storiesofmnm.com's new player guide (`traits` in `site/data/wiki.json`, refreshed with the daily full scan, with who may take each one); stat and resist traits are added into the totals. Which gods each race and class may follow, and the starting cities each choice allows, are hand-copied into `deities` in `site/curated.json` from the community wiki's "Starting City by Race, Class, and Deity" table, because that wiki sits behind a bot check the scanner can't pass. Guided (or Classic with upgrade tips on) suggests a Major Combat trait for the class's main stat and the night-vision trait when the race can take it.
+
 The first time someone signs in, Wallabik Ningel (a gnome Master Elementalist) walks them around the page; the steps are `tourSteps()` in the script, each with its own pose from `site/img/wallabik/` (transparent WebP, all on one 428×382 canvas at the same scale with his feet on the same line, so he doesn't jump in size between steps). The ? button or Settings replays it.
 
 Players pick a look under **Settings** (it opens by itself the first time someone signs in): **Field journal** (paper, ink and margin notes; the default, styled by the `html[data-look="journal"]` block at the end of the stylesheet) or **Game window**, which uses the area themes below.

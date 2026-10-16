@@ -562,6 +562,88 @@ def scan_races(snap: dict, delay: float) -> None:
         snap["races"] = races
 
 
+ABBR_CLASS = {"ARC": "Archer", "BRD": "Bard", "BST": "Beastmaster", "CLR": "Cleric", "DRU": "Druid", "ELE": "Elementalist",
+              "ENC": "Enchanter", "FTR": "Fighter", "INQ": "Inquisitor", "MNK": "Monk", "NEC": "Necromancer", "PAL": "Paladin",
+              "RNG": "Ranger", "ROG": "Rogue", "SHD": "Shadow Knight", "SHM": "Shaman", "SPB": "Spellblade", "WIZ": "Wizard"}
+STAT_NAMES = {"Strength": "STR", "Stamina": "STA", "Dexterity": "DEX", "Agility": "AGI", "Intelligence": "INT", "Wisdom": "WIS", "Charisma": "CHA"}
+TRAIT_GROUPS = (("majorCombat", "Major Combat"), ("minorCombat", "Minor Combat"),
+                ("majorNonCombat", "Major Non-Combat"), ("minorNonCombat", "Minor Non-Combat"))
+
+
+def _who(text: str, abbr: dict) -> dict:
+    """'Any', 'Halfling', 'BST, DRU, ...', 'All except ARC, BRD', 'Dwarf, Gnome (also High Elf, Troll)' -> who may take it."""
+    t = clean(text)
+    if not t or re.fullmatch(r"(?i)any|all", t):
+        return {"any": True}
+    names = lambda part: [abbr.get(x.strip(), x.strip()) for x in part.split(",") if x.strip()]
+    also = re.findall(r"\(also ([^)]*)\)", t)
+    bare = re.sub(r"\([^)]*\)", "", t).strip()
+    m = re.match(r"(?i)all except (.*)", bare)
+    if m:
+        lst = names(m.group(1))
+        known = set(abbr.values()) if abbr else None
+        if known is None or all(n in known for n in lst):
+            return {"except": lst}
+        return {"any": True, "note": t}            # e.g. "All except classes with innate Sneak"
+    return {"only": names(bare) + [n for a in also for n in names(a)]}
+
+
+def parse_traits(root: Node) -> dict:
+    """The four trait picks at character creation, from the trait tables on the new player guide."""
+    groups, heading = [], None
+    for n in root.iter():
+        if n.tag in ("h3", "h4"):
+            heading = n.text().strip()
+        if n.tag != "table" or "npg-traits" not in n.cls():
+            continue
+        key = name = None
+        for k, label in TRAIT_GROUPS:
+            if heading and heading.lower().startswith(label.lower() + " trait"):
+                key, name = k, label
+        if not key:
+            continue
+        traits = []
+        for tr in n.find_all("tr"):
+            tds = [td for td in tr.children if isinstance(td, Node) and td.tag == "td"]
+            if len(tds) < 4:
+                continue
+            nm, text = clean(tds[0].text()), clean(tds[3].text())
+            if not nm:
+                continue
+            t = {"name": nm, "races": _who(tds[1].text(), {}), "classes": _who(tds[2].text(), ABBR_CLASS), "text": text}
+            stats = {STAT_NAMES[a]: int(b) for a, b in re.findall(r"Passive: Your (?:base )?(%s) is increased by (\d+)" % "|".join(STAT_NAMES), text)}
+            res = {("Electricity" if a == "Electric" else a): int(b)
+                   for a, b in re.findall(r"Passive: Your base (\w+) [Rr]esistance is increased by (\d+)", text)}
+            if stats:
+                t["stats"] = stats
+            if res:
+                t["resists"] = res
+            traits.append(t)
+        if traits:
+            groups.append({"key": key, "name": name, "traits": traits})
+    blurbs = {}
+    for h in root.find_all("h4"):
+        m = re.match(r"\d\s+(.*)", h.text().strip())
+        if m and h.parent is not None:
+            rest = clean(h.parent.text().replace(h.text(), "", 1))
+            if rest and len(rest) < 80:
+                blurbs[m.group(1).strip().lower()] = rest
+    for g in groups:
+        if g["name"].lower() in blurbs:
+            g["blurb"] = blurbs[g["name"].lower()]
+    return {"groups": groups}
+
+
+def scan_traits(snap: dict) -> None:
+    url = "/wiki/guide/new-player-guide/"
+    t = parse_traits(dom(fetch(url)))
+    if len(t["groups"]) == len(TRAIT_GROUPS):
+        t["url"] = BASE + url
+        snap["traits"] = t
+    else:
+        log("traits: found %d of %d groups, keeping the old ones" % (len(t["groups"]), len(TRAIT_GROUPS)))
+
+
 # -------------------------------------------------------------------- scan
 def _status(phase: str):
     _scan_status["phase"] = phase
@@ -691,6 +773,13 @@ def _scan(full: bool) -> dict:
             scan_races(snap, delay)
         except Exception as e:
             log("races skipped: %s" % e)
+
+    # the four trait picks at character creation (daily, or once if missing)
+    if full or not snap.get("traits"):
+        try:
+            scan_traits(snap)
+        except Exception as e:
+            log("traits skipped: %s" % e)
 
     # class guides: daily, or right away when a new class shows up on a tab
     guides = dict(snap.get("guides", {}))

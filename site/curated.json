@@ -378,6 +378,787 @@
    ]
   }
  ],
+ "deities": {
+  "note": "Who can follow which god, and the starting cities each choice allows. Hand-copied from the community wiki (its pages sit behind a bot check the scanner can't pass); check again when races or cities change.",
+  "checked": "2026-10-16",
+  "source": "https://monstersandmemories.miraheze.org/wiki/Starting_City_by_Race,_Class,_and_Deity",
+  "about": "https://monstersandmemories.miraheze.org/wiki/Deities",
+  "gods": [
+   {
+    "name": "Agnostic",
+    "title": "No god"
+   },
+   {
+    "name": "Bulibyre",
+    "title": "God of Decay"
+   },
+   {
+    "name": "Eltindra",
+    "title": "Goddess of Travelers"
+   },
+   {
+    "name": "Erythar",
+    "title": "God of Thievery"
+   },
+   {
+    "name": "Haradrel",
+    "title": "God of War"
+   },
+   {
+    "name": "Krivea",
+    "title": "Goddess of Harvests"
+   },
+   {
+    "name": "Maelsin Thrys",
+    "title": "Goddess of Envy"
+   },
+   {
+    "name": "The Matswar",
+    "title": "God of Death"
+   },
+   {
+    "name": "Relle",
+    "title": "Goddess of Fertility"
+   },
+   {
+    "name": "Shalla",
+    "title": "Goddess of Night"
+   },
+   {
+    "name": "Sorophal",
+    "title": "God of Inspiration"
+   },
+   {
+    "name": "Tilustra",
+    "title": "Goddess of Knowledge"
+   },
+   {
+    "name": "Trem",
+    "title": "God of Commerce"
+   },
+   {
+    "name": "Trimminax",
+    "title": "God of Plague"
+   },
+   {
+    "name": "Urzebol",
+    "title": "God of Hatred"
+   },
+   {
+    "name": "Vespyra",
+    "title": "Goddess of Magic"
+   },
+   {
+    "name": "Ygorath",
+    "title": "God of Fear"
+   },
+   {
+    "name": "Yuum",
+    "title": "God of Sanctuary"
+   }
+  ],
+  "table": [
+   {
+    "race": "Deep Elf",
+    "classes": [
+     "Archer",
+     "Cleric",
+     "Elementalist",
+     "Enchanter",
+     "Fighter",
+     "Necromancer",
+     "Ranger",
+     "Rogue",
+     "Shadow Knight",
+     "Wizard"
+    ],
+    "starts": {
+     "Agnostic": [
+      "ailvorith",
+      "underdocks"
+     ],
+     "Bulibyre": [
+      "ailvorith",
+      "underdocks"
+     ],
+     "Erythar": [
+      "underdocks"
+     ],
+     "Maelsin Thrys": [
+      "ailvorith"
+     ],
+     "Trimminax": [
+      "ailvorith",
+      "underdocks"
+     ],
+     "Urzebol": [
+      "ailvorith",
+      "underdocks"
+     ],
+     "Ygorath": [
+      "ailvorith",
+      "underdocks"
+     ]
+    }
+   },
+   {
+    "race": "Deep Elf",
+    "classes": [
+     "Inquisitor",
+     "Monk",
+     "Paladin",
+     "Spellblade"
+    ],
+    "starts": {
+     "Agnostic": [
+      "ailvorith"
+     ],
+     "Bulibyre": [
+      "ailvorith"
+     ],
+     "Erythar": [
+      "ailvorith"
+     ],
+     "Maelsin Thrys": [
+      "ailvorith"
+     ],
+     "Trimminax": [
+      "ailvorith"
+     ],
+     "Urzebol": [
+      "ailvorith"
+     ],
+     "Ygorath": [
+      "ailvorith"
+     ]
+    }
+   },
+   {
+    "race": "Deep Gnome",
+    "classes": [
+     "Beastmaster",
+     "Druid",
+     "Elementalist",
+     "Enchanter",
+     "Necromancer",
+     "Rogue",
+     "Shaman",
+     "Wizard"
+    ],
+    "starts": {
+     "Agnostic": [
+      "underdocks"
+     ],
+     "Bulibyre": [
+      "underdocks"
+     ],
+     "Eltindra": [
+      "underdocks"
+     ],
+     "Erythar": [
+      "underdocks"
+     ],
+     "Haradrel": [
+      "underdocks"
+     ],
+     "Trem": [
+      "underdocks"
+     ],
+     "Trimminax": [
+      "underdocks"
+     ],
+     "Urzebol": [
+      "underdocks"
+     ],
+     "Vespyra": [
+      "underdocks"
+     ],
+     "Ygorath": [
+      "underdocks"
+     ]
+    }
+   },
+   {
+    "race": "Dwarf",
+    "classes": [
+     "Bard",
+     "Cleric",
+     "Elementalist",
+     "Enchanter",
+     "Fighter",
+     "Paladin",
+     "Ranger",
+     "Rogue",
+     "Spellblade",
+     "Wizard"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor"
+     ],
+     "Eltindra": [
+      "night-harbor"
+     ],
+     "Haradrel": [
+      "night-harbor"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ],
+     "Trem": [
+      "night-harbor"
+     ],
+     "Vespyra": [
+      "night-harbor"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Gnome",
+    "classes": [
+     "Cleric",
+     "Elementalist",
+     "Enchanter",
+     "Fighter",
+     "Necromancer",
+     "Rogue",
+     "Wizard"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Bulibyre": [
+      "underdocks"
+     ],
+     "Eltindra": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Erythar": [
+      "underdocks"
+     ],
+     "Haradrel": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ],
+     "Trem": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Trimminax": [
+      "underdocks"
+     ],
+     "Urzebol": [
+      "underdocks"
+     ],
+     "Vespyra": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Ygorath": [
+      "underdocks"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Gnome",
+    "classes": [
+     "Paladin",
+     "Spellblade"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor"
+     ],
+     "Eltindra": [
+      "night-harbor"
+     ],
+     "Haradrel": [
+      "night-harbor"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ],
+     "Trem": [
+      "night-harbor"
+     ],
+     "Vespyra": [
+      "night-harbor"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Goblin",
+    "classes": [
+     "Archer",
+     "Beastmaster",
+     "Druid",
+     "Enchanter",
+     "Fighter",
+     "Necromancer",
+     "Ranger",
+     "Rogue",
+     "Shadow Knight",
+     "Shaman"
+    ],
+    "starts": {
+     "Agnostic": [
+      "underdocks"
+     ],
+     "Bulibyre": [
+      "underdocks"
+     ],
+     "Eltindra": [
+      "underdocks"
+     ],
+     "Erythar": [
+      "underdocks"
+     ],
+     "Haradrel": [
+      "underdocks"
+     ],
+     "Trem": [
+      "underdocks"
+     ],
+     "Trimminax": [
+      "underdocks"
+     ],
+     "Urzebol": [
+      "underdocks"
+     ],
+     "Vespyra": [
+      "underdocks"
+     ],
+     "Ygorath": [
+      "underdocks"
+     ]
+    }
+   },
+   {
+    "race": "Halfling",
+    "classes": [
+     "Archer",
+     "Bard",
+     "Beastmaster",
+     "Druid",
+     "Fighter",
+     "Ranger",
+     "Rogue"
+    ],
+    "starts": {
+     "Agnostic": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Krivea": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Relle": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Shalla": [
+      "faelindral"
+     ],
+     "Sorophal": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "faelindral",
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Halfling",
+    "classes": [
+     "Cleric",
+     "Paladin"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Human",
+    "classes": [
+     "Archer",
+     "Beastmaster",
+     "Cleric",
+     "Druid",
+     "Elementalist",
+     "Fighter",
+     "Necromancer",
+     "Ranger",
+     "Rogue",
+     "Shadow Knight",
+     "Shaman"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Bulibyre": [
+      "underdocks"
+     ],
+     "Eltindra": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Erythar": [
+      "underdocks"
+     ],
+     "Haradrel": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ],
+     "Trem": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Trimminax": [
+      "underdocks"
+     ],
+     "Urzebol": [
+      "underdocks"
+     ],
+     "Vespyra": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Ygorath": [
+      "underdocks"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Human",
+    "classes": [
+     "Bard",
+     "Inquisitor",
+     "Monk",
+     "Paladin",
+     "Spellblade"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor"
+     ],
+     "Eltindra": [
+      "night-harbor"
+     ],
+     "Haradrel": [
+      "night-harbor"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ],
+     "Trem": [
+      "night-harbor"
+     ],
+     "Vespyra": [
+      "night-harbor"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Human",
+    "classes": [
+     "Wizard"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Eltindra": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Haradrel": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ],
+     "Trem": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Trimminax": [
+      "underdocks"
+     ],
+     "Urzebol": [
+      "underdocks"
+     ],
+     "Vespyra": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Ygorath": [
+      "underdocks"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Ogre",
+    "classes": [
+     "Archer",
+     "Beastmaster",
+     "Elementalist",
+     "Fighter",
+     "Ranger",
+     "Shadow Knight",
+     "Shaman"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Eltindra": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Haradrel": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ],
+     "Trimminax": [
+      "underdocks"
+     ],
+     "Vespyra": [
+      "night-harbor",
+      "underdocks"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Ogre",
+    "classes": [
+     "Monk"
+    ],
+    "starts": {
+     "Agnostic": [
+      "night-harbor"
+     ],
+     "Eltindra": [
+      "night-harbor"
+     ],
+     "Haradrel": [
+      "night-harbor"
+     ],
+     "Krivea": [
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "night-harbor"
+     ],
+     "Relle": [
+      "night-harbor"
+     ],
+     "Sorophal": [
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "night-harbor"
+     ],
+     "Vespyra": [
+      "night-harbor"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   },
+   {
+    "race": "Wood Elf",
+    "classes": [
+     "Archer",
+     "Bard",
+     "Beastmaster",
+     "Druid",
+     "Fighter",
+     "Ranger",
+     "Rogue",
+     "Shaman"
+    ],
+    "starts": {
+     "Agnostic": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Krivea": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "The Matswar": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Relle": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Shalla": [
+      "faelindral"
+     ],
+     "Sorophal": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Tilustra": [
+      "faelindral",
+      "night-harbor"
+     ],
+     "Yuum": [
+      "night-harbor"
+     ]
+    }
+   }
+  ]
+ },
  "sets": [
   {
    "id": "scarab",
