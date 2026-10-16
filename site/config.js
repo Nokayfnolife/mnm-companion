@@ -4,8 +4,7 @@ window.MNM_CONFIG = {
   supabaseUrl: "https://tdmkwojyhzptdgvsjjmi.supabase.co",
   supabaseAnonKey: "sb_publishable_HU7B86p_zQ1v-A1VlkEoIg_oFz0cntY",
   // Sign-in options shown next to email, enabled in Supabase > Authentication > Providers
-  // Add "discord" once it is switched on in Supabase, or its button shows an error.
-  providers: [],
+  providers: ["discord"],
   // "Ask the guide" uses the Supabase Edge Function in supabase/functions/ask
   // Set to true once the ask function and its ANTHROPIC_API_KEY secret are in Supabase.
   ask: false,
