@@ -50949,5 +50949,874 @@
    "at": "2026-10-15T17:01:52+00:00"
   }
  },
- "news": []
+ "news": [],
+ "races": {
+  "deep-dwarf": {
+   "base": null,
+   "classes": {},
+   "bonus": null,
+   "details": {
+    "Faction Alignment": "Evil",
+    "Languages": "Not yet revealed",
+    "Racial Ability": "Not yet revealed",
+    "Resistances": "Not yet revealed",
+    "Starting City": "Night Harbor (during development)",
+    "Playable Classes": "8 — Cleric, Elementalist, Fighter, Inquisitor, Necromancer, Paladin, Shadow Knight, Spellblade"
+   },
+   "name": "Deep Dwarf",
+   "url": "https://storiesofmnm.com/race/deep-dwarf/"
+  },
+  "deep-elf": {
+   "base": null,
+   "classes": {},
+   "bonus": null,
+   "details": {
+    "Faction Alignment": "Evil",
+    "Languages": "Not yet revealed",
+    "Racial Ability": "Not yet revealed",
+    "Resistances": "Not yet revealed",
+    "Starting City": "Night Harbor (during development)",
+    "Playable Classes": "13 — Archer, Cleric, Elementalist, Enchanter, Fighter, Inquisitor, Monk, Necromancer, Paladin, Rogue, Shadow Knight, Spellblade, Wizard"
+   },
+   "name": "Deep Elf",
+   "url": "https://storiesofmnm.com/race/deep-elf/"
+  },
+  "deep-gnome": {
+   "base": null,
+   "classes": {},
+   "bonus": null,
+   "details": {
+    "Faction Alignment": "Not yet revealed",
+    "Languages": "Not yet revealed",
+    "Racial Ability": "Not yet revealed",
+    "Resistances": "Not yet revealed",
+    "Starting City": "Night Harbor (during development)",
+    "Playable Classes": "8 — Beastmaster, Druid, Elementalist, Enchanter, Necromancer, Rogue, Shaman, Wizard"
+   },
+   "name": "Deep Gnome",
+   "url": "https://storiesofmnm.com/race/deep-gnome/"
+  },
+  "dwarf": {
+   "base": {
+    "STR": 17,
+    "STA": 17,
+    "DEX": 18,
+    "AGI": 15,
+    "INT": 16,
+    "WIS": 16,
+    "CHA": 15
+   },
+   "classes": {
+    "Bard": {
+     "STR": 18,
+     "STA": 17,
+     "DEX": 21,
+     "AGI": 15,
+     "INT": 16,
+     "WIS": 16,
+     "CHA": 19
+    },
+    "Cleric": {
+     "STR": 19,
+     "STA": 19,
+     "DEX": 18,
+     "AGI": 15,
+     "INT": 16,
+     "WIS": 19,
+     "CHA": 16
+    },
+    "Elementalist": {
+     "STR": 17,
+     "STA": 21,
+     "DEX": 18,
+     "AGI": 15,
+     "INT": 20,
+     "WIS": 16,
+     "CHA": 15
+    },
+    "Enchanter": {
+     "STR": 17,
+     "STA": 17,
+     "DEX": 18,
+     "AGI": 15,
+     "INT": 20,
+     "WIS": 16,
+     "CHA": 19
+    },
+    "Fighter": {
+     "STR": 21,
+     "STA": 20,
+     "DEX": 18,
+     "AGI": 16,
+     "INT": 16,
+     "WIS": 16,
+     "CHA": 15
+    },
+    "Paladin": {
+     "STR": 19,
+     "STA": 21,
+     "DEX": 18,
+     "AGI": 15,
+     "INT": 16,
+     "WIS": 18,
+     "CHA": 15
+    },
+    "Ranger": {
+     "STR": 18,
+     "STA": 17,
+     "DEX": 21,
+     "AGI": 17,
+     "INT": 16,
+     "WIS": 18,
+     "CHA": 15
+    },
+    "Rogue": {
+     "STR": 17,
+     "STA": 17,
+     "DEX": 22,
+     "AGI": 19,
+     "INT": 16,
+     "WIS": 16,
+     "CHA": 15
+    },
+    "Spellblade": {
+     "STR": 19,
+     "STA": 17,
+     "DEX": 21,
+     "AGI": 15,
+     "INT": 19,
+     "WIS": 16,
+     "CHA": 15
+    },
+    "Wizard": {
+     "STR": 20,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 15,
+     "INT": 20,
+     "WIS": 16,
+     "CHA": 15
+    }
+   },
+   "bonus": 10,
+   "details": {
+    "Faction Alignment": "Neutral",
+    "Languages": "Common (100), Dwarvish (100)",
+    "Racial Ability": "Stone Form",
+    "Resistances": "Cold +5, Magic +5",
+    "Starting City": "Night Harbor (during development)",
+    "Playable Classes": "10 — Bard, Cleric, Elementalist, Enchanter, Fighter, Paladin, Ranger, Rogue, Spellblade, Wizard",
+    "Reputation Note": "Dwarves are not well-liked outside Night Harbor. One orc kill raises standing to Uneasy in Evershade Weald, enough to trade."
+   },
+   "name": "Dwarf",
+   "url": "https://storiesofmnm.com/race/dwarf/"
+  },
+  "gnome": {
+   "base": {
+    "STR": 14,
+    "STA": 15,
+    "DEX": 19,
+    "AGI": 16,
+    "INT": 20,
+    "WIS": 15,
+    "CHA": 15
+   },
+   "classes": {
+    "Cleric": {
+     "STR": 16,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 16,
+     "INT": 20,
+     "WIS": 18,
+     "CHA": 16
+    },
+    "Elementalist": {
+     "STR": 14,
+     "STA": 19,
+     "DEX": 19,
+     "AGI": 16,
+     "INT": 24,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Enchanter": {
+     "STR": 14,
+     "STA": 15,
+     "DEX": 19,
+     "AGI": 16,
+     "INT": 24,
+     "WIS": 15,
+     "CHA": 19
+    },
+    "Fighter": {
+     "STR": 18,
+     "STA": 18,
+     "DEX": 19,
+     "AGI": 17,
+     "INT": 20,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Necromancer": {
+     "STR": 14,
+     "STA": 15,
+     "DEX": 23,
+     "AGI": 16,
+     "INT": 24,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Paladin": {
+     "STR": 16,
+     "STA": 19,
+     "DEX": 19,
+     "AGI": 16,
+     "INT": 20,
+     "WIS": 17,
+     "CHA": 15
+    },
+    "Rogue": {
+     "STR": 14,
+     "STA": 15,
+     "DEX": 23,
+     "AGI": 20,
+     "INT": 20,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Spellblade": {
+     "STR": 16,
+     "STA": 15,
+     "DEX": 22,
+     "AGI": 16,
+     "INT": 23,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Wizard": {
+     "STR": 17,
+     "STA": 15,
+     "DEX": 20,
+     "AGI": 16,
+     "INT": 24,
+     "WIS": 15,
+     "CHA": 15
+    }
+   },
+   "bonus": 10,
+   "details": {
+    "Faction Alignment": "Neutral",
+    "Languages": "Common (100), Gnomish (100)",
+    "Racial Ability": "Slippery",
+    "Resistances": "Electricity +5, Poison +5",
+    "Starting City": "Night Harbor (during development)",
+    "Playable Classes": "9 — Cleric, Elementalist, Enchanter, Fighter, Necromancer, Paladin, Rogue, Spellblade, Wizard",
+    "Reputation Note": "Gnomes are not well-liked outside Night Harbor. One orc kill raises standing to Uneasy in Evershade Weald, enough to trade."
+   },
+   "name": "Gnome",
+   "url": "https://storiesofmnm.com/race/gnome/"
+  },
+  "goblin": {
+   "base": {
+    "STR": 15,
+    "STA": 15,
+    "DEX": 19,
+    "AGI": 19,
+    "INT": 17,
+    "WIS": 16,
+    "CHA": 13
+   },
+   "classes": {
+    "Archer": {
+     "STR": 17,
+     "STA": 15,
+     "DEX": 23,
+     "AGI": 21,
+     "INT": 17,
+     "WIS": 16,
+     "CHA": 13
+    },
+    "Beastmaster": {
+     "STR": 19,
+     "STA": 15,
+     "DEX": 19,
+     "AGI": 21,
+     "INT": 17,
+     "WIS": 18,
+     "CHA": 13
+    },
+    "Druid": {
+     "STR": 15,
+     "STA": 15,
+     "DEX": 19,
+     "AGI": 21,
+     "INT": 17,
+     "WIS": 20,
+     "CHA": 15
+    },
+    "Enchanter": {
+     "STR": 15,
+     "STA": 15,
+     "DEX": 19,
+     "AGI": 19,
+     "INT": 21,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Fighter": {
+     "STR": 19,
+     "STA": 18,
+     "DEX": 19,
+     "AGI": 20,
+     "INT": 17,
+     "WIS": 16,
+     "CHA": 13
+    },
+    "Necromancer": {
+     "STR": 15,
+     "STA": 15,
+     "DEX": 23,
+     "AGI": 19,
+     "INT": 21,
+     "WIS": 16,
+     "CHA": 13
+    },
+    "Ranger": {
+     "STR": 16,
+     "STA": 15,
+     "DEX": 22,
+     "AGI": 21,
+     "INT": 17,
+     "WIS": 18,
+     "CHA": 13
+    },
+    "Rogue": {
+     "STR": 15,
+     "STA": 15,
+     "DEX": 23,
+     "AGI": 23,
+     "INT": 17,
+     "WIS": 16,
+     "CHA": 13
+    },
+    "Shadow Knight": {
+     "STR": 18,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 19,
+     "INT": 20,
+     "WIS": 16,
+     "CHA": 13
+    },
+    "Shaman": {
+     "STR": 16,
+     "STA": 17,
+     "DEX": 20,
+     "AGI": 19,
+     "INT": 17,
+     "WIS": 20,
+     "CHA": 13
+    }
+   },
+   "bonus": 10,
+   "details": {
+    "Faction Alignment": "Neutral",
+    "Languages": "Common (100), Goblin (100)",
+    "Racial Ability": "Bribe",
+    "Resistances": "Disease +5, Poison +5",
+    "Racial Stat Modifiers": "−1 STR, −1 STA, +3 AGI, +3 DEX, +1 INT, −3 CHA",
+    "Starting City": "Night Harbor (during development)",
+    "Playable Classes": "10 — Archer, Beastmaster, Druid, Enchanter, Fighter, Necromancer, Ranger, Rogue, Shadow Knight, Shaman",
+    "Reputation Note": "Goblins are not well-liked outside Night Harbor. One orc kill raises standing to Uneasy in Evershade Weald, enough to trade."
+   },
+   "name": "Goblin",
+   "url": "https://storiesofmnm.com/race/goblin/"
+  },
+  "halfling": {
+   "base": {
+    "STR": 15,
+    "STA": 17,
+    "DEX": 16,
+    "AGI": 17,
+    "INT": 14,
+    "WIS": 20,
+    "CHA": 15
+   },
+   "classes": {
+    "Archer": {
+     "STR": 17,
+     "STA": 17,
+     "DEX": 20,
+     "AGI": 19,
+     "INT": 14,
+     "WIS": 20,
+     "CHA": 15
+    },
+    "Bard": {
+     "STR": 16,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 17,
+     "INT": 14,
+     "WIS": 20,
+     "CHA": 19
+    },
+    "Beastmaster": {
+     "STR": 19,
+     "STA": 17,
+     "DEX": 16,
+     "AGI": 19,
+     "INT": 14,
+     "WIS": 22,
+     "CHA": 15
+    },
+    "Cleric": {
+     "STR": 17,
+     "STA": 19,
+     "DEX": 16,
+     "AGI": 17,
+     "INT": 14,
+     "WIS": 23,
+     "CHA": 16
+    },
+    "Druid": {
+     "STR": 15,
+     "STA": 17,
+     "DEX": 16,
+     "AGI": 19,
+     "INT": 14,
+     "WIS": 24,
+     "CHA": 17
+    },
+    "Fighter": {
+     "STR": 19,
+     "STA": 20,
+     "DEX": 16,
+     "AGI": 18,
+     "INT": 14,
+     "WIS": 20,
+     "CHA": 15
+    },
+    "Paladin": {
+     "STR": 17,
+     "STA": 21,
+     "DEX": 16,
+     "AGI": 17,
+     "INT": 14,
+     "WIS": 22,
+     "CHA": 15
+    },
+    "Ranger": {
+     "STR": 16,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 19,
+     "INT": 14,
+     "WIS": 22,
+     "CHA": 15
+    },
+    "Rogue": {
+     "STR": 15,
+     "STA": 17,
+     "DEX": 20,
+     "AGI": 21,
+     "INT": 14,
+     "WIS": 20,
+     "CHA": 15
+    }
+   },
+   "bonus": 10,
+   "details": {
+    "Faction Alignment": "Neutral",
+    "Languages": "Common (100), Halfling (100)",
+    "Racial Abilities": "Sneak, Forage, Increased Consumption Rate",
+    "Resistances": "Corruption +5, Disease +5",
+    "Starting Cities": "Night Harbor (during development), Faelindral",
+    "Playable Classes": "9 — Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Paladin, Ranger, Rogue",
+    "Class Note": "Bards and Rangers get Sneak at level 1 but can’t use it until level 20 / 13 respectively; Rogues can use it immediately."
+   },
+   "name": "Halfling",
+   "url": "https://storiesofmnm.com/race/halfling/"
+  },
+  "human": {
+   "base": {
+    "STR": 16,
+    "STA": 17,
+    "DEX": 16,
+    "AGI": 16,
+    "INT": 16,
+    "WIS": 16,
+    "CHA": 17
+   },
+   "classes": {
+    "Archer": {
+     "STR": 18,
+     "STA": 17,
+     "DEX": 20,
+     "AGI": 18,
+     "INT": 16,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Bard": {
+     "STR": 17,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 16,
+     "INT": 16,
+     "WIS": 16,
+     "CHA": 21
+    },
+    "Beastmaster": {
+     "STR": 20,
+     "STA": 17,
+     "DEX": 16,
+     "AGI": 18,
+     "INT": 16,
+     "WIS": 18,
+     "CHA": 17
+    },
+    "Cleric": {
+     "STR": 18,
+     "STA": 19,
+     "DEX": 16,
+     "AGI": 16,
+     "INT": 16,
+     "WIS": 19,
+     "CHA": 18
+    },
+    "Druid": {
+     "STR": 16,
+     "STA": 17,
+     "DEX": 16,
+     "AGI": 18,
+     "INT": 16,
+     "WIS": 20,
+     "CHA": 19
+    },
+    "Enchanter": {
+     "STR": 16,
+     "STA": 17,
+     "DEX": 16,
+     "AGI": 16,
+     "INT": 20,
+     "WIS": 16,
+     "CHA": 21
+    },
+    "Elementalist": {
+     "STR": 16,
+     "STA": 21,
+     "DEX": 16,
+     "AGI": 16,
+     "INT": 20,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Fighter": {
+     "STR": 20,
+     "STA": 20,
+     "DEX": 16,
+     "AGI": 17,
+     "INT": 16,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Inquisitor": {
+     "STR": 17,
+     "STA": 20,
+     "DEX": 17,
+     "AGI": 16,
+     "INT": 18,
+     "WIS": 16,
+     "CHA": 18
+    },
+    "Monk": {
+     "STR": 17,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 20,
+     "INT": 16,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Necromancer": {
+     "STR": 16,
+     "STA": 17,
+     "DEX": 20,
+     "AGI": 16,
+     "INT": 20,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Paladin": {
+     "STR": 18,
+     "STA": 21,
+     "DEX": 16,
+     "AGI": 16,
+     "INT": 16,
+     "WIS": 18,
+     "CHA": 17
+    },
+    "Ranger": {
+     "STR": 17,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 18,
+     "INT": 16,
+     "WIS": 18,
+     "CHA": 17
+    },
+    "Rogue": {
+     "STR": 16,
+     "STA": 17,
+     "DEX": 20,
+     "AGI": 20,
+     "INT": 16,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Shadow Knight": {
+     "STR": 19,
+     "STA": 19,
+     "DEX": 16,
+     "AGI": 16,
+     "INT": 19,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Shaman": {
+     "STR": 17,
+     "STA": 19,
+     "DEX": 17,
+     "AGI": 16,
+     "INT": 16,
+     "WIS": 20,
+     "CHA": 17
+    },
+    "Spellblade": {
+     "STR": 18,
+     "STA": 17,
+     "DEX": 19,
+     "AGI": 16,
+     "INT": 19,
+     "WIS": 16,
+     "CHA": 17
+    },
+    "Wizard": {
+     "STR": 19,
+     "STA": 17,
+     "DEX": 17,
+     "AGI": 16,
+     "INT": 20,
+     "WIS": 16,
+     "CHA": 17
+    }
+   },
+   "bonus": 10,
+   "details": {
+    "Faction Alignment": "Neutral",
+    "Languages": "Common (100)",
+    "Racial Ability": "Tenacity",
+    "Resistances": "Corruption −5, Holy −5",
+    "Starting City": "Night Harbor",
+    "Playable Classes": "18 (every class in the game)"
+   },
+   "name": "Human",
+   "url": "https://storiesofmnm.com/race/human/"
+  },
+  "ogre": {
+   "base": {
+    "STR": 20,
+    "STA": 19,
+    "DEX": 15,
+    "AGI": 14,
+    "INT": 16,
+    "WIS": 15,
+    "CHA": 15
+   },
+   "classes": {
+    "Archer": {
+     "STR": 22,
+     "STA": 19,
+     "DEX": 19,
+     "AGI": 16,
+     "INT": 16,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Beastmaster": {
+     "STR": 24,
+     "STA": 19,
+     "DEX": 15,
+     "AGI": 16,
+     "INT": 16,
+     "WIS": 17,
+     "CHA": 15
+    },
+    "Elementalist": {
+     "STR": 20,
+     "STA": 23,
+     "DEX": 15,
+     "AGI": 14,
+     "INT": 20,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Fighter": {
+     "STR": 24,
+     "STA": 22,
+     "DEX": 15,
+     "AGI": 15,
+     "INT": 16,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Monk": {
+     "STR": 21,
+     "STA": 19,
+     "DEX": 18,
+     "AGI": 18,
+     "INT": 16,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Ranger": {
+     "STR": 21,
+     "STA": 19,
+     "DEX": 18,
+     "AGI": 16,
+     "INT": 16,
+     "WIS": 17,
+     "CHA": 15
+    },
+    "Shadow Knight": {
+     "STR": 23,
+     "STA": 21,
+     "DEX": 15,
+     "AGI": 14,
+     "INT": 19,
+     "WIS": 15,
+     "CHA": 15
+    },
+    "Shaman": {
+     "STR": 21,
+     "STA": 21,
+     "DEX": 16,
+     "AGI": 14,
+     "INT": 16,
+     "WIS": 19,
+     "CHA": 15
+    }
+   },
+   "bonus": 10,
+   "details": {
+    "Faction Alignment": "Neutral",
+    "Languages": "Common (100), Ogrish (100)",
+    "Racial Abilities": "Ogre Smash, Increased Consumption Rate",
+    "Resistances": "Cold +10, Magic −10",
+    "Starting City": "Night Harbor (during development)",
+    "Playable Classes": "8 — Archer, Beastmaster, Elementalist, Fighter, Monk, Ranger, Shadow Knight, Shaman",
+    "Reputation Note": "Ogres are Kill-on-Sight in Evershade Weald and not well-liked outside Night Harbor. ~100 orc kills are needed to reach trading standing."
+   },
+   "name": "Ogre",
+   "url": "https://storiesofmnm.com/race/ogre/"
+  },
+  "wood-elf": {
+   "base": {
+    "STR": 14,
+    "STA": 14,
+    "DEX": 18,
+    "AGI": 20,
+    "INT": 15,
+    "WIS": 17,
+    "CHA": 16
+   },
+   "classes": {
+    "Archer": {
+     "STR": 16,
+     "STA": 14,
+     "DEX": 22,
+     "AGI": 22,
+     "INT": 15,
+     "WIS": 17,
+     "CHA": 16
+    },
+    "Bard": {
+     "STR": 15,
+     "STA": 14,
+     "DEX": 21,
+     "AGI": 20,
+     "INT": 15,
+     "WIS": 17,
+     "CHA": 20
+    },
+    "Beastmaster": {
+     "STR": 18,
+     "STA": 14,
+     "DEX": 18,
+     "AGI": 22,
+     "INT": 15,
+     "WIS": 19,
+     "CHA": 16
+    },
+    "Druid": {
+     "STR": 14,
+     "STA": 14,
+     "DEX": 18,
+     "AGI": 22,
+     "INT": 15,
+     "WIS": 21,
+     "CHA": 18
+    },
+    "Fighter": {
+     "STR": 18,
+     "STA": 17,
+     "DEX": 18,
+     "AGI": 21,
+     "INT": 15,
+     "WIS": 17,
+     "CHA": 16
+    },
+    "Ranger": {
+     "STR": 15,
+     "STA": 14,
+     "DEX": 21,
+     "AGI": 22,
+     "INT": 15,
+     "WIS": 19,
+     "CHA": 16
+    },
+    "Rogue": {
+     "STR": 14,
+     "STA": 14,
+     "DEX": 22,
+     "AGI": 24,
+     "INT": 15,
+     "WIS": 17,
+     "CHA": 16
+    },
+    "Shaman": {
+     "STR": 15,
+     "STA": 16,
+     "DEX": 19,
+     "AGI": 20,
+     "INT": 15,
+     "WIS": 21,
+     "CHA": 16
+    }
+   },
+   "bonus": 10,
+   "details": {
+    "Faction Alignment": "Good",
+    "Languages": "Common (100), Elvish (100)",
+    "Racial Abilities": "Hide, Forage",
+    "Resistances": "Electricity +5, Fire −5",
+    "Starting Cities": "Night Harbor (during development), Faelindral",
+    "Playable Classes": "8 — Archer, Bard, Beastmaster, Druid, Fighter, Ranger, Rogue, Shaman"
+   },
+   "name": "Wood Elf",
+   "url": "https://storiesofmnm.com/race/wood-elf/"
+  }
+ }
 }

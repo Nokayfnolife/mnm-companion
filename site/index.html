@@ -811,7 +811,7 @@ a.ilink:hover{text-decoration:underline;text-decoration-style:dotted;text-underl
 
 /* ---------- nameplate + experience bar ---------- */
 .hero{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 16px;align-items:center;margin:14px 0 0;padding:16px 20px 12px}
-.crestbig{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 40% 35%,var(--slab),var(--well));box-shadow:0 0 0 2px #000,0 0 0 4px var(--iron2),inset 0 1px 0 var(--rim);font:800 18px/1 var(--display);color:var(--gilt2);text-shadow:0 1px 0 #000}
+.crestbig{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 40% 35%,var(--slab),var(--well));box-shadow:0 0 0 2px #000,0 0 0 4px var(--iron2),inset 0 1px 0 var(--rim);font:800 18px/1 var(--display);color:var(--gilt2);text-shadow:0 1px 0 #000}
 .who{min-width:0}
 .who h2{font:800 31px/1.05 var(--display);margin:0 0 4px;color:var(--parch);text-shadow:0 2px 0 #000;overflow-wrap:anywhere}
 .who .meta{color:var(--ash);font-size:15px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}
@@ -1118,7 +1118,83 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
 .th small{display:block;color:var(--ash);font-size:13px;line-height:1.3}
 .sw{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 68% 30%,var(--a) 0 24%,transparent 27%),linear-gradient(165deg,var(--s1),var(--s2));box-shadow:0 0 0 1px #000,0 0 0 2px var(--e)}
 .th[aria-checked="true"] .sw{box-shadow:0 0 0 1px #000,0 0 0 2px var(--a)}
+
+/* ---------- class emblems, modes, character sheet, equipment ---------- */
+.emb{display:block;width:62%;height:62%;color:var(--gilt2);filter:drop-shadow(0 1px 0 #000);overflow:visible}
+.emb path,.emb circle,.emb ellipse,.emb rect{fill:none;stroke:currentColor;stroke-width:3.6;stroke-linecap:round;stroke-linejoin:round}
+.emb .f{fill:currentColor;stroke:none}
+.modes2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mcard{display:grid;align-content:start;gap:5px;text-align:left;padding:12px 13px 13px;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--frame2);border-radius:3px;color:var(--text2);font:14px/1.42 var(--body)}
+.mcard:hover{box-shadow:0 0 0 1px var(--iron2)}
+.mcard b{font:700 17px/1.2 var(--display);color:var(--parch)}
+.mcard .disc{color:var(--soot);font-size:13px}
+.mcard[aria-checked="true"]{background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 12%,var(--well)),var(--well));box-shadow:0 0 0 1px var(--accent),0 0 16px color-mix(in srgb,var(--accent) 22%,transparent)}
+.mcard[aria-checked="true"] b{color:var(--gilt2)}
+.gnote{display:flex;gap:6px 12px;align-items:center;flex-wrap:wrap;margin-top:16px;padding:9px 12px;border-radius:3px;background:color-mix(in srgb,var(--accent) 8%,var(--well));border:1px solid #000;box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 35%,transparent);color:var(--text2);font-size:14.5px}
+.gnote>span{flex:1 1 300px}
+.gnote b{color:var(--gilt2);font-weight:700}
+.gnote .more{padding:0}
+.tgl{display:inline-flex;align-items:center;gap:8px;font:600 14px/1.2 var(--body);color:var(--ash);cursor:pointer;white-space:nowrap}
+.tgl input{-webkit-appearance:none;appearance:none;flex:none;width:34px;height:20px;margin:0;border-radius:10px;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--iron),inset 0 2px 3px rgba(0,0,0,.6);position:relative;cursor:pointer}
+.tgl input::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--ash);transition:transform .15s}
+.tgl input:checked{background:linear-gradient(180deg,var(--accent-hi),var(--accent-lo))}
+.tgl input:checked::after{transform:translateX(14px);background:#fff}
+.tgl:has(input:checked){color:var(--parch)}
+.tgl:has(input:disabled){opacity:.45;cursor:default}
+.tgl input:disabled{cursor:default}
+.tgls{display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center}
+.sheet{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.85fr);gap:18px;align-items:start;margin-top:18px}
+.portrait .body{display:grid;justify-items:center;text-align:center;gap:3px;padding:24px 16px 18px;background:radial-gradient(circle at 50% 34%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 60%)}
+.medal{width:150px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin-bottom:12px;background:radial-gradient(circle at 40% 32%,var(--slab),var(--well) 72%);box-shadow:0 0 0 2px #000,0 0 0 5px var(--accent-lo),0 0 0 7px #000,0 0 0 9px var(--iron2),inset 0 2px 0 var(--rim),inset 0 -16px 30px rgba(0,0,0,.5),0 0 48px color-mix(in srgb,var(--accent) 32%,transparent)}
+.medal .emb{width:58%;height:58%;color:var(--gilt2)}
+.portrait h2{font:800 30px/1.05 var(--display);margin:0;color:var(--parch);text-shadow:0 2px 0 #000}
+.portrait .role{font:700 16px/1.3 var(--display);color:var(--gilt2)}
+.portrait .pl{color:var(--ash);font-size:14px;max-width:34ch}
+.attrs{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto auto;gap:5px 12px;align-items:center}
+.attrs .h{font:700 12px/1.2 var(--body);color:var(--soot);text-transform:uppercase;letter-spacing:.06em;padding-bottom:2px}
+.attrs .h.r,.attrs .r{text-align:right}
+.attrs .k{font:800 16px/1 var(--display);color:var(--ash);min-width:40px}
+.attrs .k.key{color:var(--gilt2)}
+.attrs .k.key::after{content:" ◆";font-size:10px;vertical-align:2px}
+.attrs .b{color:var(--text2);font-size:15px}
+.attrs .b input{width:58px;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--iron);border-radius:3px;padding:3px 6px;color:var(--parch);font:15px/1.2 var(--body)}
+.attrs .pts{display:inline-flex;align-items:center;gap:4px}
+.attrs .pts button{width:26px;height:26px;display:grid;place-items:center;padding:0;background:linear-gradient(180deg,var(--btn1),var(--btn2));border:1px solid #000;border-radius:3px;box-shadow:0 0 0 1px var(--iron);font:700 16px/1 var(--body);color:var(--parch)}
+.attrs .pts button:disabled{opacity:.35;cursor:default}
+.attrs .pts b{min-width:22px;text-align:center;font:700 15px/1 var(--body);color:var(--gilt2)}
+.attrs .g{color:var(--q-fx);font-size:14.5px;min-width:30px}
+.attrs .tot{font:800 21px/1 var(--display);color:var(--parch);min-width:34px}
+.gearsum{display:grid;gap:6px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:14.5px;color:var(--text2)}
+.gearsum .ln{display:flex;flex-wrap:wrap;gap:4px 14px}
+.gearsum .lb{font:700 13px/1.6 var(--display);color:var(--soot);min-width:62px}
+.gearsum b{color:var(--parch);font-weight:700}
+.gearsum .neg{color:var(--hold)}
+.pick{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;margin-top:5px;background:var(--stone2);border:1px solid #000;box-shadow:0 0 0 1px var(--iron),inset 0 1px 0 var(--rim);border-radius:3px;padding:6px 9px;text-align:left;font:600 15px/1.25 var(--body);color:var(--soot)}
+.pick:hover{box-shadow:0 0 0 1px var(--gilt),inset 0 1px 0 var(--rim)}
+.pick::after{content:"";flex:none;width:12px;height:8px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23b4b8c8' stroke-width='2'/></svg>") no-repeat center}
+.pick span{min-width:0;overflow-wrap:anywhere}
+.upg{margin-top:8px;padding-top:7px;border-top:1px dashed color-mix(in srgb,var(--iron2) 45%,transparent);font-size:14px;color:var(--text2)}
+.upg .ul{font:700 13px/1 var(--display);color:var(--now);margin-right:4px}
+.upg .ul.soon{color:var(--gilt)}
+.upg .dl{font-size:13.5px;margin-top:2px;display:flex;flex-wrap:wrap;gap:0 8px}
+.upg .dl .p{color:var(--q-fx)}
+.upg .dl .m{color:var(--hold)}
+.upg .src{color:var(--soot);font-size:13px;margin-top:3px;line-height:1.35}
+.upg .more{font-size:13.5px;padding-top:4px}
+.plist{display:grid;gap:5px;max-height:min(54vh,520px);overflow:auto;margin:10px 0 4px;padding:1px 3px 1px 1px}
+.popt{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1px 10px;align-items:baseline;text-align:left;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--frame2);border-radius:3px;padding:7px 10px}
+.popt:hover{box-shadow:0 0 0 1px var(--gilt)}
+.popt.on{box-shadow:0 0 0 1px var(--accent),0 0 12px color-mix(in srgb,var(--accent) 20%,transparent)}
+.popt .n{font-weight:600;font-size:15px}
+.popt .s{grid-column:1/-1;color:var(--ash);font-size:13px}
+.popt:disabled{opacity:.45;cursor:default}
+.pkbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pkbar input[type=search]{flex:1 1 220px;min-width:0;background:var(--well);border:1px solid #000;box-shadow:0 0 0 1px var(--iron),inset 0 2px 4px rgba(0,0,0,.6);border-radius:3px;padding:9px 10px;color:var(--parch);font:16px/1.3 var(--body)}
+.pkbar input[type=search]:focus{outline:0;box-shadow:0 0 0 1px var(--gilt),inset 0 2px 4px rgba(0,0,0,.6)}
+.skipped{color:var(--soot);font-size:13.5px;margin-top:6px}
+.classic .ticks,.classic .upnext,.classic #soloSeg{display:none}
 @media (max-width:980px){
+  .sheet{grid-template-columns:1fr}
   .grid,.mapgrid{grid-template-columns:1fr}
   .lvlbig .n{font-size:50px}
   .who h2{font-size:26px}
@@ -1160,6 +1236,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
   .acct .who-am{display:none}
   .ins .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .search kbd{display:none}
+  .modes2{grid-template-columns:1fr}
+  .medal{width:120px}
+  .portrait h2{font-size:26px}
+  .attrs{gap:5px 9px}
+  .attrs .tot{font-size:19px}
 }
 </style>
 </head>
@@ -1201,8 +1282,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
       </div>
     </section>
     <div class="feats">
-      <article class="win feat"><header class="tb"><h2>A plan for your level</h2></header><div class="body"><p>Drag the experience bar to your level and the quests, hunting spots and armor sets re-sort around it. Each of your characters gets its own plan.</p></div></article>
-      <article class="win feat"><header class="tb"><h2>Gear by slot</h2></header><div class="body"><p>The best item for every slot your class can wear right now, the next upgrade, and what drops it.</p></div></article>
+      <article class="win feat"><header class="tb"><h2>Guided or Classic</h2></header><div class="body"><p>Guided lays out quests, hunting spots and armor sets for your level. Classic is a plain character sheet, with upgrade tips only if you ask for them.</p></div></article>
+      <article class="win feat"><header class="tb"><h2>Your gear, your stats</h2></header><div class="body"><p>Pick what you're wearing in each slot. Your stats add up on their own, and only the items that beat your gear show as upgrades.</p></div></article>
       <article class="win feat"><header class="tb"><h2>Zone maps</h2></header><div class="body"><p>Community maps with pins for camps, quest givers and turn-ins, plus notes you drop yourself.</p></div></article>
       <article class="win feat" id="lgAsk"><header class="tb"><h2>Search and ask</h2></header><div class="body"><p>Find any item, quest or zone as you type, or ask a question and get an answer drawn from the wiki.</p><p class="eg">“Where do I get a bigger bag at level 6?”</p></div></article>
     </div>
@@ -1217,10 +1298,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
   <section class="hero win" id="hero"><p class="loading">Loading the wiki copy…</p></section>
 
   <div id="planView" hidden>
+    <div id="gnote"></div>
     <div class="grid">
       <div class="col">
         <div class="card"><header><h3>Do next</h3><span class="sub" id="nextSub"></span></header><div class="body" id="plays"></div></div>
-        <div class="card"><header><h3>Gear by slot</h3><span class="sub">best you can use now, and the next step up</span>
+        <div class="card"><header><h3>Gear</h3><span class="sub">what you wear, and what beats it</span>
           <div class="right"><div class="seg" id="gearMode"><button data-v="all">All slots</button><button data-v="up">Upgrades only</button></div></div></header>
           <div class="body"><div class="slots" id="slots"></div><div class="tip" id="gearNote"></div></div></div>
         <div class="card"><header><h3>Quests</h3><span class="sub" id="qSub"></span>
@@ -1228,12 +1310,24 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 2px var(-
           <div class="body" id="quests"></div></div>
       </div>
       <div class="col">
-        <div class="card" id="setsCard"><header><h3>Armor sets</h3><span class="sub">shopping list</span></header><div class="body" id="sets"></div></div>
+        <div class="card"><header><h3>Stats</h3><span class="sub" id="gAttrSub"></span></header><div class="body" id="gAttrs"></div></div>
+        <div class="card" id="setsCard"><header><h3>Armor sets</h3><span class="sub">only the pieces that beat your gear</span></header><div class="body" id="sets"></div></div>
         <div class="card"><header><h3>Where to hunt</h3><span class="sub" id="campSub"></span></header><div class="body" id="camps"></div></div>
         <div class="card"><header><h3>Bags and space</h3></header><div class="body" id="bags"></div></div>
         <div class="card" id="spellCard"><header><h3>Spells to buy</h3><span class="sub" id="spellSub"></span></header><div class="body" id="spells"></div></div>
         <div class="card"><header><h3>New on the wiki</h3><span class="sub" id="newsSub"></span></header><div class="body" id="news"></div></div>
       </div>
+    </div>
+  </div>
+
+  <div id="sheetView" hidden>
+    <div class="sheet">
+      <div class="col">
+        <section class="card portrait" id="portrait"></section>
+        <section class="card"><header><h3>Attributes</h3><span class="sub" id="attrSub"></span></header><div class="body" id="attrs"></div></section>
+      </div>
+      <section class="card"><header><h3>Equipment</h3><span class="sub">pick what you're wearing</span><div class="right tgls" id="eqTgl"></div></header>
+        <div class="body"><div class="slots" id="equip"></div><div class="tip" id="eqNote"></div></div></section>
     </div>
   </div>
 
@@ -1283,24 +1377,39 @@ const UI = Object.assign({view:"plan", gear:"all", qScope:"home", zone:null, alt
 if(UI.view !== "map") UI.view = "plan";
 if(!UI.alt || typeof UI.alt !== "object") UI.alt = {};
 let saveTimer = null;
-const SLOTS = [["head","Head"],["face","Face"],["ear","Ear"],["neck","Neck"],["shoulders","Shoulders"],["back","Back"],["chest","Chest"],["wrist","Wrist"],["hands","Hands"],["ring","Ring"],["waist","Waist"],["legs","Legs"],["feet","Feet"],["primary","Primary"],["secondary","Secondary"],["ranged","Ranged"]];
 
 function loadUI(){ try{ const v = JSON.parse(localStorage.getItem("mnm-ui") || "{}"); return v && typeof v === "object" ? v : {}; }catch(_){ return {}; } }
-function saveUI(){ try{ localStorage.setItem("mnm-ui", JSON.stringify({view:UI.view, gear:UI.gear, qScope:UI.qScope, zone:UI.zone, alt:UI.alt, showPlan:UI.showPlan, showMine:UI.showMine})); }catch(_){} }
+function saveUI(){ try{ localStorage.setItem("mnm-ui", JSON.stringify({view:UI.view, gear:UI.gear, qScope:UI.qScope, zone:UI.zone, alt:UI.alt, showPlan:UI.showPlan, showMine:UI.showMine, hideGNote:!!UI.hideGNote})); }catch(_){} }
 function localGet(){ try{ const u = localStorage.getItem("mnm-user"); return u ? JSON.parse(u) : null; }catch(_){ return null; } }
 function localSet(u){ try{ localStorage.setItem("mnm-user", JSON.stringify(u)); }catch(_){} }
 
 // ------------------------------------------------------------- your data: Supabase account with a browser copy
 const Store = {mode:"local", ready:false, sb:null, uid:null, email:null, chan:null, noAuth:false, inflight:false, dirty:false, pending:false, retried:false, err:null};
 
+const ATTRS = ["STR","STA","DEX","AGI","INT","WIS","CHA"];
+const EQUIP = [["head","Head","head"],["face","Face","face"],["ear1","Ear","ear"],["ear2","Ear","ear"],["neck","Neck","neck"],["shoulders","Shoulders","shoulders"],["back","Back","back"],["chest","Chest","chest"],["wrist1","Wrist","wrist"],["wrist2","Wrist","wrist"],["hands","Hands","hands"],["ring1","Ring","ring"],["ring2","Ring","ring"],["waist","Waist","waist"],["legs","Legs","legs"],["feet","Feet","feet"],["primary","Primary","primary"],["secondary","Secondary","secondary"],["ranged","Ranged","ranged"]];
+const EQKEYS = EQUIP.map(e => e[0]);
+function statMap(o, lo, hi){
+  const out = {};
+  if(o && typeof o === "object") ATTRS.forEach(k => { const v = parseInt(o[k]); if(isFinite(v) && v >= lo && v <= hi && (lo > 0 || v > 0)) out[k] = v; });
+  return out;
+}
+function gearMap(o){
+  const out = {};
+  EQKEYS.forEach(k => { if(typeof o[k] === "string" && o[k]) out[k] = o[k].slice(0,100); });
+  return out;
+}
 function normUser(u){
   u = (u && typeof u === "object") ? u : {};
   const seen = new Set();
   const chars = (Array.isArray(u.characters) ? u.characters : []).filter(c => c && typeof c === "object").map(c => {
     let id = String(c.id || "").replace(/[^\w-]/g,"").slice(0,40) || ("c" + Math.random().toString(36).slice(2,8));
     while(seen.has(id)) id += "x"; seen.add(id);
-    return {id, name:String(c.name || "").slice(0,40), race:String(c.race || "Human").slice(0,30), cls:String(c.cls || "Warrior").slice(0,30),
-      city:String(c.city || "night-harbor").slice(0,40), level:Math.max(1, Math.min(60, parseInt(c.level) || 1)), solo:c.solo !== false, created:c.created || null};
+    return {id, name:String(c.name || "").slice(0,40), race:String(c.race || "Human").slice(0,30), cls:String(c.cls || "Fighter").slice(0,30),
+      city:String(c.city || "night-harbor").slice(0,40), level:Math.max(1, Math.min(60, parseInt(c.level) || 1)), solo:c.solo !== false, created:c.created || null,
+      mode:c.mode === "classic" ? "classic" : "guided", recs:!!c.recs, where:!!c.where,
+      alloc:statMap(c.alloc, 0, 60), baseOv:statMap(c.baseOv, 1, 99),
+      gear:(c.gear && typeof c.gear === "object" && !Array.isArray(c.gear)) ? gearMap(c.gear) : null};
   });
   const progress = (u.progress && typeof u.progress === "object" && !Array.isArray(u.progress)) ? u.progress : {};
   const pins = (Array.isArray(u.pins) ? u.pins : []).filter(p => p && p.map && isFinite(p.x) && isFinite(p.y)).map(p => ({
@@ -1557,6 +1666,15 @@ async function load(){
 
 // ------------------------------------------------------------- data prep
 let D = {};
+// "Saves: Magic +3, Fire +2" or "Corruption −5, Holy −5" -> {Magic:3, Fire:2}
+function parseSaves(t){
+  const out = {};
+  String(t || "").replace(/^\s*saves:\s*/i, "").split(",").forEach(p => {
+    const m = p.trim().replace(/[−–]/g, "-").match(/^([A-Za-z][A-Za-z ]*?)\s*([+-]?\d+)$/);
+    if(m) out[m[1]] = (out[m[1]] || 0) + parseInt(m[2]);
+  });
+  return out;
+}
 function prep(){
   const snap = S.snapshot || {}, cur = S.curated || {};
   const items = snap.items || {};
@@ -1591,8 +1709,9 @@ function prep(){
     else if(guideTier[it.slug]){ lvl = guideTier[it.slug] === "early" ? 10 : 22; why = "class guide"; }
     out[it.slug] = {slug:it.slug, name:it.name, url:it.url, type:it.type||"", slots, stats, classes,
       race:(d.race||it.races||"All"), tags:d.tags||[], drop:d.drop||it.excerpt||"", bagSlots:d.bagSlots||null,
-      weapon:d.weapon||null, effect:d.effect||"", lvl, est, why, req:(nt&&nt.reqLevel)||null, note:(nt&&nt.note)||"", hasDetail:!!it.detail};
+      weapon:d.weapon||null, effect:d.effect||"", saves:parseSaves(d.saves), lvl, est, why, req:(nt&&nt.reqLevel)||null, note:(nt&&nt.note)||"", hasDetail:!!it.detail};
   });
+  CAND.key = null;
   D = {items:out, camps, npcLevel, nameToSlug,
        classes: Object.fromEntries((cur.classes||[]).map(c => [c.name, c])),
        cities: Object.fromEntries((cur.cities||[]).map(c => [c.key, c]))};
@@ -1663,28 +1782,41 @@ function render(){
   if(!S.loaded) return;
   if(S.user.theme && S.user.theme !== themeKey()) applyTheme(S.user.theme, false);
   $("#app").classList.toggle("mapmode", UI.view === "map");
+  migrateGear();
+  const classic = isClassic(S.user.characters.length ? char() : null);
+  $("#app").classList.toggle("classic", classic);
   renderViewSeg(); renderStatus(); renderTabs(); renderFoot();
   if(!S.user.characters.length){ renderEmpty(); return; }
-  $("#planView").hidden = UI.view !== "plan";
+  $("#planView").hidden = UI.view !== "plan" || classic;
+  $("#sheetView").hidden = UI.view !== "plan" || !classic;
   $("#mapView").hidden = UI.view !== "map";
   renderHero();
   renderBody();
 }
 function renderBody(){
-  if(UI.view === "plan"){ renderPlays(); renderGear(); renderQuests(); renderSets(); renderCamps(); renderBags(); renderSpells(); renderNews(); }
-  else showMap();
+  if(UI.view !== "plan"){ showMap(); return; }
+  if(isClassic(char())){ renderSheet(); return; }
+  renderGuideNote(); renderPlays(); renderGear(); renderAttrs($("#gAttrs"), $("#gAttrSub")); renderQuests(); renderSets(); renderCamps(); renderBags(); renderSpells(); renderNews();
+}
+// characters saved before the gear picker existed: start them wearing the best of what they ticked as owned
+function migrateGear(){
+  let changed = false;
+  S.user.characters.forEach(c => { if(c.gear == null){ c.gear = gearFromOwned(c); changed = true; } });
+  if(changed) save();
 }
 function renderEmpty(){
-  $("#planView").hidden = true; $("#mapView").hidden = true;
+  $("#planView").hidden = true; $("#sheetView").hidden = true; $("#mapView").hidden = true;
   $("#hero").className = "";
   if(!Store.ready){ $("#hero").innerHTML = `<p class="loading">Loading your characters…</p>`; return; }
   $("#hero").innerHTML = `<div class="onboard win"><header class="tb"><h2>Create your first character</h2></header><div class="body">
-    <p>Pick a class, race, starting city and level. The plan, gear list, hunting spots and map pins all follow the experience bar, and each alt gets its own plan.</p>
+    <p>Pick a class, race, starting city and level, then choose how much help you want: Guided lays out a plan for your level, Classic keeps it to a character sheet. Each alt gets its own setup.</p>
     <button class="btn primary" id="obAdd">Add a character</button><button class="btn" id="obImp">Import from the PC app</button></div></div>`;
   $("#obAdd").onclick = () => openEditor(null);
   $("#obImp").onclick = openImport;
 }
 function renderViewSeg(){
+  const pb = $("#viewSeg [data-v=plan]");
+  if(pb) pb.textContent = isClassic(S.user.characters.length ? char() : null) ? "Sheet" : "Plan";
   $$("#viewSeg button").forEach(b => {
     b.classList.toggle("on", b.dataset.v === UI.view);
     b.setAttribute("aria-selected", b.dataset.v === UI.view ? "true" : "false");
@@ -1733,10 +1865,11 @@ function renderHero(){
   const max = 60, fill = ((c.level-1)/(max-1))*100;
   $("#hero").className = "hero win";
   $("#hero").innerHTML = `
-    <div class="crestbig" aria-hidden="true">${esc(clsInfo(c).abbr)}</div>
+    <div class="crestbig" aria-hidden="true">${emblem(c.cls)}</div>
     <div class="who"><h2>${esc(c.name || c.cls)}</h2>
       <div class="meta"><span><b>${esc(c.race)}</b> ${esc(c.cls)}</span><span>starts in <b>${esc(city.name)}</b></span>
-      <span class="modes"><span class="seg" id="soloSeg"><button data-v="1" class="${c.solo!==false?"on":""}">Solo</button><button data-v="0" class="${c.solo===false?"on":""}">Group</button></span></span>
+      <span class="modes"><span class="seg" id="modeSeg" role="radiogroup" aria-label="Mode"><button data-v="guided" role="radio" aria-checked="${!isClassic(c)}" class="${isClassic(c)?"":"on"}" title="A plan for your level: quests, hunting spots, armor sets and gear upgrades">Guided</button><button data-v="classic" role="radio" aria-checked="${isClassic(c)}" class="${isClassic(c)?"on":""}" title="A character sheet: stats and the gear you wear, with tips only if you ask">Classic</button></span>
+      <span class="seg" id="soloSeg"><button data-v="1" class="${c.solo!==false?"on":""}">Solo</button><button data-v="0" class="${c.solo===false?"on":""}">Group</button></span></span>
       <button class="btn ghost" id="editChar">Edit</button></div></div>
     <div class="lvlbig"><div class="n num" id="lvlN">${c.level}</div><div class="l">Level</div></div>
     <div class="slider"><input type="range" min="1" max="${max}" value="${c.level}" id="lvl" style="--fill:${fill}%" aria-label="Character level">
@@ -1745,6 +1878,7 @@ function renderHero(){
   const r = $("#lvl");
   r.oninput = () => { c.level = +r.value; $("#lvlN").textContent = c.level; r.style.setProperty("--fill", ((c.level-1)/(max-1))*100+"%"); clearTimeout(r._t); r._t = setTimeout(() => { save(); renderTabs(); renderBody(); renderTicks(); }, 120); };
   $$("#soloSeg button").forEach(b => b.onclick = () => { c.solo = b.dataset.v === "1"; save(); render(); });
+  $$("#modeSeg button").forEach(b => b.onclick = () => setMode(c, b.dataset.v));
   $("#editChar").onclick = () => openEditor(c);
 }
 function upNext(c){
@@ -1776,15 +1910,24 @@ function playsFor(c){
 function renderPlays(){
   const c = char(), pr = prog(c);
   const rank = {now:0, hold:1, soon:2};
-  let list = playsFor(c).sort((a,b) => (!!pr.done[a.p.id]) - (!!pr.done[b.p.id]) || rank[a.st.s]-rank[b.st.s] || (b.p.priority||0)-(a.p.priority||0));
+  // gear tips drop out once what you wear already beats everything they lead to
+  const stillUseful = p => {
+    if(p.kind !== "gear" || pr.done[p.id]) return true;
+    const set = p.set && ((S.curated||{}).sets||[]).find(s => s.id === p.set);
+    if(set) return setUseful(set, c);
+    const its = (p.usesItems||[]).map(s => D.items[s]).filter(Boolean);
+    return !its.length || its.some(it => beatsWorn(it, c));
+  };
+  let list = playsFor(c).filter(x => stillUseful(x.p)).sort((a,b) => (!!pr.done[a.p.id]) - (!!pr.done[b.p.id]) || rank[a.st.s]-rank[b.st.s] || (b.p.priority||0)-(a.p.priority||0));
   const covered = new Set((S.curated.plays||[]).map(p => p.link).filter(Boolean));
   const starters = ((S.snapshot||{}).quests||[]).filter(q => q.starter && classMatch(q.classes,c) && !/^ALL$/i.test(q.classes) && inHome(q.zone,c) && !covered.has(q.url));
   const nNow = list.filter(x => x.st.s==="now" && !pr.done[x.p.id]).length;
   $("#nextSub").textContent = `${nNow} things for level ${c.level}`;
-  let h = list.map(({p,st}) => {
+  const lim = UI.allPlays ? list.length : 5, extra = list.length - lim;
+  let h = list.slice(0, lim).map(({p,st}) => {
     const done = !!pr.done[p.id];
     const its = (p.usesItems||[]).map(s => D.items[s]).filter(Boolean);
-    const open = UI.openPlays[p.id] ?? (st.s !== "soon" && !done && (p.priority||0) >= 4);
+    const open = !!UI.openPlays[p.id];
     const acts = (p.steps && p.steps.length ? `<button class="more" data-tog="${esc(p.id)}">${open?"Hide steps":"Show steps"}</button>` : "")
       + (Z.byPlay[p.id] ? `<button class="more maplink" data-showmap="${esc(p.id)}">Show on map</button>` : "")
       + (p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">wiki</a>` : "");
@@ -1800,69 +1943,291 @@ function renderPlays(){
     </div>`;
   }).join("");
   h += starters.map(q => `<div class="play"><span class="badge b-info">Class</span><div><h4>${esc(q.name)}<span class="kind">starter quest</span></h4><div class="why">${esc(q.excerpt)}${q.reward?" Reward: "+esc(q.reward)+".":""}</div><div class="acts"><a href="${esc(q.url)}" target="_blank" rel="noopener">wiki walkthrough</a></div></div><span></span></div>`).join("");
+  if(extra > 0) h += `<button class="more" id="pMore">Show ${extra} more</button>`;
+  else if(UI.allPlays && list.length > 5) h += `<button class="more" id="pMore">Show fewer</button>`;
   $("#plays").innerHTML = h || `<div class="empty">Nothing hand-picked for this level and city yet - the quest, camp and gear lists below still fill in from the wiki.</div>`;
-  $$("[data-tog]").forEach(b => b.onclick = () => { const id = b.dataset.tog; const p = (S.curated.plays||[]).find(x => x.id===id); const st = p && playState(p,char()); const cur = UI.openPlays[id] ?? (st && st.s!=="soon" && !prog(char()).done[id] && (p.priority||0)>=4); UI.openPlays[id] = !cur; renderPlays(); });
+  if($("#pMore")) $("#pMore").onclick = () => { UI.allPlays = !UI.allPlays; renderPlays(); };
+  $$("[data-tog]").forEach(b => b.onclick = () => { const id = b.dataset.tog; UI.openPlays[id] = !UI.openPlays[id]; renderPlays(); });
   $$("[data-done]").forEach(b => b.onchange = () => { const pr = prog(char()); if(b.checked) pr.done[b.dataset.done] = true; else delete pr.done[b.dataset.done]; save(); renderPlays(); });
   $$("[data-showmap]").forEach(b => b.onclick = () => focusPlay(b.dataset.showmap));
 }
 
-// ---- gear
-function gearPlan(c){
-  const L = c.level, slack = c.solo === false ? 2 : 0, pr = prog(c);
-  const res = {};
-  SLOTS.forEach(([k]) => res[k] = {owned:null, now:null, next:null, unknown:0});
+// ---- modes
+const isClassic = c => !!c && c.mode === "classic";
+const showRecs = c => !isClassic(c) || !!c.recs;
+// where an item drops: always in Guided; in Classic only when both toggles are on
+const showWhere = c => !c || !isClassic(c) || (!!c.recs && !!c.where);
+function setMode(c, mode){
+  if(!c || (c.mode || "guided") === mode) return;
+  c.mode = mode === "classic" ? "classic" : "guided";
+  save(); render();
+}
+function renderGuideNote(){
+  const el = $("#gnote");
+  if(UI.hideGNote){ el.innerHTML = ""; return; }
+  el.innerHTML = `<div class="gnote"><span><b>Guided mode</b> lays out a path, gear and hunting spots for your level. It's for players who want help finding their way around; if you'd rather explore on your own, switch to <button class="more" id="gnClassic">Classic</button> any time.</span><button class="btn ghost" id="gnHide">Got it</button></div>`;
+  $("#gnClassic").onclick = () => setMode(char(), "classic");
+  $("#gnHide").onclick = () => { UI.hideGNote = true; saveUI(); renderGuideNote(); };
+}
+
+// ---- class emblems (original line art, one per class)
+const EMB = {
+  "Archer":'<path d="M24 7Q47 32 24 57"/><path d="M24 7L17 32L24 57"/><path d="M10 32H54"/><path d="M47 26L55 32L47 38"/><path d="M14 32l-5-5M14 32l-5 5M19 32l-5-5M19 32l-5 5"/>',
+  "Bard":'<circle cx="25" cy="41" r="14"/><circle class="f" cx="25" cy="41" r="3.4"/><path d="M34 31L49 16"/><path d="M45 12L51 6L57 12L51 18Z"/><path d="M18 48l4-4"/>',
+  "Beastmaster":'<ellipse class="f" cx="32" cy="43" rx="12.5" ry="10.5"/><ellipse class="f" cx="14.5" cy="29" rx="5.2" ry="6.8"/><ellipse class="f" cx="24.5" cy="17.5" rx="5.2" ry="6.8"/><ellipse class="f" cx="39.5" cy="17.5" rx="5.2" ry="6.8"/><ellipse class="f" cx="49.5" cy="29" rx="5.2" ry="6.8"/>',
+  "Cleric":'<path d="M32 30V58M26 58h12"/><circle cx="32" cy="18" r="9"/><path d="M32 3v5M18 18h-4M46 18h4M21 7l3 3M43 7l-3 3M21 29l3-3M43 29l-3-3"/>',
+  "Druid":'<path d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58Z"/><path d="M32 58V16M32 30l-8-7M32 39l8-7M32 47l-8-6"/>',
+  "Elementalist":'<path d="M32 58C19 58 13 47 18 37C20 42 24 44 26 42C24 32 30 22 34 7C42 17 51 28 49 42C48 52 41 58 32 58Z"/><path class="f" d="M32 58C27 58 25 53 27 48C29 50 31 50 32 48C32 43 34 40 36 37C40 43 41 48 39 53C38 56 35 58 32 58Z"/>',
+  "Enchanter":'<path d="M32 7L48 25L32 58L16 25Z"/><path d="M16 25H48M24 25L32 7L40 25M24 25L32 58L40 25"/><path class="f" d="M52 6l1.6 4.4L58 12l-4.4 1.6L52 18l-1.6-4.4L46 12l4.4-1.6Z"/>',
+  "Fighter":'<path d="M10 10L40 40M34 46L46 34M40 40l9 9"/><circle class="f" cx="51.5" cy="51.5" r="3.4"/><path d="M54 10L24 40M18 34l12 12M24 40l-9 9"/><circle class="f" cx="12.5" cy="51.5" r="3.4"/>',
+  "Inquisitor":'<path d="M6 34Q32 10 58 34Q32 58 6 34Z"/><circle cx="32" cy="34" r="9"/><circle class="f" cx="32" cy="34" r="3.8"/><path d="M32 13V6M19 17l-3-5M45 17l3-5"/>',
+  "Monk":'<path d="M32 52C24 42 24 26 32 13C40 26 40 42 32 52Z"/><path d="M29 52C17 50 9 40 9 29C19 31 26 38 29 46"/><path d="M35 52C47 50 55 40 55 29C45 31 38 38 35 46"/><path d="M13 57H51"/>',
+  "Necromancer":'<path d="M17 36C15 20 24 9 32 9S49 20 47 36L45 42H40V53H24V42H19Z"/><circle class="f" cx="25" cy="31" r="4.8"/><circle class="f" cx="39" cy="31" r="4.8"/><path class="f" d="M32 37l-3.2 5.4h6.4Z"/><path d="M28.5 47v6M32 47v6M35.5 47v6"/>',
+  "Paladin":'<path d="M32 6L52 13V30C52 44 43 53 32 58C21 53 12 44 12 30V13Z"/><path d="M32 17V47M22 28H42"/>',
+  "Ranger":'<path d="M32 6L45 24H39L50 40H14L25 24H19Z"/><path d="M32 40V56M25 57H39"/>',
+  "Rogue":'<g transform="rotate(-35 32 32)"><path d="M32 3L37.5 11V37H26.5V11Z"/><path d="M19 37H45M32 37V51"/><circle class="f" cx="32" cy="55" r="3.6"/></g>',
+  "Shadow Knight":'<path d="M19 55V33C19 22 25 17 32 17S45 22 45 33V55Z"/><path d="M25 35H39M32 35V49"/><path d="M20 27C12 25 8 17 10 7C14 15 19 18 25 19"/><path d="M44 27C52 25 56 17 54 7C50 15 45 18 39 19"/>',
+  "Shaman":'<path d="M19 17H45V39C45 50 39 57 32 57S19 50 19 39Z"/><path d="M24 29l7 3M40 29l-7 3M26 45h12"/><path d="M24 17L20 6M32 17V4M40 17L44 6"/>',
+  "Spellblade":'<path d="M27 40V12L32 5L37 12V40Z"/><path d="M19 40H45M32 40V52"/><circle class="f" cx="32" cy="56" r="3.2"/><path class="f" d="M51 9l1.8 5.2L58 16l-5.2 1.8L51 23l-1.8-5.2L44 16l5.2-1.8Z"/><path class="f" d="M12 25l1.2 3.3 3.3 1.2-3.3 1.2L12 34l-1.2-3.3-3.3-1.2 3.3-1.2Z"/>',
+  "Wizard":'<path d="M18 48L29 17C31 11 36 7 45 8C39 11 37 15 38 21L46 48Z"/><path d="M9 50Q32 59 55 50"/><path class="f" d="M31 28l1.8 5.2L38 35l-5.2 1.8L31 42l-1.8-5.2L24 35l5.2-1.8Z"/>'
+};
+function emblem(cls){
+  const art = EMB[cls] || `<circle cx="32" cy="32" r="20"/><path d="M32 18V46M18 32H46"/>`;
+  return `<svg class="emb" viewBox="0 0 64 64" aria-hidden="true">${art}</svg>`;
+}
+
+// ---- races and starting stats (from the race pages on the wiki)
+function raceData(c){ const r = (S.snapshot||{}).races || {}; return Object.values(r).find(x => norm(x.name) === norm(c && c.race)) || null; }
+function playable(r){
+  if(!r) return null;
+  const listed = Object.keys(r.classes || {});
+  if(listed.length) return listed;
+  const t = String((r.details||{})["Playable Classes"] || "");
+  if(/every class/i.test(t)) return null;
+  const list = t.split(/\s[—–]\s/).slice(1).join(",").split(",").map(s => s.trim()).filter(Boolean);
+  return list.length ? list : null;
+}
+function baseStats(c){
+  const r = raceData(c);
+  const pool = (r && r.bonus) || 10;
+  if(r && r.classes && r.classes[c.cls]) return {stats:r.classes[c.cls], pool, r, src:"class"};
+  if(Object.keys(c.baseOv || {}).length === ATTRS.length) return {stats:c.baseOv, pool, r, src:"you", edit:true};
+  if(r && r.base) return {stats:Object.assign({}, r.base, c.baseOv), pool, r, src:"race", edit:true};
+  return {stats:Object.assign(Object.fromEntries(ATTRS.map(k => [k, 15])), c.baseOv), pool, r, src:"none", edit:true};
+}
+function gearTotals(c){
+  const t = {}, saves = {};
+  EQKEYS.forEach(k => {
+    const it = eqItem(c, k); if(!it) return;
+    Object.entries(it.stats).forEach(([s,v]) => t[s] = (t[s]||0) + v);
+    Object.entries(it.saves || {}).forEach(([s,v]) => saves[s] = (saves[s]||0) + v);
+  });
+  return {t, saves};
+}
+const ROLE = {tank:"Tank", melee:"Melee damage", ranged:"Ranged damage", caster:"Caster", healer:"Healer", support:"Support", hybrid:"Hybrid"};
+const keyStats = c => Object.entries(clsInfo(c).weights || {}).filter(([k]) => ATTRS.includes(k)).sort((a,b) => b[1]-a[1]).slice(0,3).map(x => x[0]);
+function renderAttrs(el, sub){
+  const c = char(), b = baseStats(c), g = gearTotals(c), keys = keyStats(c);
+  const alloc = c.alloc || (c.alloc = {});
+  const spent = ATTRS.reduce((s,k) => s + (alloc[k]||0), 0), left = b.pool - spent;
+  sub.textContent = left > 0 ? `${left} of ${b.pool} bonus points to spend` : (left === 0 ? `all ${b.pool} bonus points spent` : `${-left} points over the ${b.pool}-point pool`);
+  let h = `<div class="attrs"><span class="h">Stat</span><span class="h">Base</span><span class="h">Points</span><span class="h r">Gear</span><span class="h r">Total</span>`;
+  ATTRS.forEach(k => {
+    const base = b.stats[k] || 0, pt = alloc[k] || 0, gv = g.t[k] || 0;
+    h += `<span class="k ${keys.includes(k)?"key":""}" title="${keys.includes(k)?esc(c.cls)+" leans on "+k:""}">${k}</span>
+      <span class="b">${b.edit ? `<input type="number" min="1" max="99" inputmode="numeric" data-base="${k}" value="${base}" aria-label="Base ${k}">` : base}</span>
+      <span class="pts"><button type="button" data-pt="${k}|-1" ${pt<=0?"disabled":""} aria-label="One less point in ${k}">−</button><b class="num">${pt}</b><button type="button" data-pt="${k}|1" ${left<=0?"disabled":""} aria-label="One more point in ${k}">+</button></span>
+      <span class="g r num">${gv ? (gv > 0 ? "+" : "") + gv : ""}</span><span class="tot r num">${base + pt + gv}</span>`;
+  });
+  h += `</div>`;
+  const extra = Object.keys(g.t).filter(k => !ATTRS.includes(k) && !["AC","HP","Mana"].includes(k));
+  const res = parseSaves(((b.r||{}).details||{}).Resistances);
+  Object.entries(g.saves).forEach(([k,v]) => res[k] = (res[k]||0) + v);
+  const w = eqItem(c, "primary");
+  const wDmg = w && w.weapon && Object.entries(w.weapon).find(([k]) => /dmg|damage/i.test(k)), wDly = w && w.weapon && Object.entries(w.weapon).find(([k]) => /delay|dly/i.test(k));
+  h += `<div class="gearsum">
+    <div class="ln"><span class="lb">Gear</span><span>AC <b class="num">${g.t.AC||0}</b></span><span>HP <b class="num">+${g.t.HP||0}</b></span><span>Mana <b class="num">+${g.t.Mana||0}</b></span>${extra.map(k => `<span>${esc(k)} <b class="num">${g.t[k]>0?"+":""}${g.t[k]}</b></span>`).join("")}</div>
+    ${Object.keys(res).length ? `<div class="ln"><span class="lb">Resists</span>${Object.entries(res).sort((a,b) => a[0].localeCompare(b[0])).map(([k,v]) => `<span>${esc(k)} <b class="num ${v<0?"neg":""}">${v>0?"+":""}${v}</b></span>`).join("")}</div>` : ""}
+    ${wDmg && wDly ? `<div class="ln"><span class="lb">Weapon</span><span>${esc(w.name)}: <b class="num">${esc(wDmg[1])}</b> dmg / <b class="num">${esc(wDly[1])}</b> delay</span></div>` : ""}
+  </div>`;
+  const rname = b.r ? b.r.name : c.race;
+  const src = b.src === "class" ? `Starting stats for a ${esc(rname)} ${esc(c.cls)} come from the <a href="${esc(b.r.url)}" target="_blank" rel="noopener">${esc(rname)} page</a> on the wiki. Spend the bonus points the way you did in game.`
+    : b.src === "race" ? `The wiki lists ${esc(rname)} base stats but not the ${esc(c.cls)} bonus; adjust the base numbers to match your character.`
+    : b.src === "you" ? `Base numbers you entered. The wiki doesn't list ${esc(rname)} starting stats yet.`
+    : `The wiki doesn't list ${esc(rname)} starting stats yet. Type your base numbers from the game.`;
+  h += `<div class="tip">${src} ${keys.length ? `◆ marks what a ${esc(c.cls)} leans on.` : ""}${spent ? ` <button class="more" id="ptReset" style="padding:0">Reset points</button>` : ""}</div>`;
+  el.innerHTML = h;
+  el.querySelectorAll("[data-pt]").forEach(btn => btn.onclick = () => {
+    const [k, d] = btn.dataset.pt.split("|"); const a = c.alloc;
+    a[k] = Math.max(0, (a[k]||0) + parseInt(d)); if(!a[k]) delete a[k];
+    save(); renderAttrs(el, sub);
+    const again = el.querySelector(`[data-pt="${k}|${d}"]`); if(again && !again.disabled) again.focus();
+  });
+  el.querySelectorAll("[data-base]").forEach(inp => inp.onchange = () => {
+    const v = Math.max(1, Math.min(99, parseInt(inp.value) || 0));
+    c.baseOv = Object.assign({}, b.stats, c.baseOv || {}, {[inp.dataset.base]: v});
+    save(); renderAttrs(el, sub);
+  });
+  if(el.querySelector("#ptReset")) el.querySelector("#ptReset").onclick = () => { c.alloc = {}; save(); renderAttrs(el, sub); };
+}
+
+// ---- equipment and upgrades
+const eqItem = (c, k) => { const s = (c.gear || {})[k]; return s && D.items[s] ? D.items[s] : null; };
+const eqDef = k => EQUIP.find(e => e[0] === k) || [k, k, k];
+const TWIN = {ear1:"ear2", ear2:"ear1", wrist1:"wrist2", wrist2:"wrist1", ring1:"ring2", ring2:"ring1"};
+const isLore = it => (it.tags || []).includes("Lore");
+const weightOf = (k, c) => { const w = clsInfo(c).weights || {}; return w[k] ?? (k === "AC" ? 0.4 : 0.15); };
+function gearFromOwned(c){
+  const g = {}, have = (S.user.progress[c.id] || {}).have || {};
+  Object.keys(have).map(s => D.items[s]).filter(it => it && usable(it, c)).sort((a,b) => score(b,c) - score(a,c)).forEach(it => {
+    const k = EQKEYS.find(k => !g[k] && it.slots.includes(eqDef(k)[2]));
+    if(k && !Object.values(g).includes(it.slug)) g[k] = it.slug;
+  });
+  return g;
+}
+// usable gear for this class and race, best first, by slot (cached per class and race)
+const CAND = {key:null, bySlot:{}, unknown:{}};
+function candidates(c){
+  const key = c.cls + "|" + c.race;
+  if(CAND.key === key) return CAND;
+  const notes = (S.curated||{}).itemNotes || {}, bases = new Set(EQUIP.map(e => e[2]));
+  const bySlot = {}, unknown = {};
   Object.values(D.items).forEach(it => {
     if(!/armor|weapon|jewelry|instrument/.test(it.type) && !it.hasDetail) return;
-    if(!usable(it,c)) return;
-    if(!it.hasDetail && !(S.curated.itemNotes||{})[it.slug]) { it.slots.forEach(sl => { if(res[sl]) res[sl].unknown++; }); return; }
-    const sc = score(it,c);
-    if(sc < 1.5 && !(S.curated.itemNotes||{})[it.slug]) return;
-    it.slots.forEach(sl => {
-      const r = res[sl]; if(!r) return;
-      if(pr.have[it.slug]){ if(!r.owned || sc > r.owned.sc) r.owned = {it, sc}; return; }
-      if(it.lvl == null){ r.unknown++; return; }
-      if(it.req && it.req > L) { if(it.req <= L + 8 && (!r.next || sc > r.next.sc)) r.next = {it, sc}; return; }
-      if(it.lvl <= L + slack){ if(!r.now || sc > r.now.sc) r.now = {it, sc}; }
-      else if(it.lvl <= L + 8){ if(!r.next || sc > r.next.sc || (sc === r.next.sc && it.lvl < r.next.it.lvl)) r.next = {it, sc}; }
-    });
+    const slots = it.slots.filter(s => bases.has(s));
+    if(!slots.length || !usable(it, c)) return;
+    if(!it.hasDetail && !notes[it.slug]){ slots.forEach(s => unknown[s] = (unknown[s]||0) + 1); return; }
+    const sc = score(it, c);
+    if(sc < 1.5 && !notes[it.slug]) return;
+    slots.forEach(s => (bySlot[s] = bySlot[s] || []).push({it, sc}));
   });
-  Object.values(res).forEach(r => {
-    if(r.owned && r.now && r.now.sc <= r.owned.sc) r.now = null;
-    const base = Math.max(r.owned ? r.owned.sc : 0, r.now ? r.now.sc : 0);
-    if(r.next && r.next.sc <= base) r.next = null;
+  Object.values(bySlot).forEach(a => a.sort((x,y) => y.sc - x.sc || (x.it.lvl ?? 99) - (y.it.lvl ?? 99)));
+  return Object.assign(CAND, {key, bySlot, unknown});
+}
+// for every slot: what you wear, the best upgrade you can get now, and the next one within 8 levels
+function upgradesFor(c){
+  const L = c.level, slack = c.solo === false ? 2 : 0, {bySlot, unknown} = candidates(c), res = {};
+  const nowOk = it => it.req ? it.req <= L : (it.lvl != null && it.lvl <= L + slack);
+  const nextOk = it => it.req ? (it.req > L && it.req <= L + 8) : (it.lvl != null && it.lvl > L + slack && it.lvl <= L + 8);
+  EQUIP.forEach(([k,,base]) => {
+    if(res[k]) return;
+    const keys = TWIN[k] ? [k, TWIN[k]] : [k];
+    const worn = keys.map(x => { const it = eqItem(c, x); return {x, cur: it ? {it, sc:score(it, c)} : null}; })
+      .sort((a,b) => (a.cur ? a.cur.sc : -1) - (b.cur ? b.cur.sc : -1));            // weaker slot of a pair gets the best pick
+    const lore = new Set(worn.map(w => w.cur && isLore(w.cur.it) ? w.cur.it.slug : null).filter(Boolean));
+    const taken = new Set();
+    worn.forEach(({x, cur}) => {
+      const floor = cur ? cur.sc : 0;
+      const list = (bySlot[base] || []).filter(o => !taken.has(o.it.slug) && !lore.has(o.it.slug) && !(cur && o.it.slug === cur.it.slug));
+      const now = list.find(o => nowOk(o.it) && o.sc > floor + 0.05) || null;
+      const next = list.find(o => nextOk(o.it) && o.sc > Math.max(floor, now ? now.sc : 0) + 0.05) || null;
+      if(now) taken.add(now.it.slug);
+      if(next) taken.add(next.it.slug);
+      res[x] = {cur, now, next, unknown:unknown[base] || 0};
+    });
   });
   return res;
 }
-function diffTxt(a, b){
-  if(!b) return "";
-  const keys = ["AC","STA","STR","HP"]; const out = [];
-  keys.forEach(k => { const d = (a.stats[k]||0) - (b.stats[k]||0); if(d) out.push((d>0?"+":"")+d+" "+k); });
-  return out.slice(0,3).join(", ");
+// would wearing this beat something you have on (or fill an empty slot)?
+function beatsWorn(it, c){
+  if(!it || !usable(it, c) || Object.values(c.gear || {}).includes(it.slug)) return false;
+  const sc = score(it, c);
+  return EQUIP.some(([k,,base]) => it.slots.includes(base) && (!eqItem(c, k) || score(eqItem(c, k), c) + 0.05 < sc));
 }
-function renderGear(){
-  const c = char(), plan = gearPlan(c), pr = prog(c);
+function deltaHTML(a, b, c){
+  const sa = a.stats || {}, sb = (b && b.stats) || {};
+  const ds = [...new Set([...Object.keys(sa), ...Object.keys(sb)])].map(k => [k, (sa[k]||0) - (sb[k]||0)]).filter(x => x[1])
+    .sort((x,y) => Math.abs(y[1]) * weightOf(y[0], c) - Math.abs(x[1]) * weightOf(x[0], c));
+  return ds.slice(0, 5).map(([k,d]) => `<span class="${d > 0 ? "p" : "m"}">${d > 0 ? "+" : ""}${d} ${esc(k)}</span>`).join("");
+}
+const lvTxt = it => it.req ? "needs " + it.req : (it.lvl != null ? "lv " + it.lvl + (it.est ? "~" : "") : "");
+function upLine(kind, k, nit, cur, c){
+  const lv = lvTxt(nit);
+  return `<div class="upg"><div><span class="ul ${kind === "next" ? "soon" : ""}">${kind === "next" ? "Soon" : "Upgrade"}</span>${itemLink(nit)}${lv ? ` <span class="lvtag">${lv}</span>` : ""}</div>
+    <div class="dl">${deltaHTML(nit, cur, c)}</div>
+    ${showWhere(c) && nit.drop ? `<div class="src">${esc(trimDrop(nit.drop))}</div>` : ""}
+    <button class="more" data-got="${k}|${esc(nit.slug)}">I have it, wear it</button></div>`;
+}
+function equipHTML(c, upOnly){
+  const ups = showRecs(c) ? upgradesFor(c) : null;
   let h = "";
-  SLOTS.forEach(([k,label]) => {
-    const r = plan[k];
-    const isUp = !!(r.now || r.next);
-    if(UI.gear === "up" && !isUp) return;
-    const cur = r.now || r.owned;
-    const owned = cur && pr.have[cur.it.slug];
-    h += `<div class="slot ${cur?"":"none"}"><div class="sl"><span>${label}</span>${cur?`<span class="lvtag">${owned?"owned":(cur.it.lvl!=null?"lv "+cur.it.lvl+(cur.it.est?"~":""):"")}</span>`:""}</div>`;
-    if(cur){
-      const it = cur.it;
-      h += `<div class="it">${itemLink(it)}</div><div class="st">${esc(statLine(it))}${r.now && r.owned?` <span class="up">${esc(diffTxt(it, r.owned.it))}</span>`:""}</div><div class="src">${esc(trimDrop(it.drop))}</div>
-        <label class="own"><input type="checkbox" data-have="${esc(it.slug)}" ${owned?"checked":""}> I have this</label>`;
-    } else h += `<div class="it">Nothing confirmed yet</div><div class="src">${r.unknown?r.unknown+" usable items with no known level":""}</div>`;
-    if(r.next){ const it = r.next.it; h += `<div class="nx">Next: <b>${itemLink(it)}</b> <span class="lvtag">${it.req?"needs "+it.req:"lv "+it.lvl+(it.est?"~":"")}</span><div class="st">${esc(statLine(it))}</div><div class="src">${esc(trimDrop(it.drop))}</div></div>`; }
+  EQUIP.forEach(([k, label]) => {
+    const it = eqItem(c, k), u = ups && ups[k];
+    if(upOnly && !(u && (u.now || u.next))) return;
+    h += `<div class="slot ${it ? "" : "none"}"><div class="sl"><span>${label}</span>${it && lvTxt(it) ? `<span class="lvtag">${lvTxt(it)}</span>` : ""}</div>
+      <button type="button" class="pick" data-pick="${k}"${it ? ` data-tip="${esc(it.slug)}"` : ""} aria-label="${esc(label)}: ${it ? esc(it.name) : "empty"}. Change">${it ? `<span class="q-${quality(it)}">${esc(it.name)}</span>` : `<span>Empty</span>`}</button>
+      ${it ? `<div class="st">${esc(statLine(it))}</div>` : ""}`;
+    if(u && u.now) h += upLine("now", k, u.now.it, it, c);
+    if(u && u.next) h += upLine("next", k, u.next.it, u.now ? u.now.it : it, c);
     h += `</div>`;
   });
-  $("#slots").innerHTML = h || `<div class="empty">No upgrades found in the next few levels.</div>`;
+  return h;
+}
+function wireEquip(el){
+  el.querySelectorAll("[data-pick]").forEach(b => b.onclick = () => openPicker(b.dataset.pick));
+  el.querySelectorAll("[data-got]").forEach(b => b.onclick = () => { const [k, s] = b.dataset.got.split("|"); wear(k, s); });
+}
+function wear(k, slug){
+  const c = char(); c.gear = c.gear || {};
+  if(slug){ c.gear[k] = slug; prog(c).have[slug] = true; } else delete c.gear[k];
+  save(); hideTip(); closeModal(); renderBody();
+}
+function gearKey(){
+  return `<div class="qkey"><span class="q-stat">Stats</span><span class="q-fx">Has an effect</span><span class="q-lore">Lore (one per character)</span><span class="q-plain">No stats listed</span></div>`;
+}
+function renderGear(){
+  const c = char();
+  $("#slots").innerHTML = equipHTML(c, UI.gear === "up") || `<div class="empty">Nothing beats what you're wearing in the next 8 levels.</div>`;
   const pend = ((S.snapshot||{}).meta||{}).itemDetailsPending;
-  $("#gearNote").innerHTML = `Levels with ~ are estimates from the camp or named mob that drops them. Tick “I have this” and upgrades are compared against what you own. Hover an item name for its stats.${pend?` ${pend} item pages still to read; more appear after each check.`:""}
-    <div class="qkey"><span class="q-stat">Stats</span><span class="q-fx">Has an effect</span><span class="q-lore">Lore (one per character)</span><span class="q-plain">No stats listed</span></div>`;
+  $("#gearNote").innerHTML = `Pick what you wear in each slot and only real upgrades show up; “I have it, wear it” swaps one in. Levels with ~ are estimates from the camp or named mob that drops them.${pend?` ${pend} item pages still to read; more appear after each check.`:""}${gearKey()}`;
   $$("#gearMode button").forEach(b => { b.classList.toggle("on", b.dataset.v === UI.gear); b.onclick = () => { UI.gear = b.dataset.v; saveUI(); renderGear(); }; });
-  $$("#slots [data-have]").forEach(b => b.onchange = () => { const pr = prog(char()); if(b.checked) pr.have[b.dataset.have] = true; else delete pr.have[b.dataset.have]; save(); renderGear(); renderSets(); });
+  wireEquip($("#slots"));
+}
+
+// ---- Classic: character sheet
+function renderSheet(){
+  const c = char(), ci = clsInfo(c), r = raceData(c), det = (r && r.details) || {};
+  const keys = keyStats(c);
+  $("#portrait").innerHTML = `<div class="body"><div class="medal">${emblem(c.cls)}</div><h2>${esc(c.cls)}</h2><div class="role">${esc(ROLE[ci.role] || "")}</div>
+    <div class="pl">${esc(c.race)}${keys.length ? `, leans on ${keys.join(", ")}` : ""}</div>${det["Racial Ability"] ? `<div class="pl">Racial ability: ${esc(det["Racial Ability"])}</div>` : ""}</div>`;
+  renderAttrs($("#attrs"), $("#attrSub"));
+  $("#eqTgl").innerHTML = `<label class="tgl"><input type="checkbox" id="tRecs" ${c.recs ? "checked" : ""}> Recommend upgrades</label>
+    <label class="tgl"><input type="checkbox" id="tWhere" ${c.where ? "checked" : ""} ${c.recs ? "" : "disabled"}> Show where to find them</label>`;
+  $("#equip").innerHTML = equipHTML(c, false);
+  $("#eqNote").innerHTML = (c.recs ? `Upgrades are the best items your ${esc(c.cls)} can use at level ${c.level} that beat what you wear.${c.where ? "" : " Where they drop stays hidden until you turn that on."}`
+    : `Turn on “Recommend upgrades” to see what beats your gear at your level. Where it drops stays hidden unless you ask.`) + gearKey();
+  wireEquip($("#equip"));
+  $("#tRecs").onchange = e => { c.recs = e.target.checked; if(!c.recs) c.where = false; save(); renderSheet(); };
+  $("#tWhere").onchange = e => { c.where = e.target.checked; save(); renderSheet(); };
+}
+
+// pick what's in a slot: a searchable list of what your class and race can wear
+function openPicker(k){
+  const c = char(), [, label, base] = eqDef(k), cur = (c.gear || {})[k];
+  const tw = TWIN[k] && eqItem(c, TWIN[k]);
+  let all = false;
+  const pool = () => Object.values(D.items).filter(it => it.slots.includes(base) && (all || usable(it, c))).sort((a,b) => a.name.localeCompare(b.name));
+  modal(`${label}: what are you wearing?`, `<div class="pkbar"><input id="pkQ" type="search" autocomplete="off" spellcheck="false" aria-label="Search ${esc(label.toLowerCase())} items"><label class="tgl"><input type="checkbox" id="pkAll"> Other classes too</label></div>
+    <div class="plist" id="pkL"></div>
+    <div class="mfoot">${cur ? `<button class="btn" id="pkOff">Take it off</button>` : ""}<button class="btn" id="pkCancel">Cancel</button></div>`, true);
+  const draw = () => {
+    const list = pool(), q = norm($("#pkQ").value);
+    $("#pkQ").placeholder = `Search ${list.length} ${label.toLowerCase()} items`;
+    const f = q ? list.filter(it => norm(it.name).includes(q)) : list;
+    $("#pkL").innerHTML = f.slice(0, 250).map(it => {
+      const lock = tw && tw.slug === it.slug && isLore(it), lv = lvTxt(it);
+      return `<button type="button" class="popt ${it.slug === cur ? "on" : ""}" data-s="${esc(it.slug)}" ${lock ? "disabled" : ""}><span class="n q-${quality(it)}">${esc(it.name)}</span><span class="lvtag" ${lv ? "" : "hidden"}>${lv}</span>
+        <span class="s">${esc(statLine(it))}${usable(it, c) ? "" : " · not for " + esc(clsInfo(c).abbr)}${lock ? ` · Lore, already in your other ${esc(label.toLowerCase())} slot` : ""}</span></button>`;
+    }).join("") + (f.length > 250 ? `<div class="empty">${f.length - 250} more; type to narrow it down.</div>` : "") || `<div class="empty">No ${esc(label.toLowerCase())} items match.</div>`;
+    $$("#pkL [data-s]").forEach(b => b.onclick = () => wear(k, b.dataset.s));
+  };
+  $("#pkQ").oninput = draw;
+  $("#pkAll").onchange = e => { all = e.target.checked; draw(); };
+  $("#pkCancel").onclick = closeModal;
+  if($("#pkOff")) $("#pkOff").onclick = () => wear(k, null);
+  draw();
+  if(TIP.ptr !== "touch") setTimeout(() => $("#pkQ").focus(), 30);
+  const on = $("#pkL .popt.on"); if(on) on.scrollIntoView({block:"center"});
 }
 
 // ---- quests
@@ -1899,6 +2264,10 @@ function renderQuests(){
 }
 
 // ---- sets
+// a set piece is worth chasing if you don't have it yet and it beats what you wear in its slot
+const owns = (c, slug) => !!prog(c).have[slug] || Object.values(c.gear || {}).includes(slug);
+const pieceWanted = (p, c) => !owns(c, p.item) && (!D.items[p.item] || beatsWorn(D.items[p.item], c));
+const setUseful = (s, c) => s.pieces.some(p => pieceWanted(p, c));
 function renderSets(){
   const c = char(), pr = prog(c);
   const sets = ((S.curated||{}).sets||[]).filter(s => (!s.cities || s.cities.includes(c.city)) && s.pieces.some(p => !D.items[p.item] || usable(D.items[p.item], c)));
@@ -1906,22 +2275,28 @@ function renderSets(){
   $("#sets").innerHTML = sets.map(s => {
     const mats = pr.mats[s.id] || {};
     const need = {};
-    s.pieces.forEach(p => { if(!pr.have[p.item]) Object.entries(p.need).forEach(([m,q]) => need[m] = (need[m]||0)+q); });
-    if(s.raw && s.pieces.some(p => !pr.have[p.item])){
+    const want = s.pieces.filter(p => pieceWanted(p, c)), skip = s.pieces.filter(p => !owns(c, p.item) && !pieceWanted(p, c));
+    want.forEach(p => Object.entries(p.need).forEach(([m,q]) => need[m] = (need[m]||0)+q));
+    if(s.raw && want.length){
       if(need["Cinder Tanning Agent"]){ need["Cinder Beetle Gland"] = (need["Cinder Beetle Gland"]||0)+need["Cinder Tanning Agent"]; need["Cinder Beetle Blood"] = (need["Cinder Beetle Blood"]||0)+need["Cinder Tanning Agent"]; delete need["Cinder Tanning Agent"]; }
       if(need["Cinder Varnish"]){ const v = need["Cinder Varnish"]; need["Resin"]=(need["Resin"]||0)+2*v; need["Cinder Beetle Blood"]=(need["Cinder Beetle Blood"]||0)+2*v; need["Crude Fish Oil"]=(need["Crude Fish Oil"]||0)+v; need["Twilight Bay Rum"]=(need["Twilight Bay Rum"]||0)+v; delete need["Cinder Varnish"]; }
     }
     const usableAny = s.pieces.some(p => D.items[p.item] && usable(D.items[p.item], c));
-    const got = s.pieces.filter(p => pr.have[p.item]).length;
+    const got = s.pieces.filter(p => owns(c, p.item)).length;
+    const nm = p => (D.items[p.item] || {name:p.item}).name;
+    const skipTxt = skip.length ? `<div class="skipped">Skip ${skip.map(p => esc(nm(p))).join(", ")}: what you wear is already better.</div>` : "";
+    if(!want.length && usableAny) return `<div class="set"><h4>${esc(s.name)} <span class="tag">${got}/${s.pieces.length}</span></h4>
+      <div class="skipped">${got === s.pieces.length ? "Set complete." : "Nothing left in this set beats what you're wearing."}</div></div>`;
     return `<div class="set"><h4>${esc(s.name)} <span class="tag">${got}/${s.pieces.length}</span>${usableAny?"":'<span class="tag" style="color:var(--hold)">not for your class</span>'}</h4>
       <div class="meta">${esc(s.giver)}<br>${esc(s.mob)}</div>
       ${Z.byPlay[s.id+"-set"] ? `<button class="more maplink" data-showmap="${esc(s.id)}-set">Show the turn-in spots on the map</button>` : ""}
-      ${s.pieces.map(p => { const it = D.items[p.item] || {name:p.item, stats:{}, slots:[]}; const have = !!pr.have[p.item];
+      ${s.pieces.filter(p => owns(c, p.item) || pieceWanted(p, c)).map(p => { const it = D.items[p.item] || {name:p.item, stats:{}, slots:[]}; const have = owns(c, p.item);
         return `<div class="piece ${have?"done":""}"><input type="checkbox" class="chk" data-have="${esc(p.item)}" ${have?"checked":""} title="I have this" aria-label="I have ${esc(it.name)}">
           <div><div class="n">${itemLink(it)} <span class="w">${esc((it.slots||[]).join("/"))} · ${esc(statLine(it))}</span></div>
           ${p.who?`<div class="w">${esc(p.who)}</div>`:""}
           <div class="need">${Object.entries(p.need).map(([m,q]) => q+"× "+esc(m)).join(", ")}</div>
           ${p.sub?`<div class="w">${esc(p.sub)}</div>`:""}${p.alt?`<div class="w">${esc(p.alt)}</div>`:""}</div></div>`; }).join("")}
+      ${skipTxt}
       ${Object.keys(need).length ? `<div class="mats"><div class="h">Still to collect</div>${Object.entries(need).map(([m,q]) => { const have = mats[m]||0; return `<div class="mat ${have>=q?"ok":""}">${esc(m)}</div><div class="ctr"><button data-mat="${esc(s.id)}|${esc(m)}|-1" aria-label="One less ${esc(m)}">−</button><span>${have} / ${q}</span><button data-mat="${esc(s.id)}|${esc(m)}|1" aria-label="One more ${esc(m)}">+</button></div>`; }).join("")}</div>` : `<div class="tip">Set complete.</div>`}
       ${s.tip?`<div class="tip">${esc(s.tip)}</div>`:""}</div>`;
   }).join("");
@@ -2139,7 +2514,7 @@ function planPopup(p){
   const st = pinState(p, char());
   const d = document.createElement("div"); d.className = "pop";
   d.innerHTML = `<h5>${esc(p.title)}</h5>${p.approx ? '<div class="approx">Approximate spot</div>' : ""}<p>${esc(p.note)}</p>`
-    + st.rows.map(r => `<div class="pl"><span class="badge b-${r.done ? "info" : (r.st ? r.st.s : "info")}">${r.done ? "Done" : (r.st ? esc(r.st.label) : (r.past ? "Earlier" : "Later"))}</span><span>${esc(r.p.title)}</span>${r.st && !r.done ? `<button class="more" data-goplan="${esc(r.p.id)}">see plan</button>` : ""}</div>`).join("");
+    + st.rows.map(r => `<div class="pl"><span class="badge b-${r.done ? "info" : (r.st ? r.st.s : "info")}">${r.done ? "Done" : (r.st ? esc(r.st.label) : (r.past ? "Earlier" : "Later"))}</span><span>${esc(r.p.title)}</span>${r.st && !r.done && !isClassic(char()) ? `<button class="more" data-goplan="${esc(r.p.id)}">see plan</button>` : ""}</div>`).join("");
   d.querySelectorAll("[data-goplan]").forEach(b => b.onclick = () => goPlan(b.dataset.goplan));
   return d;
 }
@@ -2243,7 +2618,7 @@ function focusPlay(playId){
 }
 function goPlan(playId){
   if(MAP.map) MAP.map.closePopup();
-  UI.view = "plan"; UI.openPlays[playId] = true; saveUI(); render();
+  UI.view = "plan"; UI.openPlays[playId] = true; UI.allPlays = true; saveUI(); render();
   const el = document.querySelector(`[data-play="${CSS.escape(playId)}"]`);
   if(el){ el.scrollIntoView({block:"center", behavior:"smooth"}); el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1800); }
 }
@@ -2272,7 +2647,7 @@ function itemCard(it, withTitle){
     + `<div class="tg">Class: ${esc(it.classes || "All")}${it.race && !/^all$/i.test(it.race) ? `. Race: ${esc(it.race)}` : ""}</div>`
     + (stats ? `<div class="stats">${stats}</div>` : `<div class="meta">${it.hasDetail ? "No stats listed on the wiki." : "Stats not read from the wiki yet."}</div>`)
     + (it.effect ? `<div class="fx">${esc(it.effect)}</div>` : "")
-    + (it.drop ? `<div class="src">${esc(trimDrop(it.drop))}</div>` : "")
+    + (it.drop && showWhere(c) ? `<div class="src">${esc(trimDrop(it.drop))}</div>` : "")
     + ((lv || fit) ? `<div class="meta">${esc(lv)}${lv && fit ? ". " : ""}${fit}</div>` : "");
 }
 const TIP = {slug:null, ptr:"mouse"};
@@ -2293,12 +2668,13 @@ function hideTip(){ TIP.slug = null; $("#itip").hidden = true; }
 document.addEventListener("pointerdown", e => { TIP.ptr = e.pointerType || "mouse"; }, true);
 document.addEventListener("pointerover", e => {
   if(e.pointerType !== "mouse") return;
-  const a = e.target.closest && e.target.closest(".ilink[data-slug]");
-  if(a && a.dataset.slug !== TIP.slug) showTip(a.dataset.slug, e.clientX, e.clientY);
+  const a = e.target.closest && e.target.closest(".ilink[data-slug],[data-tip]");
+  const s = a && (a.dataset.slug || a.dataset.tip);
+  if(s && s !== TIP.slug) showTip(s, e.clientX, e.clientY);
 });
 document.addEventListener("pointermove", e => { if(TIP.slug && e.pointerType === "mouse") placeTip(e.clientX, e.clientY); });
 document.addEventListener("pointerout", e => {
-  const a = e.target.closest && e.target.closest(".ilink[data-slug]");
+  const a = e.target.closest && e.target.closest(".ilink[data-slug],[data-tip]");
   if(a && !(e.relatedTarget && a.contains(e.relatedTarget))) hideTip();
 });
 document.addEventListener("focusin", e => {
@@ -2334,11 +2710,14 @@ function openItem(slug){
   const dr = dropsFor(it);
   const where = dr.camps.slice(0, 6).map(campLine).join("")
     + dr.quests.slice(0, 4).map(q => `<div class="crow"><span class="lvp num">${questLevel(q)}+</span><span><a href="#" data-quest="${esc(q.slug)}"><b>${esc(q.name)}</b></a><small>Quest reward, ${esc(q.zone)}</small></span></div>`).join("");
+  const spoil = showWhere(c);
+  const whereHTML = (where || it.drop) ? `<div class="side"><div class="sh">Where to get it</div>${it.drop && !spoil ? `<div class="src">${esc(trimDrop(it.drop))}</div>` : ""}${where}</div>` : "";
   modal(it.name, `<div class="ins">${itemCard(it, false)}
-    ${where ? `<div class="side"><div class="sh">Where to get it</div>${where}</div>` : ""}
+    ${spoil ? (where ? `<div class="side"><div class="sh">Where to get it</div>${where}</div>` : "") : (whereHTML ? `<div id="insWhere"><button class="more" id="insShow">Show where to find it</button></div>` : "")}
     <div class="acts">${c ? `<label class="own" style="margin:0"><input type="checkbox" id="insHave" ${have ? "checked" : ""}> ${esc(c.name || c.cls)} has this</label>` : ""}${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">Open on the wiki</a>` : ""}<button class="btn" id="insClose" style="margin-left:auto">Close</button></div></div>`);
   $("#mTitle").className = "q-" + quality(it);
   $("#insClose").onclick = closeModal;
+  if($("#insShow")) $("#insShow").onclick = () => { $("#insWhere").innerHTML = whereHTML; };
   if($("#insHave")) $("#insHave").onchange = e => { const pr = prog(char()); if(e.target.checked) pr.have[slug] = true; else delete pr.have[slug]; save(); renderBody(); };
 }
 function rewardHTML(r){
@@ -2551,21 +2930,37 @@ async function runAsk(q){
 }
 
 // ------------------------------------------------------------- editor + import
+const MODE_CARDS = `
+  <button type="button" class="mcard" data-mode="guided" role="radio" aria-checked="false"><b>Guided companion</b><span>A path for your level: what to do next, quests, hunting spots and armor sets, plus the gear that beats what you wear and where it drops.</span><span class="disc">For players who want help finding their way around.</span></button>
+  <button type="button" class="mcard" data-mode="classic" role="radio" aria-checked="false"><b>Classic</b><span>A character sheet: your class, starting stats and the gear you wear, with the totals added up. Upgrade tips are optional, and where they drop stays hidden unless you ask.</span><span class="disc">For players who'd rather find their own way.</span></button>`;
 function openEditor(c){
   const isNew = !c;
   const cur = S.curated || {};
   const d = c || {name:"", race:"", cls:"", city:"night-harbor", level:1, solo:true};
   const first = !S.user.characters.length;
+  let mode = isNew ? null : (d.mode || "guided");
   modal(first ? "Your first character" : (isNew ? "Add an alt" : "Edit character"), `
+    <div class="f"><label id="eModeL">How much help do you want?</label><div class="modes2" role="radiogroup" aria-labelledby="eModeL">${MODE_CARDS}</div><div class="hint" id="eModeHint">${isNew ? "" : "You can switch any time from the Guided / Classic buttons on your character."}</div></div>
     <div class="f"><label for="eName">Name</label><input id="eName" value="${esc(d.name)}" placeholder="e.g. Grubnak" maxlength="40"></div>
     <div class="two"><div class="f"><label for="eRace">Race</label><input id="eRace" list="races" value="${esc(d.race)}" placeholder="Human" maxlength="30"><datalist id="races">${(cur.races||[]).map(r => `<option value="${esc(r)}">`).join("")}</datalist></div>
       <div class="f"><label for="eLvl">Level</label><input id="eLvl" type="number" min="1" max="60" value="${esc(d.level)}"></div></div>
-    <div class="f"><label for="eCls">Class</label><select id="eCls">${(cur.classes||[]).map(k => `<option ${k.name===d.cls?"selected":""}>${esc(k.name)}</option>`).join("")}</select></div>
+    <div class="f"><label for="eCls">Class</label><select id="eCls">${(cur.classes||[]).map(k => `<option ${k.name===d.cls?"selected":""}>${esc(k.name)}</option>`).join("")}</select><div class="hint" id="eClsHint"></div></div>
     <div class="f"><label for="eCity">Starting city</label><select id="eCity">${(cur.cities||[]).map(k => `<option value="${esc(k.key)}" ${k.key===d.city?"selected":""}>${esc(k.name)}</option>`).join("")}</select><div class="hint" id="eWho"></div></div>
-    <div class="mfoot">${!isNew && S.user.characters.length>1?`<button class="btn del" id="eDel">Delete</button>`:""}<button class="btn" id="eCancel">Cancel</button><button class="btn primary" id="eSave">${isNew?"Add":"Save"}</button></div>`);
+    <div class="mfoot">${!isNew && S.user.characters.length>1?`<button class="btn del" id="eDel">Delete</button>`:""}<button class="btn" id="eCancel">Cancel</button><button class="btn primary" id="eSave">${isNew?"Add":"Save"}</button></div>`, true);
+  const markMode = () => $$("#modal [data-mode]").forEach(b => b.setAttribute("aria-checked", b.dataset.mode === mode ? "true" : "false"));
+  $$("#modal [data-mode]").forEach(b => b.onclick = () => { mode = b.dataset.mode; markMode(); const h = $("#eModeHint"); h.classList.remove("bad"); if(isNew) h.textContent = "You can switch any time from the Guided / Classic buttons on your character."; });
+  markMode();
   const who = () => { const k = (cur.cities||[]).find(x => x.key === $("#eCity").value); $("#eWho").textContent = k ? k.who : ""; };
   $("#eCity").onchange = who; who();
-  $("#eName").focus();
+  // only the classes the wiki lists for the race
+  const syncCls = () => {
+    const r = raceData({race:$("#eRace").value.trim() || "Human"}), ok = playable(r), sel = $("#eCls");
+    [...sel.options].forEach(o => o.disabled = !!ok && !ok.includes(o.value));
+    if(ok && !ok.includes(sel.value)) sel.value = ok[0];
+    $("#eClsHint").textContent = !r ? "" : (ok ? `${r.name} can be ${ok.length >= 18 ? "any class" : ok.length + " classes: " + ok.join(", ")}.` : `${r.name} can be any class.`);
+  };
+  $("#eRace").oninput = syncCls; syncCls();
+  if(!isNew) $("#eName").focus();
   $("#eCancel").onclick = closeModal;
   const del = $("#eDel");
   if(del) del.onclick = () => {
@@ -2573,8 +2968,9 @@ function openEditor(c){
     S.user.characters = S.user.characters.filter(x => x.id !== c.id); delete S.user.progress[c.id]; S.user.active = S.user.characters[0].id; save(); closeModal(); render();
   };
   $("#eSave").onclick = () => {
-    const v = {name:$("#eName").value.trim().slice(0,40) || $("#eCls").value, race:$("#eRace").value.trim().slice(0,30) || "Human", cls:$("#eCls").value, city:$("#eCity").value, level:Math.max(1,Math.min(60,parseInt($("#eLvl").value)||1))};
-    if(isNew){ const id = "c"+Date.now().toString(36); S.user.characters.push(Object.assign({id, solo:true, created:new Date().toISOString()}, v)); S.user.active = id; }
+    if(!mode){ const h = $("#eModeHint"); h.textContent = "Pick Guided or Classic first."; h.classList.add("bad"); $("#modal [data-mode]").focus(); return; }
+    const v = {name:$("#eName").value.trim().slice(0,40) || $("#eCls").value, race:$("#eRace").value.trim().slice(0,30) || "Human", cls:$("#eCls").value, city:$("#eCity").value, level:Math.max(1,Math.min(60,parseInt($("#eLvl").value)||1)), mode};
+    if(isNew){ const id = "c"+Date.now().toString(36); S.user.characters.push(Object.assign({id, solo:true, created:new Date().toISOString(), recs:false, where:false, alloc:{}, baseOv:{}, gear:{}}, v)); S.user.active = id; }
     else Object.assign(c, v);
     save(); closeModal(); render();
   };

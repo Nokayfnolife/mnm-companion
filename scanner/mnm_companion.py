@@ -508,6 +508,60 @@ def parse_guide(root: Node) -> dict:
     return {"gear": gear, "path": path}
 
 
+STAT_KEYS = ("STR", "STA", "DEX", "AGI", "INT", "WIS", "CHA")
+
+
+def parse_race_page(root: Node) -> dict:
+    """Base stats, starting stats for each class the race can play, and the race details table."""
+    race = {"base": None, "classes": {}, "bonus": None, "details": {}}
+    m = re.search(r"\+\s*(\d+)\s*stat-point bonus pool", root.text())
+    if m:
+        race["bonus"] = int(m.group(1))
+    for t in root.find_all("table"):
+        heads = [th.text().strip() for th in t.find_all("th")]
+        rows = [[td.text().strip() for td in tr.children if isinstance(td, Node) and td.tag == "td"]
+                for tr in t.find_all("tr")]
+        rows = [r for r in rows if r]
+        if heads[:2] == ["Attribute", "Detail"]:
+            race["details"] = {r[0]: r[1] for r in rows if len(r) >= 2}
+        elif heads == list(STAT_KEYS) and rows:
+            try:
+                race["base"] = dict(zip(STAT_KEYS, (int(v) for v in rows[0])))
+            except ValueError:
+                pass
+        elif heads and heads[0] == "Class" and tuple(heads[1:]) == STAT_KEYS:
+            for r in rows:
+                try:
+                    race["classes"][r[0]] = dict(zip(STAT_KEYS, (int(v) for v in r[1:8])))
+                except ValueError:
+                    continue
+    return race
+
+
+def scan_races(snap: dict, delay: float) -> None:
+    root = dom(fetch("/races/"))
+    slugs = []
+    for l in root.links("race"):
+        s = slug_from(l["href"], "race")
+        if s and s not in slugs:
+            slugs.append(s)
+    races = dict(snap.get("races", {}))
+    for s in slugs:
+        time.sleep(delay)
+        _status("reading race: %s" % s)
+        try:
+            page = dom(fetch("/race/%s/" % s))
+            r = parse_race_page(page)
+            h1 = page.find("h1", "race-title")
+            r["name"] = h1.text() if h1 is not None else s.replace("-", " ").title()
+            r["url"] = "%s/race/%s/" % (BASE, s)
+            races[s] = r
+        except Exception as e:
+            log("race %s skipped: %s" % (s, e))
+    if races:
+        snap["races"] = races
+
+
 # -------------------------------------------------------------------- scan
 def _status(phase: str):
     _scan_status["phase"] = phase
@@ -630,6 +684,13 @@ def _scan(full: bool) -> dict:
                 it["firstSeen"] = o.get("firstSeen") or now_iso()
             snap["items"] = items
         meta["lastFull"] = now_iso()
+
+    # races: starting stats by race and class (daily, or once if missing)
+    if full or not snap.get("races"):
+        try:
+            scan_races(snap, delay)
+        except Exception as e:
+            log("races skipped: %s" % e)
 
     # class guides: daily, or right away when a new class shows up on a tab
     guides = dict(snap.get("guides", {}))
