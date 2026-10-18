@@ -1,8 +1,8 @@
 {
  "meta": {
   "lastFull": "2026-10-18T15:52:52+00:00",
-  "itemDetailsPending": 71,
-  "lastScan": "2026-10-18T15:56:37+00:00",
+  "itemDetailsPending": 0,
+  "lastScan": "2026-10-18T20:45:15+00:00",
   "lastError": null,
   "counts": {
    "quests": 127,
@@ -6862,7 +6862,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:11-07:00",
+   "detailAt": "2026-10-18T20:44:50+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "alchemists-amulet": {
@@ -7277,7 +7277,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:46-07:00",
+   "detailAt": "2026-10-18T20:44:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "apprentice-hoop-of-the-listener": {
@@ -7462,7 +7462,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:38-07:00",
+   "detailAt": "2026-10-18T20:44:32+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ashira-hunter-tooth": {
@@ -7527,7 +7527,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:53-07:00",
+   "detailAt": "2026-10-18T20:43:43+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ashira-protector-axe": {
@@ -9694,7 +9694,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:23-07:00",
+   "detailAt": "2026-10-18T20:44:13+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bloodied-bone": {
@@ -9981,7 +9981,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:09-07:00",
+   "detailAt": "2026-10-18T20:43:13+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "blue-crude-silk-robe": {
@@ -10068,7 +10068,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:08-07:00",
+   "detailAt": "2026-10-18T20:43:58+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bone-mask-of-the-servant": {
@@ -11722,7 +11722,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:12-07:00",
+   "detailAt": "2026-10-18T20:44:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cape-of-the-plague-avatar": {
@@ -11912,7 +11912,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:28-07:00",
+   "detailAt": "2026-10-18T20:44:21+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "carved-warstaff": {
@@ -12103,7 +12103,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:33-07:00",
+   "detailAt": "2026-10-18T20:44:27+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "chain-of-the-construct": {
@@ -12138,7 +12138,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:10-07:00",
+   "detailAt": "2026-10-18T20:44:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "chain-splitting-axe": {
@@ -12173,7 +12173,7 @@
     "class": "Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:41-07:00",
+   "detailAt": "2026-10-18T20:43:31+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "chainfall-gauntlets": {
@@ -12354,7 +12354,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:43-07:00",
+   "detailAt": "2026-10-18T20:43:33+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "chitonweave-breeches": {
@@ -12386,7 +12386,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:44-07:00",
+   "detailAt": "2026-10-18T20:43:35+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "choker-of-the-gallows": {
@@ -13008,7 +13008,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:46-07:00",
+   "detailAt": "2026-10-18T20:43:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cleaver": {
@@ -13098,7 +13098,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:40-07:00",
+   "detailAt": "2026-10-18T20:43:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cloak-of-the-chiropteran": {
@@ -14854,7 +14854,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:04-07:00",
+   "detailAt": "2026-10-18T20:44:43+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "crude-handmade-torch": {
@@ -14876,7 +14876,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:15-07:00",
+   "detailAt": "2026-10-18T20:44:54+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cruel-mail-belt": {
@@ -15354,7 +15354,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:17-07:00",
+   "detailAt": "2026-10-18T20:44:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dark-buckler": {
@@ -16937,7 +16937,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:26-07:00",
+   "detailAt": "2026-10-18T20:44:20+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "drillmasters-tread": {
@@ -17181,7 +17181,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:31-07:00",
+   "detailAt": "2026-10-18T20:44:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "duneseer-soft-wraps": {
@@ -17265,15 +17265,15 @@
     },
     "sub": "Jewelry · Ring",
     "saves": "Saves: Cold +1 · Corruption +1 · Electric +1",
-    "drop": "Dropped by Rami Al'qawwaas in Vale Of Zintar.",
+    "drop": "Dropped by Rami Al-Qawwaasr in Vale Of Zintar.",
     "dropNpcs": [
-     "Rami Al'qawwaas"
+     "Rami Al-Qawwaasr"
     ],
     "weight": "0.1",
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:36-07:00",
+   "detailAt": "2026-10-18T20:44:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "duneshapers-sandals": {
@@ -18401,15 +18401,15 @@
     },
     "sub": "Armor · Legs",
     "saves": "Saves: Magic +14",
-    "drop": "Dropped by Zubair Goldentongue in Vale of Zintar.",
+    "drop": "Dropped by Zubair Goldtongue in Vale of Zintar.",
     "dropNpcs": [
-     "Zubair Goldentongue"
+     "Zubair Goldtongue"
     ],
     "weight": "0.9",
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:06-07:00",
+   "detailAt": "2026-10-18T20:44:45+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "embroidered-cape": {
@@ -19461,7 +19461,7 @@
     "class": "Archer, Bard, Beastmaster, Druid, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:25-07:00",
+   "detailAt": "2026-10-18T20:44:18+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fang-backed-boots": {
@@ -19962,7 +19962,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:20-07:00",
+   "detailAt": "2026-10-18T20:44:10+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "festerclasp": {
@@ -20519,7 +20519,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:00-07:00",
+   "detailAt": "2026-10-18T20:43:50+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fishing-pole": {
@@ -20550,7 +20550,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:58-07:00",
+   "detailAt": "2026-10-18T20:43:48+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "flayer-of-renewed-purpose": {
@@ -21482,7 +21482,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:48-07:00",
+   "detailAt": "2026-10-18T20:44:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "gelatinous-crown": {
@@ -21724,7 +21724,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:11-07:00",
+   "detailAt": "2026-10-18T20:44:02+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "giant-femur": {
@@ -23427,7 +23427,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:29-07:00",
+   "detailAt": "2026-10-18T20:44:23+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hadirs-iron-fist": {
@@ -23584,15 +23584,15 @@
      "Delay": "24",
      "Type": "Blunt"
     },
-    "drop": "Dropped by/from: Vale of Zintar, Sularfaan the Flamekeeper",
+    "drop": "Dropped by/from: Vale of Zintar, Sutarfaan the Flamekeeper",
     "dropNpcs": [
-     "Sularfaan the Flamekeeper"
+     "Sutarfaan the Flamekeeper"
     ],
     "weight": "15",
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:45-07:00",
+   "detailAt": "2026-10-18T20:44:38+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hammer-of-the-divine": {
@@ -23759,7 +23759,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:20-07:00",
+   "detailAt": "2026-10-18T20:44:57+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "handmaids-needler": {
@@ -24355,7 +24355,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:21-07:00",
+   "detailAt": "2026-10-18T20:44:59+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hiveguard-warblade": {
@@ -24896,7 +24896,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:13-07:00",
+   "detailAt": "2026-10-18T20:44:03+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "incantation-shoulderpads": {
@@ -25963,7 +25963,7 @@
     "class": "Not yet documented",
     "race": "Not yet documented"
    },
-   "detailAt": "2026-10-10T14:04:16-07:00",
+   "detailAt": "2026-10-18T20:44:06+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "irontail-braces": {
@@ -26058,7 +26058,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:18-07:00",
+   "detailAt": "2026-10-18T20:44:08+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ivors-battle-bracer": {
@@ -26219,7 +26219,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:23-07:00",
+   "detailAt": "2026-10-18T20:45:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "kazessthras-bane": {
@@ -26283,13 +26283,13 @@
     "sub": "Armor · Face",
     "drop": "Dropped by/from: Vale of Zintar, a Dustrend kennel master",
     "dropNpcs": [
-     "Dustrend kennel master"
+     "a Dustrend kennel master"
     ],
     "weight": "0.3",
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:21-07:00",
+   "detailAt": "2026-10-18T20:44:11+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "khayyats-griplinks": {
@@ -26320,7 +26320,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:50-07:00",
+   "detailAt": "2026-10-18T20:43:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "khragixx-cowl": {
@@ -26949,7 +26949,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:25-07:00",
+   "detailAt": "2026-10-18T20:45:02+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "lavashot-longbow": {
@@ -27898,7 +27898,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:56-07:00",
+   "detailAt": "2026-10-18T20:43:47+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mandible-edge-helm": {
@@ -28689,7 +28689,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:55-07:00",
+   "detailAt": "2026-10-18T20:43:45+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "maulers-cuirass": {
@@ -28720,7 +28720,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:26-07:00",
+   "detailAt": "2026-10-18T20:43:16+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mawchant-leather-mantle": {
@@ -29262,7 +29262,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:51-07:00",
+   "detailAt": "2026-10-18T20:43:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mirebloom-choker": {
@@ -29716,7 +29716,7 @@
     "class": "Cleric, Druid, Paladin, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:39-07:00",
+   "detailAt": "2026-10-18T20:44:33+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "moonstone-earring": {
@@ -30464,7 +30464,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:36-07:00",
+   "detailAt": "2026-10-18T20:43:26+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "nosebleed-studs": {
@@ -31230,7 +31230,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:26-07:00",
+   "detailAt": "2026-10-18T20:45:04+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ornate-sash": {
@@ -31606,7 +31606,7 @@
     "class": "Cleric, Druid, Elementalist, Enchanter, Necromancer, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:28-07:00",
+   "detailAt": "2026-10-18T20:45:06+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "parched-salt-gauntlets": {
@@ -32530,7 +32530,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard, Monk, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:30-07:00",
+   "detailAt": "2026-10-18T20:45:08+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "prankers-briarbinds": {
@@ -33181,7 +33181,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:32-07:00",
+   "detailAt": "2026-10-18T20:45:10+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "rabid-hide-wristguard": {
@@ -34252,7 +34252,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:14-07:00",
+   "detailAt": "2026-10-18T20:44:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "riders-chainmail-leggings": {
@@ -34536,7 +34536,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:38-07:00",
+   "detailAt": "2026-10-18T20:43:28+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ring-of-the-deacon": {
@@ -34698,7 +34698,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Elementalist, Enchanter, Inquisitor, Necromancer, Paladin, Ranger, Shadow Knight, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:35-07:00",
+   "detailAt": "2026-10-18T20:43:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ring-of-withering-thought": {
@@ -38866,7 +38866,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:31-07:00",
+   "detailAt": "2026-10-18T20:43:21+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scriptorium-greaves": {
@@ -40061,7 +40061,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:33-07:00",
+   "detailAt": "2026-10-18T20:43:23+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "shield-of-the-dragon-crusader": {
@@ -41736,7 +41736,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:48-07:00",
+   "detailAt": "2026-10-18T20:43:38+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "slippers-of-renewal": {
@@ -43121,7 +43121,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:34-07:00",
+   "detailAt": "2026-10-18T20:44:28+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "stained-black-iron-dagger": {
@@ -43662,7 +43662,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:34-07:00",
+   "detailAt": "2026-10-18T20:45:12+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "stillbrook-coif": {
@@ -45991,7 +45991,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:28-07:00",
+   "detailAt": "2026-10-18T20:43:18+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "the-final-word": {
@@ -46021,15 +46021,15 @@
      "Type": "Slash"
     },
     "effect": "Effect: Mana Burn II (Chance On Hit. Level: 1)",
-    "drop": "Dropped by/from: Vale of Zintar, Servarator Vakraar",
+    "drop": "Dropped by/from: Vale of Zintar, Servator Vakraar",
     "dropNpcs": [
-     "Servarator Vakraar"
+     "Servator Vakraar"
     ],
     "weight": "17",
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:41-07:00",
+   "detailAt": "2026-10-18T20:44:35+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "the-impaler": {
@@ -46991,7 +46991,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:36-07:00",
+   "detailAt": "2026-10-18T20:45:14+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "torn-leather-bracer": {
@@ -48171,7 +48171,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:30-07:00",
+   "detailAt": "2026-10-18T20:43:20+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vesskas-thorn": {
@@ -48292,15 +48292,15 @@
     },
     "sub": "Armor · Chest",
     "saves": "Saves: Magic +2",
-    "drop": "Dropped by/from: Vale of Zintar, Servarator Vakraar",
+    "drop": "Dropped by/from: Vale of Zintar, Servator Vakraar",
     "dropNpcs": [
-     "Servarator Vakraar"
+     "Servator Vakraar"
     ],
     "weight": "6",
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:43-07:00",
+   "detailAt": "2026-10-18T20:44:37+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vethras-figurine": {
@@ -48484,7 +48484,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:03:10-07:00",
+   "detailAt": "2026-10-18T20:43:15+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vindicator-breastplate": {
@@ -49218,15 +49218,15 @@
      "Mana": "+10"
     },
     "sub": "Armor · Wrist",
-    "drop": "Dropped by Zubair Goldentongue in Vale Of Zintar.",
+    "drop": "Dropped by Zubair Goldtongue in Vale Of Zintar.",
     "dropNpcs": [
-     "Zubair Goldentongue"
+     "Zubair Goldtongue"
     ],
     "weight": "0.25",
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:09-07:00",
+   "detailAt": "2026-10-18T20:44:49+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wayfarers-vambrace": {
@@ -49376,7 +49376,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:07-07:00",
+   "detailAt": "2026-10-18T20:44:47+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "whiskerwood-necklace": {
@@ -50419,7 +50419,7 @@
     "class": "Bard, Ranger, Rogue, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:05-07:00",
+   "detailAt": "2026-10-18T20:43:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-clergy-rosary": {
@@ -50483,7 +50483,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:02-07:00",
+   "detailAt": "2026-10-18T20:43:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-grandmasters-earring": {
@@ -50579,7 +50579,7 @@
     "class": "Archer, Beastmaster, Druid, Monk, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:07-07:00",
+   "detailAt": "2026-10-18T20:43:57+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-lieutenants-medallion": {
@@ -50636,7 +50636,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:04:03-07:00",
+   "detailAt": "2026-10-18T20:43:53+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-signal-torch": {
@@ -50668,7 +50668,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:38-07:00",
+   "detailAt": "2026-10-18T20:45:15+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-war-drum": {
