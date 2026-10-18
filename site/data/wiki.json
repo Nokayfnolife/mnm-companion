@@ -1,8 +1,8 @@
 {
  "meta": {
   "lastFull": "2026-10-17T15:36:43+00:00",
-  "itemDetailsPending": 305,
-  "lastScan": "2026-10-18T04:38:08+00:00",
+  "itemDetailsPending": 185,
+  "lastScan": "2026-10-18T11:07:54+00:00",
   "lastError": null,
   "counts": {
    "quests": 127,
@@ -6739,7 +6739,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:34-07:00",
+   "detailAt": "2026-10-18T11:05:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "aged-craftsman-bracer": {
@@ -7337,7 +7337,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:49-07:00",
+   "detailAt": "2026-10-18T11:05:33+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "arrow": {
@@ -7719,6 +7719,11 @@
      "Mana": "+15"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "15",
+     "Delay": "23",
+     "Type": "Pierce"
+    },
     "drop": "Dropped by Blightcaller Ghora .",
     "dropNpcs": [
      "Blightcaller Ghora"
@@ -7727,7 +7732,7 @@
     "class": "Archer, Bard, Beastmaster, Elementalist, Enchanter, Fighter, Inquisitor, Necromancer, Ranger, Rogue, Shadow Knight, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:45-07:00",
+   "detailAt": "2026-10-18T11:06:04+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "awakened-spirit-pouch": {
@@ -8001,7 +8006,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:08-07:00",
+   "detailAt": "2026-10-18T11:05:46+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "banded-steel-cuff": {
@@ -8339,6 +8344,7 @@
      "Mana": "+10"
     },
     "sub": "Armor · Face",
+    "saves": "Saves: Cold +3 · Poison +3",
     "drop": "Dropped by/from: Glinting Hollow, Thornbark",
     "dropNpcs": [
      "Thornbark"
@@ -8347,7 +8353,7 @@
     "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:24-07:00",
+   "detailAt": "2026-10-18T11:06:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "barnacle-bracer": {
@@ -8802,6 +8808,7 @@
      "Mana": "+20"
     },
     "sub": "Armor · Chest",
+    "saves": "Saves: Magic +5 · Cold +2 · Disease +2 · Corruption +2",
     "drop": "Dropped by/from: Evershade Weald, Mistress Naelira",
     "dropNpcs": [
      "Mistress Naelira"
@@ -8810,7 +8817,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:43-07:00",
+   "detailAt": "2026-10-18T11:05:28+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bellkeepers-sash": {
@@ -9275,7 +9282,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:20-07:00",
+   "detailAt": "2026-10-18T11:06:33+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "blacktide-earring": {
@@ -9590,7 +9597,7 @@
     "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:38-07:00",
+   "detailAt": "2026-10-18T11:07:29+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "blood-smeared-iron-breastplate": {
@@ -9847,7 +9854,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:11-07:00",
+   "detailAt": "2026-10-18T11:05:01+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bloodsoaked-amulet": {
@@ -9880,7 +9887,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:15-07:00",
+   "detailAt": "2026-10-18T11:07:11+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bloodstained-apron": {
@@ -10256,6 +10263,7 @@
      "Mana": "+5"
     },
     "sub": "Armor · Wrist",
+    "saves": "Saves: Fire +3 · Cold +3",
     "drop": "Dropped by Asthijvala in Fallen Pass.",
     "dropNpcs": [
      "Asthijvala"
@@ -10264,7 +10272,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:41-07:00",
+   "detailAt": "2026-10-18T11:06:01+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "boneyard-britches": {
@@ -10326,7 +10334,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:09-07:00",
+   "detailAt": "2026-10-18T11:05:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "boots-of-certainty": {
@@ -10578,7 +10586,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:21-07:00",
+   "detailAt": "2026-10-18T11:07:51+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "boulderstride-chain-greaves": {
@@ -11378,6 +11386,12 @@
      "DEX": "+1"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "7",
+     "Delay": "23",
+     "Type": "Pierce"
+    },
+    "effect": "Effect: Weak Poison (Chance On Hit. Level: 1)",
     "drop": "Dropped by/from: Infested Crypt, a crypt broodmother",
     "dropNpcs": [
      "a crypt broodmother"
@@ -11386,7 +11400,7 @@
     "class": "Archer, Bard, Beastmaster, Elementalist, Enchanter, Fighter, Inquisitor, Necromancer, Ranger, Rogue, Shadow Knight, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:44-07:00",
+   "detailAt": "2026-10-18T11:07:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "broodwarden-carapace": {
@@ -11416,7 +11430,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:46-07:00",
+   "detailAt": "2026-10-18T11:07:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "buckler": {
@@ -11593,7 +11607,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:56-07:00",
+   "detailAt": "2026-10-18T11:06:59+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "burrow-treads": {
@@ -11733,6 +11747,7 @@
      "Mana": "+25"
     },
     "sub": "Armor · Back",
+    "saves": "Saves: Magic +8 · Disease +8",
     "drop": "Dropped by Pustulax the Avatar of Plagues .",
     "dropNpcs": [
      "Pustulax the Avatar of Plagues"
@@ -11741,7 +11756,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:56-07:00",
+   "detailAt": "2026-10-18T11:06:13+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "captains-mail-boots": {
@@ -13145,7 +13160,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:14-07:00",
+   "detailAt": "2026-10-18T11:07:45+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "clockwork-gauntlets": {
@@ -13175,7 +13190,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:03-07:00",
+   "detailAt": "2026-10-18T11:04:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "coated-keepers-cloak": {
@@ -13429,7 +13444,7 @@
     "class": "Cleric, Paladin",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:04-07:00",
+   "detailAt": "2026-10-18T11:06:19+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "construction-hammer": {
@@ -15176,6 +15191,7 @@
      "Mana": "+10"
     },
     "sub": "Armor · Ranged",
+    "saves": "Saves: Corruption +5",
     "drop": "Dropped by A Priestess Of Kravvin in Grain Cellar.",
     "dropNpcs": [
      "A Priestess Of Kravvin"
@@ -15184,7 +15200,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:09-07:00",
+   "detailAt": "2026-10-18T11:07:07+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dagger-of-the-damned": {
@@ -15389,13 +15405,19 @@
      "CHA": "-5"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "11",
+     "Delay": "23",
+     "Type": "Slash"
+    },
+    "effect": "Effect: Life Draw (Chance On Hit. Level: 1)",
     "drop": "Dropped by/from: Grain Cellar, a nefarious cultist",
     "dropNpcs": [],
     "weight": "7",
     "class": "Archer, Bard, Beastmaster, Druid, Fighter, Inquisitor, Necromancer, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:02-07:00",
+   "detailAt": "2026-10-18T11:07:04+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dark-kite-shield": {
@@ -15584,7 +15606,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:07-07:00",
+   "detailAt": "2026-10-18T11:04:58+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dawnglow-gossamer-vest": {
@@ -15614,7 +15636,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:31-07:00",
+   "detailAt": "2026-10-18T11:05:17+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dawnglow-luminthread-greaves": {
@@ -15734,7 +15756,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:38-07:00",
+   "detailAt": "2026-10-18T11:05:23+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "deathmask-of-the-witchlord": {
@@ -15981,7 +16003,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:07-07:00",
+   "detailAt": "2026-10-18T11:07:39+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dense-plate-boots": {
@@ -16010,7 +16032,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:44-07:00",
+   "detailAt": "2026-10-18T11:06:50+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dented-black-enamel-helm": {
@@ -16064,13 +16086,14 @@
      "STA": "+6"
     },
     "sub": "Armor · Waist",
+    "saves": "Saves: Disease +2",
     "drop": "Dropped by/from: Fallen Pass",
     "dropNpcs": [],
     "weight": "0.3",
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:51-07:00",
+   "detailAt": "2026-10-18T11:06:09+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dented-platinum-coin-pendant": {
@@ -16489,6 +16512,7 @@
      "STR": "+4"
     },
     "sub": "Armor · Shoulders",
+    "saves": "Saves: Disease -3",
     "drop": "Dropped by/from: Evershade Weald, Vorkuul Blighteye",
     "dropNpcs": [
      "Vorkuul Blighteye"
@@ -16497,7 +16521,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:36-07:00",
+   "detailAt": "2026-10-18T11:05:21+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "disgraced-captains-cuirass": {
@@ -16784,7 +16808,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:28-07:00",
+   "detailAt": "2026-10-18T11:05:15+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "drakeling-skewer": {
@@ -16972,7 +16996,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:40-07:00",
+   "detailAt": "2026-10-18T11:06:48+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "drycrack-jerkin": {
@@ -17055,6 +17079,7 @@
      "Mana": "+10"
     },
     "sub": "Jewelry · Ear",
+    "saves": "Saves: Cold +3",
     "drop": "Dropped by/from: Glass Flats, Hovarth Ezzadel",
     "dropNpcs": [
      "Hovarth Ezzadel"
@@ -17063,7 +17088,7 @@
     "class": "Elementalist, Enchanter, Inquisitor, Necromancer, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:17-07:00",
+   "detailAt": "2026-10-18T11:06:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dull-mining-pick": {
@@ -17604,6 +17629,7 @@
      "DEX": "+1"
     },
     "sub": "Armor · Chest",
+    "saves": "Saves: Electric +2",
     "drop": "Dropped by Aidan Thrym .",
     "dropNpcs": [
      "Aidan Thrym"
@@ -17612,7 +17638,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:30-07:00",
+   "detailAt": "2026-10-18T11:05:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dustmaul-pauldrons": {
@@ -18248,6 +18274,7 @@
      "Mana": "+10"
     },
     "sub": "Jewelry · Ring",
+    "saves": "Saves: Fire +8 · Cold +8",
     "drop": "Dropped by Asthijvala in Fallen Pass.",
     "dropNpcs": [
      "Asthijvala"
@@ -18256,7 +18283,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:43-07:00",
+   "detailAt": "2026-10-18T11:06:03+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "emberfold-cape": {
@@ -18979,7 +19006,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:47-07:00",
+   "detailAt": "2026-10-18T11:05:31+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "enthralling-bracelet": {
@@ -19010,7 +19037,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:13-07:00",
+   "detailAt": "2026-10-18T11:07:10+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "etched-bone-mask": {
@@ -19195,6 +19222,7 @@
      "CHA": "-2"
     },
     "sub": "Armor · Face",
+    "saves": "Saves: Corruption +3",
     "drop": "Dropped by/from: Grimtide Sanctum, Vesska the Bloodbound",
     "dropNpcs": [
      "Vesska the Bloodbound"
@@ -19203,7 +19231,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:33-07:00",
+   "detailAt": "2026-10-18T11:07:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "faceguard-of-warding": {
@@ -19399,7 +19427,7 @@
     "class": "Archer, Bard, Beastmaster, Elementalist, Enchanter, Fighter, Inquisitor, Necromancer, Ranger, Shadow Knight, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:25-07:00",
+   "detailAt": "2026-10-18T11:07:54+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fang-of-the-serpent": {
@@ -19612,6 +19640,7 @@
      "Mana": "+10"
     },
     "sub": "Armor · Shoulders",
+    "saves": "Saves: Cold +8",
     "drop": "Dropped by Fariha Bint Nizar in Grain Cellar.",
     "dropNpcs": [
      "Fariha Bint Nizar"
@@ -19620,7 +19649,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:58-07:00",
+   "detailAt": "2026-10-18T11:07:01+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "farwinds-pendant": {
@@ -19799,6 +19828,12 @@
      "Mana": "+5"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "17",
+     "Delay": "28",
+     "Type": "Pierce"
+    },
+    "effect": "Effect: Infirmity (Chance On Hit. Level: 50)",
     "drop": "Dropped by/from: Glass Flats, Hovarth Ezzadel",
     "dropNpcs": [
      "Hovarth Ezzadel"
@@ -19807,7 +19842,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:18-07:00",
+   "detailAt": "2026-10-18T11:06:31+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fellstone-gauntlets": {
@@ -21065,6 +21100,10 @@
      "STA": "+1"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "6",
+     "Delay": "35"
+    },
     "drop": "Dropped by Rotmuzzle in Evershade Weald.",
     "dropNpcs": [
      "Rotmuzzle"
@@ -21073,7 +21112,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:27-07:00",
+   "detailAt": "2026-10-18T11:05:14+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fungal-boots": {
@@ -21312,6 +21351,7 @@
      "Mana": "+20"
     },
     "sub": "Armor · Chest",
+    "saves": "Saves: Magic +6",
     "drop": "Dropped by Leila Al-Bahri in Grain Cellar.",
     "dropNpcs": [
      "Leila Al-Bahri"
@@ -21320,7 +21360,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:11-07:00",
+   "detailAt": "2026-10-18T11:07:08+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "gardeners-hauberk": {
@@ -22035,7 +22075,7 @@
     "class": "Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:05-07:00",
+   "detailAt": "2026-10-18T11:06:21+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "girdle-of-stern-mercy": {
@@ -22102,7 +22142,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:18-07:00",
+   "detailAt": "2026-10-18T11:07:48+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "glacial-fists": {
@@ -22124,6 +22164,11 @@
      "AGI": "+6"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "3",
+     "Delay": "4",
+     "Type": "Hand to hand"
+    },
     "drop": "Dropped by/from: Glinting Hollow, Hrask",
     "dropNpcs": [
      "Hrask"
@@ -22132,7 +22177,7 @@
     "class": "Monk",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:48-07:00",
+   "detailAt": "2026-10-18T11:06:53+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "glimmering-ward": {
@@ -22253,7 +22298,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:01-07:00",
+   "detailAt": "2026-10-18T11:04:54+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "goblin-fang": {
@@ -22275,13 +22320,19 @@
      "Mana": "+5"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "16",
+     "Delay": "35",
+     "Type": "Pierce"
+    },
+    "saves": "Saves: Magic +2",
     "drop": "Dropped by/from: Glinting Hollow",
     "dropNpcs": [],
     "weight": "2.5",
     "class": "Archer, Bard, Beastmaster, Elementalist, Enchanter, Fighter, Inquisitor, Necromancer, Ranger, Rogue, Shadow Knight, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:30-07:00",
+   "detailAt": "2026-10-18T11:06:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "goblin-skin-mask": {
@@ -22376,7 +22427,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:23-07:00",
+   "detailAt": "2026-10-18T11:07:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "gore-smeared-warleggings": {
@@ -22772,7 +22823,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:37-07:00",
+   "detailAt": "2026-10-18T11:05:58+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "greaves-of-the-entrusted": {
@@ -23023,7 +23074,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:32-07:00",
+   "detailAt": "2026-10-18T11:06:41+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "grips-of-the-deep-enchantress": {
@@ -23267,6 +23318,7 @@
     ],
     "stats": {},
     "sub": "Jewelry",
+    "effect": "Effect: Runeskin III (On Click. Any Slot. Cast Time: Instant. Level: 50)",
     "drop": "Dropped by Guillome The Accursed in Glass Flats.",
     "dropNpcs": [
      "Guillome The Accursed"
@@ -23274,7 +23326,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:09-07:00",
+   "detailAt": "2026-10-18T11:06:24+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hadhramans-ring": {
@@ -24150,7 +24202,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:13-07:00",
+   "detailAt": "2026-10-18T11:07:43+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "high-wyrmseers-signet": {
@@ -24324,6 +24376,11 @@
      "HP": "+10"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "11",
+     "Delay": "40",
+     "Type": "Slash"
+    },
     "drop": "Dropped by/from: Wasp Hive Protector",
     "dropNpcs": [
      "Wasp Hive Protector"
@@ -24332,7 +24389,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:02-07:00",
+   "detailAt": "2026-10-18T11:05:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hoarders-grip": {
@@ -24737,7 +24794,7 @@
     "class": "Bard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:27-07:00",
+   "detailAt": "2026-10-18T11:07:20+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "iced-fang": {
@@ -25660,7 +25717,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:42-07:00",
+   "detailAt": "2026-10-18T11:06:49+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "interrogators-clasp": {
@@ -26562,6 +26619,11 @@
      "HP": "+10"
     },
     "sub": "Weapon · Ranged",
+    "weapon": {
+     "DMG": "9",
+     "Delay": "39"
+    },
+    "saves": "Saves: Disease -3",
     "drop": "Dropped by Scout Leader Krindor in Evershade Weald.",
     "dropNpcs": [
      "Scout Leader Krindor"
@@ -26570,7 +26632,7 @@
     "class": "Archer, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:22-07:00",
+   "detailAt": "2026-10-18T11:05:11+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "krindors-wristguard": {
@@ -26594,6 +26656,7 @@
      "STA": "+1"
     },
     "sub": "Armor · Wrist",
+    "saves": "Saves: Disease -3",
     "drop": "Dropped by/from: Evershade Weald, Scout Leader Krindor",
     "dropNpcs": [
      "Scout Leader Krindor"
@@ -26602,7 +26665,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:20-07:00",
+   "detailAt": "2026-10-18T11:05:09+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "kroghars-fury": {
@@ -26624,6 +26687,11 @@
      "DEX": "+3"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "17",
+     "Delay": "35",
+     "Type": "Slash"
+    },
     "drop": "Dropped by/from: Blacktide Bay, Bloodchain Champion",
     "dropNpcs": [
      "Bloodchain Champion"
@@ -26632,7 +26700,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:13-07:00",
+   "detailAt": "2026-10-18T11:05:03+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "lambent-lute": {
@@ -26976,7 +27044,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:34-07:00",
+   "detailAt": "2026-10-18T11:05:20+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "leather-bracer-of-obedience-2": {
@@ -27137,6 +27205,7 @@
      "HP": "+25"
     },
     "sub": "Armor · Wrist",
+    "saves": "Saves: Poison +5",
     "drop": "Dropped by Blightcaller Ghora in Fallen Pass.",
     "dropNpcs": [
      "Blightcaller Ghora"
@@ -27145,7 +27214,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:47-07:00",
+   "detailAt": "2026-10-18T11:06:06+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "leprotic-gloves": {
@@ -27955,7 +28024,7 @@
     "class": "Archer, Bard, Beastmaster, Druid, Monk, Ranger, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:21-07:00",
+   "detailAt": "2026-10-18T11:07:15+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mantle-of-the-untamed-beast": {
@@ -27987,7 +28056,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:09-07:00",
+   "detailAt": "2026-10-18T11:07:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mantle-of-the-windcaller": {
@@ -28020,7 +28089,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:20-07:00",
+   "detailAt": "2026-10-18T11:07:49+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mantle-of-umbrage": {
@@ -28294,6 +28363,7 @@
      "CHA": "-5"
     },
     "sub": "Armor · Face",
+    "saves": "Saves: Cold +3",
     "drop": "Dropped by/from: Grimtide Sanctum, Bloatbelly",
     "dropNpcs": [
      "Bloatbelly"
@@ -28302,7 +28372,7 @@
     "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:40-07:00",
+   "detailAt": "2026-10-18T11:07:31+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mask-of-the-forest-walker": {
@@ -28449,6 +28519,7 @@
      "CHA": "+1"
     },
     "sub": "Armor · Face",
+    "saves": "Saves: Magic +2",
     "drop": "Dropped by Mistress Naelira in Evershade Weald.",
     "dropNpcs": [
      "Mistress Naelira"
@@ -28457,7 +28528,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:45-07:00",
+   "detailAt": "2026-10-18T11:05:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mask-of-the-strategist": {
@@ -28680,7 +28751,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:29-07:00",
+   "detailAt": "2026-10-18T11:07:22+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mawchant-rite-vest": {
@@ -28713,7 +28784,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:31-07:00",
+   "detailAt": "2026-10-18T11:07:23+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mawtooth": {
@@ -29340,7 +29411,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:51-07:00",
+   "detailAt": "2026-10-18T11:05:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mistfall-pauldrons": {
@@ -29916,6 +29987,12 @@
      "DEX": "+2"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "13",
+     "Delay": "29",
+     "Type": "Slash"
+    },
+    "saves": "Saves: Disease -8",
     "drop": "Dropped by Qassem Brolt in the Smugglers Caves of Fallen Pass.",
     "dropNpcs": [
      "Qassem Brolt"
@@ -29924,7 +30001,7 @@
     "class": "Beastmaster",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:10-07:00",
+   "detailAt": "2026-10-18T11:05:48+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "murkraals-legwraps": {
@@ -30082,7 +30159,7 @@
     "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:40-07:00",
+   "detailAt": "2026-10-18T11:05:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "necrotic-chitin-pauldrons": {
@@ -30174,7 +30251,7 @@
     "class": "Elementalist, Enchanter, Inquisitor, Necromancer, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:01-07:00",
+   "detailAt": "2026-10-18T11:05:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "nidus-buckler": {
@@ -30201,7 +30278,7 @@
     "class": "Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:04-07:00",
+   "detailAt": "2026-10-18T11:05:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "night-touched-wristwrap": {
@@ -30960,7 +31037,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:13-07:00",
+   "detailAt": "2026-10-18T11:06:27+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "onyx-vambraces": {
@@ -31977,13 +32054,19 @@
      "Mana": "+50"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "39",
+     "Delay": "40",
+     "Type": "Slash"
+    },
+    "saves": "Saves: Disease +30",
     "drop": "Dropped by/from: Fallen Pass",
     "dropNpcs": [],
     "weight": "13",
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:58-07:00",
+   "detailAt": "2026-10-18T11:06:15+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "phantom-stein": {
@@ -32246,7 +32329,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:46-07:00",
+   "detailAt": "2026-10-18T11:06:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "polished-iron-boots": {
@@ -32507,7 +32590,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:32-07:00",
+   "detailAt": "2026-10-18T11:05:18+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "prayer-beads-of-the-leper-saint": {
@@ -32807,13 +32890,14 @@
      "Mana": "+35"
     },
     "sub": "Armor · Chest",
+    "saves": "Saves: Disease +15",
     "drop": "Dropped by Pustulax in Fallen Pass.",
     "dropNpcs": [],
     "weight": "0.8",
     "class": "Elementalist, Necromancer, Wizard, Enchanter",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:54-07:00",
+   "detailAt": "2026-10-18T11:06:12+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "putrid-carpenters-vest": {
@@ -33128,7 +33212,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:24-07:00",
+   "detailAt": "2026-10-18T11:05:12+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "rabid-hide-wristguards": {
@@ -33338,7 +33422,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:11-07:00",
+   "detailAt": "2026-10-18T11:06:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "rat-bone-earring": {
@@ -33554,7 +33638,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:54-07:00",
+   "detailAt": "2026-10-18T11:06:58+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "rathmeres-spyglass": {
@@ -33886,7 +33970,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:14-07:00",
+   "detailAt": "2026-10-18T11:05:04+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "reach-of-the-ardent-keeper": {
@@ -34047,7 +34131,7 @@
     "class": "Bard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:11-07:00",
+   "detailAt": "2026-10-18T11:07:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "reinforced-boiled-leather-buckler": {
@@ -34419,7 +34503,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:26-07:00",
+   "detailAt": "2026-10-18T11:05:49+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ring-of-the-bloodynose-clan": {
@@ -34541,6 +34625,7 @@
      "HP": "+35"
     },
     "sub": "Jewelry · Ring",
+    "saves": "Saves: Electric +10",
     "drop": "Dropped by Braggla The Spawnkeeper in Grimtide Sanctum.",
     "dropNpcs": [
      "Braggla The Spawnkeeper"
@@ -34549,7 +34634,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:25-07:00",
+   "detailAt": "2026-10-18T11:07:19+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ring-of-the-seas": {
@@ -34948,7 +35033,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:07-07:00",
+   "detailAt": "2026-10-18T11:06:22+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "rod-of-consumption": {
@@ -37791,7 +37876,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:00-07:00",
+   "detailAt": "2026-10-18T11:06:16+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "sandy-dune-tunic": {
@@ -38883,6 +38968,7 @@
      "INT": "+6"
     },
     "sub": "Armor · Head",
+    "saves": "Saves: Corruption +3",
     "drop": "Dropped by/from: Fallen Pass, Qassem Brolt",
     "dropNpcs": [
      "Qassem Brolt"
@@ -38891,7 +38977,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:06-07:00",
+   "detailAt": "2026-10-18T11:05:45+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scurrywraps": {
@@ -39811,7 +39897,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:23-07:00",
+   "detailAt": "2026-10-18T11:07:17+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "shattered-staff-of-allistaire": {
@@ -40267,7 +40353,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:50-07:00",
+   "detailAt": "2026-10-18T11:06:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "shroud-of-the-ardent-keeper": {
@@ -40583,7 +40669,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:32-07:00",
+   "detailAt": "2026-10-18T11:05:54+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "silentstride-breeches": {
@@ -40803,13 +40889,14 @@
      "Mana": "+10"
     },
     "sub": "Armor · Head",
+    "saves": "Saves: Disease +2",
     "drop": "Dropped by Alaric Brom in Fallen Pass.",
     "dropNpcs": [],
     "weight": "1",
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:39-07:00",
+   "detailAt": "2026-10-18T11:06:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "silvery-robe": {
@@ -41002,7 +41089,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:52-07:00",
+   "detailAt": "2026-10-18T11:06:56+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "skeletal-plates": {
@@ -41032,7 +41119,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:05-07:00",
+   "detailAt": "2026-10-18T11:04:57+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "skeletal-sight": {
@@ -42187,13 +42274,14 @@
      "WIS": "+4"
     },
     "sub": "Armor · Back",
+    "saves": "Saves: Poison +6 · Electric +1",
     "drop": "Dropped by/from: Glinting Hollow",
     "dropNpcs": [],
     "weight": "0.25",
     "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:36-07:00",
+   "detailAt": "2026-10-18T11:06:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "spectral-coif": {
@@ -42246,6 +42334,7 @@
      "Mana": "+15"
     },
     "sub": "Armor · Head",
+    "saves": "Saves: Magic +2",
     "drop": "Dropped by/from: Grain Cellar, Rais Muzari",
     "dropNpcs": [
      "Rais Muzari"
@@ -42254,7 +42343,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:08-07:00",
+   "detailAt": "2026-10-18T11:07:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "spectral-seal": {
@@ -42279,6 +42368,7 @@
      "Mana": "+5"
     },
     "sub": "Jewelry · Ring",
+    "saves": "Saves: Magic +4",
     "drop": "Dropped by A Lingering Ghost in Grain Cellar.",
     "dropNpcs": [
      "A Lingering Ghost"
@@ -42287,7 +42377,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:00-07:00",
+   "detailAt": "2026-10-18T11:07:02+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "spellbinders-inquisitor-talisman": {
@@ -42432,6 +42522,7 @@
      "HP": "+5"
     },
     "sub": "Armor · Neck",
+    "saves": "Saves: Fire +3",
     "drop": "Dropped by Jailer Kur'mak in Fallen Pass.",
     "dropNpcs": [
      "Jailer Kur'mak"
@@ -42440,7 +42531,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:49-07:00",
+   "detailAt": "2026-10-18T11:06:07+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "spiked-onyx-pauldrons": {
@@ -42472,7 +42563,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:15-07:00",
+   "detailAt": "2026-10-18T11:06:28+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "spiked-training-collar": {
@@ -42878,6 +42969,12 @@
      "HP": "+10"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "24",
+     "Delay": "37",
+     "Type": "Blunt"
+    },
+    "saves": "Saves: Disease +5",
     "drop": "Dropped by Aidan Thrym .",
     "dropNpcs": [
      "Aidan Thrym"
@@ -42886,7 +42983,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:35-07:00",
+   "detailAt": "2026-10-18T11:05:57+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "staff-of-the-drowned": {
@@ -42910,6 +43007,10 @@
      "Mana": "+30"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "15",
+     "Delay": "31"
+    },
     "drop": "Dropped by Tidecaller Selka in Grimtide Sanctum.",
     "dropNpcs": [
      "Tidecaller Selka"
@@ -42918,7 +43019,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:19-07:00",
+   "detailAt": "2026-10-18T11:07:14+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "staff-of-the-leper-priest": {
@@ -42943,6 +43044,11 @@
      "Mana": "+25"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "23",
+     "Delay": "37"
+    },
+    "saves": "Saves: Disease +8",
     "drop": "Dropped by Kowmeh Lalen in Fallen Pass.",
     "dropNpcs": [
      "Kowmeh Lalen"
@@ -42951,7 +43057,7 @@
     "class": "Cleric, Druid, Paladin, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:52-07:00",
+   "detailAt": "2026-10-18T11:06:10+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "staff-of-the-shattered-seer": {
@@ -43707,7 +43813,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:59-07:00",
+   "detailAt": "2026-10-18T11:05:39+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "stirring-stick": {
@@ -43947,13 +44053,14 @@
      "Mana": "+10"
     },
     "sub": "Armor · Chest",
+    "saves": "Saves: Cold +3",
     "drop": "Dropped by/from: Glinting Hollow",
     "dropNpcs": [],
     "weight": "6",
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:34-07:00",
+   "detailAt": "2026-10-18T11:06:43+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "strikers-chain-of-the-wyrdguard": {
@@ -44130,6 +44237,7 @@
      "HP": "+10"
     },
     "sub": "Jewelry · Ear",
+    "saves": "Saves: Disease +7",
     "drop": "Dropped by/from: Glass Flats, Soraya the Mirage",
     "dropNpcs": [
      "Soraya the Mirage"
@@ -44138,7 +44246,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:02-07:00",
+   "detailAt": "2026-10-18T11:06:18+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "suede-leather-mask": {
@@ -44478,7 +44586,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:18-07:00",
+   "detailAt": "2026-10-18T11:05:07+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "tanned-sinew-bracer": {
@@ -46152,6 +46260,11 @@
      "Haste %": "+7"
     },
     "sub": "Weapon · Primary Hand, Secondary Hand, Waist",
+    "weapon": {
+     "DMG": "5",
+     "Delay": "28",
+     "Type": "Blunt"
+    },
     "drop": "Dropped by/from: Evershade Weald, Taeresh Deathcharmer",
     "dropNpcs": [
      "Taeresh Deathcharmer"
@@ -46160,7 +46273,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:42-07:00",
+   "detailAt": "2026-10-18T11:05:26+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "third-degree-fourfold-sash": {
@@ -46282,7 +46395,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:26-07:00",
+   "detailAt": "2026-10-18T11:06:37+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "thornbark-mantle": {
@@ -46313,7 +46426,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:28-07:00",
+   "detailAt": "2026-10-18T11:06:39+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "thoughtweavers-wrap": {
@@ -46695,7 +46808,7 @@
     "class": "Cleric, Druid, Paladin, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:17-07:00",
+   "detailAt": "2026-10-18T11:07:13+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "tidewalker-slippers": {
@@ -46777,6 +46890,11 @@
      "HP": "+10"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "9",
+     "Delay": "32",
+     "Type": "Slash"
+    },
     "drop": "Dropped by Watcher Aquafis in Evershade Weald.",
     "dropNpcs": [
      "Watcher Aquafis"
@@ -46785,7 +46903,7 @@
     "class": "Archer, Bard, Beastmaster, Druid, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:54-07:00",
+   "detailAt": "2026-10-18T11:05:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "tomas-signet-ring": {
@@ -46963,7 +47081,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:35-07:00",
+   "detailAt": "2026-10-18T11:07:26+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "torvald-heater-shield": {
@@ -47328,7 +47446,7 @@
     "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:16-07:00",
+   "detailAt": "2026-10-18T11:05:06+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "tusts-copper-earring": {
@@ -47546,7 +47664,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:38-07:00",
+   "detailAt": "2026-10-18T11:06:46+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "untamed-spirit-grips": {
@@ -48083,7 +48201,7 @@
     "class": "Inquisitor, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:36-07:00",
+   "detailAt": "2026-10-18T11:07:28+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vest-of-shattered-duty": {
@@ -48903,7 +49021,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:16-07:00",
+   "detailAt": "2026-10-18T11:07:46+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wartide-tooth": {
@@ -49348,7 +49466,7 @@
     "class": "Monk, Rogue",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:42-07:00",
+   "detailAt": "2026-10-18T11:07:33+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wicked-longbow": {
@@ -49473,7 +49591,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:51:56-07:00",
+   "detailAt": "2026-10-18T11:05:37+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wildbinders-spear": {
@@ -49537,7 +49655,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:06-07:00",
+   "detailAt": "2026-10-18T11:07:37+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "windstorm-moccasins": {
@@ -49713,6 +49831,12 @@
      "STA": "+1"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "10",
+     "Delay": "21",
+     "Type": "Pierce"
+    },
+    "effect": "Effect: Rotwyrm Strike (Chance On Hit. Level: 40)",
     "drop": "Dropped by/from: Fallen Pass, Morthkara the Blight",
     "dropNpcs": [
      "Morthkara the Blight"
@@ -49721,7 +49845,7 @@
     "class": "Elementalist, Enchanter, Fighter, Necromancer, Rogue, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:52:28-07:00",
+   "detailAt": "2026-10-18T11:05:51+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wolf-tooth-earring": {
@@ -49773,6 +49897,11 @@
      "Mana": "+5"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "13",
+     "Delay": "26",
+     "Type": "Slash"
+    },
     "drop": "Dropped by/from: Glinting Hollow, Softpaws",
     "dropNpcs": [
      "Softpaws"
@@ -49781,7 +49910,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:53:22-07:00",
+   "detailAt": "2026-10-18T11:06:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wolfskin-gloves": {
