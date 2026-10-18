@@ -1,8 +1,8 @@
 {
  "meta": {
   "lastFull": "2026-10-17T15:36:43+00:00",
-  "itemDetailsPending": 0,
-  "lastScan": "2026-10-17T20:36:59+00:00",
+  "itemDetailsPending": 305,
+  "lastScan": "2026-10-18T04:38:08+00:00",
   "lastError": null,
   "counts": {
    "quests": 127,
@@ -6706,7 +6706,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:59-07:00",
+   "detailAt": "2026-10-18T04:38:02+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "aegis-of-the-dragon-crusader": {
@@ -7306,7 +7306,7 @@
     "class": "Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:16-07:00",
+   "detailAt": "2026-10-18T04:36:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "aquafis-scaleboots": {
@@ -7689,13 +7689,13 @@
      "Mana": "+5"
     },
     "sub": "Weapon · Primary Hand",
-    "drop": "A druidic icon fashioned from twisted vines and thorns in the shape of a crescent moon (a lesser version of the Icon of the Gatekeeper). Can be worn in the Primary, Secondary, or Ranged slot. Reward from the Druid Starter Quest (Faelindral).",
+    "drop": "Reward from the Druid Starter Quest (Faelindral).",
     "dropNpcs": [],
     "weight": "2",
     "class": "Druid",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:39-07:00",
+   "detailAt": "2026-10-18T04:36:50+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "athame-of-the-plague-maker": {
@@ -7757,7 +7757,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:42-07:00",
+   "detailAt": "2026-10-18T04:37:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ayips-chopper": {
@@ -7819,13 +7819,13 @@
      "Mana": "+10"
     },
     "sub": "Jewelry · Wrist",
-    "drop": "A golden bangle with brilliant azure enameled details. Final reward for the quest \"Gifts for our Dear Friends\".",
+    "drop": "Final reward for the quest \"Gifts for our Dear Friends\".",
     "dropNpcs": [],
     "weight": "1.4",
     "class": "Bard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:47-07:00",
+   "detailAt": "2026-10-18T04:37:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bahaara-kite-shield": {
@@ -8152,7 +8152,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:35-07:00",
+   "detailAt": "2026-10-18T04:35:11+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bane-of-the-twin-drakes": {
@@ -9060,7 +9060,7 @@
     "class": "Necromancer",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:09-07:00",
+   "detailAt": "2026-10-18T04:37:19+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "black-crude-silk-robe": {
@@ -9174,7 +9174,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:02-07:00",
+   "detailAt": "2026-10-18T04:38:06+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "black-widow-sickle": {
@@ -9331,7 +9331,7 @@
     "class": "Cleric, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:01-07:00",
+   "detailAt": "2026-10-18T04:38:04+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "blacktide-wristguard": {
@@ -9460,7 +9460,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:07-07:00",
+   "detailAt": "2026-10-18T04:36:20+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "blight-gnawed-crown": {
@@ -9723,7 +9723,7 @@
     "class": "Necromancer, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:37-07:00",
+   "detailAt": "2026-10-18T04:37:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bloodied-sickle": {
@@ -10021,13 +10021,18 @@
      "Mana": "+20"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "12",
+     "Delay": "30"
+    },
+    "saves": "Saves: Magic +4",
     "drop": "Dropped by Elias Messing in Sungreet Strand.",
     "dropNpcs": [],
     "weight": "5",
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:33-07:00",
+   "detailAt": "2026-10-18T04:35:09+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bone-constructs-head": {
@@ -10504,7 +10509,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:32-07:00",
+   "detailAt": "2026-10-18T04:35:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "boulderbreaker-axe": {
@@ -10819,6 +10824,11 @@
      "HP": "+10"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "9",
+     "Delay": "32",
+     "Type": "Slash"
+    },
     "drop": "Dropped by Brahson the Butcher in the Ancient Crypt.",
     "dropNpcs": [
      "Brahson the Butcher"
@@ -10827,7 +10837,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:57-07:00",
+   "detailAt": "2026-10-18T04:37:46+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "braided-crystal-ring": {
@@ -10858,7 +10868,7 @@
     "class": "Enchanter",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:04-07:00",
+   "detailAt": "2026-10-18T04:37:13+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "braided-leather-belt": {
@@ -12552,7 +12562,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:00-07:00",
+   "detailAt": "2026-10-18T04:34:33+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cinder-beetle-breastplate": {
@@ -12586,7 +12596,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:05-07:00",
+   "detailAt": "2026-10-18T04:34:38+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cinder-beetle-greaves": {
@@ -12620,7 +12630,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:03-07:00",
+   "detailAt": "2026-10-18T04:34:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cinder-beetle-helm": {
@@ -12654,7 +12664,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:01-07:00",
+   "detailAt": "2026-10-18T04:34:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cinder-beetle-horn": {
@@ -12793,7 +12803,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:55:58-07:00",
+   "detailAt": "2026-10-18T04:34:31+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cinder-wand-leggings": {
@@ -12948,7 +12958,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:50-07:00",
+   "detailAt": "2026-10-18T04:36:02+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "claws-of-bonding": {
@@ -14466,7 +14476,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T14:05:14-07:00",
+   "detailAt": "2026-10-18T04:34:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cowl-of-the-arch-lich": {
@@ -15800,7 +15810,7 @@
     "class": "Archer, Bard, Beastmaster, Elementalist, Enchanter, Fighter, Inquisitor, Necromancer, Ranger, Rogue, Shadow Knight, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:28-07:00",
+   "detailAt": "2026-10-18T04:35:38+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "deeproot-cudgel": {
@@ -16511,6 +16521,7 @@
      "HP": "+15"
     },
     "sub": "Armor · Chest",
+    "saves": "Saves: Magic +10 · Disease +10 · Poison +5",
     "drop": "Dropped by/from: Fallen Pass, Yeoman Borin Smythe",
     "dropNpcs": [
      "Yeoman Borin Smythe"
@@ -16519,7 +16530,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:45-07:00",
+   "detailAt": "2026-10-18T04:35:19+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "disgraced-daughters-locket": {
@@ -16701,13 +16712,13 @@
      "INT": "+1"
     },
     "sub": "Weapon · Primary Hand",
-    "drop": "A magical dousing rod capable of locating water in even the most barren environments, bearing the symbol of the Circle of Scarce Rains. Effect: Summon Drink (On Click, Must Equip, Cast Time 3s, Level 1). Reward from the Druid Starter Quest (Night Harbor).",
+    "drop": "Reward from the Druid Starter Quest (Night Harbor).",
     "dropNpcs": [],
     "weight": "2",
     "class": "Druid",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:39-07:00",
+   "detailAt": "2026-10-18T04:37:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dragon-sinew-bow": {
@@ -16932,7 +16943,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:52-07:00",
+   "detailAt": "2026-10-18T04:37:54+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dryadic-pendant": {
@@ -17478,7 +17489,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:54-07:00",
+   "detailAt": "2026-10-18T04:37:56+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dusktanned-vest": {
@@ -17748,7 +17759,7 @@
     "class": "Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:44-07:00",
+   "detailAt": "2026-10-18T04:37:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dusty-violet-robe": {
@@ -17780,7 +17791,7 @@
     "class": "Enchanter",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:02-07:00",
+   "detailAt": "2026-10-18T04:37:11+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "earthened-gloves": {
@@ -19161,7 +19172,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:48-07:00",
+   "detailAt": "2026-10-18T04:36:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "faceguard-of-the-torturer": {
@@ -20375,7 +20386,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:37-07:00",
+   "detailAt": "2026-10-18T04:36:48+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fire-emerald-pendant": {
@@ -20439,7 +20450,7 @@
     "class": "Monk",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:55-07:00",
+   "detailAt": "2026-10-18T04:36:07+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fish-catchers-pole": {
@@ -21093,7 +21104,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "Not yet documented"
    },
-   "detailAt": "2026-10-10T13:56:21-07:00",
+   "detailAt": "2026-10-18T04:35:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fungal-coat": {
@@ -21125,7 +21136,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:16-07:00",
+   "detailAt": "2026-10-18T04:35:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fungal-helm": {
@@ -21156,7 +21167,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:17-07:00",
+   "detailAt": "2026-10-18T04:35:27+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fungal-leggings": {
@@ -21188,7 +21199,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:19-07:00",
+   "detailAt": "2026-10-18T04:35:28+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fungal-robe": {
@@ -21695,6 +21706,10 @@
      "DEX": "+16"
     },
     "sub": "Armor",
+    "weapon": {
+     "DMG": "42",
+     "Delay": "45"
+    },
     "drop": "Dropped by Bone Construct in Tomb Of The Last Wyrmsbane.",
     "dropNpcs": [
      "Bone Construct"
@@ -21703,7 +21718,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:27-07:00",
+   "detailAt": "2026-10-18T04:34:48+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "giant-fire-beetle-eye": {
@@ -21943,6 +21958,11 @@
      "HP": "+15"
     },
     "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "17",
+     "Delay": "30",
+     "Type": "Slash"
+    },
     "drop": "Dropped by Jorvan Ironfist in Night Harbor.",
     "dropNpcs": [
      "Jorvan Ironfist"
@@ -21951,7 +21971,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:16-07:00",
+   "detailAt": "2026-10-18T04:34:57+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "gilded-spellbook": {
@@ -22326,7 +22346,7 @@
     "class": "Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:06-07:00",
+   "detailAt": "2026-10-18T04:34:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "goldgut-harness": {
@@ -22414,7 +22434,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:56-07:00",
+   "detailAt": "2026-10-18T04:37:58+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "goresnout-leatherguards": {
@@ -22813,7 +22833,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:46-07:00",
+   "detailAt": "2026-10-18T04:36:57+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "green-drakeling-scale-cloak": {
@@ -22843,7 +22863,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:48-07:00",
+   "detailAt": "2026-10-18T04:36:59+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "green-drakeling-scale-coat": {
@@ -22875,7 +22895,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:52-07:00",
+   "detailAt": "2026-10-18T04:37:03+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "green-drakeling-scale-pants": {
@@ -22906,7 +22926,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:50-07:00",
+   "detailAt": "2026-10-18T04:37:01+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "grimaldis-padded-mantle": {
@@ -23419,7 +23439,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:09-07:00",
+   "detailAt": "2026-10-18T04:36:22+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hallowed-bone-amulet": {
@@ -23444,6 +23464,7 @@
      "Mana": "+10"
     },
     "sub": "Armor · Neck",
+    "saves": "Saves: Holy +5",
     "drop": "Dropped by A Pale Forman in Night Harbor.",
     "dropNpcs": [
      "A Pale Forman"
@@ -23452,7 +23473,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:21-07:00",
+   "detailAt": "2026-10-18T04:35:03+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hammer-and-chisel": {
@@ -24455,7 +24476,7 @@
     "class": "Bard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:39-07:00",
+   "detailAt": "2026-10-18T04:35:51+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "house-captains-ring": {
@@ -24781,7 +24802,7 @@
     "class": "Druid",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:44-07:00",
+   "detailAt": "2026-10-18T04:36:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "idol-of-bone": {
@@ -24911,7 +24932,7 @@
     "class": "Ranger",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:30-07:00",
+   "detailAt": "2026-10-18T04:36:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "inlaid-amber-platinum-necklace": {
@@ -26639,7 +26660,7 @@
     "class": "Bard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:19-07:00",
+   "detailAt": "2026-10-18T04:36:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "lambent-prospect-blade": {
@@ -26668,13 +26689,13 @@
      "DMG": "6",
      "Delay": "23"
     },
-    "drop": "An elven blade of ornate make; the hilt bears the emblem of the Lambent Wanderers (Weapon Skill: STA). Reward from the Rogue Starter Quest (Faelindral).",
+    "drop": "Reward from the Rogue Starter Quest (Faelindral).",
     "dropNpcs": [],
     "weight": "1",
     "class": "Rogue",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:25-07:00",
+   "detailAt": "2026-10-18T04:36:39+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "lambent-prospect-dagger": {
@@ -26706,7 +26727,7 @@
     "class": "Rogue",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:23-07:00",
+   "detailAt": "2026-10-18T04:36:37+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "lambent-stiletto": {
@@ -26836,7 +26857,7 @@
     "class": "Elementalist, Enchanter, Inquisitor, Necromancer, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:14-07:00",
+   "detailAt": "2026-10-18T04:35:23+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "lantern": {
@@ -27093,7 +27114,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:31-07:00",
+   "detailAt": "2026-10-18T04:35:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "leprotic-bracer": {
@@ -27515,7 +27536,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:44-07:00",
+   "detailAt": "2026-10-18T04:35:56+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "lute-of-the-charmed": {
@@ -27901,7 +27922,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:48-07:00",
+   "detailAt": "2026-10-18T04:34:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mantle-of-the-sharkmother": {
@@ -28087,14 +28108,14 @@
      "DEX": "+3",
      "HP": "+20"
     },
-    "sub": "Jewelry",
+    "sub": "Jewelry · Ear",
     "drop": "Awarded for completing the Rogue starter quest in Night Harbor.",
     "dropNpcs": [],
     "weight": "0.1",
     "class": "Rogue",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:51-07:00",
+   "detailAt": "2026-10-18T04:36:03+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mark-of-the-thrallmaker": {
@@ -28307,13 +28328,13 @@
      "DEX": "+2"
     },
     "sub": "Armor · Face",
-    "drop": "A mask of hardened leaves that conceals one's features. Reward from the Rogue Starter Quest (Faelindral).",
+    "drop": "Reward from the Rogue Starter Quest (Faelindral).",
     "dropNpcs": [],
     "weight": "0.25",
     "class": "Rogue",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:27-07:00",
+   "detailAt": "2026-10-18T04:36:41+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mask-of-the-gladiator": {
@@ -28346,7 +28367,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:46-07:00",
+   "detailAt": "2026-10-18T04:35:58+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mask-of-the-hunter": {
@@ -28979,7 +29000,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:57-07:00",
+   "detailAt": "2026-10-18T04:38:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "minds-eye-turban": {
@@ -29682,7 +29703,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:23-07:00",
+   "detailAt": "2026-10-18T04:35:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "moonwhisper-knot": {
@@ -30426,7 +30447,7 @@
     "class": "Fighter",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:00-07:00",
+   "detailAt": "2026-10-18T04:36:12+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "novice-claws-of-the-keeper": {
@@ -30464,7 +30485,7 @@
     "class": "Beastmaster",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:53-07:00",
+   "detailAt": "2026-10-18T04:37:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "novice-hoop-of-the-listener": {
@@ -30492,7 +30513,7 @@
     "class": "Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:14-07:00",
+   "detailAt": "2026-10-18T04:36:28+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "novice-icon-of-the-gatekeeper": {
@@ -30546,7 +30567,7 @@
     "class": "Archer",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:11-07:00",
+   "detailAt": "2026-10-18T04:36:24+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "oak-wood-bo-staff": {
@@ -30780,15 +30801,15 @@
      "Mana": "+5"
     },
     "sub": "Jewelry · Wrist",
-    "drop": "Reward from the Ail'Vorith Starter Quest, given by Toilmaster Verith .",
+    "drop": "Reward from the Ail'Vorith Starter Quest, given by Toilmaster Vorith .",
     "dropNpcs": [
-     "Toilmaster Verith"
+     "Toilmaster Vorith"
     ],
     "weight": "1",
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:22-07:00",
+   "detailAt": "2026-10-18T04:35:32+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "oiled-tracker-shoulders": {
@@ -30879,7 +30900,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:43-07:00",
+   "detailAt": "2026-10-18T04:35:17+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "onyx-outlaw-hood": {
@@ -30995,6 +31016,8 @@
      "Spell Haste %": "+7"
     },
     "sub": "Armor · Primary Hand",
+    "saves": "Saves: Fire +9",
+    "effect": "Effect: Fading Flame (Passive. Must Equip. Level: 1)",
     "drop": "Dropped by/from: Ancient Crypt, Skyseer Illya",
     "dropNpcs": [
      "Skyseer Illya"
@@ -31003,7 +31026,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:59-07:00",
+   "detailAt": "2026-10-18T04:37:48+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "orb-of-the-waning-waters": {
@@ -31280,7 +31303,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:29-07:00",
+   "detailAt": "2026-10-18T04:34:50+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "overseers-filthy-maul": {
@@ -31353,7 +31376,7 @@
     "class": "Archer, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:59:04-07:00",
+   "detailAt": "2026-10-18T04:38:08+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "oversized-chain-hauberk": {
@@ -32125,7 +32148,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:14-07:00",
+   "detailAt": "2026-10-18T04:37:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "poachers-skinner": {
@@ -32311,7 +32334,7 @@
     "class": "Elementalist, Enchanter, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:24-07:00",
+   "detailAt": "2026-10-18T04:35:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "polished-sandstone": {
@@ -32389,16 +32412,15 @@
     "tags": [],
     "stats": {},
     "sub": "Tradeskill Material · Bag",
-    "drop": "A small 6-slot bag. Sold by bag merchants and goods merchants in Night Harbor (including Dilshad Abolfazl ).",
+    "drop": "Sold by bag merchants and goods merchants in Night Harbor (including Dilshad Abolfazl ).",
     "dropNpcs": [
      "Dilshad Abolfazl"
     ],
-    "bagSlots": 6,
     "weight": "1",
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:46-07:00",
+   "detailAt": "2026-10-18T04:34:54+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "pounce-bag": {
@@ -33618,7 +33640,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:32-07:00",
+   "detailAt": "2026-10-18T04:37:28+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ratkiller": {
@@ -33655,7 +33677,7 @@
     "class": "Archer, Ranger",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:26-07:00",
+   "detailAt": "2026-10-18T04:35:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ratpack-helm": {
@@ -34087,7 +34109,7 @@
     "class": "Elementalist",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:04-07:00",
+   "detailAt": "2026-10-18T04:36:16+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "researchers-protective-mitts": {
@@ -34302,7 +34324,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:34-07:00",
+   "detailAt": "2026-10-18T04:35:45+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ring-of-introduction": {
@@ -34331,7 +34353,7 @@
     "class": "Bard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:21-07:00",
+   "detailAt": "2026-10-18T04:36:35+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ring-of-regret": {
@@ -35144,7 +35166,7 @@
     "class": "Enchanter",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:06-07:00",
+   "detailAt": "2026-10-18T04:37:15+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "rough-iron-pot": {
@@ -38045,7 +38067,7 @@
     "class": "Druid",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:43-07:00",
+   "detailAt": "2026-10-18T04:36:54+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "sash-of-herbs": {
@@ -38237,7 +38259,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:55:52-07:00",
+   "detailAt": "2026-10-18T04:34:23+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scarab-breastplate": {
@@ -38266,7 +38288,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:55:55-07:00",
+   "detailAt": "2026-10-18T04:34:27+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scarab-greaves": {
@@ -38295,7 +38317,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:55:53-07:00",
+   "detailAt": "2026-10-18T04:34:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scarab-helm": {
@@ -38324,7 +38346,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:55:50-07:00",
+   "detailAt": "2026-10-18T04:34:21+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scarab-shell-shield": {
@@ -38353,7 +38375,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:55:56-07:00",
+   "detailAt": "2026-10-18T04:34:29+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scarburn-clip": {
@@ -38540,7 +38562,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:47-07:00",
+   "detailAt": "2026-10-18T04:35:21+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scorched-apron": {
@@ -38813,7 +38835,7 @@
     "class": "Cleric, Druid, Elementalist, Enchanter, Necromancer, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:41-07:00",
+   "detailAt": "2026-10-18T04:36:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scroll-invisibility-versus-undead": {
@@ -38839,7 +38861,7 @@
     "class": "Cleric, Enchanter, Necromancer, Paladin, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:08-07:00",
+   "detailAt": "2026-10-18T04:37:17+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "sculpted-vermin-helm": {
@@ -39028,7 +39050,7 @@
     "class": "Cleric, Fighter, Inquisitor, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:25-07:00",
+   "detailAt": "2026-10-18T04:35:07+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "seafarers-hide-boots": {
@@ -39279,13 +39301,13 @@
      "Mana": "+5"
     },
     "sub": "Jewelry · Waist",
-    "drop": "A reinforced sash affixed with two emblems. Reward from the second quest in the Elementalist Starter Quest chain (Night Harbor).",
+    "drop": "Reward from the second quest in the Elementalist Starter Quest chain (Night Harbor).",
     "dropNpcs": [],
     "weight": "0.25",
     "class": "Monk",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:57-07:00",
+   "detailAt": "2026-10-18T04:36:09+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "sekhara-manacles": {
@@ -40011,6 +40033,8 @@
      "HP": "+15"
     },
     "sub": "Armor · Secondary Hand",
+    "saves": "Saves: Corruption +10",
+    "effect": "Effect: Woodskin (On Click. Any Slot, Cast Time: 10s. Level; 1)",
     "drop": "Dropped by/from: Tel Ekir, Ashir the Protector",
     "dropNpcs": [
      "Ashir the Protector"
@@ -40019,7 +40043,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:31-07:00",
+   "detailAt": "2026-10-18T04:34:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "shimmering-scimitar": {
@@ -40404,7 +40428,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:37-07:00",
+   "detailAt": "2026-10-18T04:35:49+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "sigil-of-inquiry": {
@@ -40439,7 +40463,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:36-07:00",
+   "detailAt": "2026-10-18T04:35:47+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "silent-oath": {
@@ -40841,7 +40865,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:02-07:00",
+   "detailAt": "2026-10-18T04:36:14+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "simple-brass-horn": {
@@ -41277,7 +41301,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:51-07:00",
+   "detailAt": "2026-10-18T04:37:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "skrivar-bind": {
@@ -42322,7 +42346,7 @@
     "class": "Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:53-07:00",
+   "detailAt": "2026-10-18T04:36:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "spellbound-tome-of-shielding": {
@@ -42563,7 +42587,7 @@
     "class": "Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:17-07:00",
+   "detailAt": "2026-10-18T04:36:32+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "spirit-blessed-shawl": {
@@ -42597,7 +42621,7 @@
     "class": "Beastmaster",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:55-07:00",
+   "detailAt": "2026-10-18T04:37:07+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "spiritbreakers-mantle": {
@@ -42831,7 +42855,7 @@
     "class": "Beastmaster, Cleric, Druid, Elementalist, Enchanter, Fighter, Monk, Necromancer, Paladin, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:28-07:00",
+   "detailAt": "2026-10-18T04:36:43+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "staff-of-storied-lineage": {
@@ -43173,13 +43197,15 @@
      "DEX": "+1"
     },
     "sub": "Armor · Chest",
-    "drop": "A worn tunic with faded Steel Talons heraldry. Reward from part 1 of the Fighter Starter Quest (Night Harbor), given by Lurinda Steele.",
-    "dropNpcs": [],
+    "drop": "A worn tunic with faded Steel Talons heraldry. Reward from part 1 of the Fighter Starter Quest (Night Harbor), given by Lurinda Steele .",
+    "dropNpcs": [
+     "Lurinda Steele"
+    ],
     "weight": "5",
     "class": "Archer",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:13-07:00",
+   "detailAt": "2026-10-18T04:37:23+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "steel-talons-recruit-breastplate": {
@@ -43273,7 +43299,7 @@
     "class": "Ranger",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:16-07:00",
+   "detailAt": "2026-10-18T04:37:26+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "steel-war-lance": {
@@ -43839,7 +43865,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:08-07:00",
+   "detailAt": "2026-10-18T04:34:46+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "stonehead-arrow": {
@@ -44356,13 +44382,13 @@
      "INT": "+2"
     },
     "sub": "Jewelry · Neck",
-    "drop": "A medallion bearing the symbol of a skull sitting on an open book. Can be worn in the Neck or Ranged slot. Effect: Swirling Shadows (On Click, Any Slot, Cast Time 6s, Level 1). Reward for the Necromancer Starter Quest (Night Harbor). Note: this item received a later nerf removing 1 STA, 3 WIS, 5 HP, and 5 Mana from its original stats.",
+    "drop": "Reward for the Necromancer Starter Quest (Night Harbor).",
     "dropNpcs": [],
     "weight": "0.1",
     "class": "Necromancer",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:11-07:00",
+   "detailAt": "2026-10-18T04:37:21+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "tacticians-stilette": {
@@ -44630,7 +44656,7 @@
     "class": "Fighter",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:59-07:00",
+   "detailAt": "2026-10-18T04:36:10+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "tarnished-iron-axe": {
@@ -44872,7 +44898,7 @@
     "class": "Inquisitor",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:35-07:00",
+   "detailAt": "2026-10-18T04:37:32+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "tarnished-tinkers-ring": {
@@ -45929,7 +45955,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:41-07:00",
+   "detailAt": "2026-10-18T04:37:38+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "the-mangler": {
@@ -46007,7 +46033,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:41-07:00",
+   "detailAt": "2026-10-18T04:35:53+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "the-red-book": {
@@ -46198,7 +46224,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:19-07:00",
+   "detailAt": "2026-10-18T04:35:01+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "thistlefire-lanterns": {
@@ -47272,7 +47298,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:54:50-07:00",
+   "detailAt": "2026-10-18T04:34:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "tuskhook-earrings": {
@@ -47395,7 +47421,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:18-07:00",
+   "detailAt": "2026-10-18T04:34:59+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "twilight-seashell-necklace": {
@@ -47775,7 +47801,7 @@
     "class": "Beastmaster",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:00-07:00",
+   "detailAt": "2026-10-18T04:37:09+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "venomdrop-earring": {
@@ -47933,7 +47959,7 @@
     "class": "Ranger",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:35-07:00",
+   "detailAt": "2026-10-18T04:36:46+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "verdant-breaker-mail-shoulders": {
@@ -48090,7 +48116,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:29-07:00",
+   "detailAt": "2026-10-18T04:35:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vest-of-the-glass-viper": {
@@ -48400,7 +48426,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "GNM DDE DGN DWF HFL GOB"
    },
-   "detailAt": "2026-10-10T13:50:37-07:00",
+   "detailAt": "2026-10-18T04:35:13+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vindicator-greaves": {
@@ -48431,7 +48457,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:50:39-07:00",
+   "detailAt": "2026-10-18T04:35:15+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "visrus-chain": {
@@ -48461,7 +48487,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:49-07:00",
+   "detailAt": "2026-10-18T04:37:50+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "visrus-devotional-gauntlets": {
@@ -48637,7 +48663,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:56:43-07:00",
+   "detailAt": "2026-10-18T04:35:54+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wand-of-hex": {
@@ -48992,7 +49018,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:58:34-07:00",
+   "detailAt": "2026-10-18T04:37:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wavebreaker-amulet": {
@@ -49140,7 +49166,7 @@
     "class": "Archer",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:12-07:00",
+   "detailAt": "2026-10-18T04:36:26+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "weatherproof-cloak": {
@@ -49944,7 +49970,7 @@
     "class": "Druid",
     "race": "All"
    },
-   "detailAt": "2026-10-10T13:57:05-07:00",
+   "detailAt": "2026-10-18T04:36:18+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "worn-elderwood-buckler": {
