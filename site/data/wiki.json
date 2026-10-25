@@ -2,7 +2,7 @@
  "meta": {
   "lastFull": "2026-10-25T11:29:40+00:00",
   "itemDetailsPending": 0,
-  "lastScan": "2026-10-25T16:22:51+00:00",
+  "lastScan": "2026-10-25T20:53:00+00:00",
   "lastError": null,
   "counts": {
    "quests": 127,
@@ -6862,7 +6862,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:50+00:00",
+   "detailAt": "2026-10-25T20:52:32+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "alchemists-amulet": {
@@ -7277,7 +7277,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:40+00:00",
+   "detailAt": "2026-10-25T20:52:22+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "apprentice-hoop-of-the-listener": {
@@ -7462,7 +7462,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:32+00:00",
+   "detailAt": "2026-10-25T20:52:14+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ashira-hunter-tooth": {
@@ -7527,7 +7527,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:43+00:00",
+   "detailAt": "2026-10-25T20:51:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ashira-protector-axe": {
@@ -9694,7 +9694,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:13+00:00",
+   "detailAt": "2026-10-25T20:52:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bloodied-bone": {
@@ -9981,7 +9981,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:13+00:00",
+   "detailAt": "2026-10-25T20:51:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "blue-crude-silk-robe": {
@@ -10068,7 +10068,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:58+00:00",
+   "detailAt": "2026-10-25T20:51:45+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "bone-mask-of-the-servant": {
@@ -11722,7 +11722,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:52+00:00",
+   "detailAt": "2026-10-25T20:52:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cape-of-the-plague-avatar": {
@@ -11912,7 +11912,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:21+00:00",
+   "detailAt": "2026-10-25T20:52:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "carved-warstaff": {
@@ -12103,7 +12103,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:27+00:00",
+   "detailAt": "2026-10-25T20:52:10+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "chain-of-the-construct": {
@@ -12138,7 +12138,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:00+00:00",
+   "detailAt": "2026-10-25T20:51:47+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "chain-splitting-axe": {
@@ -12173,7 +12173,7 @@
     "class": "Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:31+00:00",
+   "detailAt": "2026-10-25T20:51:19+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "chainfall-gauntlets": {
@@ -12354,7 +12354,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:33+00:00",
+   "detailAt": "2026-10-25T20:51:20+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "chitonweave-breeches": {
@@ -12386,7 +12386,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:35+00:00",
+   "detailAt": "2026-10-25T20:51:22+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "choker-of-the-gallows": {
@@ -13008,7 +13008,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:36+00:00",
+   "detailAt": "2026-10-25T20:51:24+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cleaver": {
@@ -13098,7 +13098,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:30+00:00",
+   "detailAt": "2026-10-25T20:51:17+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cloak-of-the-chiropteran": {
@@ -14854,7 +14854,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:43+00:00",
+   "detailAt": "2026-10-25T20:52:26+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "crude-handmade-torch": {
@@ -14876,7 +14876,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:54+00:00",
+   "detailAt": "2026-10-25T20:52:35+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "cruel-mail-belt": {
@@ -15354,7 +15354,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:55+00:00",
+   "detailAt": "2026-10-25T20:52:37+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "dark-buckler": {
@@ -16937,7 +16937,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:20+00:00",
+   "detailAt": "2026-10-25T20:52:03+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "drillmasters-tread": {
@@ -17181,7 +17181,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:25+00:00",
+   "detailAt": "2026-10-25T20:52:08+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "duneseer-soft-wraps": {
@@ -17273,7 +17273,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:30+00:00",
+   "detailAt": "2026-10-25T20:52:13+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "duneshapers-sandals": {
@@ -18409,7 +18409,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:45+00:00",
+   "detailAt": "2026-10-25T20:52:27+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "embroidered-cape": {
@@ -19461,7 +19461,7 @@
     "class": "Archer, Bard, Beastmaster, Druid, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:18+00:00",
+   "detailAt": "2026-10-25T20:52:01+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fang-backed-boots": {
@@ -19962,7 +19962,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:10+00:00",
+   "detailAt": "2026-10-25T20:51:56+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "festerclasp": {
@@ -20519,7 +20519,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:50+00:00",
+   "detailAt": "2026-10-25T20:51:37+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "fishing-pole": {
@@ -20550,7 +20550,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:48+00:00",
+   "detailAt": "2026-10-25T20:51:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "flayer-of-renewed-purpose": {
@@ -21482,7 +21482,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:42+00:00",
+   "detailAt": "2026-10-25T20:52:24+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "gelatinous-crown": {
@@ -21724,7 +21724,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:02+00:00",
+   "detailAt": "2026-10-25T20:51:49+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "giant-femur": {
@@ -23427,7 +23427,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:23+00:00",
+   "detailAt": "2026-10-25T20:52:06+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hadirs-iron-fist": {
@@ -23592,7 +23592,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:38+00:00",
+   "detailAt": "2026-10-25T20:52:21+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hammer-of-the-divine": {
@@ -23759,7 +23759,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:57+00:00",
+   "detailAt": "2026-10-25T20:52:39+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "handmaids-needler": {
@@ -24355,7 +24355,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:59+00:00",
+   "detailAt": "2026-10-25T20:52:40+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "hiveguard-warblade": {
@@ -24896,7 +24896,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:03+00:00",
+   "detailAt": "2026-10-25T20:51:50+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "incantation-shoulderpads": {
@@ -25963,7 +25963,7 @@
     "class": "Not yet documented",
     "race": "Not yet documented"
    },
-   "detailAt": "2026-10-18T20:44:06+00:00",
+   "detailAt": "2026-10-25T20:51:53+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "irontail-braces": {
@@ -26058,7 +26058,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:08+00:00",
+   "detailAt": "2026-10-25T20:51:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ivors-battle-bracer": {
@@ -26219,7 +26219,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:00+00:00",
+   "detailAt": "2026-10-25T20:52:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "kazessthras-bane": {
@@ -26289,7 +26289,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:11+00:00",
+   "detailAt": "2026-10-25T20:51:58+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "khayyats-griplinks": {
@@ -26320,7 +26320,7 @@
     "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:40+00:00",
+   "detailAt": "2026-10-25T20:51:27+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "khragixx-cowl": {
@@ -26949,7 +26949,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:02+00:00",
+   "detailAt": "2026-10-25T20:52:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "lavashot-longbow": {
@@ -27898,7 +27898,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:47+00:00",
+   "detailAt": "2026-10-25T20:51:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mandible-edge-helm": {
@@ -28689,7 +28689,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:45+00:00",
+   "detailAt": "2026-10-25T20:51:32+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "maulers-cuirass": {
@@ -28720,7 +28720,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:16+00:00",
+   "detailAt": "2026-10-25T20:51:04+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mawchant-leather-mantle": {
@@ -29262,7 +29262,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:42+00:00",
+   "detailAt": "2026-10-25T20:51:29+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "mirebloom-choker": {
@@ -29716,7 +29716,7 @@
     "class": "Cleric, Druid, Paladin, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:33+00:00",
+   "detailAt": "2026-10-25T20:52:16+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "moonstone-earring": {
@@ -30464,7 +30464,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:26+00:00",
+   "detailAt": "2026-10-25T20:51:13+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "nosebleed-studs": {
@@ -31230,7 +31230,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:04+00:00",
+   "detailAt": "2026-10-25T20:52:45+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ornate-sash": {
@@ -31606,7 +31606,7 @@
     "class": "Cleric, Druid, Elementalist, Enchanter, Necromancer, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:06+00:00",
+   "detailAt": "2026-10-25T20:52:47+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "parched-salt-gauntlets": {
@@ -32530,7 +32530,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard, Monk, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:08+00:00",
+   "detailAt": "2026-10-25T20:52:53+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "prankers-briarbinds": {
@@ -33181,7 +33181,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:10+00:00",
+   "detailAt": "2026-10-25T20:52:55+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "rabid-hide-wristguard": {
@@ -34252,7 +34252,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:05+00:00",
+   "detailAt": "2026-10-25T20:51:52+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "riders-chainmail-leggings": {
@@ -34536,7 +34536,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:28+00:00",
+   "detailAt": "2026-10-25T20:51:15+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ring-of-the-deacon": {
@@ -34698,7 +34698,7 @@
     "class": "Bard, Beastmaster, Cleric, Druid, Elementalist, Enchanter, Inquisitor, Necromancer, Paladin, Ranger, Shadow Knight, Shaman, Spellblade, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:25+00:00",
+   "detailAt": "2026-10-25T20:51:12+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "ring-of-withering-thought": {
@@ -38866,7 +38866,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:21+00:00",
+   "detailAt": "2026-10-25T20:51:08+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "scriptorium-greaves": {
@@ -40061,7 +40061,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:23+00:00",
+   "detailAt": "2026-10-25T20:51:10+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "shield-of-the-dragon-crusader": {
@@ -41736,7 +41736,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:38+00:00",
+   "detailAt": "2026-10-25T20:51:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "slippers-of-renewal": {
@@ -43121,7 +43121,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:28+00:00",
+   "detailAt": "2026-10-25T20:52:11+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "stained-black-iron-dagger": {
@@ -43662,7 +43662,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:12+00:00",
+   "detailAt": "2026-10-25T20:52:57+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "stillbrook-coif": {
@@ -45991,7 +45991,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:18+00:00",
+   "detailAt": "2026-10-25T20:51:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "the-final-word": {
@@ -46029,7 +46029,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:35+00:00",
+   "detailAt": "2026-10-25T20:52:18+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "the-impaler": {
@@ -46991,7 +46991,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:14+00:00",
+   "detailAt": "2026-10-25T20:52:58+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "torn-leather-bracer": {
@@ -48171,7 +48171,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:20+00:00",
+   "detailAt": "2026-10-25T20:51:07+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vesskas-thorn": {
@@ -48300,7 +48300,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:37+00:00",
+   "detailAt": "2026-10-25T20:52:19+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vethras-figurine": {
@@ -48484,7 +48484,7 @@
     "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:15+00:00",
+   "detailAt": "2026-10-25T20:51:02+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "vindicator-breastplate": {
@@ -49226,7 +49226,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:49+00:00",
+   "detailAt": "2026-10-25T20:52:30+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wayfarers-vambrace": {
@@ -49376,7 +49376,7 @@
     "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Ranger, Rogue, Shadow Knight, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:44:47+00:00",
+   "detailAt": "2026-10-25T20:52:29+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "whiskerwood-necklace": {
@@ -50419,7 +50419,7 @@
     "class": "Bard, Ranger, Rogue, Shaman",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:55+00:00",
+   "detailAt": "2026-10-25T20:51:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-clergy-rosary": {
@@ -50483,7 +50483,7 @@
     "class": "Elementalist, Enchanter, Necromancer, Wizard",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:52+00:00",
+   "detailAt": "2026-10-25T20:51:39+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-grandmasters-earring": {
@@ -50579,7 +50579,7 @@
     "class": "Archer, Beastmaster, Druid, Monk, Spellblade",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:57+00:00",
+   "detailAt": "2026-10-25T20:51:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-lieutenants-medallion": {
@@ -50636,7 +50636,7 @@
     "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:43:53+00:00",
+   "detailAt": "2026-10-25T20:51:41+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-signal-torch": {
@@ -50668,7 +50668,7 @@
     "class": "All",
     "race": "All"
    },
-   "detailAt": "2026-10-18T20:45:15+00:00",
+   "detailAt": "2026-10-25T20:53:00+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
   "wyrmsbane-war-drum": {
