@@ -1,12 +1,12 @@
 {
  "meta": {
-  "lastFull": "2026-10-26T13:03:17+00:00",
+  "lastFull": "2026-10-27T12:12:39+00:00",
   "itemDetailsPending": 0,
-  "lastScan": "2026-10-27T05:04:39+00:00",
+  "lastScan": "2026-10-27T12:15:46+00:00",
   "lastError": null,
   "counts": {
    "quests": 127,
-   "items": 1452,
+   "items": 1531,
    "zones": 25,
    "guides": 1
   },
@@ -1690,7 +1690,9 @@
     }
    ],
    "links": [
-    "underdocks-zone-info-and-map"
+    "underdocks-zone-info-and-map",
+    "blind-midden",
+    "great-cavern-sea"
    ]
   },
   "ancient-crypt": {
@@ -2178,7 +2180,8 @@
     "shaded-dunes",
     "tomb-of-the-last-wyrmsbane",
     "ancient-crypt",
-    "rothold"
+    "rothold",
+    "great-cavern-sea"
    ]
   },
   "evershade-weald": {
@@ -4603,7 +4606,8 @@
     }
    ],
    "links": [
-    "caves-of-irem"
+    "caves-of-irem",
+    "great-cavern-sea"
    ]
   },
   "scarwood": {
@@ -6582,6 +6586,65 @@
    },
    "detailAt": "2026-10-10T14:05:41-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "acid-etched-focus-of-the-brood-mother": {
+   "slug": "acid-etched-focus-of-the-brood-mother",
+   "name": "Acid-Etched Focus of the Brood Mother",
+   "url": "https://storiesofmnm.com/wiki/item/acid-etched-focus-of-the-brood-mother/",
+   "type": "armor",
+   "slot": "ranged",
+   "classes": "ALL",
+   "statKeys": "INT HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A shiny focus coated in a clear jelly that has hardened into a shell. When held to the…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "INT": "+2",
+     "HP": "+10"
+    },
+    "sub": "Armor · Ranged",
+    "drop": "Dropped by Gelmother Jiggol in Blind Midden.",
+    "dropNpcs": [
+     "Gelmother Jiggol"
+    ],
+    "weight": "3",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:13+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "acid-washed-skinsuit": {
+   "slug": "acid-washed-skinsuit",
+   "name": "Acid-Washed Skinsuit",
+   "url": "https://storiesofmnm.com/wiki/item/acid-washed-skinsuit/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STA WIS",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A leather haubrek that spent a long time inside something that was in no hurry. The surface is…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+8",
+     "STA": "+1",
+     "WIS": "+3"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Mother Gummer in Blind Midden.",
+    "dropNpcs": [
+     "Mother Gummer"
+    ],
+    "weight": "2",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:15+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "acolyte-mantle-of-ashes": {
    "slug": "acolyte-mantle-of-ashes",
@@ -8851,6 +8914,36 @@
    "detailAt": "2026-10-10T14:07:24-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "belt-of-the-forgotten-kingdom": {
+   "slug": "belt-of-the-forgotten-kingdom",
+   "name": "Belt of the Forgotten Kingdom",
+   "url": "https://storiesofmnm.com/wiki/item/belt-of-the-forgotten-kingdom/",
+   "type": "armor",
+   "slot": "waist",
+   "classes": "BEASTMASTER CLERIC DRUID PALADIN RANGER SHAMAN",
+   "statKeys": "AC STA WIS",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A wide leather strap set with dull gold studs in a pattern no living ogre recognizes. It is…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+4",
+     "STA": "+2",
+     "WIS": "+2"
+    },
+    "sub": "Armor · Waist",
+    "drop": "Dropped by King Jekom the Ancient in Blind Midden.",
+    "dropNpcs": [
+     "King Jekom the Ancient"
+    ],
+    "weight": "0.25",
+    "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:17+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "bent-staff-of-nerguk": {
    "slug": "bent-staff-of-nerguk",
    "name": "Bent Staff of Nerguk",
@@ -10721,6 +10814,67 @@
    "detailAt": "2026-10-10T14:08:20-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "bracer-of-the-bottom-feeder": {
+   "slug": "bracer-of-the-bottom-feeder",
+   "name": "Bracer of the Bottom-Feeder",
+   "url": "https://storiesofmnm.com/wiki/item/bracer-of-the-bottom-feeder/",
+   "type": "armor",
+   "slot": "wrist",
+   "classes": "ALL",
+   "statKeys": "AC INT HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Flavic took these from the inmate he killed to take possession of their sewer claim.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "INT": "+3",
+     "HP": "+5"
+    },
+    "sub": "Armor · Wrist",
+    "drop": "Dropped by Flavic the Fisher in Blind Midden.",
+    "dropNpcs": [
+     "Flavic the Fisher"
+    ],
+    "weight": "0.25",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:18+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "bracer-of-the-boulder-breaker": {
+   "slug": "bracer-of-the-boulder-breaker",
+   "name": "Bracer of the Boulder Breaker",
+   "url": "https://storiesofmnm.com/wiki/item/bracer-of-the-boulder-breaker/",
+   "type": "armor",
+   "slot": "wrist",
+   "classes": "CLERIC FIGHTER INQUISITOR PALADIN SHADOW_KNIGHT",
+   "statKeys": "AC STR DEX HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A thick plate armguard, dented along the top from years of falling rock.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+13",
+     "STR": "+2",
+     "DEX": "+2",
+     "HP": "+10"
+    },
+    "sub": "Armor · Wrist",
+    "drop": "Dropped by Pragrok the Pickaxe in Blind Midden.",
+    "dropNpcs": [
+     "Pragrok the Pickaxe"
+    ],
+    "weight": "1.25",
+    "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:20+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "bracer-of-the-fallen-foe": {
    "slug": "bracer-of-the-fallen-foe",
    "name": "Bracer of the Fallen Foe",
@@ -11368,6 +11522,37 @@
    "detailAt": "2026-10-10T14:08:46-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "brood-mothers-gel-band": {
+   "slug": "brood-mothers-gel-band",
+   "name": "Brood-mother’s Gel Band",
+   "url": "https://storiesofmnm.com/wiki/item/brood-mothers-gel-band/",
+   "type": "armor",
+   "slot": "waist",
+   "classes": "BEASTMASTER CLERIC DRUID PALADIN RANGER SHAMAN",
+   "statKeys": "AC STA WIS HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A thick, rubbery belt that stretches farther than it should and always snaps back. It stays consistently warm…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+4",
+     "STA": "+2",
+     "WIS": "+2",
+     "HP": "+5"
+    },
+    "sub": "Armor · Waist",
+    "drop": "Dropped by Gelmother Jiggol in Blind Midden.",
+    "dropNpcs": [
+     "Gelmother Jiggol"
+    ],
+    "weight": "0.25",
+    "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:22+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "broodmother-spider-fang": {
    "slug": "broodmother-spider-fang",
    "name": "Broodmother Spider Fang",
@@ -11460,6 +11645,37 @@
    },
    "detailAt": "2026-10-10T14:08:48-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "buckler-of-the-backup-plan": {
+   "slug": "buckler-of-the-backup-plan",
+   "name": "Buckler of the Backup Plan",
+   "url": "https://storiesofmnm.com/wiki/item/buckler-of-the-backup-plan/",
+   "type": "armor",
+   "slot": "secondary",
+   "classes": "BARD CLERIC DRUID FIGHTER INQUISITOR PALADIN RANGER SHADOW_KNIGHT SHAMAN",
+   "statKeys": "AC STR DEX HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A small buckler with a hidden latch behind the grip. Whatever it once held is gone, but Skizik…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+11",
+     "STR": "+3",
+     "DEX": "+1",
+     "HP": "+5"
+    },
+    "sub": "Armor · Secondary Hand",
+    "drop": "Dropped by Skizik the Schemer in Blind Midden.",
+    "dropNpcs": [
+     "Skizik the Schemer"
+    ],
+    "weight": "2.5",
+    "class": "Bard, Cleric, Druid, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:24+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "bulwark-of-the-fallen": {
    "slug": "bulwark-of-the-fallen",
@@ -11724,6 +11940,37 @@
    },
    "detailAt": "2026-10-25T20:52:34+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "cap-of-the-collective": {
+   "slug": "cap-of-the-collective",
+   "name": "Cap of the Collective",
+   "url": "https://storiesofmnm.com/wiki/item/cap-of-the-collective/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR STA DEX",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A covering made from the fibrous skin of a shroom cap.Fine spore threads run through the lining, and…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+13",
+     "STR": "+4",
+     "STA": "+1",
+     "DEX": "+1"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by Davosin the Domineering in Blind Midden.",
+    "dropNpcs": [
+     "Davosin the Domineering"
+    ],
+    "weight": "1.5",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:26+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "cape-of-the-plague-avatar": {
    "slug": "cape-of-the-plague-avatar",
@@ -12942,6 +13189,72 @@
    "detailAt": "2026-10-25T16:21:26+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "claim-jumpers-shiv": {
+   "slug": "claim-jumpers-shiv",
+   "name": "Claim-Jumper’s Shiv",
+   "url": "https://storiesofmnm.com/wiki/item/claim-jumpers-shiv/",
+   "type": "weapon",
+   "slot": "primary",
+   "classes": "ARCHER BARD BEASTMASTER ELEMENTALIST ENCHANTER FIGHTER INQUISITOR NECROMANCER RANGER ROGUE SHADOW_KNIGHT SHAMAN WIZARD",
+   "statKeys": "STA INT DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "The point is bright and the rest is filth. Notches along the handle may count finds, or claim…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+1",
+     "INT": "+3"
+    },
+    "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "6",
+     "Delay": "26",
+     "Type": "Pierce"
+    },
+    "drop": "Dropped by Forager Davra in Blind Midden.",
+    "dropNpcs": [
+     "Forager Davra"
+    ],
+    "weight": "2.5",
+    "class": "Archer, Bard, Beastmaster, Elementalist, Enchanter, Fighter, Inquisitor, Necromancer, Ranger, Rogue, Shadow Knight, Shaman, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:28+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "claim-stakers-tunic": {
+   "slug": "claim-stakers-tunic",
+   "name": "Claim-Staker’s Tunic",
+   "url": "https://storiesofmnm.com/wiki/item/claim-stakers-tunic/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STA WIS HP MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A forager’s tunic with deep pockets sewn inside and out, each one crusted with whatever it last carried.…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+10",
+     "STA": "+1",
+     "WIS": "+2",
+     "HP": "+5",
+     "Mana": "+5"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Forager Davra in Blind Midden.",
+    "dropNpcs": [
+     "Forager Davra"
+    ],
+    "weight": "2.4",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:30+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "claw-of-the-gladiator": {
    "slug": "claw-of-the-gladiator",
    "name": "Claw of the Gladiator",
@@ -13316,6 +13629,36 @@
    },
    "detailAt": "2026-10-10T14:09:58-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "cold-hearted-cord": {
+   "slug": "cold-hearted-cord",
+   "name": "Cold-Hearted Cord",
+   "url": "https://storiesofmnm.com/wiki/item/cold-hearted-cord/",
+   "type": "armor",
+   "slot": "waist",
+   "classes": "ALL",
+   "statKeys": "AC STA CHA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A thin cord, brittle with cold, that crackles when it is tied. The ends are frozen stiff and…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STA": "+2",
+     "CHA": "+2"
+    },
+    "sub": "Armor · Waist",
+    "drop": "Dropped by Flashfreeze Fraegra in Blind Midden.",
+    "dropNpcs": [
+     "Flashfreeze Fraegra"
+    ],
+    "weight": "0.25",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:32+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "colorful-leather-vest": {
    "slug": "colorful-leather-vest",
@@ -15241,6 +15584,36 @@
    "detailAt": "2026-10-10T14:11:35-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "dakkins-links-of-larceny": {
+   "slug": "dakkins-links-of-larceny",
+   "name": "Dakkin’s Links of Larceny",
+   "url": "https://storiesofmnm.com/wiki/item/dakkins-links-of-larceny/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "BARD CLERIC FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN",
+   "statKeys": "AC STR AGI",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A gnome-sized chain vest with small pouches riveted to the inside of every panel. When pressed closed, the…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+15",
+     "STR": "+4",
+     "AGI": "+1"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Dakkin the Diabolical in Blind Midden.",
+    "dropNpcs": [
+     "Dakkin the Diabolical"
+    ],
+    "weight": "3.5",
+    "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:34+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "dalinders-tunic": {
    "slug": "dalinders-tunic",
    "name": "Dalinder’s Tunic",
@@ -15608,6 +15981,36 @@
    },
    "detailAt": "2026-10-25T11:30:09+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "davras-lucky-find": {
+   "slug": "davras-lucky-find",
+   "name": "Davra’s Lucky Find",
+   "url": "https://storiesofmnm.com/wiki/item/davras-lucky-find/",
+   "type": "jewelry",
+   "slot": "neck",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "STR STA DEX",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A small trinket threaded on a greasy cord, the best thing Davra ever pulled form the muck. She…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+1",
+     "STA": "+2",
+     "DEX": "+1"
+    },
+    "sub": "Jewelry · Neck",
+    "drop": "Dropped by Forager Davra in Blind Midden.",
+    "dropNpcs": [
+     "Forager Davra"
+    ],
+    "weight": "0.1",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:35+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "dawnglow-gossamer-vest": {
    "slug": "dawnglow-gossamer-vest",
@@ -16396,6 +16799,162 @@
    },
    "detailAt": "2026-10-10T14:12:22-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "dhurazzims-brass-rod": {
+   "slug": "dhurazzims-brass-rod",
+   "name": "Dhurazzim’s Brass Rod",
+   "url": "https://storiesofmnm.com/wiki/item/dhurazzims-brass-rod/",
+   "type": "weapon",
+   "slot": "primary,secondary",
+   "classes": "ELEMENTALIST ENCHANTER NECROMANCER WIZARD",
+   "statKeys": "STA INT DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A brass rod taken from Dhurazzim. Living flame crawls along its length.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+3",
+     "INT": "+4"
+    },
+    "sub": "Weapon · Primary Hand, Secondary Hand",
+    "weapon": {
+     "DMG": "25",
+     "Delay": "40",
+     "Type": "Blunt"
+    },
+    "effect": "Effect: Blaze (On Click. Must Equip. Cast Time: 10s. Level: 40)",
+    "drop": "Dropped by Dhurazzim in Great Cavern Sea.",
+    "dropNpcs": [
+     "Dhurazzim"
+    ],
+    "weight": "8",
+    "class": "Elementalist, Enchanter, Necromancer, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:37+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "dhurazzims-brass-stud": {
+   "slug": "dhurazzims-brass-stud",
+   "name": "Dhurazzim’s Brass Stud",
+   "url": "https://storiesofmnm.com/wiki/item/dhurazzims-brass-stud/",
+   "type": "jewelry",
+   "slot": "ear",
+   "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "AC STA INT HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+4",
+     "STA": "+8",
+     "INT": "+5",
+     "HP": "+10"
+    },
+    "sub": "Jewelry · Ear",
+    "drop": "Dropped by Dhurazzim in Great Cavern Sea.",
+    "dropNpcs": [
+     "Dhurazzim"
+    ],
+    "weight": "0.1",
+    "class": "Archer, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:39+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "dhurazzims-silk-cap": {
+   "slug": "dhurazzims-silk-cap",
+   "name": "Dhurazzim’s Silk Cap",
+   "url": "https://storiesofmnm.com/wiki/item/dhurazzims-silk-cap/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "ALL",
+   "statKeys": "AC STA INT",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+16",
+     "STA": "+4",
+     "INT": "+9"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by Dhurazzim in Great Cavern Sea.",
+    "dropNpcs": [
+     "Dhurazzim"
+    ],
+    "weight": "1",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:41+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "diabolical-dealers-mask": {
+   "slug": "diabolical-dealers-mask",
+   "name": "Diabolical Dealer’s Mask",
+   "url": "https://storiesofmnm.com/wiki/item/diabolical-dealers-mask/",
+   "type": "armor",
+   "slot": "face",
+   "classes": "ELEMENTALIST ENCHANTER INQUISITOR NECROMANCER SHADOW_KNIGHT SPELLBLADE WIZARD",
+   "statKeys": "AC STA INT",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STA": "+2",
+     "INT": "+2"
+    },
+    "sub": "Armor · Face",
+    "drop": "Dropped by Dakkin the Diabolical in Blind Midden.",
+    "dropNpcs": [
+     "Dakkin the Diabolical"
+    ],
+    "weight": "0.25",
+    "class": "Elementalist, Enchanter, Inquisitor, Necromancer, Shadow Knight, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:43+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "dingy-drape-of-the-desperate-delver": {
+   "slug": "dingy-drape-of-the-desperate-delver",
+   "name": "Dingy Drape of the Desperate Delver",
+   "url": "https://storiesofmnm.com/wiki/item/dingy-drape-of-the-desperate-delver/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "ELEMENTALIST ENCHANTER NECROMANCER WIZARD",
+   "statKeys": "AC INT HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "This was once an item of exquisite craftsmanship, but now it is stained and full of holes from…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+5",
+     "INT": "+2",
+     "HP": "+5"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Gorgeous in Blind Midden.",
+    "dropNpcs": [
+     "Gorgeous"
+    ],
+    "weight": "1",
+    "class": "Elementalist, Enchanter, Necromancer, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:45+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "dinning-staff": {
    "slug": "dinning-staff",
@@ -18203,6 +18762,35 @@
    "detailAt": "2026-10-10T14:13:42-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "elixas-sample-vial": {
+   "slug": "elixas-sample-vial",
+   "name": "Elixa’s Sample Vial",
+   "url": "https://storiesofmnm.com/wiki/item/elixas-sample-vial/",
+   "type": "jewelry",
+   "slot": "neck",
+   "classes": "ALL",
+   "statKeys": "STA CHA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A tiny stoppered vial on a cord, still holding a few drops of something that shifts color in…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+2",
+     "CHA": "+2"
+    },
+    "sub": "Jewelry · Neck",
+    "drop": "Dropped by Elixa the Experimentalist in Blind Midden.",
+    "dropNpcs": [
+     "Elixa the Experimentalist"
+    ],
+    "weight": "0.1",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:47+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "elixir-of-mental-focus": {
    "slug": "elixir-of-mental-focus",
    "name": "Elixir of Mental Focus",
@@ -19873,6 +20461,67 @@
    "detailAt": "2026-10-10T14:14:48-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "fergs-camouflaged-breastplate": {
+   "slug": "fergs-camouflaged-breastplate",
+   "name": "Ferg’s Camouflaged Breastplate",
+   "url": "https://storiesofmnm.com/wiki/item/fergs-camouflaged-breastplate/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "CLERIC FIGHTER INQUISITOR PALADIN SHADOW_KNIGHT",
+   "statKeys": "AC AGI DEX INT",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Ferg took this from a clean-skinned foreigner and let the gutters finish the job. The grime outweighs the…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+22",
+     "AGI": "+1",
+     "DEX": "+3",
+     "INT": "+1"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Ferg the Filthy in Blind Midden.",
+    "dropNpcs": [
+     "Ferg the Filthy"
+    ],
+    "weight": "4.8",
+    "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:49+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "fergs-unwashed-leggings": {
+   "slug": "fergs-unwashed-leggings",
+   "name": "Ferg’s Unwashed Leggings",
+   "url": "https://storiesofmnm.com/wiki/item/fergs-unwashed-leggings/",
+   "type": "armor",
+   "slot": "legs",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE",
+   "statKeys": "AC STA WIS",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Ferg waded the gutters in these daily and called it bathing. The smell arrives a moment before the…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+10",
+     "STA": "+2",
+     "WIS": "+2"
+    },
+    "sub": "Armor · Legs",
+    "drop": "Dropped by Ferg the Filthy in Blind Midden.",
+    "dropNpcs": [
+     "Ferg the Filthy"
+    ],
+    "weight": "2.4",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:51+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "fermenters-leggings": {
    "slug": "fermenters-leggings",
    "name": "Fermenter’s Leggings",
@@ -20553,6 +21202,40 @@
    "detailAt": "2026-10-25T20:51:36+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "flavics-filleting-falchion": {
+   "slug": "flavics-filleting-falchion",
+   "name": "Flavic’s Filleting Falchion",
+   "url": "https://storiesofmnm.com/wiki/item/flavics-filleting-falchion/",
+   "type": "weapon",
+   "slot": "primary",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE WIZARD",
+   "statKeys": "STR HP DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A heavy, curved blade with fish scales and filth stuck fast to the steel near the grip. It…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+2",
+     "HP": "+5"
+    },
+    "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "7",
+     "Delay": "35",
+     "Type": "Slash"
+    },
+    "drop": "Dropped by Flavic the Fisher in Blind Midden.",
+    "dropNpcs": [
+     "Flavic the Fisher"
+    ],
+    "weight": "6",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:53+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "flayer-of-renewed-purpose": {
    "slug": "flayer-of-renewed-purpose",
    "name": "Flayer of Renewed Purpose",
@@ -20685,6 +21368,36 @@
    "detailAt": "2026-10-10T14:15:21-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "foragers-footwear": {
+   "slug": "foragers-footwear",
+   "name": "Forager’s Footwear",
+   "url": "https://storiesofmnm.com/wiki/item/foragers-footwear/",
+   "type": "armor",
+   "slot": "feet",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR STA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Soft leather boots caked to the ankle in dark, rich soil. Small pale shoots have started growing from…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+9",
+     "STR": "+4",
+     "STA": "+2"
+    },
+    "sub": "Armor · Feet",
+    "drop": "Dropped by Forager Frandrah in Blind Midden.",
+    "dropNpcs": [
+     "Forager Frandrah"
+    ],
+    "weight": "1.2",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:55+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "forest-scout-coat": {
    "slug": "forest-scout-coat",
    "name": "Forest Scout Coat",
@@ -20744,6 +21457,37 @@
    },
    "detailAt": "2026-10-10T14:15:25-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "forge-scorched-drape": {
+   "slug": "forge-scorched-drape",
+   "name": "Forge-Scorched Drape",
+   "url": "https://storiesofmnm.com/wiki/item/forge-scorched-drape/",
+   "type": "armor",
+   "slot": "back",
+   "classes": "BEASTMASTER CLERIC DRUID PALADIN RANGER SHAMAN",
+   "statKeys": "AC STA WIS MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A heavy drape pocked with small burn holes from years of flying sparks. It smells of coal smoke…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STA": "+2",
+     "WIS": "+1",
+     "Mana": "+5"
+    },
+    "sub": "Armor · Back",
+    "drop": "Dropped by Blacksmith Jerictus in Blind Midden.",
+    "dropNpcs": [
+     "Blacksmith Jerictus"
+    ],
+    "weight": "0.25",
+    "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:57+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "forge-touched-girdle": {
    "slug": "forge-touched-girdle",
@@ -20838,6 +21582,36 @@
    "detailAt": "2026-10-10T14:15:30-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "fraegras-cold-snap-cap": {
+   "slug": "fraegras-cold-snap-cap",
+   "name": "Fraegra’s Cold Snap Cap",
+   "url": "https://storiesofmnm.com/wiki/item/fraegras-cold-snap-cap/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STA WIS",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Fraegra took this cap from the last of the twelve guards she froze. The leather is still stiff…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+8",
+     "STA": "+1",
+     "WIS": "+3"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by Flashfreeze Fraegra in Blind Midden.",
+    "dropNpcs": [
+     "Flashfreeze Fraegra"
+    ],
+    "weight": "1.2",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:13:59+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "fragged-leather-geoves-rime": {
    "slug": "fragged-leather-geoves-rime",
    "name": "Fragged Leather Geoves Rime",
@@ -20865,6 +21639,36 @@
    },
    "detailAt": "2026-10-10T14:15:32-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "frandrahs-helm-of-the-harvest": {
+   "slug": "frandrahs-helm-of-the-harvest",
+   "name": "Frandrah’s Helm of the Harvest",
+   "url": "https://storiesofmnm.com/wiki/item/frandrahs-helm-of-the-harvest/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "CLERIC FIGHTER INQUISITOR PALADIN SHADOW_KNIGHT",
+   "statKeys": "AC STA WIS",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A dented plate helm, flipped upside down and used as a gathering basket more often than as armor.…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+15",
+     "STA": "+2",
+     "WIS": "+3"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by Forager Frandrah in Blind Midden.",
+    "dropNpcs": [
+     "Forager Frandrah"
+    ],
+    "weight": "2.4",
+    "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:00+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "frayed-rope": {
    "slug": "frayed-rope",
@@ -21587,6 +22391,41 @@
    "detailAt": "2026-10-10T14:16:12-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "genorahs-staff-of-persuasion": {
+   "slug": "genorahs-staff-of-persuasion",
+   "name": "Genorah’s Staff of Persuasion",
+   "url": "https://storiesofmnm.com/wiki/item/genorahs-staff-of-persuasion/",
+   "type": "weapon",
+   "slot": "primary",
+   "classes": "ALL",
+   "statKeys": "CHA HP MANA DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Gnorah tapped out a slow, steady rhythm with this staff while her workers labored. Some of them still…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "CHA": "+6",
+     "HP": "+15",
+     "Mana": "+5"
+    },
+    "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "15",
+     "Delay": "43",
+     "Type": "Blunt"
+    },
+    "drop": "Dropped by Enthraller Gnorah in Blind Midden.",
+    "dropNpcs": [
+     "Enthraller Gnorah"
+    ],
+    "weight": "8",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:02+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "ghostlimb-staff": {
    "slug": "ghostlimb-staff",
    "name": "Ghostlimb Staff",
@@ -22301,6 +23140,36 @@
    "detailAt": "2026-10-25T11:30:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "goblin-divers-leggings": {
+   "slug": "goblin-divers-leggings",
+   "name": "Goblin Diver’s Leggings",
+   "url": "https://storiesofmnm.com/wiki/item/goblin-divers-leggings/",
+   "type": "armor",
+   "slot": "legs",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR STA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+16",
+     "STR": "+4",
+     "STA": "+4"
+    },
+    "sub": "Armor · Legs",
+    "drop": "Dropped by Skerrick in Great Cavern Sea.",
+    "dropNpcs": [
+     "Skerrick"
+    ],
+    "weight": "2.75",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:04+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "goblin-fang": {
    "slug": "goblin-fang",
    "name": "Goblin Fang",
@@ -22517,6 +23386,36 @@
    },
    "detailAt": "2026-10-25T16:22:49+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "gorget-of-the-reluctant-weaponsmith": {
+   "slug": "gorget-of-the-reluctant-weaponsmith",
+   "name": "Gorget of the Reluctant Weaponsmith",
+   "url": "https://storiesofmnm.com/wiki/item/gorget-of-the-reluctant-weaponsmith/",
+   "type": "jewelry",
+   "slot": "neck",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "STR STA DEX",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Jerictus drew strength from the neckguard handed down to him from his father. His family demanded the heirloom…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+2",
+     "STA": "+2",
+     "DEX": "+1"
+    },
+    "sub": "Jewelry · Neck",
+    "drop": "Dropped by Blacksmith Jerictus in Blind Midden.",
+    "dropNpcs": [
+     "Blacksmith Jerictus"
+    ],
+    "weight": "0.1",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:06+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "grand-viziers-coif": {
    "slug": "grand-viziers-coif",
@@ -23329,6 +24228,166 @@
    "detailAt": "2026-10-25T11:31:25+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "gurms-claymore-of-remembrance": {
+   "slug": "gurms-claymore-of-remembrance",
+   "name": "Gurm’s Claymore of Remembrance",
+   "url": "https://storiesofmnm.com/wiki/item/gurms-claymore-of-remembrance/",
+   "type": "weapon",
+   "slot": "primary",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "STR AGI DEX HP DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A great ogre-sized claymore, its edge nicked from fights that reminded Gurm who he was. His name is…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+5",
+     "AGI": "+1",
+     "DEX": "+1",
+     "HP": "+5"
+    },
+    "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "14",
+     "Delay": "44",
+     "Type": "Slash"
+    },
+    "drop": "Dropped by Gurm the Half-Woken in Blind Midden.",
+    "dropNpcs": [
+     "Gurm the Half-Woken"
+    ],
+    "weight": "8.5",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:08+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "gurroks-barnacled-dagger": {
+   "slug": "gurroks-barnacled-dagger",
+   "name": "Gurrok’s Barnacled Dagger",
+   "url": "https://storiesofmnm.com/wiki/item/gurroks-barnacled-dagger/",
+   "type": "weapon",
+   "slot": "primary,secondary",
+   "classes": "ARCHER BARD BEASTMASTER ELEMENTALIST ENCHANTER FIGHTER INQUISITOR NECROMANCER RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE WIZARD",
+   "statKeys": "STA DEX DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+3",
+     "DEX": "+3"
+    },
+    "sub": "Weapon · Primary Hand, Secondary Hand",
+    "weapon": {
+     "DMG": "6",
+     "Delay": "21",
+     "Type": "Pierce"
+    },
+    "drop": "Dropped by Boss Gurrok in Great Cavern Sea.",
+    "dropNpcs": [
+     "Boss Gurrok"
+    ],
+    "weight": "2",
+    "class": "Archer, Bard, Beastmaster, Elementalist, Enchanter, Fighter, Inquisitor, Necromancer, Ranger, Rogue, Shadow Knight, Shaman, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:10+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "gurroks-diving-boots": {
+   "slug": "gurroks-diving-boots",
+   "name": "Gurrok’s Diving Boots",
+   "url": "https://storiesofmnm.com/wiki/item/gurroks-diving-boots/",
+   "type": "armor",
+   "slot": "feet",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR STA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+8",
+     "STR": "+3",
+     "STA": "+2"
+    },
+    "sub": "Armor · Feet",
+    "drop": "Dropped by Boss Gurrok in Great Cavern Sea.",
+    "dropNpcs": [
+     "Boss Gurrok"
+    ],
+    "weight": "0.5",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:12+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "gurroks-diving-harness": {
+   "slug": "gurroks-diving-harness",
+   "name": "Gurrok’s Diving Harness",
+   "url": "https://storiesofmnm.com/wiki/item/gurroks-diving-harness/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR STA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+15",
+     "STR": "+5",
+     "STA": "+2"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Boss Gurrok in Great Cavern Sea.",
+    "dropNpcs": [
+     "Boss Gurrok"
+    ],
+    "weight": "2.4",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:14+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "gutters-gloves": {
+   "slug": "gutters-gloves",
+   "name": "Gutter’s Gloves",
+   "url": "https://storiesofmnm.com/wiki/item/gutters-gloves/",
+   "type": "armor",
+   "slot": "hands",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR AGI",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Thick leather grips made for holding a slippery catch still while the knife works. They have never fully…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+5",
+     "STR": "+2",
+     "AGI": "+1"
+    },
+    "sub": "Armor · Hands",
+    "drop": "Dropped by Flavic the Fisher in Blind Midden.",
+    "dropNpcs": [
+     "Flavic the Fisher"
+    ],
+    "weight": "1",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:16+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "hadhramans-ring": {
    "slug": "hadhramans-ring",
    "name": "Hadhraman’s Ring",
@@ -23894,6 +24953,35 @@
    },
    "detailAt": "2026-10-10T14:17:22-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "harvesters-band": {
+   "slug": "harvesters-band",
+   "name": "Harvester’s Band",
+   "url": "https://storiesofmnm.com/wiki/item/harvesters-band/",
+   "type": "jewelry",
+   "slot": "ring",
+   "classes": "ALL",
+   "statKeys": "STA CHA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A plain signet with a tiny mushroom cap pressed into its face. It still smells faintly of damp…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+2",
+     "CHA": "+2"
+    },
+    "sub": "Jewelry · Ring",
+    "drop": "Dropped by Forager Frandrah in Blind Midden.",
+    "dropNpcs": [
+     "Forager Frandrah"
+    ],
+    "weight": "0.1",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:18+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "heartplate-scout-cap": {
    "slug": "heartplate-scout-cap",
@@ -24477,6 +25565,36 @@
    },
    "detailAt": "2026-10-10T14:17:44-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "hood-of-the-harried-huntsman": {
+   "slug": "hood-of-the-harried-huntsman",
+   "name": "Hood of the Harried Huntsman",
+   "url": "https://storiesofmnm.com/wiki/item/hood-of-the-harried-huntsman/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN",
+   "statKeys": "AC STR DEX",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A ranger’s hood, pitted with small, smooth holes where the acid bit through. It still holds its shape,…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+5",
+     "STR": "+2",
+     "DEX": "+1"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by Gorgeous in Blind Midden.",
+    "dropNpcs": [
+     "Gorgeous"
+    ],
+    "weight": "1",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:20+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "hood-of-the-iron-lash": {
    "slug": "hood-of-the-iron-lash",
@@ -26164,6 +27282,69 @@
    "detailAt": "2026-10-10T14:19:22-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "jekoms-royal-signet": {
+   "slug": "jekoms-royal-signet",
+   "name": "Jekom’s Royal Signet",
+   "url": "https://storiesofmnm.com/wiki/item/jekoms-royal-signet/",
+   "type": "jewelry",
+   "slot": "ring",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "STR AGI DEX HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A heavy signet bearing the crest of a kingdom that fell long before the Blind Midden was dug.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+2",
+     "AGI": "+3",
+     "DEX": "+1",
+     "HP": "+5"
+    },
+    "sub": "Jewelry · Ring",
+    "drop": "Dropped by King Jekom the Ancient in Blind Midden.",
+    "dropNpcs": [
+     "King Jekom the Ancient"
+    ],
+    "weight": "0.1",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:22+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "jekoms-war-helm": {
+   "slug": "jekoms-war-helm",
+   "name": "Jekom’s War Helm",
+   "url": "https://storiesofmnm.com/wiki/item/jekoms-war-helm/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "CLERIC FIGHTER INQUISITOR PALADIN SHADOW_KNIGHT",
+   "statKeys": "AC STR AGI DEX HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "An old ogre war helm of a style not forged in centuries. A ridge rings its outer edge,…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+15",
+     "STR": "+1",
+     "AGI": "+1",
+     "DEX": "+2",
+     "HP": "+5"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by King Jekom the Ancient in Blind Midden.",
+    "dropNpcs": [
+     "King Jekom the Ancient"
+    ],
+    "weight": "2.4",
+    "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:24+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "jokandarus-iron-stompers": {
    "slug": "jokandarus-iron-stompers",
    "name": "Jokan’daru’s Iron Stompers",
@@ -27706,6 +28887,40 @@
    "detailAt": "2026-10-10T14:20:46-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "mace-of-dark-aspiration": {
+   "slug": "mace-of-dark-aspiration",
+   "name": "Mace of Dark Aspiration",
+   "url": "https://storiesofmnm.com/wiki/item/mace-of-dark-aspiration/",
+   "type": "weapon",
+   "slot": "primary",
+   "classes": "BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "STA WIS DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "The head of this mace is dented from long use, and the grip is wrapped in House Unheard…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+2",
+     "WIS": "+2"
+    },
+    "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "8",
+     "Delay": "35",
+     "Type": "Blunt"
+    },
+    "drop": "Dropped by Underboss Vekrizin in Blind Midden.",
+    "dropNpcs": [
+     "Underboss Vekrizin"
+    ],
+    "weight": "7",
+    "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:26+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "mace-of-malice": {
    "slug": "mace-of-malice",
    "name": "Mace of Malice",
@@ -28884,6 +30099,36 @@
    "detailAt": "2026-10-10T14:21:18-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "membrane-mask": {
+   "slug": "membrane-mask",
+   "name": "Membrane Mask",
+   "url": "https://storiesofmnm.com/wiki/item/membrane-mask/",
+   "type": "armor",
+   "slot": "face",
+   "classes": "ALL",
+   "statKeys": "AC STA CHA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A clear, rubbery film shaped to a face that is no longer here. It wobbles slightly when the…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STA": "+2",
+     "CHA": "+2"
+    },
+    "sub": "Armor · Face",
+    "drop": "Dropped by Mother Gummer in Blind Midden.",
+    "dropNpcs": [
+     "Mother Gummer"
+    ],
+    "weight": "0.25",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:28+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "mercenarys-hood": {
    "slug": "mercenarys-hood",
    "name": "Mercenary’s Hood",
@@ -29138,6 +30383,36 @@
    },
    "detailAt": "2026-10-25T16:22:29+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "miners-mail-coif": {
+   "slug": "miners-mail-coif",
+   "name": "Miner’s Mail Coif",
+   "url": "https://storiesofmnm.com/wiki/item/miners-mail-coif/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "BARD CLERIC FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN",
+   "statKeys": "AC STA WIS",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "An ogre-sized mail hood packed with grit. Every dented link is a cave-in that Pragrok walked away from.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+12",
+     "STA": "+1",
+     "WIS": "+4"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by Pragrok the Pickaxe in Blind Midden.",
+    "dropNpcs": [
+     "Pragrok the Pickaxe"
+    ],
+    "weight": "1.75",
+    "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:30+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "mining-pick": {
    "slug": "mining-pick",
@@ -29836,6 +31111,36 @@
    },
    "detailAt": "2026-10-10T14:21:54-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "morgurahs-crusty-cap": {
+   "slug": "morgurahs-crusty-cap",
+   "name": "Morgurah’s Crusty Cap",
+   "url": "https://storiesofmnm.com/wiki/item/morgurahs-crusty-cap/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR STA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A leather cap cut short over the ears, so that nothing said in the next cell goes unheard.…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+5",
+     "STR": "+3",
+     "STA": "+1"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by Mucky Morgurah in Blind Midden.",
+    "dropNpcs": [
+     "Mucky Morgurah"
+    ],
+    "weight": "1",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:31+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "mothers-sorrow": {
    "slug": "mothers-sorrow",
@@ -31876,6 +33181,36 @@
    "detailAt": "2026-10-10T14:23:27-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "pendent-of-pacification": {
+   "slug": "pendent-of-pacification",
+   "name": "Pendent of Pacification",
+   "url": "https://storiesofmnm.com/wiki/item/pendent-of-pacification/",
+   "type": "jewelry",
+   "slot": "neck",
+   "classes": "ELEMENTALIST ENCHANTER INQUISITOR NECROMANCER SHADOW_KNIGHT SPELLBLADE WIZARD",
+   "statKeys": "STA INT HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A polished stone on a long chain, meant to swing slowly before the eyes. It catches the light…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+2",
+     "INT": "+1",
+     "HP": "+5"
+    },
+    "sub": "Jewelry · Neck",
+    "drop": "Dropped by Enthraller Gnorah in Blind Midden.",
+    "dropNpcs": [
+     "Enthraller Gnorah"
+    ],
+    "weight": "0.1",
+    "class": "Elementalist, Enchanter, Inquisitor, Necromancer, Shadow Knight, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:33+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "penitent-gavel": {
    "slug": "penitent-gavel",
    "name": "Penitent Gavel",
@@ -32004,6 +33339,73 @@
    },
    "detailAt": "2026-10-10T14:23:34-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "percys-prison-protection": {
+   "slug": "percys-prison-protection",
+   "name": "Percy’s Prison Protection",
+   "url": "https://storiesofmnm.com/wiki/item/percys-prison-protection/",
+   "type": "weapon",
+   "slot": "primary,secondary",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE WIZARD",
+   "statKeys": "AGI DEX HP DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A well-forged short sword with a wrapped grip worn smooth by one small hand. Percy called it his…",
+   "detail": {
+    "tags": [
+     "No Drop"
+    ],
+    "stats": {
+     "AGI": "+3",
+     "DEX": "+3",
+     "HP": "+10"
+    },
+    "sub": "Weapon · Primary Hand, Secondary Hand",
+    "weapon": {
+     "DMG": "6",
+     "Delay": "24",
+     "Type": "Slash"
+    },
+    "saves": "Saves: Poison +5",
+    "effect": "Effect: Percy's Poison(Chance On Hit. Level 15)",
+    "drop": "Dropped by Percy the Purse in Blind Midden.",
+    "dropNpcs": [
+     "Percy the Purse"
+    ],
+    "weight": "5",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:36+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "percys-prison-purse": {
+   "slug": "percys-prison-purse",
+   "name": "Percy’s Prison Purse",
+   "url": "https://storiesofmnm.com/wiki/item/percys-prison-purse/",
+   "type": "armor",
+   "slot": "bag,waist",
+   "classes": "ALL",
+   "statKeys": "",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Percy was not the original owner of this unusually supple purse. Rumors have it that Percy “acquired” it…",
+   "detail": {
+    "tags": [
+     "No Drop"
+    ],
+    "stats": {},
+    "sub": "Armor · Bag, Waist",
+    "drop": "Dropped by Percy the Purse in Blind Midden.",
+    "dropNpcs": [
+     "Percy the Purse"
+    ],
+    "weight": "1",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:38+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "perfect-beetleshell-gauntlets": {
    "slug": "perfect-beetleshell-gauntlets",
@@ -32533,6 +33935,36 @@
    "detailAt": "2026-10-25T20:52:53+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "pragroks-charm-of-relentless-strikes": {
+   "slug": "pragroks-charm-of-relentless-strikes",
+   "name": "Pragrok’s Charm of Relentless Strikes",
+   "url": "https://storiesofmnm.com/wiki/item/pragroks-charm-of-relentless-strikes/",
+   "type": "jewelry",
+   "slot": "neck",
+   "classes": "ELEMENTALIST ENCHANTER INQUISITOR NECROMANCER SHADOW_KNIGHT SPELLBLADE WIZARD",
+   "statKeys": "STA INT MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A crude necklace of polished rock chips and one small, very clean tooth. Pragrok never said whose.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+2",
+     "INT": "+1",
+     "Mana": "+5"
+    },
+    "sub": "Jewelry · Neck",
+    "drop": "Dropped by Pragrok the Pickaxe in Blind Midden.",
+    "dropNpcs": [
+     "Pragrok the Pickaxe"
+    ],
+    "weight": "0.1",
+    "class": "Elementalist, Enchanter, Inquisitor, Necromancer, Shadow Knight, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:40+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "prankers-briarbinds": {
    "slug": "prankers-briarbinds",
    "name": "Pranker’s Briarbinds",
@@ -32995,6 +34427,37 @@
    },
    "detailAt": "2026-10-10T14:24:11-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "quarrymans-earring": {
+   "slug": "quarrymans-earring",
+   "name": "Quarryman’s Earring",
+   "url": "https://storiesofmnm.com/wiki/item/quarrymans-earring/",
+   "type": "jewelry",
+   "slot": "ear",
+   "classes": "BEASTMASTER CLERIC DRUID PALADIN RANGER SHAMAN",
+   "statKeys": "STA WIS HP MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Cedrius carved this hoop from the first stone he cut in the Blind Midden. He meant to carve…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+2",
+     "WIS": "+1",
+     "HP": "+5",
+     "Mana": "+5"
+    },
+    "sub": "Jewelry · Ear",
+    "drop": "Dropped by Cedrius the Cutter in Blind Midden.",
+    "dropNpcs": [
+     "Cedrius the Cutter"
+    ],
+    "weight": "0.1",
+    "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:41+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "quartermire-mitts": {
    "slug": "quartermire-mitts",
@@ -33972,6 +35435,36 @@
    },
    "detailAt": "2026-10-25T11:30:14+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "reabsorbed-ring": {
+   "slug": "reabsorbed-ring",
+   "name": "Reabsorbed Ring",
+   "url": "https://storiesofmnm.com/wiki/item/reabsorbed-ring/",
+   "type": "jewelry",
+   "slot": "ring",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "STR STA DEX",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A ring crusted with a thin, hard film of dried sewage. Under the grime, an oath is engraved…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+2",
+     "STA": "+1",
+     "DEX": "+1"
+    },
+    "sub": "Jewelry · Ring",
+    "drop": "Dropped by Biomass in Blind Midden.",
+    "dropNpcs": [
+     "Biomass"
+    ],
+    "weight": "0.1",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:43+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "reach-of-the-ardent-keeper": {
    "slug": "reach-of-the-ardent-keeper",
@@ -35003,6 +36496,36 @@
    },
    "detailAt": "2026-10-10T14:25:41-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "robe-of-the-unknown-inmate": {
+   "slug": "robe-of-the-unknown-inmate",
+   "name": "Robe of the Unknown Inmate",
+   "url": "https://storiesofmnm.com/wiki/item/robe-of-the-unknown-inmate/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "ELEMENTALIST ENCHANTER NECROMANCER WIZARD",
+   "statKeys": "AC STA INT",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A robe collected from a prisoner’s corpse. They could not be identified and therefore never eulogized.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+8",
+     "STA": "+1",
+     "INT": "+3"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Willie the Watcher in Blind Midden.",
+    "dropNpcs": [
+     "Willie the Watcher"
+    ],
+    "weight": "1.25",
+    "class": "Elementalist, Enchanter, Necromancer, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:45+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "robe-of-the-veiled-doctrine": {
    "slug": "robe-of-the-veiled-doctrine",
@@ -38186,6 +39709,36 @@
    "detailAt": "2026-10-10T14:28:35-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "sash-of-house-unheard": {
+   "slug": "sash-of-house-unheard",
+   "name": "Sash of House Unheard",
+   "url": "https://storiesofmnm.com/wiki/item/sash-of-house-unheard/",
+   "type": "armor",
+   "slot": "waist",
+   "classes": "ALL",
+   "statKeys": "AC STA CHA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A dark sash in the colors of House Unherd, knotted in the style reserved for those who give…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STA": "+3",
+     "CHA": "+2"
+    },
+    "sub": "Armor · Waist",
+    "drop": "Dropped by Underboss Vekrizin in Blind Midden.",
+    "dropNpcs": [
+     "Underboss Vekrizin"
+    ],
+    "weight": "0.25",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:48+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "savage-club": {
    "slug": "savage-club",
    "name": "Savage Club",
@@ -39552,6 +41105,66 @@
    "detailAt": "2026-10-10T14:29:26-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "setherines-skinny-leggings": {
+   "slug": "setherines-skinny-leggings",
+   "name": "Setherine’s Skinny Leggings",
+   "url": "https://storiesofmnm.com/wiki/item/setherines-skinny-leggings/",
+   "type": "armor",
+   "slot": "legs",
+   "classes": "ALL",
+   "statKeys": "AC INT CHA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Dark cloth wound tight from ankle to thigh so that no fold whispers when its wearer moves. Small,…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "INT": "+2",
+     "CHA": "+2"
+    },
+    "sub": "Armor · Legs",
+    "drop": "Dropped by Sethrine the Unblinking in Blind Midden.",
+    "dropNpcs": [
+     "Sethrine the Unblinking"
+    ],
+    "weight": "1",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:49+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "sethrines-coat-of-supple-strength": {
+   "slug": "sethrines-coat-of-supple-strength",
+   "name": "Sethrine’s Coat of Supple Strength",
+   "url": "https://storiesofmnm.com/wiki/item/sethrines-coat-of-supple-strength/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR STA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A gang member’s hide coat, its collar turned high against the damp. Someone has stiched a small open…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+6",
+     "STR": "+2",
+     "STA": "+1"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Sethrine the Unblinking in Blind Midden.",
+    "dropNpcs": [
+     "Sethrine the Unblinking"
+    ],
+    "weight": "2",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:51+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "seven-fingered-gloves": {
    "slug": "seven-fingered-gloves",
    "name": "Seven-Fingered Gloves",
@@ -40132,6 +41745,38 @@
    "detailAt": "2026-10-25T04:41:43+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "shimmering-legplates": {
+   "slug": "shimmering-legplates",
+   "name": "Shimmering Legplates",
+   "url": "https://storiesofmnm.com/wiki/item/shimmering-legplates/",
+   "type": "armor",
+   "slot": "legs",
+   "classes": "CLERIC FIGHTER INQUISITOR PALADIN SHADOW_KNIGHT",
+   "statKeys": "AC STR STA DEX INT",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Heavy plate legguards that the Gelmother could not break down, though she kept trying. The steel is etched…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+21",
+     "STR": "+2",
+     "STA": "+1",
+     "DEX": "+2",
+     "INT": "+1"
+    },
+    "sub": "Armor · Legs",
+    "drop": "Dropped by Gelmother Jiggol in Blind Midden.",
+    "dropNpcs": [
+     "Gelmother Jiggol"
+    ],
+    "weight": "4.8",
+    "class": "Cleric, Fighter, Inquisitor, Paladin, Shadow Knight",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:53+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "shimmering-scimitar": {
    "slug": "shimmering-scimitar",
    "name": "Shimmering Scimitar",
@@ -40259,6 +41904,40 @@
    },
    "detailAt": "2026-10-10T14:29:56-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "shiv-of-the-revivifier": {
+   "slug": "shiv-of-the-revivifier",
+   "name": "Shiv of the Revivifier",
+   "url": "https://storiesofmnm.com/wiki/item/shiv-of-the-revivifier/",
+   "type": "weapon",
+   "slot": "primary",
+   "classes": "ARCHER BARD BEASTMASTER ELEMENTALIST ENCHANTER FIGHTER INQUISITOR NECROMANCER RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE WIZARD",
+   "statKeys": "STA INT DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A short, narrow shiv sized for close work on small targets. The grip is wrapped in strips of…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+2",
+     "INT": "+2"
+    },
+    "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "6",
+     "Delay": "25",
+     "Type": "Pierce"
+    },
+    "drop": "Dropped by Reviver Vlarek in Blind Midden.",
+    "dropNpcs": [
+     "Reviver Vlarek"
+    ],
+    "weight": "2.5",
+    "class": "Archer, Bard, Beastmaster, Elementalist, Enchanter, Fighter, Inquisitor, Necromancer, Ranger, Rogue, Shadow Knight, Shaman, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:55+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "shoe-iron-claymore": {
    "slug": "shoe-iron-claymore",
@@ -41152,6 +42831,37 @@
    "detailAt": "2026-10-10T14:30:29-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "skerricks-shell-earring": {
+   "slug": "skerricks-shell-earring",
+   "name": "Skerrick’s Shell Earring",
+   "url": "https://storiesofmnm.com/wiki/item/skerricks-shell-earring/",
+   "type": "jewelry",
+   "slot": "ear",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "AC STA DEX HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+2",
+     "STA": "+3",
+     "DEX": "+2",
+     "HP": "+5"
+    },
+    "sub": "Jewelry · Ear",
+    "drop": "Dropped by Skerrick in Great Cavern Sea.",
+    "dropNpcs": [
+     "Skerrick"
+    ],
+    "weight": "0.1",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:57+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "skin-bound-staff": {
    "slug": "skin-bound-staff",
    "name": "Skin Bound Staff",
@@ -41290,6 +43000,37 @@
    },
    "detailAt": "2026-10-10T14:30:34-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "skiziks-silk-shawl": {
+   "slug": "skiziks-silk-shawl",
+   "name": "Skizik’s Silk Shawl",
+   "url": "https://storiesofmnm.com/wiki/item/skiziks-silk-shawl/",
+   "type": "armor",
+   "slot": "back",
+   "classes": "ALL",
+   "statKeys": "AC STA CHA HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A crimson cape with a quick-release clasp at the throat. Skizik could shed it and vanish into a…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+4",
+     "STA": "+3",
+     "CHA": "+2",
+     "HP": "+5"
+    },
+    "sub": "Armor · Back",
+    "drop": "Dropped by Skizik the Schemer in Blind Midden.",
+    "dropNpcs": [
+     "Skizik the Schemer"
+    ],
+    "weight": "0.25",
+    "class": "All",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:14:59+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "skrivar-overseers-chain": {
    "slug": "skrivar-overseers-chain",
@@ -42030,6 +43771,41 @@
    },
    "detailAt": "2026-10-10T14:31:21-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "snitch-seeking-shaft-shooter": {
+   "slug": "snitch-seeking-shaft-shooter",
+   "name": "Snitch-Seeking Shaft Shooter",
+   "url": "https://storiesofmnm.com/wiki/item/snitch-seeking-shaft-shooter/",
+   "type": "weapon",
+   "slot": "ranged",
+   "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT WIZARD",
+   "statKeys": "STR DEX HP DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Morgurah pulled this prices from the sewer and kept it for herself. This would typically carry a death…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+2",
+     "DEX": "+1",
+     "HP": "+5"
+    },
+    "sub": "Weapon · Ranged",
+    "weapon": {
+     "DMG": "11",
+     "Delay": "44",
+     "Type": "Pierce"
+    },
+    "drop": "Dropped by Mucky Morgurah in Blind Midden.",
+    "dropNpcs": [
+     "Mucky Morgurah"
+    ],
+    "weight": "3",
+    "class": "Archer, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:01+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "soaked-copper-bracer": {
    "slug": "soaked-copper-bracer",
@@ -43256,6 +45032,36 @@
    "detailAt": "2026-10-10T14:31:58-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "steadying-wristguards-of-the-experimentalist": {
+   "slug": "steadying-wristguards-of-the-experimentalist",
+   "name": "Steadying Wristguards of the Experimentalist",
+   "url": "https://storiesofmnm.com/wiki/item/steadying-wristguards-of-the-experimentalist/",
+   "type": "armor",
+   "slot": "wrist",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STA WIS",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Tight leather cuffs that keep the sleeves clear of the work. The inside of each is stained where…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+6",
+     "STA": "+2",
+     "WIS": "+2"
+    },
+    "sub": "Armor · Wrist",
+    "drop": "Dropped by Elixa the Experimentalist in Blind Midden.",
+    "dropNpcs": [
+     "Elixa the Experimentalist"
+    ],
+    "weight": "0.6",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:03+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "steel-dagger": {
    "slug": "steel-dagger",
    "name": "Steel Dagger",
@@ -43909,6 +45715,98 @@
    },
    "detailAt": "2026-10-10T14:32:32-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "stolen-mask-of-the-enthralled": {
+   "slug": "stolen-mask-of-the-enthralled",
+   "name": "Stolen Mask of the Enthralled",
+   "url": "https://storiesofmnm.com/wiki/item/stolen-mask-of-the-enthralled/",
+   "type": "armor",
+   "slot": "face",
+   "classes": "BEASTMASTER CLERIC DRUID PALADIN RANGER SHAMAN",
+   "statKeys": "AC STR WIS",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Gnorah took this mask from one of her enthralled humans. Nothing more about its provenance can be determined.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STR": "+2",
+     "WIS": "+2"
+    },
+    "sub": "Armor · Face",
+    "drop": "Dropped by Enthraller Gnorah in Blind Midden.",
+    "dropNpcs": [
+     "Enthraller Gnorah"
+    ],
+    "weight": "0.25",
+    "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:05+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "stone-scarred-shoulderpads": {
+   "slug": "stone-scarred-shoulderpads",
+   "name": "Stone-Scarred Shoulderpads",
+   "url": "https://storiesofmnm.com/wiki/item/stone-scarred-shoulderpads/",
+   "type": "armor",
+   "slot": "shoulders",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC WIS MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Heavy shoulderpads scored with shallow cuts from falling chips of stone. Each scratch is filled with fine grey…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+7",
+     "WIS": "+2",
+     "Mana": "+10"
+    },
+    "sub": "Armor · Shoulders",
+    "drop": "Dropped by Cedrius the Cutter in Blind Midden.",
+    "dropNpcs": [
+     "Cedrius the Cutter"
+    ],
+    "weight": "1.2",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:07+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "stonecutters-shroud": {
+   "slug": "stonecutters-shroud",
+   "name": "Stonecutter’s Shroud",
+   "url": "https://storiesofmnm.com/wiki/item/stonecutters-shroud/",
+   "type": "armor",
+   "slot": "back",
+   "classes": "ELEMENTALIST ENCHANTER INQUISITOR NECROMANCER SHADOW_KNIGHT SPELLBLADE WIZARD",
+   "statKeys": "AC STA INT HP MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Cedrius wore this cloak over his face in the quarry to keep the grit out of his lungs.…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STA": "+2",
+     "INT": "+2",
+     "HP": "+5",
+     "Mana": "+5"
+    },
+    "sub": "Armor · Back",
+    "drop": "Dropped by Cedrius the Cutter in Blind Midden.",
+    "dropNpcs": [
+     "Cedrius the Cutter"
+    ],
+    "weight": "0.25",
+    "class": "Elementalist, Enchanter, Inquisitor, Necromancer, Shadow Knight, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:09+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "stonegrip-gauntlets": {
    "slug": "stonegrip-gauntlets",
@@ -45994,6 +47892,42 @@
    "detailAt": "2026-10-25T20:51:05+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "the-blacksmiths-prototype": {
+   "slug": "the-blacksmiths-prototype",
+   "name": "The Blacksmith’s Prototype",
+   "url": "https://storiesofmnm.com/wiki/item/the-blacksmiths-prototype/",
+   "type": "weapon",
+   "slot": "primary",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "STR STA DEX HP DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "This blade was given to Jerictus as the model for him to replicate. His best efforts did not…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+4",
+     "STA": "+1",
+     "DEX": "+2",
+     "HP": "+5"
+    },
+    "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "16",
+     "Delay": "54",
+     "Type": "Slash"
+    },
+    "drop": "Dropped by Blacksmith Jerictus in Blind Midden.",
+    "dropNpcs": [
+     "Blacksmith Jerictus"
+    ],
+    "weight": "12",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:11+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "the-final-word": {
    "slug": "the-final-word",
    "name": "The Final Word",
@@ -46687,6 +48621,37 @@
    "detailAt": "2026-10-10T14:35:00-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "tibbeks-bowarm-bracer": {
+   "slug": "tibbeks-bowarm-bracer",
+   "name": "Tibbek’s Bowarm Bracer",
+   "url": "https://storiesofmnm.com/wiki/item/tibbeks-bowarm-bracer/",
+   "type": "armor",
+   "slot": "wrist",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR STA HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+6",
+     "STR": "+2",
+     "STA": "+2",
+     "HP": "+5"
+    },
+    "sub": "Armor · Wrist",
+    "drop": "Dropped by Tibbek in Great Cavern Sea.",
+    "dropNpcs": [
+     "Tibbek"
+    ],
+    "weight": "0.5",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:13+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "tides-whisper": {
    "slug": "tides-whisper",
    "name": "Tide’s Whisper",
@@ -46907,6 +48872,36 @@
    },
    "detailAt": "2026-10-25T11:30:42+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "tizzixs-tender-touch": {
+   "slug": "tizzixs-tender-touch",
+   "name": "Tizzix’s Tender Touch",
+   "url": "https://storiesofmnm.com/wiki/item/tizzixs-tender-touch/",
+   "type": "armor",
+   "slot": "hands",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR AGI",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Small leather gloves, fitted close to the fingers for fine work. The palms are stained in layers, and…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+6",
+     "STR": "+2",
+     "AGI": "+2"
+    },
+    "sub": "Armor · Hands",
+    "drop": "Dropped by Tormentor Tizzix in Blind Midden.",
+    "dropNpcs": [
+     "Tormentor Tizzix"
+    ],
+    "weight": "1.2",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:15+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "tomas-signet-ring": {
    "slug": "tomas-signet-ring",
@@ -47669,6 +49664,102 @@
    "detailAt": "2026-10-25T11:31:46+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "underboss-bracers": {
+   "slug": "underboss-bracers",
+   "name": "Underboss Bracers",
+   "url": "https://storiesofmnm.com/wiki/item/underboss-bracers/",
+   "type": "armor",
+   "slot": "wrist",
+   "classes": "ARCHER BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "AC STR DEX HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Thick bracers laced high on the forarm, stained dark along the inside. Vekrizin slew the forager unlucky enough…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+5",
+     "STR": "+3",
+     "DEX": "+1",
+     "HP": "+5"
+    },
+    "sub": "Armor · Wrist",
+    "drop": "Dropped by Underboss Vekrizin in Blind Midden.",
+    "dropNpcs": [
+     "Underboss Vekrizin"
+    ],
+    "weight": "0.6",
+    "class": "Archer, Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:17+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "undigested-underworld-bow": {
+   "slug": "undigested-underworld-bow",
+   "name": "Undigested Underworld Bow",
+   "url": "https://storiesofmnm.com/wiki/item/undigested-underworld-bow/",
+   "type": "weapon",
+   "slot": "ranged",
+   "classes": "ARCHER BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT WIZARD",
+   "statKeys": "STR STA HP DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Something about its short time in the acidic environment seems to have made it more powerful.",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+3",
+     "STA": "+1",
+     "HP": "+5"
+    },
+    "sub": "Weapon · Ranged",
+    "weapon": {
+     "DMG": "14",
+     "Delay": "46",
+     "Type": "Pierce"
+    },
+    "drop": "Dropped by Gorgeous in Blind Midden.",
+    "dropNpcs": [
+     "Gorgeous"
+    ],
+    "weight": "3",
+    "class": "Archer, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:19+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "undissolved-buckler": {
+   "slug": "undissolved-buckler",
+   "name": "Undissolved Buckler",
+   "url": "https://storiesofmnm.com/wiki/item/undissolved-buckler/",
+   "type": "armor",
+   "slot": "secondary",
+   "classes": "BARD CLERIC DRUID FIGHTER INQUISITOR PALADIN RANGER SHADOW_KNIGHT SHAMAN",
+   "statKeys": "AC WIS MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A small buckler that the sludge could not break down. A holy symbol on its face is still…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+9",
+     "WIS": "+3",
+     "Mana": "+5"
+    },
+    "sub": "Armor · Secondary Hand",
+    "drop": "Dropped by Biomass in Blind Midden.",
+    "dropNpcs": [
+     "Biomass"
+    ],
+    "weight": "0.25",
+    "class": "Bard, Cleric, Druid, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:21+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "untamed-spirit-grips": {
    "slug": "untamed-spirit-grips",
    "name": "Untamed Spirit Grips",
@@ -48271,6 +50362,36 @@
    "detailAt": "2026-10-10T14:36:11-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "vestment-of-the-vile-vigilante": {
+   "slug": "vestment-of-the-vile-vigilante",
+   "name": "Vestment of the Vile Vigilante",
+   "url": "https://storiesofmnm.com/wiki/item/vestment-of-the-vile-vigilante/",
+   "type": "armor",
+   "slot": "chest",
+   "classes": "ELEMENTALIST ENCHANTER NECROMANCER WIZARD",
+   "statKeys": "AC INT HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A prisoner’s blouse, stained through with fever-sweat. It has been patched so many times that little of the…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+5",
+     "INT": "+2",
+     "HP": "+5"
+    },
+    "sub": "Armor · Chest",
+    "drop": "Dropped by Mucky Morgurah in Blind Midden.",
+    "dropNpcs": [
+     "Mucky Morgurah"
+    ],
+    "weight": "1",
+    "class": "Elementalist, Enchanter, Necromancer, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:24+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "vestments-of-vakraar": {
    "slug": "vestments-of-vakraar",
    "name": "Vestments of Vakraar",
@@ -48393,6 +50514,100 @@
    "detailAt": "2026-10-25T16:22:17+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "vikkits-chain-cap": {
+   "slug": "vikkits-chain-cap",
+   "name": "Vikkit’s Chain Cap",
+   "url": "https://storiesofmnm.com/wiki/item/vikkits-chain-cap/",
+   "type": "armor",
+   "slot": "head",
+   "classes": "BARD CLERIC FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN",
+   "statKeys": "AC STR STA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+17",
+     "STR": "+4",
+     "STA": "+2"
+    },
+    "sub": "Armor · Head",
+    "drop": "Dropped by Foreman Vikkit in Great Cavern Sea.",
+    "dropNpcs": [
+     "Foreman Vikkit"
+    ],
+    "weight": "2",
+    "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:26+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "vikkits-chain-gauntlets": {
+   "slug": "vikkits-chain-gauntlets",
+   "name": "Vikkit’s Chain Gauntlets",
+   "url": "https://storiesofmnm.com/wiki/item/vikkits-chain-gauntlets/",
+   "type": "armor",
+   "slot": "hands",
+   "classes": "BARD CLERIC FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN",
+   "statKeys": "AC STR STA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+17",
+     "STR": "+4",
+     "STA": "+4"
+    },
+    "sub": "Armor · Hands",
+    "drop": "Dropped by Foreman Vikkit in Great Cavern Sea.",
+    "dropNpcs": [
+     "Foreman Vikkit"
+    ],
+    "weight": "2",
+    "class": "Bard, Cleric, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:28+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "vikkits-rock-hammer": {
+   "slug": "vikkits-rock-hammer",
+   "name": "Vikkit’s Rock Hammer",
+   "url": "https://storiesofmnm.com/wiki/item/vikkits-rock-hammer/",
+   "type": "weapon",
+   "slot": "primary,secondary",
+   "classes": "BARD BEASTMASTER CLERIC DRUID FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SHAMAN SPELLBLADE",
+   "statKeys": "STR STA DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A hammer with stone dust caking its iron head. | item_link_id-OLD =",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+5",
+     "STA": "+4"
+    },
+    "sub": "Weapon · Primary Hand, Secondary Hand",
+    "weapon": {
+     "DMG": "10",
+     "Delay": "26",
+     "Type": "Blunt"
+    },
+    "drop": "Dropped by Foreman Vikkit in Great Cavern Sea.",
+    "dropNpcs": [
+     "Foreman Vikkit"
+    ],
+    "weight": "4.25",
+    "class": "Bard, Beastmaster, Cleric, Druid, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:30+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "vile-bastard-sword": {
    "slug": "vile-bastard-sword",
    "name": "Vile Bastard Sword",
@@ -48457,6 +50672,36 @@
    },
    "detailAt": "2026-10-10T14:36:17-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "vile-veil-of-the-villain": {
+   "slug": "vile-veil-of-the-villain",
+   "name": "Vile Veil of the Villain",
+   "url": "https://storiesofmnm.com/wiki/item/vile-veil-of-the-villain/",
+   "type": "armor",
+   "slot": "face",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "AC STR DEX",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A thin mask of lacquered hide recovered from the Blind Midden sewers. Sethrine quietly claimed it for herself…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+2",
+     "STR": "+1",
+     "DEX": "+2"
+    },
+    "sub": "Armor · Face",
+    "drop": "Dropped by Sethrine the Unblinking in Blind Midden.",
+    "dropNpcs": [
+     "Sethrine the Unblinking"
+    ],
+    "weight": "0.25",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:32+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "viletracker-gloves": {
    "slug": "viletracker-gloves",
@@ -48670,6 +50915,36 @@
    },
    "detailAt": "2026-10-10T14:36:21-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "vlareks-second-wind": {
+   "slug": "vlareks-second-wind",
+   "name": "Vlarek’s Second Wind",
+   "url": "https://storiesofmnm.com/wiki/item/vlareks-second-wind/",
+   "type": "armor",
+   "slot": "secondary",
+   "classes": "FIGHTER INQUISITOR PALADIN SHADOW_KNIGHT",
+   "statKeys": "AC STR HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "The face of this shield is scratched with tally marks. Some are crossed out, as if their subjects…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+11",
+     "STR": "+3",
+     "HP": "+5"
+    },
+    "sub": "Armor · Secondary Hand",
+    "drop": "Dropped by Reviver Vlarek in Blind Midden.",
+    "dropNpcs": [
+     "Reviver Vlarek"
+    ],
+    "weight": "8",
+    "class": "Fighter, Inquisitor, Paladin, Shadow Knight",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:34+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "voice-of-the-land-sabatons": {
    "slug": "voice-of-the-land-sabatons",
@@ -48921,6 +51196,37 @@
    },
    "detailAt": "2026-10-10T14:36:31-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "ward-of-the-frozen-circle": {
+   "slug": "ward-of-the-frozen-circle",
+   "name": "Ward of the Frozen Circle",
+   "url": "https://storiesofmnm.com/wiki/item/ward-of-the-frozen-circle/",
+   "type": "armor",
+   "slot": "secondary",
+   "classes": "BARD CLERIC DRUID FIGHTER INQUISITOR PALADIN RANGER SHADOW_KNIGHT SHAMAN",
+   "statKeys": "AC STA INT HP",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Fraegra carried this ward into the fight that ended in her capture. Frost still creeps across it whenever…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+10",
+     "STA": "+1",
+     "INT": "+3",
+     "HP": "+5"
+    },
+    "sub": "Armor · Secondary Hand",
+    "drop": "Dropped by Flashfreeze Fraegra in Blind Midden.",
+    "dropNpcs": [
+     "Flashfreeze Fraegra"
+    ],
+    "weight": "2",
+    "class": "Bard, Cleric, Druid, Fighter, Inquisitor, Paladin, Ranger, Shadow Knight, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:35+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "ward-of-wisdom": {
    "slug": "ward-of-wisdom",
@@ -49412,6 +51718,37 @@
    "detailAt": "2026-10-10T14:36:48-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "whisperbud-earring": {
+   "slug": "whisperbud-earring",
+   "name": "Whisperbud Earring",
+   "url": "https://storiesofmnm.com/wiki/item/whisperbud-earring/",
+   "type": "jewelry",
+   "slot": "ear",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "STR STA AGI DEX",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A small earring grown, not forged, from a single glossy spore pod. It pulses faintly in time with…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+2",
+     "STA": "+2",
+     "AGI": "+1",
+     "DEX": "+4"
+    },
+    "sub": "Jewelry · Ear",
+    "drop": "Dropped by Davosin the Domineering in Blind Midden.",
+    "dropNpcs": [
+     "Davosin the Domineering"
+    ],
+    "weight": "0.1",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:37+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "whispering-hours-pendant": {
    "slug": "whispering-hours-pendant",
    "name": "Whispering Hours Pendant",
@@ -49596,6 +51933,102 @@
    "detailAt": "2026-10-25T11:30:44+00:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
   },
+  "wikkets-third-wand": {
+   "slug": "wikkets-third-wand",
+   "name": "Wikket’s Third Wand",
+   "url": "https://storiesofmnm.com/wiki/item/wikkets-third-wand/",
+   "type": "weapon",
+   "slot": "primary",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE WIZARD",
+   "statKeys": "STR HP DAMAGE DELAY",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A plain blade that Wikket kept hidden and swore he would never need. Someone began carving small runes…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STR": "+2",
+     "HP": "+10"
+    },
+    "sub": "Weapon · Primary Hand",
+    "weapon": {
+     "DMG": "8",
+     "Delay": "35",
+     "Type": "Slash"
+    },
+    "drop": "Dropped by Wikket Two-Wands in Blind Midden.",
+    "dropNpcs": [
+     "Wikket Two-Wands"
+    ],
+    "weight": "6",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Paladin, Ranger, Rogue, Shadow Knight, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:39+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "wikkets-wand-belt": {
+   "slug": "wikkets-wand-belt",
+   "name": "Wikket’s Wand Belt",
+   "url": "https://storiesofmnm.com/wiki/item/wikkets-wand-belt/",
+   "type": "armor",
+   "slot": "waist",
+   "classes": "ELEMENTALIST ENCHANTER INQUISITOR NECROMANCER SHADOW_KNIGHT SPELLBLADE WIZARD",
+   "statKeys": "AC STA INT MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A thin rune-stitched cord with two wand loops, both stretched and worn. A third loop, never used, sits…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STA": "+2",
+     "INT": "+1",
+     "Mana": "+10"
+    },
+    "sub": "Armor · Waist",
+    "drop": "Dropped by Wikket Two-Wands in Blind Midden.",
+    "dropNpcs": [
+     "Wikket Two-Wands"
+    ],
+    "weight": "0.25",
+    "class": "Elementalist, Enchanter, Inquisitor, Necromancer, Shadow Knight, Spellblade, Wizard",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:42+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
+  "wikkets-warmask": {
+   "slug": "wikkets-warmask",
+   "name": "Wikket’s Warmask",
+   "url": "https://storiesofmnm.com/wiki/item/wikkets-warmask/",
+   "type": "armor",
+   "slot": "face",
+   "classes": "ARCHER BARD BEASTMASTER FIGHTER INQUISITOR MONK PALADIN RANGER ROGUE SHADOW_KNIGHT SPELLBLADE",
+   "statKeys": "AC STR AGI DEX",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "Wikket swore this mask hid him from the guards. It did not, but it did keep the sparks…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "AC": "+3",
+     "STR": "+2",
+     "AGI": "+1",
+     "DEX": "+1"
+    },
+    "sub": "Armor · Face",
+    "drop": "Dropped by Wikket Two-Wands in Blind Midden.",
+    "dropNpcs": [
+     "Wikket Two-Wands"
+    ],
+    "weight": "0.25",
+    "class": "Archer, Bard, Beastmaster, Fighter, Inquisitor, Monk, Paladin, Ranger, Rogue, Shadow Knight, Spellblade",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:44+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
+  },
   "wildbinders-spear": {
    "slug": "wildbinders-spear",
    "name": "Wildbinder’s Spear",
@@ -49628,6 +52061,36 @@
    },
    "detailAt": "2026-10-10T14:36:55-07:00",
    "firstSeen": "2026-10-10T13:50:12-07:00"
+  },
+  "willies-glass-eye": {
+   "slug": "willies-glass-eye",
+   "name": "Willie’s Glass Eye",
+   "url": "https://storiesofmnm.com/wiki/item/willies-glass-eye/",
+   "type": "jewelry",
+   "slot": "neck",
+   "classes": "BEASTMASTER CLERIC DRUID PALADIN RANGER SHAMAN",
+   "statKeys": "STA WIS MANA",
+   "races": "All",
+   "levelMin": "",
+   "excerpt": "A talisman carved in the shape of a single open eye. Superstitious inmates wore these to ward off…",
+   "detail": {
+    "tags": [],
+    "stats": {
+     "STA": "+2",
+     "WIS": "+2",
+     "Mana": "+5"
+    },
+    "sub": "Jewelry · Neck",
+    "drop": "Dropped by Willie the Watcher in Blind Midden.",
+    "dropNpcs": [
+     "Willie the Watcher"
+    ],
+    "weight": "0.1",
+    "class": "Beastmaster, Cleric, Druid, Paladin, Ranger, Shaman",
+    "race": "All"
+   },
+   "detailAt": "2026-10-27T12:15:46+00:00",
+   "firstSeen": "2026-10-27T12:12:39+00:00"
   },
   "wilnas-ring": {
    "slug": "wilnas-ring",
@@ -50878,37 +53341,37 @@
    "slug": "kroths-warplate-girdle",
    "name": "Kroths Warplate Girdle",
    "url": "https://storiesofmnm.com/wiki/item/kroths-warplate-girdle/",
-   "detailAt": "2026-10-26T13:03:43+00:00"
+   "detailAt": "2026-10-27T12:13:02+00:00"
   },
   "iremgorges-luminous-core": {
    "slug": "iremgorges-luminous-core",
    "name": "Iremgorges Luminous Core",
    "url": "https://storiesofmnm.com/wiki/item/iremgorges-luminous-core/",
-   "detailAt": "2026-10-26T13:03:45+00:00"
+   "detailAt": "2026-10-27T12:13:04+00:00"
   },
   "tharnixs-root-bound-girdle": {
    "slug": "tharnixs-root-bound-girdle",
    "name": "Tharnixs Root Bound Girdle",
    "url": "https://storiesofmnm.com/wiki/item/tharnixs-root-bound-girdle/",
-   "detailAt": "2026-10-26T13:03:47+00:00"
+   "detailAt": "2026-10-27T12:13:06+00:00"
   },
   "gillmarked-bracer": {
    "slug": "gillmarked-bracer",
    "name": "Gillmarked Bracer",
    "url": "https://storiesofmnm.com/wiki/item/gillmarked-bracer/",
-   "detailAt": "2026-10-26T13:03:49+00:00"
+   "detailAt": "2026-10-27T12:13:08+00:00"
   },
   "blightfathers-warmaul": {
    "slug": "blightfathers-warmaul",
    "name": "Blightfathers Warmaul",
    "url": "https://storiesofmnm.com/wiki/item/blightfathers-warmaul/",
-   "detailAt": "2026-10-26T13:03:50+00:00"
+   "detailAt": "2026-10-27T12:13:09+00:00"
   },
   "kells-hollow-standard": {
    "slug": "kells-hollow-standard",
    "name": "Kells Hollow Standard",
    "url": "https://storiesofmnm.com/wiki/item/kells-hollow-standard/",
-   "detailAt": "2026-10-26T13:03:52+00:00"
+   "detailAt": "2026-10-27T12:13:11+00:00"
   }
  },
  "guides": {
@@ -51216,7 +53679,7 @@
      "why": "Dense camps where a self-healing tank shines."
     }
    ],
-   "at": "2026-10-26T13:03:42+00:00"
+   "at": "2026-10-27T12:13:01+00:00"
   }
  },
  "news": [],
