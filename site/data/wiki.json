@@ -1,8 +1,8 @@
 {
  "meta": {
-  "lastFull": "2026-11-12T19:54:54+00:00",
+  "lastFull": "2026-11-13T19:42:43+00:00",
   "itemDetailsPending": 0,
-  "lastScan": "2026-11-13T06:44:46+00:00",
+  "lastScan": "2026-11-13T19:43:32+00:00",
   "lastError": null,
   "counts": {
    "quests": 127,
@@ -53351,37 +53351,37 @@
    "slug": "kroths-warplate-girdle",
    "name": "Kroths Warplate Girdle",
    "url": "https://storiesofmnm.com/wiki/item/kroths-warplate-girdle/",
-   "detailAt": "2026-11-12T19:55:18+00:00"
+   "detailAt": "2026-11-13T19:43:23+00:00"
   },
   "iremgorges-luminous-core": {
    "slug": "iremgorges-luminous-core",
    "name": "Iremgorges Luminous Core",
    "url": "https://storiesofmnm.com/wiki/item/iremgorges-luminous-core/",
-   "detailAt": "2026-11-12T19:55:20+00:00"
+   "detailAt": "2026-11-13T19:43:25+00:00"
   },
   "tharnixs-root-bound-girdle": {
    "slug": "tharnixs-root-bound-girdle",
    "name": "Tharnixs Root Bound Girdle",
    "url": "https://storiesofmnm.com/wiki/item/tharnixs-root-bound-girdle/",
-   "detailAt": "2026-11-12T19:55:21+00:00"
+   "detailAt": "2026-11-13T19:43:26+00:00"
   },
   "gillmarked-bracer": {
    "slug": "gillmarked-bracer",
    "name": "Gillmarked Bracer",
    "url": "https://storiesofmnm.com/wiki/item/gillmarked-bracer/",
-   "detailAt": "2026-11-12T19:55:23+00:00"
+   "detailAt": "2026-11-13T19:43:28+00:00"
   },
   "blightfathers-warmaul": {
    "slug": "blightfathers-warmaul",
    "name": "Blightfathers Warmaul",
    "url": "https://storiesofmnm.com/wiki/item/blightfathers-warmaul/",
-   "detailAt": "2026-11-12T19:55:25+00:00"
+   "detailAt": "2026-11-13T19:43:30+00:00"
   },
   "kells-hollow-standard": {
    "slug": "kells-hollow-standard",
    "name": "Kells Hollow Standard",
    "url": "https://storiesofmnm.com/wiki/item/kells-hollow-standard/",
-   "detailAt": "2026-11-12T19:55:27+00:00"
+   "detailAt": "2026-11-13T19:43:32+00:00"
   }
  },
  "guides": {
@@ -53689,7 +53689,7 @@
      "why": "Dense camps where a self-healing tank shines."
     }
    ],
-   "at": "2026-11-12T19:55:16+00:00"
+   "at": "2026-11-13T19:43:21+00:00"
   }
  },
  "news": [],
